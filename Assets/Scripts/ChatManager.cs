@@ -30,7 +30,7 @@ public class ChatManager : MonoBehaviour
     void OnReceive(SocketAsyncEventArgs args, byte[] content, int size)
     {
         receive_str = System.Text.Encoding.UTF8.GetString(content);
-        ProcessMsg(args, content, size);
+        //ProcessMsg(args, content, size);
     }
 
     void OnComplete(SocketAsyncEventArgs args, SocketAction action)

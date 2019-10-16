@@ -38,6 +38,7 @@ public class ServerScript : MonoBehaviour {
         // 获得主机相关信息
         IPAddress[] addressList = Dns.GetHostEntry(Environment.MachineName).AddressList;
         IPEndPoint localEndPoint = new IPEndPoint(addressList[addressList.Length - 1], PORT);
+        //IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, PORT);
         _server.Start(localEndPoint);
         _server.Completed += OnComplete;
        
