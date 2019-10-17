@@ -5,7 +5,6 @@ using System.Net.Sockets;
 using Google.Protobuf;
 // https://blog.csdn.net/u014308482/article/details/52958148
 using Protobuf.Lobby;
-using static MsgDefine;
 
 // https://github.com/LitJSON/litjson
 public class LobbyMsgReply
@@ -33,7 +32,7 @@ public class LobbyMsgReply
             int msgId = BitConverter.ToInt32(recvHeader, 0);
             switch ((LOBBY) msgId)
             {
-                case LOBBY.PLAYER_ENTER:
+                case LOBBY.PlayerEnter:
                     PLAYER_ENTER(args, recvData);
                     break;
             }
@@ -48,6 +47,7 @@ public class LobbyMsgReply
     {
         PlayerEnter pe = PlayerEnter.Parser.ParseFrom(data);
 
+        // 写入redis
         if (!LobbyManager.Instance.Redis.CSRedis.Exists(pe.Account))
         {
             LobbyManager.Instance.Redis.CSRedis.HSet(pe.Account, "TokenId", pe.TokenId.ToString());
@@ -58,13 +58,11 @@ public class LobbyMsgReply
             Debug.Log($"MSG: 老用户登录！Account:<{pe.Account}> - TokenId:<{pe.TokenId}>");
         }
 
-
-
         PlayerEnterReply per = new PlayerEnterReply()
         {
             Ret = false,
         };
         // 返回消息
-        LobbyManager.Instance.SendMsg(args, LOBBY_REPLY.PLAYER_ENTER_REPLY, per.ToByteArray());
+        LobbyManager.Instance.SendMsg(args, LOBBY_REPLY.PlayerEnterReply, per.ToByteArray());
     }
 }

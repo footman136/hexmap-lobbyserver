@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
 using System;
-using LitJson;
-
 // https://github.com/LitJSON/litjson
-
+using LitJson;
+using Protobuf.Lobby;
 
 public class LobbyManager : MonoBehaviour
 {
@@ -98,7 +97,7 @@ public class LobbyManager : MonoBehaviour
     /// </summary>
     /// <param name="msgId">消息ID，注意这是服务器返回给客户端的消息</param>
     /// <param name="???"></param>
-    public void SendMsg(SocketAsyncEventArgs args, MsgDefine.LOBBY_REPLY msgId, byte[] data)
+    public void SendMsg(SocketAsyncEventArgs args, LOBBY_REPLY msgId, byte[] data)
     {
         byte[] sendData = new byte[data.Length + 4];
         byte[] sendHeader = System.BitConverter.GetBytes((int)msgId);

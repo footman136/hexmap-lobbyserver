@@ -24,7 +24,7 @@ namespace Protobuf.Lobby {
     static LobbyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cgtsb2JieS5wcm90bxIOcHJvdG9idWYubG9iYnkiLwoLUGxheWVyRW50ZXIS",
+            "Cgtsb2JieS5wcm90bxIOUHJvdG9idWYubG9iYnkiLwoLUGxheWVyRW50ZXIS",
             "DwoHQWNjb3VudBgBIAEoCRIPCgdUb2tlbklkGAIgASgDIh8KEFBsYXllckVu",
             "dGVyUmVwbHkSCwoDcmV0GAEgASgIIh4KC0NoYXRNZXNzYWdlEg8KB01lc3Nh",
             "Z2UYASABKAliBnByb3RvMw=="));
