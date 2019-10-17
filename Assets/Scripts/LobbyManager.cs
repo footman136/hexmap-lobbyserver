@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
 using System;
-using LitJson; // https://github.com/LitJSON/litjson
+using LitJson;
+
+// https://github.com/LitJSON/litjson
 
 
-public class ChatManager : MonoBehaviour
+public class LobbyManager : MonoBehaviour
 {
     public ServerScript _server;
     
@@ -18,7 +20,7 @@ public class ChatManager : MonoBehaviour
         _server.Received += OnReceive;
         _server.Completed += OnComplete;
 
-        MsgExplain._chat = this;
+        LobbyMsgReply._chat = this;
     }
 
     private void OnDestroy()
@@ -30,7 +32,7 @@ public class ChatManager : MonoBehaviour
     void OnReceive(SocketAsyncEventArgs args, byte[] content, int size)
     {
         receive_str = System.Text.Encoding.UTF8.GetString(content);
-        //ProcessMsg(args, content, size);
+        LobbyMsgReply.ProcessMsg(args, content, size);
     }
 
     void OnComplete(SocketAsyncEventArgs args, SocketAction action)
@@ -80,30 +82,19 @@ public class ChatManager : MonoBehaviour
             GUILayout.Label (receive_str, style);
         }
     }
-
+    
     /// <summary>
-    /// 处理服务器接收到的消息
+    /// 新增的发送消息函数，增加了消息ID，会把前面的消息ID（4字节）和后面的消息内容组成一个包再发送
     /// </summary>
-    /// <param name="args"></param>
-    /// <param name="content"></param>
-    void ProcessMsg(SocketAsyncEventArgs args, byte[] content, int size)
+    /// <param name="msgId">消息ID，注意这是服务器返回给客户端的消息</param>
+    /// <param name="???"></param>
+    public void SendMsg(SocketAsyncEventArgs args, MsgDefine.MSG_REPLY msgId, byte[] data)
     {
-        var message = System.Text.Encoding.UTF8.GetString (content, 0, size);
-        var dataJson = JsonMapper.ToObject(message);
-        int cmdId = Int32.Parse(dataJson["cmd_id"].ToString());
-        switch ((MsgExplain.CMD)cmdId)
-        {
-            case MsgExplain.CMD.PLAYER_ENTER:
-                MsgExplain.PLAYER_ENTER(args, dataJson);
-                break;
-            case MsgExplain.CMD.NORMAL_MESSAGE:
-                MsgExplain.NORMAL_MESSAGE(args, dataJson);
-                break;
-        }
-    }
-
-    public void SendMsg(SocketAsyncEventArgs args, string message)
-    {
-        _server.SendMsg(args, message);
+        byte[] sendData = new byte[data.Length + 4];
+        byte[] sendHeader = System.BitConverter.GetBytes((int)msgId);
+        
+        Array.Copy(sendHeader, 0, sendData, 0, 4);
+        Array.Copy(data, 0, sendData, 4, data.Length);
+        _server.SendMsg(args, sendData, sendData.Length);
     }
 }
