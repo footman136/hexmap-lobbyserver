@@ -14,7 +14,7 @@ public class MsgDefine
     /// <summary>
     /// 客户端发送给服务器的消息，消息ID一般为奇数
     /// </summary>
-    public enum MSG
+    public enum LOBBY
     {
         PLAYER_ENTER = 10001,
         CHAT_MESSAGE = 11000,
@@ -23,7 +23,7 @@ public class MsgDefine
     /// <summary>
     /// 客户端发送给服务器的消息，消息ID一般为偶数
     /// </summary>
-    public enum MSG_REPLY
+    public enum LOBBY_REPLY
     {
         PLAYER_ENTER_REPLY = 10002,
     }
