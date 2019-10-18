@@ -24,13 +24,14 @@ namespace Protobuf.Lobby {
     static MsgDefineLobbyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRNc2dEZWZpbmVMb2JieS5wcm90bxIOUHJvdG9idWYuTG9iYnkqYAoFTE9C",
+            "ChRNc2dEZWZpbmVMb2JieS5wcm90bxIOUHJvdG9idWYuTG9iYnkqcgoFTE9C",
             "QlkSDAoITXNnU3RhcnQQABIQCgtQbGF5ZXJFbnRlchCRThIQCgtQbGF5ZXJM",
             "ZWF2ZRCTThISCg1Bc2tDcmVhdGVSb29tEJVOEhEKDEFza0VudGVyUm9vbRCX",
-            "TiqAAQoLTE9CQllfUkVQTFkSEQoNTXNnU3RhcnRSZXBseRAAEhUKEFBsYXll",
-            "ckVudGVyUmVwbHkQkk4SFQoQUGxheWVyTGVhdmVSZXBseRCUThIXChJBc2tD",
-            "cmVhdGVSb29tUmVwbHkQlk4SFwoSQXNrRW50ZXJSb29tUmVwbGF5EJhOYgZw",
-            "cm90bzM="));
+            "ThIQCgtBc2tSb29tTGlzdBCZTiqXAQoLTE9CQllfUkVQTFkSEQoNTXNnU3Rh",
+            "cnRSZXBseRAAEhUKEFBsYXllckVudGVyUmVwbHkQkk4SFQoQUGxheWVyTGVh",
+            "dmVSZXBseRCUThIXChJBc2tDcmVhdGVSb29tUmVwbHkQlk4SFwoSQXNrRW50",
+            "ZXJSb29tUmVwbGF5EJhOEhUKEEFza1Jvb21MaXN0UmVwbHkQmk5iBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Lobby.LOBBY), typeof(global::Protobuf.Lobby.LOBBY_REPLY), }, null, null));
@@ -51,6 +52,7 @@ namespace Protobuf.Lobby {
     [pbr::OriginalName("PlayerLeave")] PlayerLeave = 10003,
     [pbr::OriginalName("AskCreateRoom")] AskCreateRoom = 10005,
     [pbr::OriginalName("AskEnterRoom")] AskEnterRoom = 10007,
+    [pbr::OriginalName("AskRoomList")] AskRoomList = 10009,
   }
 
   /// <summary>
@@ -65,6 +67,7 @@ namespace Protobuf.Lobby {
     [pbr::OriginalName("PlayerLeaveReply")] PlayerLeaveReply = 10004,
     [pbr::OriginalName("AskCreateRoomReply")] AskCreateRoomReply = 10006,
     [pbr::OriginalName("AskEnterRoomReplay")] AskEnterRoomReplay = 10008,
+    [pbr::OriginalName("AskRoomListReply")] AskRoomListReply = 10010,
   }
 
   #endregion

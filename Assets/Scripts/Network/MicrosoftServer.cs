@@ -146,7 +146,6 @@ public class MicrosoftServer
         //Console.WriteLine("{0} connected sockets with one outstanding receive posted to each....press any key", m_outstandingReadCount);
         //Console.WriteLine("Press any key to terminate the server process....");
         //Console.ReadKey();
-        Completed?.Invoke(null, SocketAction.Listen);
     }
 
     public void Stop()

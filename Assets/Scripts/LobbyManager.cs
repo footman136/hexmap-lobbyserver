@@ -16,6 +16,12 @@ public class LobbyManager : MonoBehaviour
     
     private string receive_str;
 
+    // 玩家的集合，Key是玩家的TokenId，因为真正的账号系统我们不一定能够获得玩家的账号名
+    public Dictionary<long, PlayerInfo> Players { set; get; }
+    
+    // 房间的集合，Key是房间的唯一ID
+    public Dictionary<long, RoomInfo> Rooms { set; get; }
+
     void Awake()
     {
         if (Instance != null)
@@ -23,6 +29,8 @@ public class LobbyManager : MonoBehaviour
             Debug.LogError("LobbyManager must be Singleton! 必须是单例！！！");
         }
         Instance = this;
+        Players = new Dictionary<long, PlayerInfo>();
+        Rooms = new Dictionary<long, RoomInfo>();
     }
     
     // Start is called before the first frame update
@@ -87,8 +95,11 @@ public class LobbyManager : MonoBehaviour
     {
         if (receive_str != null)
         {
-            var style = GUILayout.Width(600);
+            var style = GUILayout.Width(600) ;
             GUILayout.Label (receive_str, style);
+            GUILayoutOption[] style2 = new GUILayoutOption[2] {style, GUILayout.Height(60)};
+            string msg = $"----Player Count:{Players.Count} - Room Count:{Rooms.Count}";
+            GUILayout.Label (msg, style2);
         }
     }
     
