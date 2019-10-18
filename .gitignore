@@ -13,3 +13,4 @@ obj
 Temp
 .idea.hexmap-lobbyserver
 .idea.hexmap-server
+/Assembly-CSharp.csproj
