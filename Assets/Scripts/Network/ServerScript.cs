@@ -6,11 +6,9 @@
 /// 
 /// 
 using UnityEngine;
-using System.Collections;
 using System;
 using System.Net;
 using System.Net.Sockets;
-using System.Xml.Xsl;
 
 public class ServerScript : MonoBehaviour {
 
@@ -27,10 +25,10 @@ public class ServerScript : MonoBehaviour {
     public int ClientCount => _server.ClientCount;
     public int MaxClientCount => _server.MaxClientCount;
     public string Address => _server.Address;
-    public int Port => _server.Port; 
-    
-    public bool IsReady;
+    public int Port => _server.Port;
 
+    public bool IsReady;
+    
     // Use this for initialization
     void Start()
     {
@@ -43,9 +41,9 @@ public class ServerScript : MonoBehaviour {
         //IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, PORT);
         _server.Start(localEndPoint);
         _server.Completed += OnComplete;
-       
+
         string msg = $"Server is listening at address - {_server.Address}:{_server.Port} ...";
-        Debug.Log(msg);
+        Log(msg);
         IsReady = true;
     }
 
@@ -53,10 +51,10 @@ public class ServerScript : MonoBehaviour {
     {
         _server.Completed -= OnComplete;
         _server.Stop();
-        Debug.Log("Server Stopped.");
+        Log("Server Stopped.");
     }
 
-    void OnReceive(SocketAsyncEventArgs args, byte[] content, int offset, int size)
+    private void OnReceive(SocketAsyncEventArgs args, byte[] content, int offset, int size)
     {
         try
         {
@@ -71,7 +69,7 @@ public class ServerScript : MonoBehaviour {
         }
     }
 
-    void OnComplete(SocketAsyncEventArgs args, ServerSocketAction action)
+    private void OnComplete(SocketAsyncEventArgs args, ServerSocketAction action)
     {
         try
         {
@@ -80,7 +78,6 @@ public class ServerScript : MonoBehaviour {
         catch (Exception e)
         {
             Debug.LogError($"Server OnComplete() Exception - {e}");
-            throw;
         }
     }
 
@@ -100,5 +97,10 @@ public class ServerScript : MonoBehaviour {
     {
         byte[] dataBytes = System.Text.Encoding.UTF8.GetBytes(dataStr);
         _server.Send(args, dataBytes, dataBytes.Length);
+    }
+
+    public void Log(string msg)
+    {
+        _server.Log(msg);
     }
 }

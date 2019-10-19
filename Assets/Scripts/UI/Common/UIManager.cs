@@ -93,7 +93,7 @@ public class UIManager : MonoBehaviour
 
     public void EndConnecting(bool destroy = false)
     {
-        if (_panelConnecting == null)
+        if (_panelConnecting != null)
         {
             if (destroy)
             {

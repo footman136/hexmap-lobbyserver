@@ -36,6 +36,7 @@ public class MicrosoftServer
     public int MaxClientCount => m_numConnections;
     public int Port { get; private set; }
     public string Address { get; private set; }
+    public bool LogEnabled;
     
     //定义接收数据的对象  
     List<byte> m_buffer; // 把这个定义成为链表，我也是服了。。。       
@@ -63,6 +64,8 @@ public class MicrosoftServer
         m_numConnections = numConnections;
         m_receiveBufferSize = receiveBufferSize;
         receiveCallBack = rcb;
+
+        LogEnabled = true;
         // allocate buffers such that the maximum number of sockets can have one outstanding read and 
         //write posted to the socket simultaneously  
         m_bufferManager = new BufferManager(receiveBufferSize * numConnections * opsToPreAlloc,
@@ -187,7 +190,14 @@ public class MicrosoftServer
     //
     void AcceptEventArg_Completed(object sender, SocketAsyncEventArgs e)
     {
-        ProcessAccept(e);
+        try
+        {
+            ProcessAccept(e);
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("Exception - AcceptEvent - Completed...");            
+        }
     }
 
     private void ProcessAccept(SocketAsyncEventArgs e)
@@ -272,7 +282,7 @@ public class MicrosoftServer
                 // 真正的互联网环境下会有消息包被截断的情况，所以发送的时候必须在开始定义4个字节的包长度，目前是测试阶段，暂时不开放。
 //                //读取数据  
 //                byte[] data = new byte[e.BytesTransferred];
-//                Debug.Log($"Server Found data received - {e.BytesTransferred} byts");
+//                Log($"Server Found data received - {e.BytesTransferred} byts");
 //                Array.Copy(e.Buffer, e.Offset, data, 0, e.BytesTransferred);  
 //                lock (m_buffer)  
 //                {  
@@ -295,7 +305,7 @@ public class MicrosoftServer
 //                            m_buffer.RemoveRange(0, packageLen + 4);  
 //                        }  
 //                        //将数据包交给前台去处理  
-//                        Completed?.Invoke(e, SocketAction.Receive);
+//                        Completed?.Invoke(e, ServerSocketAction.Receive);
 //                        receiveCallBack?.Invoke(e, rev, rev.Length);
 //                    }  
 //                    else  
@@ -380,6 +390,9 @@ public class MicrosoftServer
         // close the socket associated with the client
         try
         {
+            //Console.WriteLine("A client has been disconnected from the server. There are {0} clients connected to the server", m_numConnectedSockets);
+            Completed?.Invoke(e, ServerSocketAction.Drop);
+            
             token.Socket.Shutdown(SocketShutdown.Send);
         }
         // throws if client process has already closed
@@ -393,8 +406,12 @@ public class MicrosoftServer
         m_readPool.Push(e);
         
         m_maxNumberAcceptedClients.Release();
-        //Console.WriteLine("A client has been disconnected from the server. There are {0} clients connected to the server", m_numConnectedSockets);
-        Completed?.Invoke(e, ServerSocketAction.Drop);
+    }
+
+    public void Log(string msg)
+    {
+        if(LogEnabled)
+            Debug.Log(msg);
     }
 
     class SocketAsyncEventArgsPool

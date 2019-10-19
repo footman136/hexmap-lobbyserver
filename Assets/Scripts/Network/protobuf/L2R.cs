@@ -24,15 +24,16 @@ namespace Protobuf.Lobby {
     static L2RReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CglMMlIucHJvdG8SDlByb3RvYnVmLkxvYmJ5Im4KD1Jvb21TZXJ2ZXJMb2dp",
-            "bhISCgpTZXJ2ZXJOYW1lGAEgASgJEhAKCFNlcnZlcklkGAIgASgDEg8KB0Fk",
-            "ZHJlc3MYAyABKAkSDAoEUG9ydBgEIAEoBRIWCg5NYXhQbGF5ZXJDb3VudBgF",
-            "IAEoBSIjChRSb29tU2VydmVyTG9naW5SZXBseRILCgNSZXQYASABKAhiBnBy",
-            "b3RvMw=="));
+            "CglMMlIucHJvdG8SDlByb3RvYnVmLkxvYmJ5IpwBCg9Sb29tU2VydmVyTG9n",
+            "aW4SEgoKU2VydmVyTmFtZRgBIAEoCRIQCghTZXJ2ZXJJZBgCIAEoAxIPCgdB",
+            "ZGRyZXNzGAMgASgJEgwKBFBvcnQYBCABKAUSFAoMTWF4Um9vbUNvdW50GAUg",
+            "ASgFEhQKDEN1clJvb21Db3VudBgGIAEoBRIYChBNYXhQbGF5ZXJQZXJSb29t",
+            "GAcgASgFIiMKFFJvb21TZXJ2ZXJMb2dpblJlcGx5EgsKA1JldBgBIAEoCGIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomServerLogin), global::Protobuf.Lobby.RoomServerLogin.Parser, new[]{ "ServerName", "ServerId", "Address", "Port", "MaxPlayerCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomServerLogin), global::Protobuf.Lobby.RoomServerLogin.Parser, new[]{ "ServerName", "ServerId", "Address", "Port", "MaxRoomCount", "CurRoomCount", "MaxPlayerPerRoom" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomServerLoginReply), global::Protobuf.Lobby.RoomServerLoginReply.Parser, new[]{ "Ret" }, null, null, null, null)
           }));
     }
@@ -69,7 +70,9 @@ namespace Protobuf.Lobby {
       serverId_ = other.serverId_;
       address_ = other.address_;
       port_ = other.port_;
-      maxPlayerCount_ = other.maxPlayerCount_;
+      maxRoomCount_ = other.maxRoomCount_;
+      curRoomCount_ = other.curRoomCount_;
+      maxPlayerPerRoom_ = other.maxPlayerPerRoom_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -122,14 +125,36 @@ namespace Protobuf.Lobby {
       }
     }
 
-    /// <summary>Field number for the "MaxPlayerCount" field.</summary>
-    public const int MaxPlayerCountFieldNumber = 5;
-    private int maxPlayerCount_;
+    /// <summary>Field number for the "MaxRoomCount" field.</summary>
+    public const int MaxRoomCountFieldNumber = 5;
+    private int maxRoomCount_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MaxPlayerCount {
-      get { return maxPlayerCount_; }
+    public int MaxRoomCount {
+      get { return maxRoomCount_; }
       set {
-        maxPlayerCount_ = value;
+        maxRoomCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CurRoomCount" field.</summary>
+    public const int CurRoomCountFieldNumber = 6;
+    private int curRoomCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CurRoomCount {
+      get { return curRoomCount_; }
+      set {
+        curRoomCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MaxPlayerPerRoom" field.</summary>
+    public const int MaxPlayerPerRoomFieldNumber = 7;
+    private int maxPlayerPerRoom_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxPlayerPerRoom {
+      get { return maxPlayerPerRoom_; }
+      set {
+        maxPlayerPerRoom_ = value;
       }
     }
 
@@ -150,7 +175,9 @@ namespace Protobuf.Lobby {
       if (ServerId != other.ServerId) return false;
       if (Address != other.Address) return false;
       if (Port != other.Port) return false;
-      if (MaxPlayerCount != other.MaxPlayerCount) return false;
+      if (MaxRoomCount != other.MaxRoomCount) return false;
+      if (CurRoomCount != other.CurRoomCount) return false;
+      if (MaxPlayerPerRoom != other.MaxPlayerPerRoom) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,7 +188,9 @@ namespace Protobuf.Lobby {
       if (ServerId != 0L) hash ^= ServerId.GetHashCode();
       if (Address.Length != 0) hash ^= Address.GetHashCode();
       if (Port != 0) hash ^= Port.GetHashCode();
-      if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
+      if (MaxRoomCount != 0) hash ^= MaxRoomCount.GetHashCode();
+      if (CurRoomCount != 0) hash ^= CurRoomCount.GetHashCode();
+      if (MaxPlayerPerRoom != 0) hash ^= MaxPlayerPerRoom.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -191,9 +220,17 @@ namespace Protobuf.Lobby {
         output.WriteRawTag(32);
         output.WriteInt32(Port);
       }
-      if (MaxPlayerCount != 0) {
+      if (MaxRoomCount != 0) {
         output.WriteRawTag(40);
-        output.WriteInt32(MaxPlayerCount);
+        output.WriteInt32(MaxRoomCount);
+      }
+      if (CurRoomCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(CurRoomCount);
+      }
+      if (MaxPlayerPerRoom != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(MaxPlayerPerRoom);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -215,8 +252,14 @@ namespace Protobuf.Lobby {
       if (Port != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Port);
       }
-      if (MaxPlayerCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
+      if (MaxRoomCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxRoomCount);
+      }
+      if (CurRoomCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CurRoomCount);
+      }
+      if (MaxPlayerPerRoom != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerPerRoom);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -241,8 +284,14 @@ namespace Protobuf.Lobby {
       if (other.Port != 0) {
         Port = other.Port;
       }
-      if (other.MaxPlayerCount != 0) {
-        MaxPlayerCount = other.MaxPlayerCount;
+      if (other.MaxRoomCount != 0) {
+        MaxRoomCount = other.MaxRoomCount;
+      }
+      if (other.CurRoomCount != 0) {
+        CurRoomCount = other.CurRoomCount;
+      }
+      if (other.MaxPlayerPerRoom != 0) {
+        MaxPlayerPerRoom = other.MaxPlayerPerRoom;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -272,7 +321,15 @@ namespace Protobuf.Lobby {
             break;
           }
           case 40: {
-            MaxPlayerCount = input.ReadInt32();
+            MaxRoomCount = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            CurRoomCount = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            MaxPlayerPerRoom = input.ReadInt32();
             break;
           }
         }

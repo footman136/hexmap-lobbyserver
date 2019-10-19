@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.Sockets;
+using Protobuf.Lobby;
 using UnityEngine;
 
 public class PlayerInfo
 {
-    public long TokenId;
-
-    public string Account;
+    public PlayerEnter Enter;
 
     public bool IsOnLine;
 

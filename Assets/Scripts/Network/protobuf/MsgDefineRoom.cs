@@ -24,12 +24,13 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKlsKBFJPT00S",
-            "DAoITXNnU3RhcnQQABIQCgpDcmVhdGVSb29tEKGcARIRCgtEZXN0cm95Um9v",
-            "bRCjnAESDwoJRW50ZXJSb29tEKWcARIPCglMZWF2ZVJvb20Qp5wBKnoKClJP",
-            "T01fUkVQTFkSEQoNTXNnU3RhcnRSZXBseRAAEhUKD0NyZWF0ZVJvb21SZXBs",
-            "eRCinAESFgoQRGVzdHJveVJvb21SZXBseRCknAESFAoORW50ZXJSb29tUmVw",
-            "bHkQppwBEhQKDkxlYXZlUm9vbVJlcGx5EKicAWIGcHJvdG8z"));
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKm4KBFJPT00S",
+            "DAoITXNnU3RhcnQQABIRCgtQbGF5ZXJFbnRlchChnAESEAoKQ3JlYXRlUm9v",
+            "bRCjnAESEQoLRGVzdHJveVJvb20QpZwBEg8KCUVudGVyUm9vbRCnnAESDwoJ",
+            "TGVhdmVSb29tEKmcASqSAQoKUk9PTV9SRVBMWRIRCg1Nc2dTdGFydFJlcGx5",
+            "EAASFgoQUGxheWVyRW50ZXJSZXBseRCinAESFQoPQ3JlYXRlUm9vbVJlcGx5",
+            "EKScARIWChBEZXN0cm95Um9vbVJlcGx5EKWcARIUCg5FbnRlclJvb21SZXBs",
+            "eRConAESFAoOTGVhdmVSb29tUmVwbHkQypoMYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -46,10 +47,11 @@ namespace Protobuf.Room {
     /// proto3枚举的第一个成员必须是0
     /// </summary>
     [pbr::OriginalName("MsgStart")] MsgStart = 0,
-    [pbr::OriginalName("CreateRoom")] CreateRoom = 20001,
-    [pbr::OriginalName("DestroyRoom")] DestroyRoom = 20003,
-    [pbr::OriginalName("EnterRoom")] EnterRoom = 20005,
-    [pbr::OriginalName("LeaveRoom")] LeaveRoom = 20007,
+    [pbr::OriginalName("PlayerEnter")] PlayerEnter = 20001,
+    [pbr::OriginalName("CreateRoom")] CreateRoom = 20003,
+    [pbr::OriginalName("DestroyRoom")] DestroyRoom = 20005,
+    [pbr::OriginalName("EnterRoom")] EnterRoom = 20007,
+    [pbr::OriginalName("LeaveRoom")] LeaveRoom = 20009,
   }
 
   /// <summary>
@@ -60,10 +62,11 @@ namespace Protobuf.Room {
     /// proto3枚举的第一个成员必须是0
     /// </summary>
     [pbr::OriginalName("MsgStartReply")] MsgStartReply = 0,
-    [pbr::OriginalName("CreateRoomReply")] CreateRoomReply = 20002,
-    [pbr::OriginalName("DestroyRoomReply")] DestroyRoomReply = 20004,
-    [pbr::OriginalName("EnterRoomReply")] EnterRoomReply = 20006,
-    [pbr::OriginalName("LeaveRoomReply")] LeaveRoomReply = 20008,
+    [pbr::OriginalName("PlayerEnterReply")] PlayerEnterReply = 20002,
+    [pbr::OriginalName("CreateRoomReply")] CreateRoomReply = 20004,
+    [pbr::OriginalName("DestroyRoomReply")] DestroyRoomReply = 20005,
+    [pbr::OriginalName("EnterRoomReply")] EnterRoomReply = 20008,
+    [pbr::OriginalName("LeaveRoomReply")] LeaveRoomReply = 200010,
   }
 
   #endregion
