@@ -31,9 +31,14 @@ namespace Protobuf.Room {
             "ZXBseRIOCgZSb29tSWQYASABKAMiHQoLRGVzdHJveVJvb20SDgoGUm9vbUlk",
             "GAEgASgDIh8KEERlc3Ryb3lSb29tUmVwbHkSCwoDUmV0GAEgASgIIjIKCUVu",
             "dGVyUm9vbRIOCgZSb29tSWQYASABKAMSFQoNUGxheWVyVG9rZW5JZBgCIAEo",
-            "AyIdCg5FbnRlclJvb21SZXBseRILCgNSZXQYASABKAgiMgoJTGVhdmVSb29t",
-            "Eg4KBlJvb21JZBgBIAEoAxIVCg1QbGF5ZXJUb2tlbklkGAIgASgDIh0KDkxl",
-            "YXZlUm9vbVJlcGx5EgsKA1JldBgBIAEoCGIGcHJvdG8z"));
+            "AyIdCg5FbnRlclJvb21SZXBseRILCgNSZXQYASABKAgicgoJVXBsb2FkTWFw",
+            "EhAKCHJvb21OYW1lGAEgASgFEhYKDk1heFBsYXllckNvdW50GAIgASgFEhQK",
+            "DFBhY2thZ2VDb3VudBgDIAEoBRIUCgxQYWNrYWdlSW5kZXgYBCABKAUSDwoH",
+            "TWFwRGF0YRgFIAEoDCJbCg5VcGxvYWRNYXBSZXBseRILCgNyZXQYASABKAgS",
+            "FgoOTWF4UGxheWVyQ291bnQYAiABKAUSFAoMUGFja2FnZUNvdW50GAMgASgF",
+            "Eg4KBlJvb21JZBgEIAEoAyIyCglMZWF2ZVJvb20SDgoGUm9vbUlkGAEgASgD",
+            "EhUKDVBsYXllclRva2VuSWQYAiABKAMiHQoOTGVhdmVSb29tUmVwbHkSCwoD",
+            "UmV0GAEgASgIYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -45,6 +50,8 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DestroyRoomReply), global::Protobuf.Room.DestroyRoomReply.Parser, new[]{ "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoom), global::Protobuf.Room.EnterRoom.Parser, new[]{ "RoomId", "PlayerTokenId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoomReply), global::Protobuf.Room.EnterRoomReply.Parser, new[]{ "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMap), global::Protobuf.Room.UploadMap.Parser, new[]{ "RoomName", "MaxPlayerCount", "PackageCount", "PackageIndex", "MapData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMapReply), global::Protobuf.Room.UploadMapReply.Parser, new[]{ "Ret", "MaxPlayerCount", "PackageCount", "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.LeaveRoom), global::Protobuf.Room.LeaveRoom.Parser, new[]{ "RoomId", "PlayerTokenId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.LeaveRoomReply), global::Protobuf.Room.LeaveRoomReply.Parser, new[]{ "Ret" }, null, null, null, null)
           }));
@@ -1169,6 +1176,460 @@ namespace Protobuf.Room {
 
   }
 
+  public sealed partial class UploadMap : pb::IMessage<UploadMap> {
+    private static readonly pb::MessageParser<UploadMap> _parser = new pb::MessageParser<UploadMap>(() => new UploadMap());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UploadMap> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMap() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMap(UploadMap other) : this() {
+      roomName_ = other.roomName_;
+      maxPlayerCount_ = other.maxPlayerCount_;
+      packageCount_ = other.packageCount_;
+      packageIndex_ = other.packageIndex_;
+      mapData_ = other.mapData_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMap Clone() {
+      return new UploadMap(this);
+    }
+
+    /// <summary>Field number for the "roomName" field.</summary>
+    public const int RoomNameFieldNumber = 1;
+    private int roomName_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int RoomName {
+      get { return roomName_; }
+      set {
+        roomName_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MaxPlayerCount" field.</summary>
+    public const int MaxPlayerCountFieldNumber = 2;
+    private int maxPlayerCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxPlayerCount {
+      get { return maxPlayerCount_; }
+      set {
+        maxPlayerCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PackageCount" field.</summary>
+    public const int PackageCountFieldNumber = 3;
+    private int packageCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PackageCount {
+      get { return packageCount_; }
+      set {
+        packageCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PackageIndex" field.</summary>
+    public const int PackageIndexFieldNumber = 4;
+    private int packageIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PackageIndex {
+      get { return packageIndex_; }
+      set {
+        packageIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MapData" field.</summary>
+    public const int MapDataFieldNumber = 5;
+    private pb::ByteString mapData_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString MapData {
+      get { return mapData_; }
+      set {
+        mapData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UploadMap);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UploadMap other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomName != other.RoomName) return false;
+      if (MaxPlayerCount != other.MaxPlayerCount) return false;
+      if (PackageCount != other.PackageCount) return false;
+      if (PackageIndex != other.PackageIndex) return false;
+      if (MapData != other.MapData) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomName != 0) hash ^= RoomName.GetHashCode();
+      if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
+      if (PackageCount != 0) hash ^= PackageCount.GetHashCode();
+      if (PackageIndex != 0) hash ^= PackageIndex.GetHashCode();
+      if (MapData.Length != 0) hash ^= MapData.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomName != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(RoomName);
+      }
+      if (MaxPlayerCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MaxPlayerCount);
+      }
+      if (PackageCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PackageCount);
+      }
+      if (PackageIndex != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PackageIndex);
+      }
+      if (MapData.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(MapData);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomName != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RoomName);
+      }
+      if (MaxPlayerCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
+      }
+      if (PackageCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PackageCount);
+      }
+      if (PackageIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PackageIndex);
+      }
+      if (MapData.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(MapData);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UploadMap other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomName != 0) {
+        RoomName = other.RoomName;
+      }
+      if (other.MaxPlayerCount != 0) {
+        MaxPlayerCount = other.MaxPlayerCount;
+      }
+      if (other.PackageCount != 0) {
+        PackageCount = other.PackageCount;
+      }
+      if (other.PackageIndex != 0) {
+        PackageIndex = other.PackageIndex;
+      }
+      if (other.MapData.Length != 0) {
+        MapData = other.MapData;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomName = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            MaxPlayerCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PackageCount = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            PackageIndex = input.ReadInt32();
+            break;
+          }
+          case 42: {
+            MapData = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UploadMapReply : pb::IMessage<UploadMapReply> {
+    private static readonly pb::MessageParser<UploadMapReply> _parser = new pb::MessageParser<UploadMapReply>(() => new UploadMapReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UploadMapReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMapReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMapReply(UploadMapReply other) : this() {
+      ret_ = other.ret_;
+      maxPlayerCount_ = other.maxPlayerCount_;
+      packageCount_ = other.packageCount_;
+      roomId_ = other.roomId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMapReply Clone() {
+      return new UploadMapReply(this);
+    }
+
+    /// <summary>Field number for the "ret" field.</summary>
+    public const int RetFieldNumber = 1;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MaxPlayerCount" field.</summary>
+    public const int MaxPlayerCountFieldNumber = 2;
+    private int maxPlayerCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxPlayerCount {
+      get { return maxPlayerCount_; }
+      set {
+        maxPlayerCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PackageCount" field.</summary>
+    public const int PackageCountFieldNumber = 3;
+    private int packageCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PackageCount {
+      get { return packageCount_; }
+      set {
+        packageCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 4;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UploadMapReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UploadMapReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ret != other.Ret) return false;
+      if (MaxPlayerCount != other.MaxPlayerCount) return false;
+      if (PackageCount != other.PackageCount) return false;
+      if (RoomId != other.RoomId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
+      if (PackageCount != 0) hash ^= PackageCount.GetHashCode();
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ret != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Ret);
+      }
+      if (MaxPlayerCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MaxPlayerCount);
+      }
+      if (PackageCount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PackageCount);
+      }
+      if (RoomId != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(RoomId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (MaxPlayerCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
+      }
+      if (PackageCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PackageCount);
+      }
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UploadMapReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      if (other.MaxPlayerCount != 0) {
+        MaxPlayerCount = other.MaxPlayerCount;
+      }
+      if (other.PackageCount != 0) {
+        PackageCount = other.PackageCount;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Ret = input.ReadBool();
+            break;
+          }
+          case 16: {
+            MaxPlayerCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PackageCount = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class LeaveRoom : pb::IMessage<LeaveRoom> {
     private static readonly pb::MessageParser<LeaveRoom> _parser = new pb::MessageParser<LeaveRoom>(() => new LeaveRoom());
     private pb::UnknownFieldSet _unknownFields;
@@ -1177,7 +1638,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1334,7 +1795,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

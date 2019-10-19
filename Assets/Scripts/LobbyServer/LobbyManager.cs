@@ -30,7 +30,7 @@ public class LobbyManager : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.LogError("LobbyManager must be Singleton! 必须是单例！！！");
+            Debug.LogError("LobbyManager is Singleton! Cannot be created again!");
         }
         Instance = this;
         Players = new Dictionary<SocketAsyncEventArgs, PlayerInfo>();

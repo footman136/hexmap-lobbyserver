@@ -133,7 +133,7 @@ public class LobbyMsgReply
         {
             RoomServerInfo roomServerInfo = keyValue.Value;
             RoomServerLogin roomServer = roomServerInfo.Login;
-            if (roomServer.CurRoomCount < roomServer.MaxRoomCount
+            if (LobbyManager.Instance.Rooms.Count < roomServer.MaxRoomCount
                 && input.MaxPlayerCount < roomServer.MaxPlayerPerRoom)
             {
                 theRoomServer = roomServer;
@@ -156,6 +156,8 @@ public class LobbyMsgReply
                 Ret = true,
                 RoomServerAddress = theRoomServer.Address,
                 RoomServerPort = theRoomServer.Port,
+                MaxPlayerCount = input.MaxPlayerCount,
+                RoomName = input.RoomName,
             };
             
             LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskCreateRoomReply, output.ToByteArray());
