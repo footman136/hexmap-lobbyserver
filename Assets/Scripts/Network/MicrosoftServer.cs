@@ -46,7 +46,7 @@ public class MicrosoftServer
     public delegate void ReceiveCallBack(SocketAsyncEventArgs s, byte[] content, int offset, int size);
     private ReceiveCallBack receiveCallBack;
 
-    public event Action<SocketAsyncEventArgs, SocketAction> Completed; 
+    public event Action<SocketAsyncEventArgs, ServerSocketAction> Completed; 
     
     #region 初始化
     // Create an uninitialized server instance.  
@@ -151,7 +151,7 @@ public class MicrosoftServer
     public void Stop()
     {
         listenSocket.Close();
-        Completed?.Invoke(null, SocketAction.Close);
+        Completed?.Invoke(null, ServerSocketAction.Close);
     }
     #endregion
 
@@ -201,7 +201,7 @@ public class MicrosoftServer
         SocketAsyncEventArgs readEventArgs = m_readPool.Pop();
         ((AsyncUserToken)readEventArgs.UserToken).Socket = e.AcceptSocket;
         
-        Completed?.Invoke(e, SocketAction.Accept); // 触发事件
+        Completed?.Invoke(e, ServerSocketAction.Accept); // 触发事件
 
         // As soon as the client is connected, post a receive to the connection
         bool willRaiseEvent = e.AcceptSocket.ReceiveAsync(readEventArgs);
@@ -260,7 +260,7 @@ public class MicrosoftServer
             try
             {
                 // 消息提交外部的回调函数处理
-                Completed?.Invoke(e, SocketAction.Receive);
+                Completed?.Invoke(e, ServerSocketAction.Receive);
                 receiveCallBack?.Invoke(e, e.Buffer, e.Offset, e.BytesTransferred);
                 
                 if (!token.Socket.ReceiveAsync(e))//为接收下一段数据，投递接收请求，这个函数有可能同步完成，这时返回false，并且不会引发SocketAsyncEventArgs.Completed事件
@@ -321,7 +321,7 @@ public class MicrosoftServer
                 string dataStr = System.Text.Encoding.UTF8.GetString(e.Buffer);
                 string errorMsg = $"Server ProcessReceive() Exception - size:{size} - data:{dataStr} - {exp}";
                 e.SetBuffer(System.Text.Encoding.UTF8.GetBytes(errorMsg), 0, errorMsg.Length);
-                Completed?.Invoke(e, SocketAction.Error);
+                Completed?.Invoke(e, ServerSocketAction.Error);
                 throw;
             }
         }
@@ -343,7 +343,7 @@ public class MicrosoftServer
         if (e.SocketError == SocketError.Success)
         {
             m_writePool.Push(e);
-            Completed?.Invoke(e, SocketAction.Send);
+            Completed?.Invoke(e, ServerSocketAction.Send);
             // done echoing data back to the client
             //AsyncUserToken token = (AsyncUserToken)e.UserToken;
             // read the next block of data send from the client
@@ -394,7 +394,7 @@ public class MicrosoftServer
         
         m_maxNumberAcceptedClients.Release();
         //Console.WriteLine("A client has been disconnected from the server. There are {0} clients connected to the server", m_numConnectedSockets);
-        Completed?.Invoke(e, SocketAction.Drop);
+        Completed?.Invoke(e, ServerSocketAction.Drop);
     }
 
     class SocketAsyncEventArgsPool
@@ -427,7 +427,7 @@ public class MicrosoftServer
 /// <summary>
 /// 接收socket的行为
 /// </summary>
-public enum SocketAction
+public enum ServerSocketAction
 {
     /// <summary>
     /// socket发生连接

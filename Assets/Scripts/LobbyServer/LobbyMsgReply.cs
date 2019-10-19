@@ -7,8 +7,6 @@ using System.Runtime.InteropServices;
 using Google.Protobuf;
 // https://blog.csdn.net/u014308482/article/details/52958148
 using Protobuf.Lobby;
-using UnityEditorInternal;
-using UnityEngine.Experimental.PlayerLoop;
 using Random = System.Random;
 
 // https://github.com/LitJSON/litjson
@@ -47,6 +45,9 @@ public class LobbyMsgReply
                 case LOBBY.AskRoomList:
                     ASK_ROOM_LIST(recvData);
                     break;
+                case LOBBY.RoomServerLogin:
+                    ROOM_SERVER_LOGIN(recvData);
+                    break;
             }
         }
         catch (Exception e)
@@ -54,7 +55,8 @@ public class LobbyMsgReply
             Debug.LogError($"Exception - LobbyMsgReply - {e}");
         }
     }
-
+    
+#region 客户端消息处理
     static void PLAYER_ENTER(byte[] bytes)
     {
         PlayerEnter input = PlayerEnter.Parser.ParseFrom(bytes);
@@ -66,7 +68,7 @@ public class LobbyMsgReply
             ret = LobbyManager.Instance.Redis.CSRedis.HSet(input.TokenId.ToString(), "Account", input.Account);
             if (ret)
             {
-                Debug.Log($"MSG： 新用户创建！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
+                Debug.Log($"MSG：新用户创建！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
             }
         }
         else
@@ -119,4 +121,21 @@ public class LobbyMsgReply
         }
         LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskRoomListReply, output.ToByteArray());
     }
+#endregion
+    
+#region 房间服务器消息处理
+    static void ROOM_SERVER_LOGIN(byte[] bytes)
+    {
+        RoomServerLogin input = RoomServerLogin.Parser.ParseFrom(bytes);
+        LobbyManager.Instance.RoomServers[input.ServerId] = input;
+        
+        RoomServerLoginReply output = new RoomServerLoginReply()
+        {
+            Ret = true,
+        };
+        Debug.Log($"MSG: 房间服务器登录成功！地址:{input.ServerName}");
+        // 返回消息
+        LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.RoomServerLoginReply, output.ToByteArray());
+    }
+#endregion
 }

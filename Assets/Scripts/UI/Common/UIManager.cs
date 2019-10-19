@@ -1,27 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private Transform _rootLobby;
-    [SerializeField] private Transform _rootInGame;
-    [SerializeField] private Transform _rootLogo;
-    
-    public Transform RootLogo
-    {
-        get { return _rootLogo; }
-    }
-
-    public Transform RootLobby
-    {
-        get { return _rootLobby; }
-    }
-
-    public Transform RootInGame
-    {
-        get { return _rootInGame; }
-    }
+    [SerializeField] private Transform _root;
+    public Transform Root => _root;
     
     private static UIManager _inst;
     public static UIManager Instance => _inst;
@@ -41,7 +27,7 @@ public class UIManager : MonoBehaviour
     {
         
     }
-#region 杂项    
+    #region 杂项    
     public bool IsPointerOverGameObject(Vector2 screenPosition)
     {
         //实例化点击事件
@@ -58,19 +44,101 @@ public class UIManager : MonoBehaviour
 //    ————————————————
 //    版权声明：本文为CSDN博主「PassionY」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
 //    原文链接：https://blog.csdn.net/yupu56/article/details/54561553    
+    
+    #endregion
+    
+    #region Loading界面
+    private GameObject _goLoading;
+    public void BeginLoading()
+    {
+        if (_goLoading == null)
+        {
+            _goLoading = CreatePanel(_root, "", "UI/Common/PanelLoading");
+        }
+        else
+        {
+            ShowPanel(_goLoading, true);
+        }
+    }
 
-    private PanelSystemTips _systemTips;
+    public void EndLoading(bool destroy = false)
+    {
+        if (_goLoading != null)
+        {
+            if (destroy)
+            {
+                DestroyPanel(ref _goLoading);
+            }
+            else
+            {
+                ShowPanel(_goLoading, false);
+            }
+        }
+    }
+    #endregion
+    
+    #region 网络连接界面
+    private GameObject _panelConnecting; 
+    public void BeginConnecting()
+    {
+        if (_panelConnecting == null)
+        {
+            _panelConnecting = CreatePanel(_root, "", "UI/Common/PanelConnecting");
+        }
+        else
+        {
+            ShowPanel(_panelConnecting, false);
+        }
+    }
+
+    public void EndConnecting(bool destroy = false)
+    {
+        if (_panelConnecting == null)
+        {
+            if (destroy)
+            {
+                DestroyPanel(ref _panelConnecting);
+            }
+            else
+            {
+                ShowPanel(_panelConnecting, false);
+            }
+        }
+    }
+    #endregion
+    
+    #region SystemTips
+
+    public List<SystemTipsParam> SystemTipsList
+    {
+        get { return _systemTipsList; }
+        set { _systemTipsList = value; }
+    }
+
+    public struct SystemTipsParam
+    {
+        public PanelSystemTips.MessageType _type;
+        public string _msg;
+        public PanelSystemTips _tips;
+    }
+    private List<SystemTipsParam> _systemTipsList;
+    private bool _systemTipsPlaying = false;
     public void SystemTips(string msg, PanelSystemTips.MessageType msgType)
     {
-        if (_systemTips == null)
+        if (_systemTipsList == null)
         {
+            _systemTipsList = new List<SystemTipsParam>();
+        }
+
+        PanelSystemTips systemTips = null;
+        { // pool里空了，创建一个新的
             var go = Resources.Load("UI/Common/PanelSystemTips");
             if (go!=null)
             {
                 var go2 = Instantiate(go, transform) as GameObject;
                 if (go2 != null)
                 {
-                    _systemTips = go2.GetComponent<PanelSystemTips>();
+                    systemTips = go2.GetComponent<PanelSystemTips>();
                 }
             }
             else
@@ -78,12 +146,42 @@ public class UIManager : MonoBehaviour
                 Debug.LogError("UI/PanelSystemTips not found!");
             }
         }
-        if (_systemTips != null)
+        
+        if (systemTips != null)
         {
-            _systemTips.Show(msg, msgType);
+            if (_systemTipsPlaying)
+            { // 当前动画正在播放，新增的动画就保存起来
+                SystemTipsParam stp = new SystemTipsParam()
+                {
+                    _type = msgType,
+                    _msg = msg,
+                    _tips = systemTips,
+                };
+                // 添加到播放链表
+                _systemTipsList.Add(stp);
+                systemTips.gameObject.SetActive(false);
+            }
+            else
+            { // 否则直接播放
+                systemTips.Show(msg, msgType, OnSystemTipsComplete);
+                _systemTipsPlaying = true;
+            }
         }
     }
 
+    void OnSystemTipsComplete()
+    {
+        _systemTipsPlaying = false;
+        if (_systemTipsList.Count > 0)
+        {
+            _systemTipsList[0]._tips.gameObject.SetActive(true);
+            _systemTipsList[0]._tips.Show(_systemTipsList[0]._msg, _systemTipsList[0]._type, OnSystemTipsComplete);
+            _systemTipsList.RemoveAt(0);
+        }
+    }
+    #endregion
+
+    #region CreatePanel
     /// <summary>
     /// 创建一个UI
     /// </summary>
@@ -104,6 +202,11 @@ public class UIManager : MonoBehaviour
         return null;
     }
 
+    public void ShowPanel(GameObject go, bool bShow)
+    {
+        go.SetActive(bShow);
+    }
+
     public static void DestroyPanel(ref GameObject go)
     {
         if (go != null)
@@ -112,13 +215,7 @@ public class UIManager : MonoBehaviour
             go = null;
         }
     }
-#endregion
+    
+    #endregion
 
-#region 大厅界面
-
-    public void ShowLobbyMenu(bool show)
-    {
-        
-    }
-#endregion
 }

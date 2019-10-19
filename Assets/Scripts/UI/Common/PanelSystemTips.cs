@@ -4,6 +4,8 @@ using System.Net.Mime;
 using UnityEngine;
 using UnityEngine.Assertions.Comparers;
 using UnityEngine.UI;
+using System;
+
 /// <summary>
 /// 系统信息，出现在屏幕上方，出现一段时间后自动消失，新消息会顶掉旧消息
 /// </summary>
@@ -23,6 +25,10 @@ public class PanelSystemTips : MonoBehaviour
     }
 
     private Vector3 _posSaved;
+    
+    public bool IsPlaying { get; set; }
+
+    public Action _Completed;
 
     void Awake()
     {
@@ -56,6 +62,8 @@ public class PanelSystemTips : MonoBehaviour
         _alphaStart = 1f;
         _alphaEnd = 0f;
         _group.alpha = _alphaStart;
+        IsPlaying = false;
+        _Completed?.Invoke();
     }
 
     // Update is called once per frame
@@ -80,8 +88,9 @@ public class PanelSystemTips : MonoBehaviour
         back.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, y);
     }
 
-    public void Show(string msg, MessageType msgType)
+    public void Show(string msg, MessageType msgType, Action Completed)
     {
+        _Completed = Completed;
         string strColorBeginFormat = "<color={0}>{1}{2}";
         string strColorEnd = "</color>";
         string msgWithColor = msg;
@@ -113,6 +122,7 @@ public class PanelSystemTips : MonoBehaviour
         
         StopAllCoroutines(); // 新消息顶掉旧消息
         StartCoroutine(PlayAnimation());
+        IsPlaying = true;
     }
     
 }

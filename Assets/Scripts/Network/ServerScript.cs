@@ -22,13 +22,15 @@ public class ServerScript : MonoBehaviour {
     byte[] ReceiveBuffer = new byte[BUFF_SIZE];
 
     public event Action<SocketAsyncEventArgs, byte[], int> Received;
-    public event Action<SocketAsyncEventArgs, SocketAction> Completed; 
+    public event Action<SocketAsyncEventArgs, ServerSocketAction> Completed; 
     
     public int ClientCount => _server.ClientCount;
     public int MaxClientCount => _server.MaxClientCount;
     public string Address => _server.Address;
     public int Port => _server.Port; 
     
+    public bool IsReady;
+
     // Use this for initialization
     void Start()
     {
@@ -44,6 +46,7 @@ public class ServerScript : MonoBehaviour {
        
         string msg = $"Server is listening at address - {_server.Address}:{_server.Port} ...";
         Debug.Log(msg);
+        IsReady = true;
     }
 
     void OnDestroy()
@@ -68,7 +71,7 @@ public class ServerScript : MonoBehaviour {
         }
     }
 
-    void OnComplete(SocketAsyncEventArgs args, SocketAction action)
+    void OnComplete(SocketAsyncEventArgs args, ServerSocketAction action)
     {
         try
         {
