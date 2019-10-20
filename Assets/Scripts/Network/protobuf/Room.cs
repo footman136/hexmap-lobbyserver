@@ -26,34 +26,32 @@ namespace Protobuf.Room {
           string.Concat(
             "Cgpyb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tIi8KC1BsYXllckVudGVyEg8K",
             "B0FjY291bnQYASABKAkSDwoHVG9rZW5JZBgCIAEoAyIfChBQbGF5ZXJFbnRl",
-            "clJlcGx5EgsKA1JldBgBIAEoCCI2CgpDcmVhdGVSb29tEhAKCHJvb21OYW1l",
-            "GAEgASgJEhYKDk1heFBsYXllckNvdW50GAUgASgFIiEKD0NyZWF0ZVJvb21S",
-            "ZXBseRIOCgZSb29tSWQYASABKAMiHQoLRGVzdHJveVJvb20SDgoGUm9vbUlk",
-            "GAEgASgDIh8KEERlc3Ryb3lSb29tUmVwbHkSCwoDUmV0GAEgASgIIjIKCUVu",
-            "dGVyUm9vbRIOCgZSb29tSWQYASABKAMSFQoNUGxheWVyVG9rZW5JZBgCIAEo",
-            "AyIdCg5FbnRlclJvb21SZXBseRILCgNSZXQYASABKAgicgoJVXBsb2FkTWFw",
-            "EhAKCHJvb21OYW1lGAEgASgFEhYKDk1heFBsYXllckNvdW50GAIgASgFEhQK",
-            "DFBhY2thZ2VDb3VudBgDIAEoBRIUCgxQYWNrYWdlSW5kZXgYBCABKAUSDwoH",
-            "TWFwRGF0YRgFIAEoDCJbCg5VcGxvYWRNYXBSZXBseRILCgNyZXQYASABKAgS",
-            "FgoOTWF4UGxheWVyQ291bnQYAiABKAUSFAoMUGFja2FnZUNvdW50GAMgASgF",
-            "Eg4KBlJvb21JZBgEIAEoAyIyCglMZWF2ZVJvb20SDgoGUm9vbUlkGAEgASgD",
-            "EhUKDVBsYXllclRva2VuSWQYAiABKAMiHQoOTGVhdmVSb29tUmVwbHkSCwoD",
-            "UmV0GAEgASgIYgZwcm90bzM="));
+            "clJlcGx5EgsKA1JldBgBIAEoCCIyCglFbnRlclJvb20SDgoGUm9vbUlkGAEg",
+            "ASgDEhUKDVBsYXllclRva2VuSWQYAiABKAMiHQoORW50ZXJSb29tUmVwbHkS",
+            "CwoDUmV0GAEgASgIIjIKCUxlYXZlUm9vbRIOCgZSb29tSWQYASABKAMSFQoN",
+            "UGxheWVyVG9rZW5JZBgCIAEoAyIdCg5MZWF2ZVJvb21SZXBseRILCgNSZXQY",
+            "ASABKAgicwoJVXBsb2FkTWFwEhAKCHJvb21OYW1lGAEgASgJEhYKDk1heFBs",
+            "YXllckNvdW50GAIgASgFEhQKDFBhY2thZ2VJbmRleBgDIAEoBRIVCg1Jc0xh",
+            "c3RQYWNrYWdlGAQgASgIEg8KB01hcERhdGEYBSABKAwiRAoOVXBsb2FkTWFw",
+            "UmVwbHkSCwoDUmV0GAEgASgIEhUKDUlzTGFzdFBhY2thZ2UYAiABKAgSDgoG",
+            "Um9vbUlkGAMgASgDIg0KC0Rvd25sb2FkTWFwIhIKEERvd25sb2FkTWFwUmVw",
+            "bHkiHQoLRGVzdHJveVJvb20SDgoGUm9vbUlkGAEgASgDIh8KEERlc3Ryb3lS",
+            "b29tUmVwbHkSCwoDUmV0GAEgASgIYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.PlayerEnter), global::Protobuf.Room.PlayerEnter.Parser, new[]{ "Account", "TokenId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.PlayerEnterReply), global::Protobuf.Room.PlayerEnterReply.Parser, new[]{ "Ret" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CreateRoom), global::Protobuf.Room.CreateRoom.Parser, new[]{ "RoomName", "MaxPlayerCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CreateRoomReply), global::Protobuf.Room.CreateRoomReply.Parser, new[]{ "RoomId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DestroyRoom), global::Protobuf.Room.DestroyRoom.Parser, new[]{ "RoomId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DestroyRoomReply), global::Protobuf.Room.DestroyRoomReply.Parser, new[]{ "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoom), global::Protobuf.Room.EnterRoom.Parser, new[]{ "RoomId", "PlayerTokenId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoomReply), global::Protobuf.Room.EnterRoomReply.Parser, new[]{ "Ret" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMap), global::Protobuf.Room.UploadMap.Parser, new[]{ "RoomName", "MaxPlayerCount", "PackageCount", "PackageIndex", "MapData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMapReply), global::Protobuf.Room.UploadMapReply.Parser, new[]{ "Ret", "MaxPlayerCount", "PackageCount", "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.LeaveRoom), global::Protobuf.Room.LeaveRoom.Parser, new[]{ "RoomId", "PlayerTokenId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.LeaveRoomReply), global::Protobuf.Room.LeaveRoomReply.Parser, new[]{ "Ret" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.LeaveRoomReply), global::Protobuf.Room.LeaveRoomReply.Parser, new[]{ "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMap), global::Protobuf.Room.UploadMap.Parser, new[]{ "RoomName", "MaxPlayerCount", "PackageIndex", "IsLastPackage", "MapData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMapReply), global::Protobuf.Room.UploadMapReply.Parser, new[]{ "Ret", "IsLastPackage", "RoomId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMap), global::Protobuf.Room.DownloadMap.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMapReply), global::Protobuf.Room.DownloadMapReply.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DestroyRoom), global::Protobuf.Room.DestroyRoom.Parser, new[]{ "RoomId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DestroyRoomReply), global::Protobuf.Room.DestroyRoomReply.Parser, new[]{ "Ret" }, null, null, null, null)
           }));
     }
     #endregion
@@ -346,550 +344,6 @@ namespace Protobuf.Room {
 
   }
 
-  public sealed partial class CreateRoom : pb::IMessage<CreateRoom> {
-    private static readonly pb::MessageParser<CreateRoom> _parser = new pb::MessageParser<CreateRoom>(() => new CreateRoom());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CreateRoom> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CreateRoom() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CreateRoom(CreateRoom other) : this() {
-      roomName_ = other.roomName_;
-      maxPlayerCount_ = other.maxPlayerCount_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CreateRoom Clone() {
-      return new CreateRoom(this);
-    }
-
-    /// <summary>Field number for the "roomName" field.</summary>
-    public const int RoomNameFieldNumber = 1;
-    private string roomName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string RoomName {
-      get { return roomName_; }
-      set {
-        roomName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "MaxPlayerCount" field.</summary>
-    public const int MaxPlayerCountFieldNumber = 5;
-    private int maxPlayerCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MaxPlayerCount {
-      get { return maxPlayerCount_; }
-      set {
-        maxPlayerCount_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as CreateRoom);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CreateRoom other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (RoomName != other.RoomName) return false;
-      if (MaxPlayerCount != other.MaxPlayerCount) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (RoomName.Length != 0) hash ^= RoomName.GetHashCode();
-      if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (RoomName.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(RoomName);
-      }
-      if (MaxPlayerCount != 0) {
-        output.WriteRawTag(40);
-        output.WriteInt32(MaxPlayerCount);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (RoomName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(RoomName);
-      }
-      if (MaxPlayerCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CreateRoom other) {
-      if (other == null) {
-        return;
-      }
-      if (other.RoomName.Length != 0) {
-        RoomName = other.RoomName;
-      }
-      if (other.MaxPlayerCount != 0) {
-        MaxPlayerCount = other.MaxPlayerCount;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            RoomName = input.ReadString();
-            break;
-          }
-          case 40: {
-            MaxPlayerCount = input.ReadInt32();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class CreateRoomReply : pb::IMessage<CreateRoomReply> {
-    private static readonly pb::MessageParser<CreateRoomReply> _parser = new pb::MessageParser<CreateRoomReply>(() => new CreateRoomReply());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<CreateRoomReply> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CreateRoomReply() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CreateRoomReply(CreateRoomReply other) : this() {
-      roomId_ = other.roomId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public CreateRoomReply Clone() {
-      return new CreateRoomReply(this);
-    }
-
-    /// <summary>Field number for the "RoomId" field.</summary>
-    public const int RoomIdFieldNumber = 1;
-    private long roomId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long RoomId {
-      get { return roomId_; }
-      set {
-        roomId_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as CreateRoomReply);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(CreateRoomReply other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (RoomId != other.RoomId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (RoomId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(RoomId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (RoomId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(CreateRoomReply other) {
-      if (other == null) {
-        return;
-      }
-      if (other.RoomId != 0L) {
-        RoomId = other.RoomId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            RoomId = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class DestroyRoom : pb::IMessage<DestroyRoom> {
-    private static readonly pb::MessageParser<DestroyRoom> _parser = new pb::MessageParser<DestroyRoom>(() => new DestroyRoom());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<DestroyRoom> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[4]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DestroyRoom() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DestroyRoom(DestroyRoom other) : this() {
-      roomId_ = other.roomId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DestroyRoom Clone() {
-      return new DestroyRoom(this);
-    }
-
-    /// <summary>Field number for the "RoomId" field.</summary>
-    public const int RoomIdFieldNumber = 1;
-    private long roomId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long RoomId {
-      get { return roomId_; }
-      set {
-        roomId_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as DestroyRoom);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(DestroyRoom other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (RoomId != other.RoomId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (RoomId != 0L) {
-        output.WriteRawTag(8);
-        output.WriteInt64(RoomId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (RoomId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(DestroyRoom other) {
-      if (other == null) {
-        return;
-      }
-      if (other.RoomId != 0L) {
-        RoomId = other.RoomId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            RoomId = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class DestroyRoomReply : pb::IMessage<DestroyRoomReply> {
-    private static readonly pb::MessageParser<DestroyRoomReply> _parser = new pb::MessageParser<DestroyRoomReply>(() => new DestroyRoomReply());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<DestroyRoomReply> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[5]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DestroyRoomReply() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DestroyRoomReply(DestroyRoomReply other) : this() {
-      ret_ = other.ret_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DestroyRoomReply Clone() {
-      return new DestroyRoomReply(this);
-    }
-
-    /// <summary>Field number for the "Ret" field.</summary>
-    public const int RetFieldNumber = 1;
-    private bool ret_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Ret {
-      get { return ret_; }
-      set {
-        ret_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as DestroyRoomReply);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(DestroyRoomReply other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Ret != other.Ret) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Ret != false) hash ^= Ret.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Ret != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(Ret);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Ret != false) {
-        size += 1 + 1;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(DestroyRoomReply other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Ret != false) {
-        Ret = other.Ret;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Ret = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
   public sealed partial class EnterRoom : pb::IMessage<EnterRoom> {
     private static readonly pb::MessageParser<EnterRoom> _parser = new pb::MessageParser<EnterRoom>(() => new EnterRoom());
     private pb::UnknownFieldSet _unknownFields;
@@ -898,7 +352,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1055,7 +509,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1176,460 +630,6 @@ namespace Protobuf.Room {
 
   }
 
-  public sealed partial class UploadMap : pb::IMessage<UploadMap> {
-    private static readonly pb::MessageParser<UploadMap> _parser = new pb::MessageParser<UploadMap>(() => new UploadMap());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<UploadMap> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[8]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UploadMap() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UploadMap(UploadMap other) : this() {
-      roomName_ = other.roomName_;
-      maxPlayerCount_ = other.maxPlayerCount_;
-      packageCount_ = other.packageCount_;
-      packageIndex_ = other.packageIndex_;
-      mapData_ = other.mapData_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UploadMap Clone() {
-      return new UploadMap(this);
-    }
-
-    /// <summary>Field number for the "roomName" field.</summary>
-    public const int RoomNameFieldNumber = 1;
-    private int roomName_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int RoomName {
-      get { return roomName_; }
-      set {
-        roomName_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "MaxPlayerCount" field.</summary>
-    public const int MaxPlayerCountFieldNumber = 2;
-    private int maxPlayerCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MaxPlayerCount {
-      get { return maxPlayerCount_; }
-      set {
-        maxPlayerCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "PackageCount" field.</summary>
-    public const int PackageCountFieldNumber = 3;
-    private int packageCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PackageCount {
-      get { return packageCount_; }
-      set {
-        packageCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "PackageIndex" field.</summary>
-    public const int PackageIndexFieldNumber = 4;
-    private int packageIndex_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PackageIndex {
-      get { return packageIndex_; }
-      set {
-        packageIndex_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "MapData" field.</summary>
-    public const int MapDataFieldNumber = 5;
-    private pb::ByteString mapData_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pb::ByteString MapData {
-      get { return mapData_; }
-      set {
-        mapData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as UploadMap);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(UploadMap other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (RoomName != other.RoomName) return false;
-      if (MaxPlayerCount != other.MaxPlayerCount) return false;
-      if (PackageCount != other.PackageCount) return false;
-      if (PackageIndex != other.PackageIndex) return false;
-      if (MapData != other.MapData) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (RoomName != 0) hash ^= RoomName.GetHashCode();
-      if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
-      if (PackageCount != 0) hash ^= PackageCount.GetHashCode();
-      if (PackageIndex != 0) hash ^= PackageIndex.GetHashCode();
-      if (MapData.Length != 0) hash ^= MapData.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (RoomName != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(RoomName);
-      }
-      if (MaxPlayerCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(MaxPlayerCount);
-      }
-      if (PackageCount != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(PackageCount);
-      }
-      if (PackageIndex != 0) {
-        output.WriteRawTag(32);
-        output.WriteInt32(PackageIndex);
-      }
-      if (MapData.Length != 0) {
-        output.WriteRawTag(42);
-        output.WriteBytes(MapData);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (RoomName != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RoomName);
-      }
-      if (MaxPlayerCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
-      }
-      if (PackageCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PackageCount);
-      }
-      if (PackageIndex != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PackageIndex);
-      }
-      if (MapData.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(MapData);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(UploadMap other) {
-      if (other == null) {
-        return;
-      }
-      if (other.RoomName != 0) {
-        RoomName = other.RoomName;
-      }
-      if (other.MaxPlayerCount != 0) {
-        MaxPlayerCount = other.MaxPlayerCount;
-      }
-      if (other.PackageCount != 0) {
-        PackageCount = other.PackageCount;
-      }
-      if (other.PackageIndex != 0) {
-        PackageIndex = other.PackageIndex;
-      }
-      if (other.MapData.Length != 0) {
-        MapData = other.MapData;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            RoomName = input.ReadInt32();
-            break;
-          }
-          case 16: {
-            MaxPlayerCount = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            PackageCount = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            PackageIndex = input.ReadInt32();
-            break;
-          }
-          case 42: {
-            MapData = input.ReadBytes();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class UploadMapReply : pb::IMessage<UploadMapReply> {
-    private static readonly pb::MessageParser<UploadMapReply> _parser = new pb::MessageParser<UploadMapReply>(() => new UploadMapReply());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<UploadMapReply> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[9]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UploadMapReply() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UploadMapReply(UploadMapReply other) : this() {
-      ret_ = other.ret_;
-      maxPlayerCount_ = other.maxPlayerCount_;
-      packageCount_ = other.packageCount_;
-      roomId_ = other.roomId_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public UploadMapReply Clone() {
-      return new UploadMapReply(this);
-    }
-
-    /// <summary>Field number for the "ret" field.</summary>
-    public const int RetFieldNumber = 1;
-    private bool ret_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Ret {
-      get { return ret_; }
-      set {
-        ret_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "MaxPlayerCount" field.</summary>
-    public const int MaxPlayerCountFieldNumber = 2;
-    private int maxPlayerCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int MaxPlayerCount {
-      get { return maxPlayerCount_; }
-      set {
-        maxPlayerCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "PackageCount" field.</summary>
-    public const int PackageCountFieldNumber = 3;
-    private int packageCount_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int PackageCount {
-      get { return packageCount_; }
-      set {
-        packageCount_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "RoomId" field.</summary>
-    public const int RoomIdFieldNumber = 4;
-    private long roomId_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long RoomId {
-      get { return roomId_; }
-      set {
-        roomId_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as UploadMapReply);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(UploadMapReply other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Ret != other.Ret) return false;
-      if (MaxPlayerCount != other.MaxPlayerCount) return false;
-      if (PackageCount != other.PackageCount) return false;
-      if (RoomId != other.RoomId) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Ret != false) hash ^= Ret.GetHashCode();
-      if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
-      if (PackageCount != 0) hash ^= PackageCount.GetHashCode();
-      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Ret != false) {
-        output.WriteRawTag(8);
-        output.WriteBool(Ret);
-      }
-      if (MaxPlayerCount != 0) {
-        output.WriteRawTag(16);
-        output.WriteInt32(MaxPlayerCount);
-      }
-      if (PackageCount != 0) {
-        output.WriteRawTag(24);
-        output.WriteInt32(PackageCount);
-      }
-      if (RoomId != 0L) {
-        output.WriteRawTag(32);
-        output.WriteInt64(RoomId);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Ret != false) {
-        size += 1 + 1;
-      }
-      if (MaxPlayerCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
-      }
-      if (PackageCount != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PackageCount);
-      }
-      if (RoomId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(UploadMapReply other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Ret != false) {
-        Ret = other.Ret;
-      }
-      if (other.MaxPlayerCount != 0) {
-        MaxPlayerCount = other.MaxPlayerCount;
-      }
-      if (other.PackageCount != 0) {
-        PackageCount = other.PackageCount;
-      }
-      if (other.RoomId != 0L) {
-        RoomId = other.RoomId;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Ret = input.ReadBool();
-            break;
-          }
-          case 16: {
-            MaxPlayerCount = input.ReadInt32();
-            break;
-          }
-          case 24: {
-            PackageCount = input.ReadInt32();
-            break;
-          }
-          case 32: {
-            RoomId = input.ReadInt64();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
   public sealed partial class LeaveRoom : pb::IMessage<LeaveRoom> {
     private static readonly pb::MessageParser<LeaveRoom> _parser = new pb::MessageParser<LeaveRoom>(() => new LeaveRoom());
     private pb::UnknownFieldSet _unknownFields;
@@ -1638,7 +638,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1795,7 +795,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1889,6 +889,892 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(LeaveRoomReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UploadMap : pb::IMessage<UploadMap> {
+    private static readonly pb::MessageParser<UploadMap> _parser = new pb::MessageParser<UploadMap>(() => new UploadMap());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UploadMap> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMap() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMap(UploadMap other) : this() {
+      roomName_ = other.roomName_;
+      maxPlayerCount_ = other.maxPlayerCount_;
+      packageIndex_ = other.packageIndex_;
+      isLastPackage_ = other.isLastPackage_;
+      mapData_ = other.mapData_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMap Clone() {
+      return new UploadMap(this);
+    }
+
+    /// <summary>Field number for the "roomName" field.</summary>
+    public const int RoomNameFieldNumber = 1;
+    private string roomName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RoomName {
+      get { return roomName_; }
+      set {
+        roomName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "MaxPlayerCount" field.</summary>
+    public const int MaxPlayerCountFieldNumber = 2;
+    private int maxPlayerCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxPlayerCount {
+      get { return maxPlayerCount_; }
+      set {
+        maxPlayerCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PackageIndex" field.</summary>
+    public const int PackageIndexFieldNumber = 3;
+    private int packageIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PackageIndex {
+      get { return packageIndex_; }
+      set {
+        packageIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IsLastPackage" field.</summary>
+    public const int IsLastPackageFieldNumber = 4;
+    private bool isLastPackage_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsLastPackage {
+      get { return isLastPackage_; }
+      set {
+        isLastPackage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MapData" field.</summary>
+    public const int MapDataFieldNumber = 5;
+    private pb::ByteString mapData_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString MapData {
+      get { return mapData_; }
+      set {
+        mapData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UploadMap);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UploadMap other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomName != other.RoomName) return false;
+      if (MaxPlayerCount != other.MaxPlayerCount) return false;
+      if (PackageIndex != other.PackageIndex) return false;
+      if (IsLastPackage != other.IsLastPackage) return false;
+      if (MapData != other.MapData) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomName.Length != 0) hash ^= RoomName.GetHashCode();
+      if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
+      if (PackageIndex != 0) hash ^= PackageIndex.GetHashCode();
+      if (IsLastPackage != false) hash ^= IsLastPackage.GetHashCode();
+      if (MapData.Length != 0) hash ^= MapData.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RoomName);
+      }
+      if (MaxPlayerCount != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MaxPlayerCount);
+      }
+      if (PackageIndex != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PackageIndex);
+      }
+      if (IsLastPackage != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(IsLastPackage);
+      }
+      if (MapData.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteBytes(MapData);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RoomName);
+      }
+      if (MaxPlayerCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
+      }
+      if (PackageIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PackageIndex);
+      }
+      if (IsLastPackage != false) {
+        size += 1 + 1;
+      }
+      if (MapData.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(MapData);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UploadMap other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomName.Length != 0) {
+        RoomName = other.RoomName;
+      }
+      if (other.MaxPlayerCount != 0) {
+        MaxPlayerCount = other.MaxPlayerCount;
+      }
+      if (other.PackageIndex != 0) {
+        PackageIndex = other.PackageIndex;
+      }
+      if (other.IsLastPackage != false) {
+        IsLastPackage = other.IsLastPackage;
+      }
+      if (other.MapData.Length != 0) {
+        MapData = other.MapData;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RoomName = input.ReadString();
+            break;
+          }
+          case 16: {
+            MaxPlayerCount = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            PackageIndex = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            IsLastPackage = input.ReadBool();
+            break;
+          }
+          case 42: {
+            MapData = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UploadMapReply : pb::IMessage<UploadMapReply> {
+    private static readonly pb::MessageParser<UploadMapReply> _parser = new pb::MessageParser<UploadMapReply>(() => new UploadMapReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UploadMapReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMapReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMapReply(UploadMapReply other) : this() {
+      ret_ = other.ret_;
+      isLastPackage_ = other.isLastPackage_;
+      roomId_ = other.roomId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UploadMapReply Clone() {
+      return new UploadMapReply(this);
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 1;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IsLastPackage" field.</summary>
+    public const int IsLastPackageFieldNumber = 2;
+    private bool isLastPackage_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsLastPackage {
+      get { return isLastPackage_; }
+      set {
+        isLastPackage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 3;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UploadMapReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UploadMapReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ret != other.Ret) return false;
+      if (IsLastPackage != other.IsLastPackage) return false;
+      if (RoomId != other.RoomId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (IsLastPackage != false) hash ^= IsLastPackage.GetHashCode();
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ret != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Ret);
+      }
+      if (IsLastPackage != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsLastPackage);
+      }
+      if (RoomId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(RoomId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (IsLastPackage != false) {
+        size += 1 + 1;
+      }
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UploadMapReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      if (other.IsLastPackage != false) {
+        IsLastPackage = other.IsLastPackage;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Ret = input.ReadBool();
+            break;
+          }
+          case 16: {
+            IsLastPackage = input.ReadBool();
+            break;
+          }
+          case 24: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DownloadMap : pb::IMessage<DownloadMap> {
+    private static readonly pb::MessageParser<DownloadMap> _parser = new pb::MessageParser<DownloadMap>(() => new DownloadMap());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DownloadMap> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadMap() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadMap(DownloadMap other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadMap Clone() {
+      return new DownloadMap(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DownloadMap);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DownloadMap other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DownloadMap other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DownloadMapReply : pb::IMessage<DownloadMapReply> {
+    private static readonly pb::MessageParser<DownloadMapReply> _parser = new pb::MessageParser<DownloadMapReply>(() => new DownloadMapReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DownloadMapReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadMapReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadMapReply(DownloadMapReply other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadMapReply Clone() {
+      return new DownloadMapReply(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DownloadMapReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DownloadMapReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DownloadMapReply other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DestroyRoom : pb::IMessage<DestroyRoom> {
+    private static readonly pb::MessageParser<DestroyRoom> _parser = new pb::MessageParser<DestroyRoom>(() => new DestroyRoom());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DestroyRoom> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestroyRoom() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestroyRoom(DestroyRoom other) : this() {
+      roomId_ = other.roomId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestroyRoom Clone() {
+      return new DestroyRoom(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DestroyRoom);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DestroyRoom other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DestroyRoom other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DestroyRoomReply : pb::IMessage<DestroyRoomReply> {
+    private static readonly pb::MessageParser<DestroyRoomReply> _parser = new pb::MessageParser<DestroyRoomReply>(() => new DestroyRoomReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DestroyRoomReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestroyRoomReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestroyRoomReply(DestroyRoomReply other) : this() {
+      ret_ = other.ret_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DestroyRoomReply Clone() {
+      return new DestroyRoomReply(this);
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 1;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DestroyRoomReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DestroyRoomReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ret != other.Ret) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ret != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Ret);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DestroyRoomReply other) {
       if (other == null) {
         return;
       }
