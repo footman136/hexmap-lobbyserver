@@ -259,71 +259,63 @@ public class MicrosoftServer
             Interlocked.Add(ref m_totalBytesRead, e.BytesTransferred);
             //Console.WriteLine("The server has read a total of {0} bytes", m_totalBytesRead);
             
-//            //echo the data received back to the client
-//            e.SetBuffer(e.Offset, e.BytesTransferred);
-//            bool willRaiseEvent = token.Socket.SendAsync(e);
-//            if (!willRaiseEvent)
-//            {
-//                ProcessSend(e);
-//            }
-
             try
             {
-                // 消息提交外部的回调函数处理
-                Completed?.Invoke(e, ServerSocketAction.Receive);
-                receiveCallBack?.Invoke(e, e.Buffer, e.Offset, e.BytesTransferred);
-                
-                if (!token.Socket.ReceiveAsync(e))//为接收下一段数据，投递接收请求，这个函数有可能同步完成，这时返回false，并且不会引发SocketAsyncEventArgs.Completed事件
-                {
-                    //同步接收时处理接收完成事件
-                    ProcessReceive(e);
-                }
-
-                // 真正的互联网环境下会有消息包被截断的情况，所以发送的时候必须在开始定义4个字节的包长度，目前是测试阶段，暂时不开放。
-//                //读取数据  
-//                byte[] data = new byte[e.BytesTransferred];
-//                Log($"Server Found data received - {e.BytesTransferred} byts");
-//                Array.Copy(e.Buffer, e.Offset, data, 0, e.BytesTransferred);  
-//                lock (m_buffer)  
-//                {  
-//                    m_buffer.AddRange(data);  
-//                }  
-//  
-//                do  
-//                {  
-//                    //注意: 这里是需要和服务器有协议的,我做了个简单的协议,就是一个完整的包是包长(4字节)+包数据,便于处理,当然你可以定义自己需要的;   
-//                    //判断包的长度,前面4个字节.  
-//                    byte[] lenBytes = m_buffer.GetRange(0, 4).ToArray();  
-//                    int packageLen = BitConverter.ToInt32(lenBytes, 0);  
-//                    if (packageLen <= m_buffer.Count - 4)  
-//                    {  
-//                        //包够长时,则提取出来,交给后面的程序去处理  
-//                        byte[] rev = m_buffer.GetRange(4, packageLen).ToArray();  
-//                        //从数据池中移除这组数据,为什么要lock,你懂的  
-//                        lock (m_buffer)  
-//                        {  
-//                            m_buffer.RemoveRange(0, packageLen + 4);  
-//                        }  
-//                        //将数据包交给前台去处理  
-//                        Completed?.Invoke(e, ServerSocketAction.Receive);
-//                        receiveCallBack?.Invoke(e, rev, rev.Length);
-//                    }  
-//                    else  
-//                    {   //长度不够,还得继续接收,需要跳出循环  
-//                        break;  
-//                    }  
-//                } while (m_buffer.Count > 4);  
-//                //注意:你一定会问,这里为什么要用do-while循环?     
-//                //如果当服务端发送大数据流的时候,e.BytesTransferred的大小就会比服务端发送过来的完整包要小,    
-//                //需要分多次接收.所以收到包的时候,先判断包头的大小.够一个完整的包再处理.    
-//                //如果服务器短时间内发送多个小数据包时, 这里可能会一次性把他们全收了.    
-//                //这样如果没有一个循环来控制,那么只会处理第一个包,    
-//                //剩下的包全部留在m_buffer中了,只有等下一个数据包过来后,才会放出一个来.  
-//                //继续接收  
-//                if (!token.Socket.ReceiveAsync(e))
+//                // 消息提交外部的回调函数处理
+//                Completed?.Invoke(e, ServerSocketAction.Receive);
+//                receiveCallBack?.Invoke(e, e.Buffer, e.Offset, e.BytesTransferred);
+//                
+//                if (!token.Socket.ReceiveAsync(e))//为接收下一段数据，投递接收请求，这个函数有可能同步完成，这时返回false，并且不会引发SocketAsyncEventArgs.Completed事件
 //                {
+//                    //同步接收时处理接收完成事件
 //                    ProcessReceive(e);
 //                }
+
+                // 真正的互联网环境下会有消息包被截断的情况，所以发送的时候必须在开始定义4个字节的包长度，目前是测试阶段，暂时不开放。
+                //读取数据  
+                byte[] data = new byte[e.BytesTransferred];
+                Log($"Server Found data received - {e.BytesTransferred} byts");
+                Array.Copy(e.Buffer, e.Offset, data, 0, e.BytesTransferred);  
+                lock (m_buffer)  
+                {  
+                    m_buffer.AddRange(data);  
+                }  
+  
+                do  
+                {  
+                    //注意: 这里是需要和服务器有协议的,我做了个简单的协议,就是一个完整的包是包长(4字节)+包数据,便于处理,当然你可以定义自己需要的;   
+                    //判断包的长度,前面4个字节.  
+                    byte[] lenBytes = m_buffer.GetRange(0, 4).ToArray();  
+                    int packageLen = BitConverter.ToInt32(lenBytes, 0);  
+                    if (packageLen <= m_buffer.Count - 4)  
+                    {  
+                        //包够长时,则提取出来,交给后面的程序去处理  
+                        byte[] rev = m_buffer.GetRange(4, packageLen).ToArray();  
+                        //从数据池中移除这组数据,为什么要lock,你懂的  
+                        lock (m_buffer)  
+                        {  
+                            m_buffer.RemoveRange(0, packageLen + 4);  
+                        }  
+                        //将数据包交给前台去处理  
+                        Completed?.Invoke(e, ServerSocketAction.Receive);
+                        receiveCallBack?.Invoke(e, rev, 0, rev.Length);
+                    }  
+                    else  
+                    {   //长度不够,还得继续接收,需要跳出循环  
+                        break;  
+                    }  
+                } while (m_buffer.Count > 4);  
+                //注意:你一定会问,这里为什么要用do-while循环?     
+                //如果当服务端发送大数据流的时候,e.BytesTransferred的大小就会比服务端发送过来的完整包要小,    
+                //需要分多次接收.所以收到包的时候,先判断包头的大小.够一个完整的包再处理.    
+                //如果服务器短时间内发送多个小数据包时, 这里可能会一次性把他们全收了.    
+                //这样如果没有一个循环来控制,那么只会处理第一个包,    
+                //剩下的包全部留在m_buffer中了,只有等下一个数据包过来后,才会放出一个来.  
+                //继续接收  
+                if (!token.Socket.ReceiveAsync(e))
+                {
+                    ProcessReceive(e);
+                }
             }
             catch (Exception exp)
             {
@@ -354,14 +346,6 @@ public class MicrosoftServer
         {
             m_writePool.Push(e);
             Completed?.Invoke(e, ServerSocketAction.Send);
-            // done echoing data back to the client
-            //AsyncUserToken token = (AsyncUserToken)e.UserToken;
-            // read the next block of data send from the client
-//            bool willRaiseEvent = token.Socket.ReceiveAsync(e);
-//            if (!willRaiseEvent)
-//            {
-//                ProcessReceive(e);
-//            }
         }
         else
         {
@@ -369,12 +353,16 @@ public class MicrosoftServer
         }
     }
 
-    public void Send(SocketAsyncEventArgs e, byte[] data, int size)
+    public void Send(SocketAsyncEventArgs e, byte[] bytes, int size)
     {
         AsyncUserToken token = (AsyncUserToken)e.UserToken;
         SocketAsyncEventArgs writeEventArgs = m_writePool.Pop();
         writeEventArgs.UserToken = token;
-        writeEventArgs.SetBuffer(data, 0, size);
+        byte[] bytesRealSend = new byte[bytes.Length+4];
+        byte[] bytesHeader = System.BitConverter.GetBytes(bytes.Length);
+        Array.Copy(bytesHeader, 0, bytesRealSend, 0, 4);
+        Array.Copy(bytes, 0, bytesRealSend, 4, bytes.Length);
+        writeEventArgs.SetBuffer(bytesRealSend, 0, size);
         bool willRaiseEvent = token.Socket.SendAsync(writeEventArgs);
         if (!willRaiseEvent)
         {

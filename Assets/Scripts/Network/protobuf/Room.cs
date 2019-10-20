@@ -32,11 +32,16 @@ namespace Protobuf.Room {
             "UGxheWVyVG9rZW5JZBgCIAEoAyIdCg5MZWF2ZVJvb21SZXBseRILCgNSZXQY",
             "ASABKAgicwoJVXBsb2FkTWFwEhAKCHJvb21OYW1lGAEgASgJEhYKDk1heFBs",
             "YXllckNvdW50GAIgASgFEhQKDFBhY2thZ2VJbmRleBgDIAEoBRIVCg1Jc0xh",
-            "c3RQYWNrYWdlGAQgASgIEg8KB01hcERhdGEYBSABKAwiRAoOVXBsb2FkTWFw",
+            "c3RQYWNrYWdlGAQgASgIEg8KB01hcERhdGEYBSABKAwiVgoOVXBsb2FkTWFw",
             "UmVwbHkSCwoDUmV0GAEgASgIEhUKDUlzTGFzdFBhY2thZ2UYAiABKAgSDgoG",
-            "Um9vbUlkGAMgASgDIg0KC0Rvd25sb2FkTWFwIhIKEERvd25sb2FkTWFwUmVw",
-            "bHkiHQoLRGVzdHJveVJvb20SDgoGUm9vbUlkGAEgASgDIh8KEERlc3Ryb3lS",
-            "b29tUmVwbHkSCwoDUmV0GAEgASgIYgZwcm90bzM="));
+            "Um9vbUlkGAMgASgDEhAKCFJvb21OYW1lGAQgASgJIi8KC0Rvd25sb2FkTWFw",
+            "Eg4KBlJvb21JZBgBIAEoAxIQCghSb29tTmFtZRgCIAEoCSKuAQoQRG93bmxv",
+            "YWRNYXBSZXBseRILCgNSZXQYASABKAgSDgoGUm9vbUlkGAIgASgDEhAKCFJv",
+            "b21OYW1lGAMgASgJEhYKDk1heFBsYXllckNvdW50GAQgASgFEhUKDUlzQ3Jl",
+            "YXRlZEJ5TWUYBSABKAgSFAoMUGFja2FnZUluZGV4GAYgASgFEhUKDUlzTGFz",
+            "dFBhY2thZ2UYByABKAgSDwoHTWFwRGF0YRgIIAEoDCIdCgtEZXN0cm95Um9v",
+            "bRIOCgZSb29tSWQYASABKAMiHwoQRGVzdHJveVJvb21SZXBseRILCgNSZXQY",
+            "ASABKAhiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -47,9 +52,9 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.LeaveRoom), global::Protobuf.Room.LeaveRoom.Parser, new[]{ "RoomId", "PlayerTokenId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.LeaveRoomReply), global::Protobuf.Room.LeaveRoomReply.Parser, new[]{ "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMap), global::Protobuf.Room.UploadMap.Parser, new[]{ "RoomName", "MaxPlayerCount", "PackageIndex", "IsLastPackage", "MapData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMapReply), global::Protobuf.Room.UploadMapReply.Parser, new[]{ "Ret", "IsLastPackage", "RoomId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMap), global::Protobuf.Room.DownloadMap.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMapReply), global::Protobuf.Room.DownloadMapReply.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMapReply), global::Protobuf.Room.UploadMapReply.Parser, new[]{ "Ret", "IsLastPackage", "RoomId", "RoomName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMap), global::Protobuf.Room.DownloadMap.Parser, new[]{ "RoomId", "RoomName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMapReply), global::Protobuf.Room.DownloadMapReply.Parser, new[]{ "Ret", "RoomId", "RoomName", "MaxPlayerCount", "IsCreatedByMe", "PackageIndex", "IsLastPackage", "MapData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DestroyRoom), global::Protobuf.Room.DestroyRoom.Parser, new[]{ "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DestroyRoomReply), global::Protobuf.Room.DestroyRoomReply.Parser, new[]{ "Ret" }, null, null, null, null)
           }));
@@ -1185,6 +1190,7 @@ namespace Protobuf.Room {
       ret_ = other.ret_;
       isLastPackage_ = other.isLastPackage_;
       roomId_ = other.roomId_;
+      roomName_ = other.roomName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1226,6 +1232,17 @@ namespace Protobuf.Room {
       }
     }
 
+    /// <summary>Field number for the "RoomName" field.</summary>
+    public const int RoomNameFieldNumber = 4;
+    private string roomName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RoomName {
+      get { return roomName_; }
+      set {
+        roomName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as UploadMapReply);
@@ -1242,6 +1259,7 @@ namespace Protobuf.Room {
       if (Ret != other.Ret) return false;
       if (IsLastPackage != other.IsLastPackage) return false;
       if (RoomId != other.RoomId) return false;
+      if (RoomName != other.RoomName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1251,6 +1269,7 @@ namespace Protobuf.Room {
       if (Ret != false) hash ^= Ret.GetHashCode();
       if (IsLastPackage != false) hash ^= IsLastPackage.GetHashCode();
       if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (RoomName.Length != 0) hash ^= RoomName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1276,6 +1295,10 @@ namespace Protobuf.Room {
         output.WriteRawTag(24);
         output.WriteInt64(RoomId);
       }
+      if (RoomName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RoomName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1292,6 +1315,9 @@ namespace Protobuf.Room {
       }
       if (RoomId != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (RoomName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RoomName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1312,6 +1338,9 @@ namespace Protobuf.Room {
       }
       if (other.RoomId != 0L) {
         RoomId = other.RoomId;
+      }
+      if (other.RoomName.Length != 0) {
+        RoomName = other.RoomName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1334,6 +1363,10 @@ namespace Protobuf.Room {
           }
           case 24: {
             RoomId = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            RoomName = input.ReadString();
             break;
           }
         }
@@ -1367,12 +1400,36 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DownloadMap(DownloadMap other) : this() {
+      roomId_ = other.roomId_;
+      roomName_ = other.roomName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DownloadMap Clone() {
       return new DownloadMap(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "RoomName" field.</summary>
+    public const int RoomNameFieldNumber = 2;
+    private string roomName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RoomName {
+      get { return roomName_; }
+      set {
+        roomName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1388,12 +1445,16 @@ namespace Protobuf.Room {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (RoomId != other.RoomId) return false;
+      if (RoomName != other.RoomName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (RoomName.Length != 0) hash ^= RoomName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1407,6 +1468,14 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (RoomName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(RoomName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1415,6 +1484,12 @@ namespace Protobuf.Room {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (RoomName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RoomName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1425,6 +1500,12 @@ namespace Protobuf.Room {
     public void MergeFrom(DownloadMap other) {
       if (other == null) {
         return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.RoomName.Length != 0) {
+        RoomName = other.RoomName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1437,6 +1518,14 @@ namespace Protobuf.Room {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 18: {
+            RoomName = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1468,12 +1557,108 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DownloadMapReply(DownloadMapReply other) : this() {
+      ret_ = other.ret_;
+      roomId_ = other.roomId_;
+      roomName_ = other.roomName_;
+      maxPlayerCount_ = other.maxPlayerCount_;
+      isCreatedByMe_ = other.isCreatedByMe_;
+      packageIndex_ = other.packageIndex_;
+      isLastPackage_ = other.isLastPackage_;
+      mapData_ = other.mapData_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public DownloadMapReply Clone() {
       return new DownloadMapReply(this);
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 1;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 2;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "RoomName" field.</summary>
+    public const int RoomNameFieldNumber = 3;
+    private string roomName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RoomName {
+      get { return roomName_; }
+      set {
+        roomName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "MaxPlayerCount" field.</summary>
+    public const int MaxPlayerCountFieldNumber = 4;
+    private int maxPlayerCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxPlayerCount {
+      get { return maxPlayerCount_; }
+      set {
+        maxPlayerCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IsCreatedByMe" field.</summary>
+    public const int IsCreatedByMeFieldNumber = 5;
+    private bool isCreatedByMe_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsCreatedByMe {
+      get { return isCreatedByMe_; }
+      set {
+        isCreatedByMe_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PackageIndex" field.</summary>
+    public const int PackageIndexFieldNumber = 6;
+    private int packageIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PackageIndex {
+      get { return packageIndex_; }
+      set {
+        packageIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IsLastPackage" field.</summary>
+    public const int IsLastPackageFieldNumber = 7;
+    private bool isLastPackage_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsLastPackage {
+      get { return isLastPackage_; }
+      set {
+        isLastPackage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MapData" field.</summary>
+    public const int MapDataFieldNumber = 8;
+    private pb::ByteString mapData_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pb::ByteString MapData {
+      get { return mapData_; }
+      set {
+        mapData_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1489,12 +1674,28 @@ namespace Protobuf.Room {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Ret != other.Ret) return false;
+      if (RoomId != other.RoomId) return false;
+      if (RoomName != other.RoomName) return false;
+      if (MaxPlayerCount != other.MaxPlayerCount) return false;
+      if (IsCreatedByMe != other.IsCreatedByMe) return false;
+      if (PackageIndex != other.PackageIndex) return false;
+      if (IsLastPackage != other.IsLastPackage) return false;
+      if (MapData != other.MapData) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (RoomName.Length != 0) hash ^= RoomName.GetHashCode();
+      if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
+      if (IsCreatedByMe != false) hash ^= IsCreatedByMe.GetHashCode();
+      if (PackageIndex != 0) hash ^= PackageIndex.GetHashCode();
+      if (IsLastPackage != false) hash ^= IsLastPackage.GetHashCode();
+      if (MapData.Length != 0) hash ^= MapData.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1508,6 +1709,38 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
+      if (Ret != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Ret);
+      }
+      if (RoomId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(RoomId);
+      }
+      if (RoomName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(RoomName);
+      }
+      if (MaxPlayerCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaxPlayerCount);
+      }
+      if (IsCreatedByMe != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(IsCreatedByMe);
+      }
+      if (PackageIndex != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(PackageIndex);
+      }
+      if (IsLastPackage != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsLastPackage);
+      }
+      if (MapData.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteBytes(MapData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1516,6 +1749,30 @@ namespace Protobuf.Room {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (RoomName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RoomName);
+      }
+      if (MaxPlayerCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
+      }
+      if (IsCreatedByMe != false) {
+        size += 1 + 1;
+      }
+      if (PackageIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PackageIndex);
+      }
+      if (IsLastPackage != false) {
+        size += 1 + 1;
+      }
+      if (MapData.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(MapData);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1526,6 +1783,30 @@ namespace Protobuf.Room {
     public void MergeFrom(DownloadMapReply other) {
       if (other == null) {
         return;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.RoomName.Length != 0) {
+        RoomName = other.RoomName;
+      }
+      if (other.MaxPlayerCount != 0) {
+        MaxPlayerCount = other.MaxPlayerCount;
+      }
+      if (other.IsCreatedByMe != false) {
+        IsCreatedByMe = other.IsCreatedByMe;
+      }
+      if (other.PackageIndex != 0) {
+        PackageIndex = other.PackageIndex;
+      }
+      if (other.IsLastPackage != false) {
+        IsLastPackage = other.IsLastPackage;
+      }
+      if (other.MapData.Length != 0) {
+        MapData = other.MapData;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1538,6 +1819,38 @@ namespace Protobuf.Room {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            Ret = input.ReadBool();
+            break;
+          }
+          case 16: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 26: {
+            RoomName = input.ReadString();
+            break;
+          }
+          case 32: {
+            MaxPlayerCount = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            IsCreatedByMe = input.ReadBool();
+            break;
+          }
+          case 48: {
+            PackageIndex = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            IsLastPackage = input.ReadBool();
+            break;
+          }
+          case 66: {
+            MapData = input.ReadBytes();
+            break;
+          }
         }
       }
     }

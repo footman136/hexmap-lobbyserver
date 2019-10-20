@@ -24,12 +24,14 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKloKBFJPT00S",
-            "DAoITXNnU3RhcnQQABIRCgtQbGF5ZXJFbnRlchChnAESDwoJRW50ZXJSb29t",
-            "EKOcARIPCglMZWF2ZVJvb20QpZwBEg8KCVVwbG9hZE1hcBCnnAEqeQoKUk9P",
-            "TV9SRVBMWRIRCg1Nc2dTdGFydFJlcGx5EAASFgoQUGxheWVyRW50ZXJSZXBs",
-            "eRCinAESFAoORW50ZXJSb29tUmVwbHkQpJwBEhQKDkxlYXZlUm9vbVJlcGx5",
-            "EMaaDBIUCg5VcGxvYWRNYXBSZXBseRConAFiBnByb3RvMw=="));
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKoABCgRST09N",
+            "EgwKCE1zZ1N0YXJ0EAASEQoLUGxheWVyRW50ZXIQoZwBEg8KCUVudGVyUm9v",
+            "bRCjnAESDwoJTGVhdmVSb29tEKWcARIPCglVcGxvYWRNYXAQp5wBEhEKC0Rv",
+            "d25sb2FkTWFwEKmcARIRCgtEZXN0cm95Um9vbRCrnAEqqQEKClJPT01fUkVQ",
+            "TFkSEQoNTXNnU3RhcnRSZXBseRAAEhYKEFBsYXllckVudGVyUmVwbHkQopwB",
+            "EhQKDkVudGVyUm9vbVJlcGx5EKScARIUCg5MZWF2ZVJvb21SZXBseRDGmgwS",
+            "FAoOVXBsb2FkTWFwUmVwbHkQqJwBEhYKEERvd25sb2FkTWFwUmVwbHkQqpwB",
+            "EhYKEERlc3Ryb3lSb29tUmVwbHkQrJwBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -50,6 +52,8 @@ namespace Protobuf.Room {
     [pbr::OriginalName("EnterRoom")] EnterRoom = 20003,
     [pbr::OriginalName("LeaveRoom")] LeaveRoom = 20005,
     [pbr::OriginalName("UploadMap")] UploadMap = 20007,
+    [pbr::OriginalName("DownloadMap")] DownloadMap = 20009,
+    [pbr::OriginalName("DestroyRoom")] DestroyRoom = 20011,
   }
 
   /// <summary>
@@ -64,6 +68,8 @@ namespace Protobuf.Room {
     [pbr::OriginalName("EnterRoomReply")] EnterRoomReply = 20004,
     [pbr::OriginalName("LeaveRoomReply")] LeaveRoomReply = 200006,
     [pbr::OriginalName("UploadMapReply")] UploadMapReply = 20008,
+    [pbr::OriginalName("DownloadMapReply")] DownloadMapReply = 20010,
+    [pbr::OriginalName("DestroyRoomReply")] DestroyRoomReply = 20012,
   }
 
   #endregion
