@@ -358,12 +358,12 @@ public class MicrosoftServer
         AsyncUserToken token = (AsyncUserToken)e.UserToken;
         SocketAsyncEventArgs writeEventArgs = m_writePool.Pop();
         writeEventArgs.UserToken = token;
-//        byte[] bytesRealSend = new byte[bytes.Length+4];
-//        byte[] bytesHeader = System.BitConverter.GetBytes(bytes.Length);
-//        Array.Copy(bytesHeader, 0, bytesRealSend, 0, 4);
-//        Array.Copy(bytes, 0, bytesRealSend, 4, bytes.Length);
-//        writeEventArgs.SetBuffer(bytesRealSend, 0, size);
-        writeEventArgs.SetBuffer(bytes, 0, size);
+        byte[] bytesRealSend = new byte[bytes.Length+4];
+        byte[] bytesHeader = System.BitConverter.GetBytes(bytes.Length);
+        Array.Copy(bytesHeader, 0, bytesRealSend, 0, 4);
+        Array.Copy(bytes, 0, bytesRealSend, 4, bytes.Length);
+        writeEventArgs.SetBuffer(bytesRealSend, 0, bytesRealSend.Length);
+        //writeEventArgs.SetBuffer(bytes, 0, size);
         bool willRaiseEvent = token.Socket.SendAsync(writeEventArgs);
         if (!willRaiseEvent)
         {
