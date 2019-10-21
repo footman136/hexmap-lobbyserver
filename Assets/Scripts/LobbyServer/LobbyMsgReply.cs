@@ -66,18 +66,24 @@ public class LobbyMsgReply
 
         bool ret = false;
         // 写入redis
-        if (!LobbyManager.Instance.Redis.CSRedis.Exists(input.TokenId.ToString()))
+        string tableName = $"ACCOUNT:{input.TokenId.ToString()}";
+        if (!LobbyManager.Instance.Redis.CSRedis.Exists(tableName))
         {
-            ret = LobbyManager.Instance.Redis.CSRedis.HSet(input.TokenId.ToString(), "Account", input.Account);
+            ret = LobbyManager.Instance.Redis.CSRedis.HSet(tableName, "Account", input.Account);
             if (ret)
             {
-                Debug.Log($"MSG：新用户创建！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
+                ret = LobbyManager.Instance.Redis.CSRedis.HSet(tableName, "TokenId", input.TokenId);
+                LobbyManager.Instance.Log($"MSG：创建新用户！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
+            }
+            else
+            {
+                LobbyManager.Instance.Log($"MSG：新用户创建失败！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
             }
         }
         else
         {
             ret = true;
-            Debug.Log($"MSG: 老用户登录！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
+            LobbyManager.Instance.Log($"MSG: 老用户登录！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
         }
 
         if (ret)
