@@ -24,20 +24,17 @@ namespace Protobuf.Lobby {
     static MsgDefineLobbyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRNc2dEZWZpbmVMb2JieS5wcm90bxIOUHJvdG9idWYuTG9iYnkq8wEKBUxP",
+            "ChRNc2dEZWZpbmVMb2JieS5wcm90bxIOUHJvdG9idWYuTG9iYnkqsQEKBUxP",
             "QkJZEgwKCE1zZ1N0YXJ0EAASEAoLUGxheWVyRW50ZXIQkU4SEAoLUGxheWVy",
             "TGVhdmUQk04SEgoNQXNrQ3JlYXRlUm9vbRCVThIQCgtBc2tKb2luUm9vbRCX",
-            "ThIQCgtBc2tSb29tTGlzdBCZThIVCg9Sb29tU2VydmVyTG9naW4QseoBEhYK",
-            "EFJvb21TZXJ2ZXJMb2dvdXQQs+oBEhAKCkNyZWF0ZVJvb20QteoBEhEKC0Rl",
-            "c3Ryb3lSb29tELfqARIVCg9QbGF5ZXJFbnRlclJvb20QueoBEhUKD1BsYXll",
-            "ckxlYXZlUm9vbRC76gEqtQIKC0xPQkJZX1JFUExZEhEKDU1zZ1N0YXJ0UmVw",
-            "bHkQABIVChBQbGF5ZXJFbnRlclJlcGx5EJJOEhUKEFBsYXllckxlYXZlUmVw",
-            "bHkQlE4SFwoSQXNrQ3JlYXRlUm9vbVJlcGx5EJZOEhUKEEFza0pvaW5Sb29t",
-            "UmVwbHkQmE4SFQoQQXNrUm9vbUxpc3RSZXBseRCaThIaChRSb29tU2VydmVy",
-            "TG9naW5SZXBseRCy6gESGwoVUm9vbVNlcnZlckxvZ291dFJlcGx5ELTqARIV",
-            "Cg9DcmVhdGVSb29tUmVwbHkQtuoBEhYKEERlc3Ryb3lSb29tUmVwbHkQuOoB",
-            "EhoKFFBsYXllckVudGVyUm9vbVJlcGx5ELrqARIaChRQbGF5ZXJMZWF2ZVJv",
-            "b21SZXBseRC86gFiBnByb3RvMw=="));
+            "ThIQCgtBc2tSb29tTGlzdBCZThIVCg9Sb29tU2VydmVyTG9naW4QseoBEhQK",
+            "DlVwZGF0ZVJvb21JbmZvELPqARIRCgtEZXN0cm95Um9vbRC16gEq5AEKC0xP",
+            "QkJZX1JFUExZEhEKDU1zZ1N0YXJ0UmVwbHkQABIVChBQbGF5ZXJFbnRlclJl",
+            "cGx5EJJOEhUKEFBsYXllckxlYXZlUmVwbHkQlE4SFwoSQXNrQ3JlYXRlUm9v",
+            "bVJlcGx5EJZOEhUKEEFza0pvaW5Sb29tUmVwbHkQmE4SFQoQQXNrUm9vbUxp",
+            "c3RSZXBseRCaThIaChRSb29tU2VydmVyTG9naW5SZXBseRCy6gESGQoTVXBk",
+            "YXRlUm9vbUluZm9SZXBseRC06gESFgoQRGVzdHJveVJvb21SZXBseRC26gFi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Lobby.LOBBY), typeof(global::Protobuf.Lobby.LOBBY_REPLY), }, null, null));
@@ -60,11 +57,14 @@ namespace Protobuf.Lobby {
     [pbr::OriginalName("AskJoinRoom")] AskJoinRoom = 10007,
     [pbr::OriginalName("AskRoomList")] AskRoomList = 10009,
     [pbr::OriginalName("RoomServerLogin")] RoomServerLogin = 30001,
-    [pbr::OriginalName("RoomServerLogout")] RoomServerLogout = 30003,
-    [pbr::OriginalName("CreateRoom")] CreateRoom = 30005,
-    [pbr::OriginalName("DestroyRoom")] DestroyRoom = 30007,
-    [pbr::OriginalName("PlayerEnterRoom")] PlayerEnterRoom = 30009,
-    [pbr::OriginalName("PlayerLeaveRoom")] PlayerLeaveRoom = 30011,
+    [pbr::OriginalName("UpdateRoomInfo")] UpdateRoomInfo = 30003,
+    /// <summary>
+    ///	RoomServerLogout = 30003;
+    ///	CreateRoom = 30005;
+    ///	PlayerEnterRoom = 30009;
+    ///	PlayerLeaveRoom = 30011;
+    /// </summary>
+    [pbr::OriginalName("DestroyRoom")] DestroyRoom = 30005,
   }
 
   /// <summary>
@@ -81,11 +81,14 @@ namespace Protobuf.Lobby {
     [pbr::OriginalName("AskJoinRoomReply")] AskJoinRoomReply = 10008,
     [pbr::OriginalName("AskRoomListReply")] AskRoomListReply = 10010,
     [pbr::OriginalName("RoomServerLoginReply")] RoomServerLoginReply = 30002,
-    [pbr::OriginalName("RoomServerLogoutReply")] RoomServerLogoutReply = 30004,
-    [pbr::OriginalName("CreateRoomReply")] CreateRoomReply = 30006,
-    [pbr::OriginalName("DestroyRoomReply")] DestroyRoomReply = 30008,
-    [pbr::OriginalName("PlayerEnterRoomReply")] PlayerEnterRoomReply = 30010,
-    [pbr::OriginalName("PlayerLeaveRoomReply")] PlayerLeaveRoomReply = 30012,
+    [pbr::OriginalName("UpdateRoomInfoReply")] UpdateRoomInfoReply = 30004,
+    /// <summary>
+    ///	RoomServerLogoutReply = 30004;
+    ///	CreateRoomReply = 30006;
+    ///	PlayerEnterRoomReply= 30010;
+    ///	PlayerLeaveRoomReply = 30012;
+    /// </summary>
+    [pbr::OriginalName("DestroyRoomReply")] DestroyRoomReply = 30006,
   }
 
   #endregion

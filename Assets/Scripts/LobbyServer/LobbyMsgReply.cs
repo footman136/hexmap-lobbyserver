@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using Google.Protobuf;
 // https://blog.csdn.net/u014308482/article/details/52958148
 using Protobuf.Lobby;
+using UnityEngine.Experimental.PlayerLoop;
 using Random = System.Random;
 
 // https://github.com/LitJSON/litjson
@@ -53,6 +54,12 @@ public class LobbyMsgReply
                     break;
                 case LOBBY.AskJoinRoom:
                     ASK_JOIN_ROOM(recvData);
+                    break;
+                case LOBBY.DestroyRoom:
+                    DESTROY_ROOM(recvData);
+                    break;
+                case LOBBY.UpdateRoomInfo:
+                    UPDATE_ROOM_INFO(recvData);
                     break;
             }
         }
@@ -113,20 +120,9 @@ public class LobbyMsgReply
     {
         AskRoomList input = AskRoomList.Parser.ParseFrom(bytes);
         
-//        // 找到当前玩家信息
-//        PlayerInfo pi = LobbyManager.Instance.Players[_args];
-//        if (pi == null)
-//        {
-//            LobbyManager.Instance.Log($"MSG: ASK_ROOM_LIST - 没有找到当前玩家！");
-//            AskRoomListReply output = new AskRoomListReply()
-//            {
-//                Ret = false,
-//            };
-//            LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskRoomListReply, output.ToByteArray());
-//            return;
-//        }
         // 从redis里读取房间信息
         {
+            
             AskRoomListReply output = new AskRoomListReply();
             output.Ret = true;
             string[] tableNames = LobbyManager.Instance.Redis.CSRedis.Keys("MAP:*");
@@ -141,6 +137,12 @@ public class LobbyMsgReply
                     Creator = createrId,
                     IsRunning = false,
                 };
+                roomInfo.IsRunning = LobbyManager.Instance.Rooms.ContainsKey(roomInfo.RoomId);
+                if (roomInfo.IsRunning)
+                {
+                    roomInfo.CurPlayerCount = LobbyManager.Instance.Rooms[roomInfo.RoomId].CurPlayerCount;
+                }
+
                 output.Rooms.Add(roomInfo);
             }
 
@@ -229,6 +231,27 @@ public class LobbyMsgReply
             LobbyManager.Instance.Log($"MSG: 找到空余的房间服务器，可以加入房间 - {theRoomServer.Address}:{theRoomServer.Port}");
         }
     }
+
+    static void DESTROY_ROOM(byte[] bytes)
+    {
+        DestroyRoom input = DestroyRoom.Parser.ParseFrom(bytes);
+        string tableName = $"MAP:{input.RoomId}";
+        bool ret = false;
+        string roomName = "";
+        if (LobbyManager.Instance.Redis.CSRedis.Exists(tableName))
+        {
+            roomName = LobbyManager.Instance.Redis.CSRedis.HGet<string>(tableName, "RoomName");
+            LobbyManager.Instance.Redis.CSRedis.Del(tableName);
+            ret = true;
+        }
+
+        DestroyRoomReply output = new DestroyRoomReply()
+        {
+            Ret = ret,
+            RoomName = roomName,
+        };
+        LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.DestroyRoomReply, output.ToByteArray());
+    }
 #endregion
     
 #region 房间服务器消息处理
@@ -245,8 +268,36 @@ public class LobbyMsgReply
         {
             Ret = true,
         };
-        LobbyManager.Instance.Log($"MSG: 房间服务器登录成功！地址:{input.ServerName} - MaxRoomCount:{input.MaxRoomCount} - MaxPlayerPerRoom:{input.MaxPlayerPerRoom}");
         // 返回消息
+        LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.RoomServerLoginReply, output.ToByteArray());
+        LobbyManager.Instance.Log($"MSG: 房间服务器登录成功！地址:{input.ServerName} - MaxRoomCount:{input.MaxRoomCount} - MaxPlayerPerRoom:{input.MaxPlayerPerRoom}");
+    }
+
+    static void UPDATE_ROOM_INFO(byte[] bytes)
+    {
+        UpdateRoomInfo input = UpdateRoomInfo.Parser.ParseFrom(bytes);
+        if (!input.IsRemove)
+        {
+            RoomInfo roomInfo = new RoomInfo()
+            {
+                RoomName = input.RoomName,
+                RoomId = input.RoomId,
+                CurPlayerCount = input.CurPlayerCount,
+                MaxPlayerCount = input.MaxPlayerCount,
+                IsRunning = input.IsRunning,
+                Creator = input.Creator,
+            };
+            LobbyManager.Instance.Rooms[input.RoomId] = roomInfo;
+        }
+        else
+        {// 删除这个房间
+            LobbyManager.Instance.Rooms.Remove(input.RoomId);
+        }
+
+        UpdateRoomInfoReply output = new UpdateRoomInfoReply()
+        {
+            Ret = true,
+        };
         LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.RoomServerLoginReply, output.ToByteArray());
     }
 #endregion

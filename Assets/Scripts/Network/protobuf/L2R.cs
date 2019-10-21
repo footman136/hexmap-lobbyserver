@@ -28,12 +28,19 @@ namespace Protobuf.Lobby {
             "aW4SEgoKU2VydmVyTmFtZRgBIAEoCRIQCghTZXJ2ZXJJZBgCIAEoAxIPCgdB",
             "ZGRyZXNzGAMgASgJEgwKBFBvcnQYBCABKAUSFAoMTWF4Um9vbUNvdW50GAUg",
             "ASgFEhgKEE1heFBsYXllclBlclJvb20YBiABKAUiIwoUUm9vbVNlcnZlckxv",
-            "Z2luUmVwbHkSCwoDUmV0GAEgASgIYgZwcm90bzM="));
+            "Z2luUmVwbHkSCwoDUmV0GAEgASgIIqwBCg5VcGRhdGVSb29tSW5mbxIQCghS",
+            "b29tTmFtZRgBIAEoCRIOCgZSb29tSWQYAiABKAMSEgoKQ3JlYXRlVGltZRgD",
+            "IAEoAxIWCg5DdXJQbGF5ZXJDb3VudBgEIAEoBRIWCg5NYXhQbGF5ZXJDb3Vu",
+            "dBgFIAEoBRIPCgdDcmVhdG9yGAYgASgDEhEKCUlzUnVubmluZxgHIAEoCBIQ",
+            "CghJc1JlbW92ZRgIIAEoCCIiChNVcGRhdGVSb29tSW5mb1JlcGx5EgsKA1Jl",
+            "dBgBIAEoCGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomServerLogin), global::Protobuf.Lobby.RoomServerLogin.Parser, new[]{ "ServerName", "ServerId", "Address", "Port", "MaxRoomCount", "MaxPlayerPerRoom" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomServerLoginReply), global::Protobuf.Lobby.RoomServerLoginReply.Parser, new[]{ "Ret" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomServerLoginReply), global::Protobuf.Lobby.RoomServerLoginReply.Parser, new[]{ "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.UpdateRoomInfo), global::Protobuf.Lobby.UpdateRoomInfo.Parser, new[]{ "RoomName", "RoomId", "CreateTime", "CurPlayerCount", "MaxPlayerCount", "Creator", "IsRunning", "IsRemove" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.UpdateRoomInfoReply), global::Protobuf.Lobby.UpdateRoomInfoReply.Parser, new[]{ "Ret" }, null, null, null, null)
           }));
     }
     #endregion
@@ -411,6 +418,460 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(RoomServerLoginReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UpdateRoomInfo : pb::IMessage<UpdateRoomInfo> {
+    private static readonly pb::MessageParser<UpdateRoomInfo> _parser = new pb::MessageParser<UpdateRoomInfo>(() => new UpdateRoomInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateRoomInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Lobby.L2RReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateRoomInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateRoomInfo(UpdateRoomInfo other) : this() {
+      roomName_ = other.roomName_;
+      roomId_ = other.roomId_;
+      createTime_ = other.createTime_;
+      curPlayerCount_ = other.curPlayerCount_;
+      maxPlayerCount_ = other.maxPlayerCount_;
+      creator_ = other.creator_;
+      isRunning_ = other.isRunning_;
+      isRemove_ = other.isRemove_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateRoomInfo Clone() {
+      return new UpdateRoomInfo(this);
+    }
+
+    /// <summary>Field number for the "RoomName" field.</summary>
+    public const int RoomNameFieldNumber = 1;
+    private string roomName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string RoomName {
+      get { return roomName_; }
+      set {
+        roomName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 2;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CreateTime" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private long createTime_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CurPlayerCount" field.</summary>
+    public const int CurPlayerCountFieldNumber = 4;
+    private int curPlayerCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CurPlayerCount {
+      get { return curPlayerCount_; }
+      set {
+        curPlayerCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "MaxPlayerCount" field.</summary>
+    public const int MaxPlayerCountFieldNumber = 5;
+    private int maxPlayerCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int MaxPlayerCount {
+      get { return maxPlayerCount_; }
+      set {
+        maxPlayerCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Creator" field.</summary>
+    public const int CreatorFieldNumber = 6;
+    private long creator_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long Creator {
+      get { return creator_; }
+      set {
+        creator_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IsRunning" field.</summary>
+    public const int IsRunningFieldNumber = 7;
+    private bool isRunning_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsRunning {
+      get { return isRunning_; }
+      set {
+        isRunning_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IsRemove" field.</summary>
+    public const int IsRemoveFieldNumber = 8;
+    private bool isRemove_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsRemove {
+      get { return isRemove_; }
+      set {
+        isRemove_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateRoomInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateRoomInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomName != other.RoomName) return false;
+      if (RoomId != other.RoomId) return false;
+      if (CreateTime != other.CreateTime) return false;
+      if (CurPlayerCount != other.CurPlayerCount) return false;
+      if (MaxPlayerCount != other.MaxPlayerCount) return false;
+      if (Creator != other.Creator) return false;
+      if (IsRunning != other.IsRunning) return false;
+      if (IsRemove != other.IsRemove) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomName.Length != 0) hash ^= RoomName.GetHashCode();
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (CreateTime != 0L) hash ^= CreateTime.GetHashCode();
+      if (CurPlayerCount != 0) hash ^= CurPlayerCount.GetHashCode();
+      if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
+      if (Creator != 0L) hash ^= Creator.GetHashCode();
+      if (IsRunning != false) hash ^= IsRunning.GetHashCode();
+      if (IsRemove != false) hash ^= IsRemove.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(RoomName);
+      }
+      if (RoomId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(RoomId);
+      }
+      if (CreateTime != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(CreateTime);
+      }
+      if (CurPlayerCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(CurPlayerCount);
+      }
+      if (MaxPlayerCount != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(MaxPlayerCount);
+      }
+      if (Creator != 0L) {
+        output.WriteRawTag(48);
+        output.WriteInt64(Creator);
+      }
+      if (IsRunning != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(IsRunning);
+      }
+      if (IsRemove != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(IsRemove);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RoomName);
+      }
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (CreateTime != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreateTime);
+      }
+      if (CurPlayerCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CurPlayerCount);
+      }
+      if (MaxPlayerCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
+      }
+      if (Creator != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Creator);
+      }
+      if (IsRunning != false) {
+        size += 1 + 1;
+      }
+      if (IsRemove != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateRoomInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomName.Length != 0) {
+        RoomName = other.RoomName;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.CreateTime != 0L) {
+        CreateTime = other.CreateTime;
+      }
+      if (other.CurPlayerCount != 0) {
+        CurPlayerCount = other.CurPlayerCount;
+      }
+      if (other.MaxPlayerCount != 0) {
+        MaxPlayerCount = other.MaxPlayerCount;
+      }
+      if (other.Creator != 0L) {
+        Creator = other.Creator;
+      }
+      if (other.IsRunning != false) {
+        IsRunning = other.IsRunning;
+      }
+      if (other.IsRemove != false) {
+        IsRemove = other.IsRemove;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            RoomName = input.ReadString();
+            break;
+          }
+          case 16: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            CreateTime = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            CurPlayerCount = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            MaxPlayerCount = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            Creator = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            IsRunning = input.ReadBool();
+            break;
+          }
+          case 64: {
+            IsRemove = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UpdateRoomInfoReply : pb::IMessage<UpdateRoomInfoReply> {
+    private static readonly pb::MessageParser<UpdateRoomInfoReply> _parser = new pb::MessageParser<UpdateRoomInfoReply>(() => new UpdateRoomInfoReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateRoomInfoReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Lobby.L2RReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateRoomInfoReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateRoomInfoReply(UpdateRoomInfoReply other) : this() {
+      ret_ = other.ret_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateRoomInfoReply Clone() {
+      return new UpdateRoomInfoReply(this);
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 1;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateRoomInfoReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateRoomInfoReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Ret != other.Ret) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Ret != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Ret);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateRoomInfoReply other) {
       if (other == null) {
         return;
       }
