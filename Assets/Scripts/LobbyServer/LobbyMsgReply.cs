@@ -113,32 +113,32 @@ public class LobbyMsgReply
     {
         AskRoomList input = AskRoomList.Parser.ParseFrom(bytes);
         
-        // 找到当前玩家信息
-        PlayerInfo pi = LobbyManager.Instance.Players[_args];
-        if (pi == null)
-        {
-            LobbyManager.Instance.Log($"MSG: ASK_ROOM_LIST - 没有找到当前玩家！");
-            AskRoomListReply output = new AskRoomListReply()
-            {
-                Ret = false,
-            };
-            LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskRoomListReply, output.ToByteArray());
-            return;
-        }
+//        // 找到当前玩家信息
+//        PlayerInfo pi = LobbyManager.Instance.Players[_args];
+//        if (pi == null)
+//        {
+//            LobbyManager.Instance.Log($"MSG: ASK_ROOM_LIST - 没有找到当前玩家！");
+//            AskRoomListReply output = new AskRoomListReply()
+//            {
+//                Ret = false,
+//            };
+//            LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskRoomListReply, output.ToByteArray());
+//            return;
+//        }
         // 从redis里读取房间信息
         {
             AskRoomListReply output = new AskRoomListReply();
             output.Ret = true;
-            string[] roomKeys = LobbyManager.Instance.Redis.CSRedis.Keys("MAP:*");
-            foreach (string roomKey in roomKeys)
+            string[] tableNames = LobbyManager.Instance.Redis.CSRedis.Keys("MAP:*");
+            foreach (string tableName in tableNames)
             {
-                long createrId = LobbyManager.Instance.Redis.CSRedis.HGet<long>(roomKey, "Creator");
+                long createrId = LobbyManager.Instance.Redis.CSRedis.HGet<long>(tableName, "Creator");
                 RoomInfo roomInfo = new RoomInfo()
                 {
-                    RoomId = LobbyManager.Instance.Redis.CSRedis.HGet<long>(roomKey, "RoomId"),
-                    MaxPlayerCount = LobbyManager.Instance.Redis.CSRedis.HGet<int>(roomKey, "MaxPlayerCount"),
-                    RoomName = LobbyManager.Instance.Redis.CSRedis.HGet<string>(roomKey, "RoomName"),
-                    IsCreatedByMe = pi.Enter.TokenId == createrId,
+                    RoomId = LobbyManager.Instance.Redis.CSRedis.HGet<long>(tableName, "RoomId"),
+                    MaxPlayerCount = LobbyManager.Instance.Redis.CSRedis.HGet<int>(tableName, "MaxPlayerCount"),
+                    RoomName = LobbyManager.Instance.Redis.CSRedis.HGet<string>(tableName, "RoomName"),
+                    Creator = createrId,
                     IsRunning = false,
                 };
                 output.Rooms.Add(roomInfo);

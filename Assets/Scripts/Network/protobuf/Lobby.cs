@@ -27,20 +27,20 @@ namespace Protobuf.Lobby {
             "Cgtsb2JieS5wcm90bxIOUHJvdG9idWYubG9iYnkiLwoLUGxheWVyRW50ZXIS",
             "DwoHQWNjb3VudBgBIAEoCRIPCgdUb2tlbklkGAIgASgDIh8KEFBsYXllckVu",
             "dGVyUmVwbHkSCwoDUmV0GAEgASgIIh4KC0NoYXRNZXNzYWdlEg8KB01lc3Nh",
-            "Z2UYASABKAkiDQoLQXNrUm9vbUxpc3QimgEKCFJvb21JbmZvEhAKCFJvb21O",
+            "Z2UYASABKAkiDQoLQXNrUm9vbUxpc3QilAEKCFJvb21JbmZvEhAKCFJvb21O",
             "YW1lGAEgASgJEg4KBlJvb21JZBgCIAEoAxISCgpDcmVhdGVUaW1lGAMgASgD",
             "EhYKDkN1clBsYXllckNvdW50GAQgASgFEhYKDk1heFBsYXllckNvdW50GAUg",
-            "ASgFEhUKDUlzQ3JlYXRlZEJ5TWUYBiABKAgSEQoJaXNSdW5uaW5nGAcgASgI",
-            "IkgKEEFza1Jvb21MaXN0UmVwbHkSCwoDUmV0GAEgASgIEicKBVJvb21zGAIg",
-            "AygLMhguUHJvdG9idWYubG9iYnkuUm9vbUluZm8iOQoNQXNrQ3JlYXRlUm9v",
-            "bRIQCghSb29tTmFtZRgBIAEoCRIWCg5NYXhQbGF5ZXJDb3VudBgCIAEoBSJ+",
-            "ChJBc2tDcmVhdGVSb29tUmVwbHkSCwoDUmV0GAEgASgIEhkKEVJvb21TZXJ2",
-            "ZXJBZGRyZXNzGAIgASgJEhYKDlJvb21TZXJ2ZXJQb3J0GAMgASgFEhAKCFJv",
-            "b21OYW1lGAQgASgJEhYKDk1heFBsYXllckNvdW50GAUgASgFIjUKC0Fza0pv",
-            "aW5Sb29tEg4KBlJvb21JZBgBIAEoAxIWCg5NYXhQbGF5ZXJDb3VudBgCIAEo",
-            "BSJiChBBc2tKb2luUm9vbVJlcGx5EgsKA1JldBgBIAEoCBIZChFSb29tU2Vy",
-            "dmVyQWRkcmVzcxgCIAEoCRIWCg5Sb29tU2VydmVyUG9ydBgDIAEoBRIOCgZS",
-            "b29tSWQYBCABKANiBnByb3RvMw=="));
+            "ASgFEg8KB0NyZWF0b3IYBiABKAMSEQoJaXNSdW5uaW5nGAcgASgIIkgKEEFz",
+            "a1Jvb21MaXN0UmVwbHkSCwoDUmV0GAEgASgIEicKBVJvb21zGAIgAygLMhgu",
+            "UHJvdG9idWYubG9iYnkuUm9vbUluZm8iOQoNQXNrQ3JlYXRlUm9vbRIQCghS",
+            "b29tTmFtZRgBIAEoCRIWCg5NYXhQbGF5ZXJDb3VudBgCIAEoBSJ+ChJBc2tD",
+            "cmVhdGVSb29tUmVwbHkSCwoDUmV0GAEgASgIEhkKEVJvb21TZXJ2ZXJBZGRy",
+            "ZXNzGAIgASgJEhYKDlJvb21TZXJ2ZXJQb3J0GAMgASgFEhAKCFJvb21OYW1l",
+            "GAQgASgJEhYKDk1heFBsYXllckNvdW50GAUgASgFIjUKC0Fza0pvaW5Sb29t",
+            "Eg4KBlJvb21JZBgBIAEoAxIWCg5NYXhQbGF5ZXJDb3VudBgCIAEoBSJiChBB",
+            "c2tKb2luUm9vbVJlcGx5EgsKA1JldBgBIAEoCBIZChFSb29tU2VydmVyQWRk",
+            "cmVzcxgCIAEoCRIWCg5Sb29tU2VydmVyUG9ydBgDIAEoBRIOCgZSb29tSWQY",
+            "BCABKANiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -48,7 +48,7 @@ namespace Protobuf.Lobby {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.PlayerEnterReply), global::Protobuf.Lobby.PlayerEnterReply.Parser, new[]{ "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.ChatMessage), global::Protobuf.Lobby.ChatMessage.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.AskRoomList), global::Protobuf.Lobby.AskRoomList.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomInfo), global::Protobuf.Lobby.RoomInfo.Parser, new[]{ "RoomName", "RoomId", "CreateTime", "CurPlayerCount", "MaxPlayerCount", "IsCreatedByMe", "IsRunning" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomInfo), global::Protobuf.Lobby.RoomInfo.Parser, new[]{ "RoomName", "RoomId", "CreateTime", "CurPlayerCount", "MaxPlayerCount", "Creator", "IsRunning" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.AskRoomListReply), global::Protobuf.Lobby.AskRoomListReply.Parser, new[]{ "Ret", "Rooms" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.AskCreateRoom), global::Protobuf.Lobby.AskCreateRoom.Parser, new[]{ "RoomName", "MaxPlayerCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.AskCreateRoomReply), global::Protobuf.Lobby.AskCreateRoomReply.Parser, new[]{ "Ret", "RoomServerAddress", "RoomServerPort", "RoomName", "MaxPlayerCount" }, null, null, null, null),
@@ -606,7 +606,7 @@ namespace Protobuf.Lobby {
       createTime_ = other.createTime_;
       curPlayerCount_ = other.curPlayerCount_;
       maxPlayerCount_ = other.maxPlayerCount_;
-      isCreatedByMe_ = other.isCreatedByMe_;
+      creator_ = other.creator_;
       isRunning_ = other.isRunning_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -671,14 +671,14 @@ namespace Protobuf.Lobby {
       }
     }
 
-    /// <summary>Field number for the "IsCreatedByMe" field.</summary>
-    public const int IsCreatedByMeFieldNumber = 6;
-    private bool isCreatedByMe_;
+    /// <summary>Field number for the "Creator" field.</summary>
+    public const int CreatorFieldNumber = 6;
+    private long creator_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool IsCreatedByMe {
-      get { return isCreatedByMe_; }
+    public long Creator {
+      get { return creator_; }
       set {
-        isCreatedByMe_ = value;
+        creator_ = value;
       }
     }
 
@@ -711,7 +711,7 @@ namespace Protobuf.Lobby {
       if (CreateTime != other.CreateTime) return false;
       if (CurPlayerCount != other.CurPlayerCount) return false;
       if (MaxPlayerCount != other.MaxPlayerCount) return false;
-      if (IsCreatedByMe != other.IsCreatedByMe) return false;
+      if (Creator != other.Creator) return false;
       if (IsRunning != other.IsRunning) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -724,7 +724,7 @@ namespace Protobuf.Lobby {
       if (CreateTime != 0L) hash ^= CreateTime.GetHashCode();
       if (CurPlayerCount != 0) hash ^= CurPlayerCount.GetHashCode();
       if (MaxPlayerCount != 0) hash ^= MaxPlayerCount.GetHashCode();
-      if (IsCreatedByMe != false) hash ^= IsCreatedByMe.GetHashCode();
+      if (Creator != 0L) hash ^= Creator.GetHashCode();
       if (IsRunning != false) hash ^= IsRunning.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -759,9 +759,9 @@ namespace Protobuf.Lobby {
         output.WriteRawTag(40);
         output.WriteInt32(MaxPlayerCount);
       }
-      if (IsCreatedByMe != false) {
+      if (Creator != 0L) {
         output.WriteRawTag(48);
-        output.WriteBool(IsCreatedByMe);
+        output.WriteInt64(Creator);
       }
       if (IsRunning != false) {
         output.WriteRawTag(56);
@@ -790,8 +790,8 @@ namespace Protobuf.Lobby {
       if (MaxPlayerCount != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerCount);
       }
-      if (IsCreatedByMe != false) {
-        size += 1 + 1;
+      if (Creator != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Creator);
       }
       if (IsRunning != false) {
         size += 1 + 1;
@@ -822,8 +822,8 @@ namespace Protobuf.Lobby {
       if (other.MaxPlayerCount != 0) {
         MaxPlayerCount = other.MaxPlayerCount;
       }
-      if (other.IsCreatedByMe != false) {
-        IsCreatedByMe = other.IsCreatedByMe;
+      if (other.Creator != 0L) {
+        Creator = other.Creator;
       }
       if (other.IsRunning != false) {
         IsRunning = other.IsRunning;
@@ -860,7 +860,7 @@ namespace Protobuf.Lobby {
             break;
           }
           case 48: {
-            IsCreatedByMe = input.ReadBool();
+            Creator = input.ReadInt64();
             break;
           }
           case 56: {
