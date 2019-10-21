@@ -25,7 +25,7 @@ public class LobbyMsgReply
         {
             if (size < 4)
             {
-                Debug.Log($"ProcessMsg Error - invalid data size:{size}");
+                LobbyManager.Instance.Log($"ProcessMsg Error - invalid data size:{size}");
                 return;
             }
 
@@ -50,6 +50,9 @@ public class LobbyMsgReply
                     break;
                 case LOBBY.AskCreateRoom:
                     ASK_CREATE_ROOM(recvData);
+                    break;
+                case LOBBY.AskJoinRoom:
+                    ASK_JOIN_ROOM(recvData);
                     break;
             }
         }
@@ -109,25 +112,41 @@ public class LobbyMsgReply
     static void ASK_ROOM_LIST(byte[] bytes)
     {
         AskRoomList input = AskRoomList.Parser.ParseFrom(bytes);
-        int playerCount = 11;
-        string[] names = new string[11] {"Childhood", "Playground", "战狼", "中土战争", "霍比特人的小屋","血战钢锯岭","狂怒","钢铁雄狮","信长の野望","被人遗忘的星辰大海","小丑"};
-
-        Random rand = new Random();
-
-        AskRoomListReply output = new AskRoomListReply();
-        for (int i = 0; i < playerCount; ++i)
+        
+        // 找到当前玩家信息
+        PlayerInfo pi = LobbyManager.Instance.Players[_args];
+        if (pi == null)
         {
-            RoomInfo roomInfo = new RoomInfo()
+            LobbyManager.Instance.Log($"MSG: ASK_ROOM_LIST - 没有找到当前玩家！");
+            AskRoomListReply output = new AskRoomListReply()
             {
-                Name = names[i],
-                CreateTime = 1000+rand.Next(1, 999),
-                RoomId = 100+rand.Next(0,99),
-                PlayerCount = rand.Next(0,20),
-                MaxPlayerCount = 20,
+                Ret = false,
             };
-            output.Rooms.Add(roomInfo);
+            LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskRoomListReply, output.ToByteArray());
+            return;
         }
-        LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskRoomListReply, output.ToByteArray());
+        // 从redis里读取房间信息
+        {
+            AskRoomListReply output = new AskRoomListReply();
+            output.Ret = true;
+            string[] roomKeys = LobbyManager.Instance.Redis.CSRedis.Keys("MAP:*");
+            foreach (string roomKey in roomKeys)
+            {
+                long createrId = LobbyManager.Instance.Redis.CSRedis.HGet<long>(roomKey, "Creator");
+                RoomInfo roomInfo = new RoomInfo()
+                {
+                    RoomId = LobbyManager.Instance.Redis.CSRedis.HGet<long>(roomKey, "RoomId"),
+                    MaxPlayerCount = LobbyManager.Instance.Redis.CSRedis.HGet<int>(roomKey, "MaxPlayerCount"),
+                    RoomName = LobbyManager.Instance.Redis.CSRedis.HGet<string>(roomKey, "RoomName"),
+                    IsCreatedByMe = pi.Enter.TokenId == createrId,
+                    IsRunning = false,
+                };
+                output.Rooms.Add(roomInfo);
+            }
+
+            LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskRoomListReply, output.ToByteArray());
+        }
+
     }
 
     static void ASK_CREATE_ROOM(byte[] bytes)
@@ -153,7 +172,7 @@ public class LobbyMsgReply
                 Ret = false,    
             };
             LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskCreateRoomReply, output.ToByteArray());
-            Debug.Log("MSG: 没有空余的房间服务器！");
+            LobbyManager.Instance.Log("MSG: 没有空余的房间服务器！");
         }
         else
         {
@@ -167,7 +186,47 @@ public class LobbyMsgReply
             };
             
             LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskCreateRoomReply, output.ToByteArray());
-            Debug.Log($"MSG: 找到空余的房间服务器 - {theRoomServer.Address}:{theRoomServer.Port}");
+            LobbyManager.Instance.Log($"MSG: 找到空余的房间服务器，可以创建房间 - {theRoomServer.Address}:{theRoomServer.Port}");
+        }
+    }
+
+    static void ASK_JOIN_ROOM(byte[] bytes)
+    {
+        AskJoinRoom input = AskJoinRoom.Parser.ParseFrom(bytes);
+        RoomServerLogin theRoomServer = null;
+        //
+        foreach (var keyValue in LobbyManager.Instance.RoomServers)
+        {
+            RoomServerInfo roomServerInfo = keyValue.Value;
+            RoomServerLogin roomServer = roomServerInfo.Login;
+            if (LobbyManager.Instance.Rooms.Count < roomServer.MaxRoomCount
+                && input.MaxPlayerCount < roomServer.MaxPlayerPerRoom)
+            {
+                theRoomServer = roomServer;
+            }
+        }
+        
+        if (theRoomServer == null)
+        {
+            AskJoinRoomReply output = new AskJoinRoomReply()
+            {
+                Ret = false,    
+            };
+            LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskJoinRoomReply, output.ToByteArray());
+            LobbyManager.Instance.Log("MSG: 没有空余的房间服务器！");
+        }
+        else
+        {
+            AskJoinRoomReply output = new AskJoinRoomReply()
+            {
+                Ret = true,
+                RoomServerAddress = theRoomServer.Address,
+                RoomServerPort = theRoomServer.Port,
+                RoomId = input.RoomId,
+            };
+            
+            LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskJoinRoomReply, output.ToByteArray());
+            LobbyManager.Instance.Log($"MSG: 找到空余的房间服务器，可以加入房间 - {theRoomServer.Address}:{theRoomServer.Port}");
         }
     }
 #endregion
@@ -186,7 +245,7 @@ public class LobbyMsgReply
         {
             Ret = true,
         };
-        Debug.Log($"MSG: 房间服务器登录成功！地址:{input.ServerName} - MaxRoomCount:{input.MaxRoomCount} - MaxPlayerPerRoom:{input.MaxPlayerPerRoom}");
+        LobbyManager.Instance.Log($"MSG: 房间服务器登录成功！地址:{input.ServerName} - MaxRoomCount:{input.MaxRoomCount} - MaxPlayerPerRoom:{input.MaxPlayerPerRoom}");
         // 返回消息
         LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.RoomServerLoginReply, output.ToByteArray());
     }
