@@ -39,10 +39,11 @@ namespace Protobuf.Room {
             "b29tTmFtZRgBIAEoCRIOCgZSb29tSWQYAiABKAMSEgoKQ3JlYXRlVGltZRgD",
             "IAEoAxIWCg5DdXJQbGF5ZXJDb3VudBgEIAEoBRIWCg5NYXhQbGF5ZXJDb3Vu",
             "dBgFIAEoBRIPCgdDcmVhdG9yGAYgASgDIhsKCUVudGVyUm9vbRIOCgZSb29t",
-            "SWQYASABKAMiLwoORW50ZXJSb29tUmVwbHkSCwoDUmV0GAEgASgIEhAKCFJv",
-            "b21OYW1lGAIgASgJIjQKCUxlYXZlUm9vbRIOCgZSb29tSWQYASABKAMSFwoP",
-            "UmVsZWFzZUlmTm9Vc2VyGAIgASgIIi8KDkxlYXZlUm9vbVJlcGx5EgsKA1Jl",
-            "dBgBIAEoCBIQCghSb29tTmFtZRgCIAEoCWIGcHJvdG8z"));
+            "SWQYASABKAMiTwoORW50ZXJSb29tUmVwbHkSCwoDUmV0GAEgASgIEg4KBlJv",
+            "b21JZBgCIAEoAxIQCghSb29tTmFtZRgDIAEoCRIOCgZFcnJNc2cYBCABKAki",
+            "NAoJTGVhdmVSb29tEg4KBlJvb21JZBgBIAEoAxIXCg9SZWxlYXNlSWZOb1Vz",
+            "ZXIYAiABKAgiLwoOTGVhdmVSb29tUmVwbHkSCwoDUmV0GAEgASgIEhAKCFJv",
+            "b21OYW1lGAIgASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,7 +55,7 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMapReply), global::Protobuf.Room.DownloadMapReply.Parser, new[]{ "Ret", "RoomId", "RoomName", "MaxPlayerCount", "IsCreatedByMe", "PackageIndex", "IsLastPackage", "MapData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.RoomInfo), global::Protobuf.Room.RoomInfo.Parser, new[]{ "RoomName", "RoomId", "CreateTime", "CurPlayerCount", "MaxPlayerCount", "Creator" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoom), global::Protobuf.Room.EnterRoom.Parser, new[]{ "RoomId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoomReply), global::Protobuf.Room.EnterRoomReply.Parser, new[]{ "Ret", "RoomName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoomReply), global::Protobuf.Room.EnterRoomReply.Parser, new[]{ "Ret", "RoomId", "RoomName", "ErrMsg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.LeaveRoom), global::Protobuf.Room.LeaveRoom.Parser, new[]{ "RoomId", "ReleaseIfNoUser" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.LeaveRoomReply), global::Protobuf.Room.LeaveRoomReply.Parser, new[]{ "Ret", "RoomName" }, null, null, null, null)
           }));
@@ -1681,7 +1682,9 @@ namespace Protobuf.Room {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public EnterRoomReply(EnterRoomReply other) : this() {
       ret_ = other.ret_;
+      roomId_ = other.roomId_;
       roomName_ = other.roomName_;
+      errMsg_ = other.errMsg_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1701,14 +1704,36 @@ namespace Protobuf.Room {
       }
     }
 
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 2;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "RoomName" field.</summary>
-    public const int RoomNameFieldNumber = 2;
+    public const int RoomNameFieldNumber = 3;
     private string roomName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string RoomName {
       get { return roomName_; }
       set {
         roomName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ErrMsg" field.</summary>
+    public const int ErrMsgFieldNumber = 4;
+    private string errMsg_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ErrMsg {
+      get { return errMsg_; }
+      set {
+        errMsg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1726,7 +1751,9 @@ namespace Protobuf.Room {
         return true;
       }
       if (Ret != other.Ret) return false;
+      if (RoomId != other.RoomId) return false;
       if (RoomName != other.RoomName) return false;
+      if (ErrMsg != other.ErrMsg) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1734,7 +1761,9 @@ namespace Protobuf.Room {
     public override int GetHashCode() {
       int hash = 1;
       if (Ret != false) hash ^= Ret.GetHashCode();
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
       if (RoomName.Length != 0) hash ^= RoomName.GetHashCode();
+      if (ErrMsg.Length != 0) hash ^= ErrMsg.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1752,9 +1781,17 @@ namespace Protobuf.Room {
         output.WriteRawTag(8);
         output.WriteBool(Ret);
       }
+      if (RoomId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(RoomId);
+      }
       if (RoomName.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(26);
         output.WriteString(RoomName);
+      }
+      if (ErrMsg.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrMsg);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1767,8 +1804,14 @@ namespace Protobuf.Room {
       if (Ret != false) {
         size += 1 + 1;
       }
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
       if (RoomName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RoomName);
+      }
+      if (ErrMsg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrMsg);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1784,8 +1827,14 @@ namespace Protobuf.Room {
       if (other.Ret != false) {
         Ret = other.Ret;
       }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
       if (other.RoomName.Length != 0) {
         RoomName = other.RoomName;
+      }
+      if (other.ErrMsg.Length != 0) {
+        ErrMsg = other.ErrMsg;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1802,8 +1851,16 @@ namespace Protobuf.Room {
             Ret = input.ReadBool();
             break;
           }
-          case 18: {
+          case 16: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 26: {
             RoomName = input.ReadString();
+            break;
+          }
+          case 34: {
+            ErrMsg = input.ReadString();
             break;
           }
         }
