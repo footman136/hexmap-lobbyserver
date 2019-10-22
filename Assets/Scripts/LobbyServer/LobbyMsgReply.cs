@@ -298,7 +298,7 @@ public class LobbyMsgReply
         {
             Ret = true,
         };
-        LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.RoomServerLoginReply, output.ToByteArray());
+        LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.UpdateRoomInfoReply, output.ToByteArray());
     }
 #endregion
 }
