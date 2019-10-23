@@ -24,14 +24,16 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKoABCgRST09N",
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKqkBCgRST09N",
             "EgwKCE1zZ1N0YXJ0EAASEQoLUGxheWVyRW50ZXIQoZwBEg8KCUVudGVyUm9v",
             "bRCjnAESDwoJTGVhdmVSb29tEKWcARIPCglVcGxvYWRNYXAQp5wBEhEKC0Rv",
-            "d25sb2FkTWFwEKmcARIRCgtEZXN0cm95Um9vbRCrnAEqqQEKClJPT01fUkVQ",
-            "TFkSEQoNTXNnU3RhcnRSZXBseRAAEhYKEFBsYXllckVudGVyUmVwbHkQopwB",
-            "EhQKDkVudGVyUm9vbVJlcGx5EKScARIUCg5MZWF2ZVJvb21SZXBseRDGmgwS",
-            "FAoOVXBsb2FkTWFwUmVwbHkQqJwBEhYKEERvd25sb2FkTWFwUmVwbHkQqpwB",
-            "EhYKEERlc3Ryb3lSb29tUmVwbHkQrJwBYgZwcm90bzM="));
+            "d25sb2FkTWFwEKmcARIRCgtEZXN0cm95Um9vbRCrnAESEgoMQ3JlYXRlQVRy",
+            "b29wELWcARITCg1EZXN0cm95QVRyb29wELecASrcAQoKUk9PTV9SRVBMWRIR",
+            "Cg1Nc2dTdGFydFJlcGx5EAASFgoQUGxheWVyRW50ZXJSZXBseRCinAESFAoO",
+            "RW50ZXJSb29tUmVwbHkQpJwBEhQKDkxlYXZlUm9vbVJlcGx5EMaaDBIUCg5V",
+            "cGxvYWRNYXBSZXBseRConAESFgoQRG93bmxvYWRNYXBSZXBseRCqnAESFgoQ",
+            "RGVzdHJveVJvb21SZXBseRCsnAESFwoRQ3JlYXRlQVRyb29wUmVwbHkQtpwB",
+            "EhgKEkRlc3Ryb3lBVHJvb3BSZXBseRC3nAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -54,6 +56,8 @@ namespace Protobuf.Room {
     [pbr::OriginalName("UploadMap")] UploadMap = 20007,
     [pbr::OriginalName("DownloadMap")] DownloadMap = 20009,
     [pbr::OriginalName("DestroyRoom")] DestroyRoom = 20011,
+    [pbr::OriginalName("CreateATroop")] CreateAtroop = 20021,
+    [pbr::OriginalName("DestroyATroop")] DestroyAtroop = 20023,
   }
 
   /// <summary>
@@ -70,6 +74,8 @@ namespace Protobuf.Room {
     [pbr::OriginalName("UploadMapReply")] UploadMapReply = 20008,
     [pbr::OriginalName("DownloadMapReply")] DownloadMapReply = 20010,
     [pbr::OriginalName("DestroyRoomReply")] DestroyRoomReply = 20012,
+    [pbr::OriginalName("CreateATroopReply")] CreateAtroopReply = 20022,
+    [pbr::OriginalName("DestroyATroopReply")] DestroyAtroopReply = 20023,
   }
 
   #endregion
