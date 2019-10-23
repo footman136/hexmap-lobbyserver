@@ -52,7 +52,18 @@ namespace Protobuf.Room {
             "Y2llcxgHIAEoCSJBCg1EZXN0cm95QVRyb29wEg4KBlJvb21JZBgBIAEoAxIP",
             "CgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMiQwoSRGVzdHJveUFU",
             "cm9vcFJlcGx5EgsKA3JldBgBIAEoCBIPCgdPd25lcklkGAIgASgDEg8KB0Fj",
-            "dG9ySWQYAyABKANiBnByb3RvMw=="));
+            "dG9ySWQYAyABKAMikAEKCVRyb29wTW92ZRIOCgZSb29tSWQYASABKAMSDwoH",
+            "T3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEhAKCFBvc0Zyb21YGAQg",
+            "ASgFEhAKCFBvc0Zyb21aGAUgASgFEg4KBlBvc1RvWBgGIAEoBRIOCgZQb3NU",
+            "b1oYByABKAUSDQoFU3BlZWQYCCABKAUiogEKDlRyb29wTW92ZVJlcGx5Eg4K",
+            "BlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyAB",
+            "KAMSEAoIUG9zRnJvbVgYBCABKAUSEAoIUG9zRnJvbVoYBSABKAUSDgoGUG9z",
+            "VG9YGAYgASgFEg4KBlBvc1RvWhgHIAEoBRINCgVTcGVlZBgIIAEoAhILCgNS",
+            "ZXQYCSABKAgirgEKEkFJVHJvb3BTdGF0ZUNoYW5nZRIOCgZSb29tSWQYASAB",
+            "KAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEg0KBVN0YXRl",
+            "GAQgASgFEhAKCFBvc0Zyb21YGAUgASgFEhAKCFBvc0Zyb21aGAYgASgFEg4K",
+            "BlBvc1RvWBgHIAEoBRIOCgZQb3NUb1oYCCABKAUSEwoLT3JpZW50YXRpb24Y",
+            "CSABKAJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -70,7 +81,10 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CreateATroop), global::Protobuf.Room.CreateATroop.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "Orientation", "Species" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CreateATroopReply), global::Protobuf.Room.CreateATroopReply.Parser, new[]{ "Ret", "OwnerId", "ActorId", "PosX", "PosZ", "Orientation", "Species" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DestroyATroop), global::Protobuf.Room.DestroyATroop.Parser, new[]{ "RoomId", "OwnerId", "ActorId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DestroyATroopReply), global::Protobuf.Room.DestroyATroopReply.Parser, new[]{ "Ret", "OwnerId", "ActorId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DestroyATroopReply), global::Protobuf.Room.DestroyATroopReply.Parser, new[]{ "Ret", "OwnerId", "ActorId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.TroopMove), global::Protobuf.Room.TroopMove.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosFromX", "PosFromZ", "PosToX", "PosToZ", "Speed" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.TroopMoveReply), global::Protobuf.Room.TroopMoveReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosFromX", "PosFromZ", "PosToX", "PosToZ", "Speed", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.AITroopStateChange), global::Protobuf.Room.AITroopStateChange.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "State", "PosFromX", "PosFromZ", "PosToX", "PosToZ", "Orientation" }, null, null, null, null)
           }));
     }
     #endregion
@@ -3152,6 +3166,1037 @@ namespace Protobuf.Room {
           }
           case 24: {
             ActorId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class TroopMove : pb::IMessage<TroopMove> {
+    private static readonly pb::MessageParser<TroopMove> _parser = new pb::MessageParser<TroopMove>(() => new TroopMove());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TroopMove> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopMove() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopMove(TroopMove other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      posFromX_ = other.posFromX_;
+      posFromZ_ = other.posFromZ_;
+      posToX_ = other.posToX_;
+      posToZ_ = other.posToZ_;
+      speed_ = other.speed_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopMove Clone() {
+      return new TroopMove(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosFromX" field.</summary>
+    public const int PosFromXFieldNumber = 4;
+    private int posFromX_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosFromX {
+      get { return posFromX_; }
+      set {
+        posFromX_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosFromZ" field.</summary>
+    public const int PosFromZFieldNumber = 5;
+    private int posFromZ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosFromZ {
+      get { return posFromZ_; }
+      set {
+        posFromZ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosToX" field.</summary>
+    public const int PosToXFieldNumber = 6;
+    private int posToX_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosToX {
+      get { return posToX_; }
+      set {
+        posToX_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosToZ" field.</summary>
+    public const int PosToZFieldNumber = 7;
+    private int posToZ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosToZ {
+      get { return posToZ_; }
+      set {
+        posToZ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Speed" field.</summary>
+    public const int SpeedFieldNumber = 8;
+    private int speed_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Speed {
+      get { return speed_; }
+      set {
+        speed_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TroopMove);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TroopMove other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (PosFromX != other.PosFromX) return false;
+      if (PosFromZ != other.PosFromZ) return false;
+      if (PosToX != other.PosToX) return false;
+      if (PosToZ != other.PosToZ) return false;
+      if (Speed != other.Speed) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (PosFromX != 0) hash ^= PosFromX.GetHashCode();
+      if (PosFromZ != 0) hash ^= PosFromZ.GetHashCode();
+      if (PosToX != 0) hash ^= PosToX.GetHashCode();
+      if (PosToZ != 0) hash ^= PosToZ.GetHashCode();
+      if (Speed != 0) hash ^= Speed.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (PosFromX != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PosFromX);
+      }
+      if (PosFromZ != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PosFromZ);
+      }
+      if (PosToX != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(PosToX);
+      }
+      if (PosToZ != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(PosToZ);
+      }
+      if (Speed != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(Speed);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (PosFromX != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosFromX);
+      }
+      if (PosFromZ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosFromZ);
+      }
+      if (PosToX != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosToX);
+      }
+      if (PosToZ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosToZ);
+      }
+      if (Speed != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Speed);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TroopMove other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.PosFromX != 0) {
+        PosFromX = other.PosFromX;
+      }
+      if (other.PosFromZ != 0) {
+        PosFromZ = other.PosFromZ;
+      }
+      if (other.PosToX != 0) {
+        PosToX = other.PosToX;
+      }
+      if (other.PosToZ != 0) {
+        PosToZ = other.PosToZ;
+      }
+      if (other.Speed != 0) {
+        Speed = other.Speed;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            PosFromX = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            PosFromZ = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            PosToX = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            PosToZ = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            Speed = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class TroopMoveReply : pb::IMessage<TroopMoveReply> {
+    private static readonly pb::MessageParser<TroopMoveReply> _parser = new pb::MessageParser<TroopMoveReply>(() => new TroopMoveReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TroopMoveReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopMoveReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopMoveReply(TroopMoveReply other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      posFromX_ = other.posFromX_;
+      posFromZ_ = other.posFromZ_;
+      posToX_ = other.posToX_;
+      posToZ_ = other.posToZ_;
+      speed_ = other.speed_;
+      ret_ = other.ret_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopMoveReply Clone() {
+      return new TroopMoveReply(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosFromX" field.</summary>
+    public const int PosFromXFieldNumber = 4;
+    private int posFromX_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosFromX {
+      get { return posFromX_; }
+      set {
+        posFromX_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosFromZ" field.</summary>
+    public const int PosFromZFieldNumber = 5;
+    private int posFromZ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosFromZ {
+      get { return posFromZ_; }
+      set {
+        posFromZ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosToX" field.</summary>
+    public const int PosToXFieldNumber = 6;
+    private int posToX_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosToX {
+      get { return posToX_; }
+      set {
+        posToX_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosToZ" field.</summary>
+    public const int PosToZFieldNumber = 7;
+    private int posToZ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosToZ {
+      get { return posToZ_; }
+      set {
+        posToZ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Speed" field.</summary>
+    public const int SpeedFieldNumber = 8;
+    private float speed_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Speed {
+      get { return speed_; }
+      set {
+        speed_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 9;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TroopMoveReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TroopMoveReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (PosFromX != other.PosFromX) return false;
+      if (PosFromZ != other.PosFromZ) return false;
+      if (PosToX != other.PosToX) return false;
+      if (PosToZ != other.PosToZ) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Speed, other.Speed)) return false;
+      if (Ret != other.Ret) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (PosFromX != 0) hash ^= PosFromX.GetHashCode();
+      if (PosFromZ != 0) hash ^= PosFromZ.GetHashCode();
+      if (PosToX != 0) hash ^= PosToX.GetHashCode();
+      if (PosToZ != 0) hash ^= PosToZ.GetHashCode();
+      if (Speed != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Speed);
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (PosFromX != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PosFromX);
+      }
+      if (PosFromZ != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PosFromZ);
+      }
+      if (PosToX != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(PosToX);
+      }
+      if (PosToZ != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(PosToZ);
+      }
+      if (Speed != 0F) {
+        output.WriteRawTag(69);
+        output.WriteFloat(Speed);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(Ret);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (PosFromX != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosFromX);
+      }
+      if (PosFromZ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosFromZ);
+      }
+      if (PosToX != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosToX);
+      }
+      if (PosToZ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosToZ);
+      }
+      if (Speed != 0F) {
+        size += 1 + 4;
+      }
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TroopMoveReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.PosFromX != 0) {
+        PosFromX = other.PosFromX;
+      }
+      if (other.PosFromZ != 0) {
+        PosFromZ = other.PosFromZ;
+      }
+      if (other.PosToX != 0) {
+        PosToX = other.PosToX;
+      }
+      if (other.PosToZ != 0) {
+        PosToZ = other.PosToZ;
+      }
+      if (other.Speed != 0F) {
+        Speed = other.Speed;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            PosFromX = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            PosFromZ = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            PosToX = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            PosToZ = input.ReadInt32();
+            break;
+          }
+          case 69: {
+            Speed = input.ReadFloat();
+            break;
+          }
+          case 72: {
+            Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class AITroopStateChange : pb::IMessage<AITroopStateChange> {
+    private static readonly pb::MessageParser<AITroopStateChange> _parser = new pb::MessageParser<AITroopStateChange>(() => new AITroopStateChange());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AITroopStateChange> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AITroopStateChange() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AITroopStateChange(AITroopStateChange other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      state_ = other.state_;
+      posFromX_ = other.posFromX_;
+      posFromZ_ = other.posFromZ_;
+      posToX_ = other.posToX_;
+      posToZ_ = other.posToZ_;
+      orientation_ = other.orientation_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AITroopStateChange Clone() {
+      return new AITroopStateChange(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "State" field.</summary>
+    public const int StateFieldNumber = 4;
+    private int state_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosFromX" field.</summary>
+    public const int PosFromXFieldNumber = 5;
+    private int posFromX_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosFromX {
+      get { return posFromX_; }
+      set {
+        posFromX_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosFromZ" field.</summary>
+    public const int PosFromZFieldNumber = 6;
+    private int posFromZ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosFromZ {
+      get { return posFromZ_; }
+      set {
+        posFromZ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosToX" field.</summary>
+    public const int PosToXFieldNumber = 7;
+    private int posToX_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosToX {
+      get { return posToX_; }
+      set {
+        posToX_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosToZ" field.</summary>
+    public const int PosToZFieldNumber = 8;
+    private int posToZ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosToZ {
+      get { return posToZ_; }
+      set {
+        posToZ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Orientation" field.</summary>
+    public const int OrientationFieldNumber = 9;
+    private float orientation_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Orientation {
+      get { return orientation_; }
+      set {
+        orientation_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AITroopStateChange);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AITroopStateChange other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (State != other.State) return false;
+      if (PosFromX != other.PosFromX) return false;
+      if (PosFromZ != other.PosFromZ) return false;
+      if (PosToX != other.PosToX) return false;
+      if (PosToZ != other.PosToZ) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Orientation, other.Orientation)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (State != 0) hash ^= State.GetHashCode();
+      if (PosFromX != 0) hash ^= PosFromX.GetHashCode();
+      if (PosFromZ != 0) hash ^= PosFromZ.GetHashCode();
+      if (PosToX != 0) hash ^= PosToX.GetHashCode();
+      if (PosToZ != 0) hash ^= PosToZ.GetHashCode();
+      if (Orientation != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Orientation);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (State != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(State);
+      }
+      if (PosFromX != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PosFromX);
+      }
+      if (PosFromZ != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(PosFromZ);
+      }
+      if (PosToX != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(PosToX);
+      }
+      if (PosToZ != 0) {
+        output.WriteRawTag(64);
+        output.WriteInt32(PosToZ);
+      }
+      if (Orientation != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(Orientation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (State != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(State);
+      }
+      if (PosFromX != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosFromX);
+      }
+      if (PosFromZ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosFromZ);
+      }
+      if (PosToX != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosToX);
+      }
+      if (PosToZ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosToZ);
+      }
+      if (Orientation != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AITroopStateChange other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.State != 0) {
+        State = other.State;
+      }
+      if (other.PosFromX != 0) {
+        PosFromX = other.PosFromX;
+      }
+      if (other.PosFromZ != 0) {
+        PosFromZ = other.PosFromZ;
+      }
+      if (other.PosToX != 0) {
+        PosToX = other.PosToX;
+      }
+      if (other.PosToZ != 0) {
+        PosToZ = other.PosToZ;
+      }
+      if (other.Orientation != 0F) {
+        Orientation = other.Orientation;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            State = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            PosFromX = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            PosFromZ = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            PosToX = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            PosToZ = input.ReadInt32();
+            break;
+          }
+          case 77: {
+            Orientation = input.ReadFloat();
             break;
           }
         }
