@@ -31,39 +31,39 @@ namespace Protobuf.Room {
             "GAMgASgFEhUKDUlzTGFzdFBhY2thZ2UYBCABKAgSDwoHTWFwRGF0YRgFIAEo",
             "DCJWCg5VcGxvYWRNYXBSZXBseRILCgNSZXQYASABKAgSFQoNSXNMYXN0UGFj",
             "a2FnZRgCIAEoCBIOCgZSb29tSWQYAyABKAMSEAoIUm9vbU5hbWUYBCABKAki",
-            "HQoLRG93bmxvYWRNYXASDgoGUm9vbUlkGAEgASgDIq4BChBEb3dubG9hZE1h",
+            "HQoLRG93bmxvYWRNYXASDgoGUm9vbUlkGAEgASgDIr4BChBEb3dubG9hZE1h",
             "cFJlcGx5EgsKA1JldBgBIAEoCBIOCgZSb29tSWQYAiABKAMSEAoIUm9vbU5h",
             "bWUYAyABKAkSFgoOTWF4UGxheWVyQ291bnQYBCABKAUSFQoNSXNDcmVhdGVk",
             "QnlNZRgFIAEoCBIUCgxQYWNrYWdlSW5kZXgYBiABKAUSFQoNSXNMYXN0UGFj",
-            "a2FnZRgHIAEoCBIPCgdNYXBEYXRhGAggASgMIoEBCghSb29tSW5mbxIQCghS",
-            "b29tTmFtZRgBIAEoCRIOCgZSb29tSWQYAiABKAMSEgoKQ3JlYXRlVGltZRgD",
-            "IAEoAxIWCg5DdXJQbGF5ZXJDb3VudBgEIAEoBRIWCg5NYXhQbGF5ZXJDb3Vu",
-            "dBgFIAEoBRIPCgdDcmVhdG9yGAYgASgDIhsKCUVudGVyUm9vbRIOCgZSb29t",
-            "SWQYASABKAMiTwoORW50ZXJSb29tUmVwbHkSCwoDUmV0GAEgASgIEg4KBlJv",
-            "b21JZBgCIAEoAxIQCghSb29tTmFtZRgDIAEoCRIOCgZFcnJNc2cYBCABKAki",
-            "NAoJTGVhdmVSb29tEg4KBlJvb21JZBgBIAEoAxIXCg9SZWxlYXNlSWZOb1Vz",
-            "ZXIYAiABKAgiLwoOTGVhdmVSb29tUmVwbHkSCwoDUmV0GAEgASgIEhAKCFJv",
-            "b21OYW1lGAIgASgJIoIBCgxDcmVhdGVBVHJvb3ASDgoGUm9vbUlkGAEgASgD",
-            "Eg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIMCgRQb3NYGAQg",
-            "ASgFEgwKBFBvc1oYBSABKAUSEwoLT3JpZW50YXRpb24YBiABKAISDwoHU3Bl",
-            "Y2llcxgHIAEoCSKEAQoRQ3JlYXRlQVRyb29wUmVwbHkSCwoDcmV0GAEgASgI",
-            "Eg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIMCgRQb3NYGAQg",
-            "ASgFEgwKBFBvc1oYBSABKAUSEwoLT3JpZW50YXRpb24YBiABKAISDwoHU3Bl",
-            "Y2llcxgHIAEoCSJBCg1EZXN0cm95QVRyb29wEg4KBlJvb21JZBgBIAEoAxIP",
-            "CgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMiQwoSRGVzdHJveUFU",
-            "cm9vcFJlcGx5EgsKA3JldBgBIAEoCBIPCgdPd25lcklkGAIgASgDEg8KB0Fj",
-            "dG9ySWQYAyABKAMikAEKCVRyb29wTW92ZRIOCgZSb29tSWQYASABKAMSDwoH",
-            "T3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEhAKCFBvc0Zyb21YGAQg",
-            "ASgFEhAKCFBvc0Zyb21aGAUgASgFEg4KBlBvc1RvWBgGIAEoBRIOCgZQb3NU",
-            "b1oYByABKAUSDQoFU3BlZWQYCCABKAUiogEKDlRyb29wTW92ZVJlcGx5Eg4K",
-            "BlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyAB",
-            "KAMSEAoIUG9zRnJvbVgYBCABKAUSEAoIUG9zRnJvbVoYBSABKAUSDgoGUG9z",
-            "VG9YGAYgASgFEg4KBlBvc1RvWhgHIAEoBRINCgVTcGVlZBgIIAEoAhILCgNS",
-            "ZXQYCSABKAgirgEKEkFJVHJvb3BTdGF0ZUNoYW5nZRIOCgZSb29tSWQYASAB",
-            "KAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEg0KBVN0YXRl",
-            "GAQgASgFEhAKCFBvc0Zyb21YGAUgASgFEhAKCFBvc0Zyb21aGAYgASgFEg4K",
-            "BlBvc1RvWBgHIAEoBRIOCgZQb3NUb1oYCCABKAUSEwoLT3JpZW50YXRpb24Y",
-            "CSABKAJiBnByb3RvMw=="));
+            "a2FnZRgHIAEoCBIPCgdNYXBEYXRhGAggASgMEg4KBkVyck1zZxgJIAEoCSKB",
+            "AQoIUm9vbUluZm8SEAoIUm9vbU5hbWUYASABKAkSDgoGUm9vbUlkGAIgASgD",
+            "EhIKCkNyZWF0ZVRpbWUYAyABKAMSFgoOQ3VyUGxheWVyQ291bnQYBCABKAUS",
+            "FgoOTWF4UGxheWVyQ291bnQYBSABKAUSDwoHQ3JlYXRvchgGIAEoAyIbCglF",
+            "bnRlclJvb20SDgoGUm9vbUlkGAEgASgDIk8KDkVudGVyUm9vbVJlcGx5EgsK",
+            "A1JldBgBIAEoCBIOCgZSb29tSWQYAiABKAMSEAoIUm9vbU5hbWUYAyABKAkS",
+            "DgoGRXJyTXNnGAQgASgJIjQKCUxlYXZlUm9vbRIOCgZSb29tSWQYASABKAMS",
+            "FwoPUmVsZWFzZUlmTm9Vc2VyGAIgASgIIi8KDkxlYXZlUm9vbVJlcGx5EgsK",
+            "A1JldBgBIAEoCBIQCghSb29tTmFtZRgCIAEoCSKCAQoMQ3JlYXRlQVRyb29w",
+            "Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQY",
+            "AyABKAMSDAoEUG9zWBgEIAEoBRIMCgRQb3NaGAUgASgFEhMKC09yaWVudGF0",
+            "aW9uGAYgASgCEg8KB1NwZWNpZXMYByABKAkihAEKEUNyZWF0ZUFUcm9vcFJl",
+            "cGx5EgsKA3JldBgBIAEoCBIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQY",
+            "AyABKAMSDAoEUG9zWBgEIAEoBRIMCgRQb3NaGAUgASgFEhMKC09yaWVudGF0",
+            "aW9uGAYgASgCEg8KB1NwZWNpZXMYByABKAkiQQoNRGVzdHJveUFUcm9vcBIO",
+            "CgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMg",
+            "ASgDIkMKEkRlc3Ryb3lBVHJvb3BSZXBseRILCgNyZXQYASABKAgSDwoHT3du",
+            "ZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDIpABCglUcm9vcE1vdmUSDgoG",
+            "Um9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEo",
+            "AxIQCghQb3NGcm9tWBgEIAEoBRIQCghQb3NGcm9tWhgFIAEoBRIOCgZQb3NU",
+            "b1gYBiABKAUSDgoGUG9zVG9aGAcgASgFEg0KBVNwZWVkGAggASgFIqIBCg5U",
+            "cm9vcE1vdmVSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEo",
+            "AxIPCgdBY3RvcklkGAMgASgDEhAKCFBvc0Zyb21YGAQgASgFEhAKCFBvc0Zy",
+            "b21aGAUgASgFEg4KBlBvc1RvWBgGIAEoBRIOCgZQb3NUb1oYByABKAUSDQoF",
+            "U3BlZWQYCCABKAISCwoDUmV0GAkgASgIIq4BChJBSVRyb29wU3RhdGVDaGFu",
+            "Z2USDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJ",
+            "ZBgDIAEoAxINCgVTdGF0ZRgEIAEoBRIQCghQb3NGcm9tWBgFIAEoBRIQCghQ",
+            "b3NGcm9tWhgGIAEoBRIOCgZQb3NUb1gYByABKAUSDgoGUG9zVG9aGAggASgF",
+            "EhMKC09yaWVudGF0aW9uGAkgASgCYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -72,7 +72,7 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMap), global::Protobuf.Room.UploadMap.Parser, new[]{ "RoomName", "MaxPlayerCount", "PackageIndex", "IsLastPackage", "MapData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMapReply), global::Protobuf.Room.UploadMapReply.Parser, new[]{ "Ret", "IsLastPackage", "RoomId", "RoomName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMap), global::Protobuf.Room.DownloadMap.Parser, new[]{ "RoomId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMapReply), global::Protobuf.Room.DownloadMapReply.Parser, new[]{ "Ret", "RoomId", "RoomName", "MaxPlayerCount", "IsCreatedByMe", "PackageIndex", "IsLastPackage", "MapData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMapReply), global::Protobuf.Room.DownloadMapReply.Parser, new[]{ "Ret", "RoomId", "RoomName", "MaxPlayerCount", "IsCreatedByMe", "PackageIndex", "IsLastPackage", "MapData", "ErrMsg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.RoomInfo), global::Protobuf.Room.RoomInfo.Parser, new[]{ "RoomName", "RoomId", "CreateTime", "CurPlayerCount", "MaxPlayerCount", "Creator" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoom), global::Protobuf.Room.EnterRoom.Parser, new[]{ "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoomReply), global::Protobuf.Room.EnterRoomReply.Parser, new[]{ "Ret", "RoomId", "RoomName", "ErrMsg" }, null, null, null, null),
@@ -993,6 +993,7 @@ namespace Protobuf.Room {
       packageIndex_ = other.packageIndex_;
       isLastPackage_ = other.isLastPackage_;
       mapData_ = other.mapData_;
+      errMsg_ = other.errMsg_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1089,6 +1090,17 @@ namespace Protobuf.Room {
       }
     }
 
+    /// <summary>Field number for the "ErrMsg" field.</summary>
+    public const int ErrMsgFieldNumber = 9;
+    private string errMsg_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ErrMsg {
+      get { return errMsg_; }
+      set {
+        errMsg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DownloadMapReply);
@@ -1110,6 +1122,7 @@ namespace Protobuf.Room {
       if (PackageIndex != other.PackageIndex) return false;
       if (IsLastPackage != other.IsLastPackage) return false;
       if (MapData != other.MapData) return false;
+      if (ErrMsg != other.ErrMsg) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1124,6 +1137,7 @@ namespace Protobuf.Room {
       if (PackageIndex != 0) hash ^= PackageIndex.GetHashCode();
       if (IsLastPackage != false) hash ^= IsLastPackage.GetHashCode();
       if (MapData.Length != 0) hash ^= MapData.GetHashCode();
+      if (ErrMsg.Length != 0) hash ^= ErrMsg.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1169,6 +1183,10 @@ namespace Protobuf.Room {
         output.WriteRawTag(66);
         output.WriteBytes(MapData);
       }
+      if (ErrMsg.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ErrMsg);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1200,6 +1218,9 @@ namespace Protobuf.Room {
       }
       if (MapData.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(MapData);
+      }
+      if (ErrMsg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrMsg);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1235,6 +1256,9 @@ namespace Protobuf.Room {
       }
       if (other.MapData.Length != 0) {
         MapData = other.MapData;
+      }
+      if (other.ErrMsg.Length != 0) {
+        ErrMsg = other.ErrMsg;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1277,6 +1301,10 @@ namespace Protobuf.Room {
           }
           case 66: {
             MapData = input.ReadBytes();
+            break;
+          }
+          case 74: {
+            ErrMsg = input.ReadString();
             break;
           }
         }
