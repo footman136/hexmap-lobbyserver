@@ -24,18 +24,18 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKroBCgRST09N",
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKs4BCgRST09N",
             "EgwKCE1zZ1N0YXJ0EAASEQoLUGxheWVyRW50ZXIQoZwBEg8KCUVudGVyUm9v",
             "bRCjnAESDwoJTGVhdmVSb29tEKWcARIPCglVcGxvYWRNYXAQp5wBEhEKC0Rv",
             "d25sb2FkTWFwEKmcARIRCgtEZXN0cm95Um9vbRCrnAESEgoMQ3JlYXRlQVRy",
             "b29wELWcARITCg1EZXN0cm95QVRyb29wELecARIPCglUcm9vcE1vdmUQv5wB",
-            "KowCCgpST09NX1JFUExZEhEKDU1zZ1N0YXJ0UmVwbHkQABIWChBQbGF5ZXJF",
-            "bnRlclJlcGx5EKKcARIUCg5FbnRlclJvb21SZXBseRCknAESFAoOTGVhdmVS",
-            "b29tUmVwbHkQxpoMEhQKDlVwbG9hZE1hcFJlcGx5EKicARIWChBEb3dubG9h",
-            "ZE1hcFJlcGx5EKqcARIWChBEZXN0cm95Um9vbVJlcGx5EKycARIXChFDcmVh",
-            "dGVBVHJvb3BSZXBseRC2nAESGAoSRGVzdHJveUFUcm9vcFJlcGx5ELicARIU",
-            "Cg5Ucm9vcE1vdmVSZXBseRDAnAESGAoSQUlUcm9vcFN0YXRlQ2hhbmdlEMKc",
-            "AWIGcHJvdG8z"));
+            "EhIKDFRyb29wQWlTdGF0ZRDBnAEqiwIKClJPT01fUkVQTFkSEQoNTXNnU3Rh",
+            "cnRSZXBseRAAEhYKEFBsYXllckVudGVyUmVwbHkQopwBEhQKDkVudGVyUm9v",
+            "bVJlcGx5EKScARIUCg5MZWF2ZVJvb21SZXBseRDGmgwSFAoOVXBsb2FkTWFw",
+            "UmVwbHkQqJwBEhYKEERvd25sb2FkTWFwUmVwbHkQqpwBEhYKEERlc3Ryb3lS",
+            "b29tUmVwbHkQrJwBEhcKEUNyZWF0ZUFUcm9vcFJlcGx5ELacARIYChJEZXN0",
+            "cm95QVRyb29wUmVwbHkQuJwBEhQKDlRyb29wTW92ZVJlcGx5EMCcARIXChFU",
+            "cm9vcEFpU3RhdGVSZXBseRDCnAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -61,6 +61,7 @@ namespace Protobuf.Room {
     [pbr::OriginalName("CreateATroop")] CreateAtroop = 20021,
     [pbr::OriginalName("DestroyATroop")] DestroyAtroop = 20023,
     [pbr::OriginalName("TroopMove")] TroopMove = 20031,
+    [pbr::OriginalName("TroopAiState")] TroopAiState = 20033,
   }
 
   /// <summary>
@@ -80,7 +81,7 @@ namespace Protobuf.Room {
     [pbr::OriginalName("CreateATroopReply")] CreateAtroopReply = 20022,
     [pbr::OriginalName("DestroyATroopReply")] DestroyAtroopReply = 20024,
     [pbr::OriginalName("TroopMoveReply")] TroopMoveReply = 20032,
-    [pbr::OriginalName("AITroopStateChange")] AitroopStateChange = 20034,
+    [pbr::OriginalName("TroopAiStateReply")] TroopAiStateReply = 20034,
   }
 
   #endregion
