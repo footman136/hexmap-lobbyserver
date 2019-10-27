@@ -24,18 +24,21 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKs4BCgRST09N",
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKoMCCgRST09N",
             "EgwKCE1zZ1N0YXJ0EAASEQoLUGxheWVyRW50ZXIQoZwBEg8KCUVudGVyUm9v",
             "bRCjnAESDwoJTGVhdmVSb29tEKWcARIPCglVcGxvYWRNYXAQp5wBEhEKC0Rv",
             "d25sb2FkTWFwEKmcARIRCgtEZXN0cm95Um9vbRCrnAESEgoMQ3JlYXRlQVRy",
             "b29wELWcARITCg1EZXN0cm95QVRyb29wELecARIPCglUcm9vcE1vdmUQv5wB",
-            "EhIKDFRyb29wQWlTdGF0ZRDBnAEqiwIKClJPT01fUkVQTFkSEQoNTXNnU3Rh",
-            "cnRSZXBseRAAEhYKEFBsYXllckVudGVyUmVwbHkQopwBEhQKDkVudGVyUm9v",
-            "bVJlcGx5EKScARIUCg5MZWF2ZVJvb21SZXBseRDGmgwSFAoOVXBsb2FkTWFw",
-            "UmVwbHkQqJwBEhYKEERvd25sb2FkTWFwUmVwbHkQqpwBEhYKEERlc3Ryb3lS",
-            "b29tUmVwbHkQrJwBEhcKEUNyZWF0ZUFUcm9vcFJlcGx5ELacARIYChJEZXN0",
-            "cm95QVRyb29wUmVwbHkQuJwBEhQKDlRyb29wTW92ZVJlcGx5EMCcARIXChFU",
-            "cm9vcEFpU3RhdGVSZXBseRDCnAFiBnByb3RvMw=="));
+            "EhIKDFRyb29wQWlTdGF0ZRDBnAESEgoMQXNrRm9yQ2l0aWVzEMOcARINCgdD",
+            "aXR5QWRkEMWcARIQCgpDaXR5UmVtb3ZlEMecASrPAgoKUk9PTV9SRVBMWRIR",
+            "Cg1Nc2dTdGFydFJlcGx5EAASFgoQUGxheWVyRW50ZXJSZXBseRCinAESFAoO",
+            "RW50ZXJSb29tUmVwbHkQpJwBEhQKDkxlYXZlUm9vbVJlcGx5EMaaDBIUCg5V",
+            "cGxvYWRNYXBSZXBseRConAESFgoQRG93bmxvYWRNYXBSZXBseRCqnAESFgoQ",
+            "RGVzdHJveVJvb21SZXBseRCsnAESFwoRQ3JlYXRlQVRyb29wUmVwbHkQtpwB",
+            "EhgKEkRlc3Ryb3lBVHJvb3BSZXBseRC4nAESFAoOVHJvb3BNb3ZlUmVwbHkQ",
+            "wJwBEhcKEVRyb29wQWlTdGF0ZVJlcGx5EMKcARIXChFBc2tGb3JDaXRpZXNS",
+            "ZXBseRDEnAESEgoMQ2l0eUFkZFJlcGx5EMacARIVCg9DaXR5UmVtb3ZlUmVw",
+            "bHkQyJwBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -62,6 +65,9 @@ namespace Protobuf.Room {
     [pbr::OriginalName("DestroyATroop")] DestroyAtroop = 20023,
     [pbr::OriginalName("TroopMove")] TroopMove = 20031,
     [pbr::OriginalName("TroopAiState")] TroopAiState = 20033,
+    [pbr::OriginalName("AskForCities")] AskForCities = 20035,
+    [pbr::OriginalName("CityAdd")] CityAdd = 20037,
+    [pbr::OriginalName("CityRemove")] CityRemove = 20039,
   }
 
   /// <summary>
@@ -82,6 +88,9 @@ namespace Protobuf.Room {
     [pbr::OriginalName("DestroyATroopReply")] DestroyAtroopReply = 20024,
     [pbr::OriginalName("TroopMoveReply")] TroopMoveReply = 20032,
     [pbr::OriginalName("TroopAiStateReply")] TroopAiStateReply = 20034,
+    [pbr::OriginalName("AskForCitiesReply")] AskForCitiesReply = 20036,
+    [pbr::OriginalName("CityAddReply")] CityAddReply = 20038,
+    [pbr::OriginalName("CityRemoveReply")] CityRemoveReply = 20040,
   }
 
   #endregion
