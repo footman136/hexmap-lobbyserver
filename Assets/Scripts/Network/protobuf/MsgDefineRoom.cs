@@ -24,21 +24,21 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKoMCCgRST09N",
-            "EgwKCE1zZ1N0YXJ0EAASEQoLUGxheWVyRW50ZXIQoZwBEg8KCUVudGVyUm9v",
-            "bRCjnAESDwoJTGVhdmVSb29tEKWcARIPCglVcGxvYWRNYXAQp5wBEhEKC0Rv",
-            "d25sb2FkTWFwEKmcARIRCgtEZXN0cm95Um9vbRCrnAESEgoMQ3JlYXRlQVRy",
-            "b29wELWcARITCg1EZXN0cm95QVRyb29wELecARIPCglUcm9vcE1vdmUQv5wB",
-            "EhIKDFRyb29wQWlTdGF0ZRDBnAESEgoMQXNrRm9yQ2l0aWVzEMOcARINCgdD",
-            "aXR5QWRkEMWcARIQCgpDaXR5UmVtb3ZlEMecASrPAgoKUk9PTV9SRVBMWRIR",
-            "Cg1Nc2dTdGFydFJlcGx5EAASFgoQUGxheWVyRW50ZXJSZXBseRCinAESFAoO",
-            "RW50ZXJSb29tUmVwbHkQpJwBEhQKDkxlYXZlUm9vbVJlcGx5EMaaDBIUCg5V",
-            "cGxvYWRNYXBSZXBseRConAESFgoQRG93bmxvYWRNYXBSZXBseRCqnAESFgoQ",
-            "RGVzdHJveVJvb21SZXBseRCsnAESFwoRQ3JlYXRlQVRyb29wUmVwbHkQtpwB",
-            "EhgKEkRlc3Ryb3lBVHJvb3BSZXBseRC4nAESFAoOVHJvb3BNb3ZlUmVwbHkQ",
-            "wJwBEhcKEVRyb29wQWlTdGF0ZVJlcGx5EMKcARIXChFBc2tGb3JDaXRpZXNS",
-            "ZXBseRDEnAESEgoMQ2l0eUFkZFJlcGx5EMacARIVCg9DaXR5UmVtb3ZlUmVw",
-            "bHkQyJwBYgZwcm90bzM="));
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKpQCCgRST09N",
+            "EgwKCE1zZ1N0YXJ0EAASDwoJSGVhcnRCZWF0EKCcARIRCgtQbGF5ZXJFbnRl",
+            "chChnAESDwoJRW50ZXJSb29tEKOcARIPCglMZWF2ZVJvb20QpZwBEg8KCVVw",
+            "bG9hZE1hcBCnnAESEQoLRG93bmxvYWRNYXAQqZwBEhEKC0Rlc3Ryb3lSb29t",
+            "EKucARISCgxDcmVhdGVBVHJvb3AQtZwBEhMKDURlc3Ryb3lBVHJvb3AQt5wB",
+            "Eg8KCVRyb29wTW92ZRC/nAESEgoMVHJvb3BBaVN0YXRlEMGcARISCgxBc2tG",
+            "b3JDaXRpZXMQw5wBEg0KB0NpdHlBZGQQxZwBEhAKCkNpdHlSZW1vdmUQx5wB",
+            "Ks8CCgpST09NX1JFUExZEhEKDU1zZ1N0YXJ0UmVwbHkQABIWChBQbGF5ZXJF",
+            "bnRlclJlcGx5EKKcARIUCg5FbnRlclJvb21SZXBseRCknAESFAoOTGVhdmVS",
+            "b29tUmVwbHkQxpoMEhQKDlVwbG9hZE1hcFJlcGx5EKicARIWChBEb3dubG9h",
+            "ZE1hcFJlcGx5EKqcARIWChBEZXN0cm95Um9vbVJlcGx5EKycARIXChFDcmVh",
+            "dGVBVHJvb3BSZXBseRC2nAESGAoSRGVzdHJveUFUcm9vcFJlcGx5ELicARIU",
+            "Cg5Ucm9vcE1vdmVSZXBseRDAnAESFwoRVHJvb3BBaVN0YXRlUmVwbHkQwpwB",
+            "EhcKEUFza0ZvckNpdGllc1JlcGx5EMScARISCgxDaXR5QWRkUmVwbHkQxpwB",
+            "EhUKD0NpdHlSZW1vdmVSZXBseRDInAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -55,6 +55,7 @@ namespace Protobuf.Room {
     /// proto3枚举的第一个成员必须是0
     /// </summary>
     [pbr::OriginalName("MsgStart")] MsgStart = 0,
+    [pbr::OriginalName("HeartBeat")] HeartBeat = 20000,
     [pbr::OriginalName("PlayerEnter")] PlayerEnter = 20001,
     [pbr::OriginalName("EnterRoom")] EnterRoom = 20003,
     [pbr::OriginalName("LeaveRoom")] LeaveRoom = 20005,

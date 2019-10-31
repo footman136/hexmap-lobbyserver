@@ -24,17 +24,17 @@ namespace Protobuf.Lobby {
     static MsgDefineLobbyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRNc2dEZWZpbmVMb2JieS5wcm90bxIOUHJvdG9idWYuTG9iYnkqsQEKBUxP",
-            "QkJZEgwKCE1zZ1N0YXJ0EAASEAoLUGxheWVyRW50ZXIQkU4SEAoLUGxheWVy",
-            "TGVhdmUQk04SEgoNQXNrQ3JlYXRlUm9vbRCVThIQCgtBc2tKb2luUm9vbRCX",
-            "ThIQCgtBc2tSb29tTGlzdBCZThIVCg9Sb29tU2VydmVyTG9naW4QseoBEhQK",
-            "DlVwZGF0ZVJvb21JbmZvELPqARIRCgtEZXN0cm95Um9vbRC16gEq5AEKC0xP",
-            "QkJZX1JFUExZEhEKDU1zZ1N0YXJ0UmVwbHkQABIVChBQbGF5ZXJFbnRlclJl",
-            "cGx5EJJOEhUKEFBsYXllckxlYXZlUmVwbHkQlE4SFwoSQXNrQ3JlYXRlUm9v",
-            "bVJlcGx5EJZOEhUKEEFza0pvaW5Sb29tUmVwbHkQmE4SFQoQQXNrUm9vbUxp",
-            "c3RSZXBseRCaThIaChRSb29tU2VydmVyTG9naW5SZXBseRCy6gESGQoTVXBk",
-            "YXRlUm9vbUluZm9SZXBseRC06gESFgoQRGVzdHJveVJvb21SZXBseRC26gFi",
-            "BnByb3RvMw=="));
+            "ChRNc2dEZWZpbmVMb2JieS5wcm90bxIOUHJvdG9idWYuTG9iYnkqwQEKBUxP",
+            "QkJZEgwKCE1zZ1N0YXJ0EAASDgoJSGVhcnRCZWF0EJBOEhAKC1BsYXllckVu",
+            "dGVyEJFOEhAKC1BsYXllckxlYXZlEJNOEhIKDUFza0NyZWF0ZVJvb20QlU4S",
+            "EAoLQXNrSm9pblJvb20Ql04SEAoLQXNrUm9vbUxpc3QQmU4SFQoPUm9vbVNl",
+            "cnZlckxvZ2luELHqARIUCg5VcGRhdGVSb29tSW5mbxCz6gESEQoLRGVzdHJv",
+            "eVJvb20QteoBKuQBCgtMT0JCWV9SRVBMWRIRCg1Nc2dTdGFydFJlcGx5EAAS",
+            "FQoQUGxheWVyRW50ZXJSZXBseRCSThIVChBQbGF5ZXJMZWF2ZVJlcGx5EJRO",
+            "EhcKEkFza0NyZWF0ZVJvb21SZXBseRCWThIVChBBc2tKb2luUm9vbVJlcGx5",
+            "EJhOEhUKEEFza1Jvb21MaXN0UmVwbHkQmk4SGgoUUm9vbVNlcnZlckxvZ2lu",
+            "UmVwbHkQsuoBEhkKE1VwZGF0ZVJvb21JbmZvUmVwbHkQtOoBEhYKEERlc3Ry",
+            "b3lSb29tUmVwbHkQtuoBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Lobby.LOBBY), typeof(global::Protobuf.Lobby.LOBBY_REPLY), }, null, null));
@@ -51,6 +51,7 @@ namespace Protobuf.Lobby {
     /// proto3枚举的第一个成员必须是0
     /// </summary>
     [pbr::OriginalName("MsgStart")] MsgStart = 0,
+    [pbr::OriginalName("HeartBeat")] HeartBeat = 10000,
     [pbr::OriginalName("PlayerEnter")] PlayerEnter = 10001,
     [pbr::OriginalName("PlayerLeave")] PlayerLeave = 10003,
     [pbr::OriginalName("AskCreateRoom")] AskCreateRoom = 10005,
@@ -58,12 +59,6 @@ namespace Protobuf.Lobby {
     [pbr::OriginalName("AskRoomList")] AskRoomList = 10009,
     [pbr::OriginalName("RoomServerLogin")] RoomServerLogin = 30001,
     [pbr::OriginalName("UpdateRoomInfo")] UpdateRoomInfo = 30003,
-    /// <summary>
-    ///	RoomServerLogout = 30003;
-    ///	CreateRoom = 30005;
-    ///	PlayerEnterRoom = 30009;
-    ///	PlayerLeaveRoom = 30011;
-    /// </summary>
     [pbr::OriginalName("DestroyRoom")] DestroyRoom = 30005,
   }
 
@@ -82,12 +77,6 @@ namespace Protobuf.Lobby {
     [pbr::OriginalName("AskRoomListReply")] AskRoomListReply = 10010,
     [pbr::OriginalName("RoomServerLoginReply")] RoomServerLoginReply = 30002,
     [pbr::OriginalName("UpdateRoomInfoReply")] UpdateRoomInfoReply = 30004,
-    /// <summary>
-    ///	RoomServerLogoutReply = 30004;
-    ///	CreateRoomReply = 30006;
-    ///	PlayerEnterRoomReply= 30010;
-    ///	PlayerLeaveRoomReply = 30012;
-    /// </summary>
     [pbr::OriginalName("DestroyRoomReply")] DestroyRoomReply = 30006,
   }
 

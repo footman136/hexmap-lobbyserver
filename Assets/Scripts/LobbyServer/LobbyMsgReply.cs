@@ -43,6 +43,9 @@ public class LobbyMsgReply
                 case LOBBY.PlayerEnter:
                     PLAYER_ENTER(recvData);
                     break;
+                case LOBBY.HeartBeat:
+                    HEART_BEAT(recvData);
+                    break;
                 case LOBBY.AskRoomList:
                     ASK_ROOM_LIST(recvData);
                     break;
@@ -114,6 +117,24 @@ public class LobbyMsgReply
         };
         // 返回消息
         LobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.PlayerEnterReply, output.ToByteArray());
+    }
+
+    private static void HEART_BEAT(byte[] byts)
+    {
+        var pi = LobbyManager.Instance.GetPlayer(_args);
+        if (pi != null)
+        {
+            pi.HeartBeatTime = DateTime.Now;
+        }
+        else
+        {
+            var rsi = LobbyManager.Instance.GetRoomServer(_args);
+            if(rsi != null)
+            {
+                rsi.HeartBeatTime = DateTime.Now;
+            }
+                
+        }
     }
 
     static void ASK_ROOM_LIST(byte[] bytes)
@@ -288,6 +309,11 @@ public class LobbyMsgReply
                 Creator = input.Creator,
             };
             LobbyManager.Instance.Rooms[input.RoomId] = roomInfo;
+            var rsi = LobbyManager.Instance.GetRoomServer(_args);
+            if (rsi != null)
+            {
+                rsi.Rooms.Add(input.RoomId);
+            }
         }
         else
         {// 删除这个房间

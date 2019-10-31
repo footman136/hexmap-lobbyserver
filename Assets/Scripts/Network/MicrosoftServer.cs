@@ -156,8 +156,14 @@ public class MicrosoftServer
         listenSocket.Close();
         Completed?.Invoke(null, ServerSocketAction.Close);
     }
-    #endregion
+    
+    public void Log(string msg)
+    {
+        if(LogEnabled)
+            Debug.Log(msg);
+    }
 
+    #endregion
 
     #region Accept
     // Begins an operation to accept a connection request from the client 
@@ -372,6 +378,8 @@ public class MicrosoftServer
     }
     #endregion
 
+    #region 关闭
+    
     private void CloseClientSocket(SocketAsyncEventArgs e)
     {
         AsyncUserToken token = e.UserToken as AsyncUserToken;
@@ -382,11 +390,12 @@ public class MicrosoftServer
             //Console.WriteLine("A client has been disconnected from the server. There are {0} clients connected to the server", m_numConnectedSockets);
             Completed?.Invoke(e, ServerSocketAction.Drop);
             
+            token.Socket.Shutdown(SocketShutdown.Receive);
             token.Socket.Shutdown(SocketShutdown.Send);
+            token.Socket.Close();
         }
         // throws if client process has already closed
-        catch (Exception) { }
-        token.Socket.Close();
+        catch (Exception ex) { Log($"Microsoft Server CloseClientSocket - {ex}");}
 
         // decrement the counter keeping track of the total number of clients connected to the server
         Interlocked.Decrement(ref m_numConnectedSockets);
@@ -397,11 +406,17 @@ public class MicrosoftServer
         m_maxNumberAcceptedClients.Release();
     }
 
-    public void Log(string msg)
+    public void CloseASocket(SocketAsyncEventArgs e)
     {
-        if(LogEnabled)
-            Debug.Log(msg);
+        AsyncUserToken token = e.UserToken as AsyncUserToken;
+        try
+        {
+            token.Socket.Close();
+        }
+        // throws if client process has already closed
+        catch (Exception ex) { Log($"Microsoft Server CloseClientSocket - {ex}");}
     }
+    #endregion
 
     class SocketAsyncEventArgsPool
     {

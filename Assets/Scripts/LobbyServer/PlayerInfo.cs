@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Net.Sockets;
+﻿using System;
 using Protobuf.Lobby;
-using UnityEngine;
 
 public class PlayerInfo
 {
@@ -13,5 +10,7 @@ public class PlayerInfo
     public bool IsInRoom;
 
     public bool HasRoom;
+    
+    public DateTime HeartBeatTime;
     
 }

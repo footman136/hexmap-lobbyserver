@@ -50,7 +50,7 @@ public class ServerScript : MonoBehaviour {
     void OnDestroy()
     {
         _server.Completed -= OnComplete;
-        _server.Stop();
+        //_server.Stop();
         Log("Server Stopped.");
     }
 
@@ -78,6 +78,7 @@ public class ServerScript : MonoBehaviour {
         catch (Exception e)
         {
             Debug.LogError($"Server OnComplete() Exception - {e}");
+            throw;
         }
     }
 
@@ -89,7 +90,7 @@ public class ServerScript : MonoBehaviour {
         }
         catch (Exception e)
         {
-            Debug.LogError($"Server SendMsg() Exception - {e}");
+            Debug.LogError($"Server SendMsg() Exception - size:{size} - {e}");
             throw;
         }
     }
@@ -102,5 +103,10 @@ public class ServerScript : MonoBehaviour {
     public void Log(string msg)
     {
         _server.Log(msg);
+    }
+
+    public void CloseASocket(SocketAsyncEventArgs args)
+    {
+        _server.CloseASocket(args);
     }
 }

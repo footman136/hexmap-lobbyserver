@@ -25,7 +25,10 @@ public class LobbyManager : MonoBehaviour
     // 房间的集合，Key是房间的唯一ID
     public Dictionary<long, RoomInfo> Rooms { set; get; } 
     
+    private const float _heartBeatTimeInterval = 20f; // 心跳时间间隔,服务器检测用的间隔比客户端实际间隔要多一些
+
     #region 初始化
+    
     void Awake()
     {
         if (Instance != null)
@@ -60,6 +63,7 @@ public class LobbyManager : MonoBehaviour
             yield return null;
         }
         receive_str = $"Server started! {_server.Address}:{_server.Port}";
+        StartCheckHeartBeat();
     }
 
     void OnGUI()
@@ -79,8 +83,56 @@ public class LobbyManager : MonoBehaviour
         receive_str = msg;
         _server.Log(msg);
     }
+    
     #endregion
 
+    #region 检测心跳
+
+    private void StartCheckHeartBeat()
+    {
+        InvokeRepeating(nameof(CheckHeartBeat), _heartBeatTimeInterval, _heartBeatTimeInterval);
+    }
+
+    private void StopCheckHeartBeat()
+    {
+        CancelInvoke(nameof(CheckHeartBeat));
+    }
+
+    private void CheckHeartBeat()
+    {
+        var now = DateTime.Now;
+        List<SocketAsyncEventArgs> delPlayerList = new List<SocketAsyncEventArgs>();
+        List<SocketAsyncEventArgs> delRoomServerList = new List<SocketAsyncEventArgs>();
+        foreach (var keyValue in Players)
+        {
+            var ts = now - keyValue.Value.HeartBeatTime;
+            if (ts.TotalSeconds > _heartBeatTimeInterval)
+            { // 该客户端(玩家)超时没有心跳了,干掉
+                delPlayerList.Add(keyValue.Key);
+            }
+        }
+        foreach (var args in delPlayerList)
+        {
+            _server.CloseASocket(args);
+        }
+        foreach (var keyValue in RoomServers)
+        {
+            var ts = now - keyValue.Value.HeartBeatTime;
+            if (ts.TotalSeconds > _heartBeatTimeInterval)
+            { // 该客户端(房间服务器)超时没有心跳了,干掉
+                delRoomServerList.Add(keyValue.Key);
+            }
+        }
+        foreach (var args in delRoomServerList)
+        {
+            _server.CloseASocket(args);
+        }
+    }
+    
+    #endregion
+
+    #region 收发消息
+    
     void OnReceive(SocketAsyncEventArgs args, byte[] content, int size)
     {
         receive_str = System.Text.Encoding.UTF8.GetString(content);
@@ -148,12 +200,70 @@ public class LobbyManager : MonoBehaviour
         }
         else if(RoomServers.ContainsKey(args))
         {
-            Log($"MSG: 玩家离开大厅服务器 - {RoomServers[args].Login.ServerName} - RoomServerCount:{RoomServers.Count-1}");
+            Log($"MSG: 房间服务器离开大厅服务器 - {RoomServers[args].Login.ServerName} - RoomServerCount:{RoomServers.Count-1}");
+            // 该房间服务器所带来的房间数也都要清理一下
+            RemoveRoomsInARoomServer(args);
             RoomServers.Remove(args);
         }
         else
         {
-            Log("MSG: Server - Reomve Player or RoomServer failed - Player or RoomServer not found!");
+            Log("MSG: Server - Remove Player or RoomServer failed - Player or RoomServer not found!");
         }
     }
+    
+    #endregion
+    
+    #region 玩家/房间服务器/房间-操作
+    public PlayerInfo GetPlayer(SocketAsyncEventArgs args)
+    {
+        if (Players.ContainsKey(args))
+        {
+            PlayerInfo pi = Players[args];
+            return pi;
+        }
+
+        return null;
+    }
+
+    public RoomServerInfo GetRoomServer(SocketAsyncEventArgs args)
+    {
+        if (RoomServers.ContainsKey(args))
+        {
+            RoomServerInfo rsi = RoomServers[args];
+            return rsi;
+        }
+
+        return null;
+    }
+
+    public void RemoveRoomsInARoomServer(SocketAsyncEventArgs args)
+    {
+        var rsi = GetRoomServer(args);
+        if (rsi != null)
+        {
+            foreach (var roomId in rsi.Rooms)
+            {
+                Rooms.Remove(roomId);
+            }
+
+            rsi.Rooms.Clear();
+        }
+    }
+
+    public void AddRoom(SocketAsyncEventArgs args, RoomInfo roomInfo)
+    {
+        Rooms[roomInfo.RoomId] = roomInfo;
+        var rsi = GetRoomServer(args);
+        rsi?.Rooms.Add(roomInfo.RoomId);
+    }
+
+    public void RemoveRoom(SocketAsyncEventArgs args, long roomId)
+    {
+        var rsi = GetRoomServer(args);
+        rsi?.Rooms.Remove(roomId);
+        Rooms.Remove(roomId);
+    }
+    
+    #endregion
+
 }
