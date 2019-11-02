@@ -37,14 +37,33 @@ public class ServerScript : MonoBehaviour {
         _server.Init();
         // 获得主机相关信息
         IPAddress[] addressList = Dns.GetHostEntry(Environment.MachineName).AddressList;
-        IPEndPoint localEndPoint = new IPEndPoint(addressList[addressList.Length - 1], PORT);
-        //IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, PORT);
-        _server.Start(localEndPoint);
-        _server.Completed += OnComplete;
+        IPAddress ipAddress = null;
+        foreach (var addr in addressList)
+        {
+            if (addr.AddressFamily.ToString() == "InterNetwork")
+            {
+                ipAddress = addr;
+                break;
+            }
+        }
 
-        string msg = $"Server is listening at address - {_server.Address}:{_server.Port} ...";
-        Log(msg);
-        IsReady = true;
+        if (ipAddress != null)
+        {
+            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, PORT);
+            //IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, PORT);
+            _server.Start(localEndPoint);
+            _server.Completed += OnComplete;
+
+            string msg = $"Server is listening at address - {_server.Address}:{_server.Port} ...";
+            Log(msg);
+            IsReady = true;
+        }
+        else
+        {
+            string msg = $"Server address is not found!";
+            Log(msg);
+            IsReady = false;
+        }
     }
 
     void OnDestroy()
