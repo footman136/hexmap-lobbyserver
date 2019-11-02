@@ -11,8 +11,8 @@ public class LobbyManager : MonoBehaviour
 {
     public static LobbyManager Instance { get; private set; }
     public ServerScript _server;
-    public RedisManager _redis;
-    public RedisManager Redis => _redis;
+    public RedisManager Redis;
+    public CsvDataManager CsvDataManager;
     
     private string receive_str;
 
@@ -46,6 +46,8 @@ public class LobbyManager : MonoBehaviour
     {
         _server.Received += OnReceive;
         _server.Completed += OnComplete;
+        
+        CsvDataManager.LoadDataAll();
         
         StartCoroutine(WaitForReady());
     }
