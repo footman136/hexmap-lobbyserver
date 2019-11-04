@@ -7,11 +7,12 @@ using System;
 using LitJson;
 using Protobuf.Lobby;
 
-public class LobbyManager : MonoBehaviour
+public class ServerLobbyManager : MonoBehaviour
 {
-    public static LobbyManager Instance { get; private set; }
+    public static ServerLobbyManager Instance { get; private set; }
     public ServerScript _server;
     public RedisManager Redis;
+    [HideInInspector]
     public CsvDataManager CsvDataManager;
     
     private string receive_str;
@@ -39,6 +40,10 @@ public class LobbyManager : MonoBehaviour
         Players = new Dictionary<SocketAsyncEventArgs, PlayerInfo>();
         Rooms = new Dictionary<long, RoomInfo>();
         RoomServers = new Dictionary<SocketAsyncEventArgs, RoomServerInfo>();
+        
+        // 读取数据表
+        CsvDataManager = gameObject.AddComponent<CsvDataManager>();
+        CsvDataManager.LoadDataAll();
     }
     
     // Start is called before the first frame update
@@ -46,8 +51,6 @@ public class LobbyManager : MonoBehaviour
     {
         _server.Received += OnReceive;
         _server.Completed += OnComplete;
-        
-        CsvDataManager.LoadDataAll();
         
         StartCoroutine(WaitForReady());
     }
