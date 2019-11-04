@@ -11,6 +11,10 @@ public class CsvDataManager : MonoBehaviour
     
     void Awake()
     {
+        if (Instance)
+        {
+            Debug.LogError("CsvDataManager is singlon, cannot be initialized more than once!");
+        }
         Instance = this;
     }
 
