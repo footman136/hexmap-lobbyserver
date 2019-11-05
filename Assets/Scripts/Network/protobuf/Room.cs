@@ -79,17 +79,24 @@ namespace Protobuf.Room {
             "bmVySWQYAiABKAMihQEKEUFza0ZvckNpdGllc1JlcGx5Eg4KBlJvb21JZBgB",
             "IAEoAxIPCgdPd25lcklkGAIgASgDEhYKDlRvdGFsQ2l0eUNvdW50GAMgASgF",
             "EhMKC015Q2l0eUNvdW50GAQgASgFEhUKDUNhcGl0YWxDaXR5SWQYBSABKAMS",
-            "CwoDUmV0GAYgASgIIo0BCgdDaXR5QWRkEg4KBlJvb21JZBgBIAEoAxIPCgdP",
+            "CwoDUmV0GAYgASgIIqABCgdDaXR5QWRkEg4KBlJvb21JZBgBIAEoAxIPCgdP",
             "d25lcklkGAIgASgDEg4KBkNpdHlJZBgDIAEoAxIMCgRQb3NYGAQgASgFEgwK",
             "BFBvc1oYBSABKAUSEQoJQ2VsbEluZGV4GAYgASgFEhAKCENpdHlOYW1lGAcg",
-            "ASgJEhAKCENpdHlTaXplGAggASgFIrIBCgxDaXR5QWRkUmVwbHkSDgoGUm9v",
-            "bUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDgoGQ2l0eUlkGAMgASgDEgwK",
-            "BFBvc1gYBCABKAUSDAoEUG9zWhgFIAEoBRIRCglDZWxsSW5kZXgYBiABKAUS",
-            "EAoIQ2l0eU5hbWUYByABKAkSEAoIQ2l0eVNpemUYCCABKAUSEQoJSXNDYXBp",
-            "dGFsGAkgASgIEgsKA1JldBgKIAEoCCI9CgpDaXR5UmVtb3ZlEg4KBlJvb21J",
-            "ZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg4KBkNpdHlJZBgDIAEoAyJPCg9D",
-            "aXR5UmVtb3ZlUmVwbHkSDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiAB",
-            "KAMSDgoGQ2l0eUlkGAMgASgDEgsKA1JldBgEIAEoCGIGcHJvdG8z"));
+            "ASgJEhAKCENpdHlTaXplGAggASgFEhEKCUNyZWF0b3JJZBgJIAEoAyLFAQoM",
+            "Q2l0eUFkZFJlcGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgD",
+            "Eg4KBkNpdHlJZBgDIAEoAxIMCgRQb3NYGAQgASgFEgwKBFBvc1oYBSABKAUS",
+            "EQoJQ2VsbEluZGV4GAYgASgFEhAKCENpdHlOYW1lGAcgASgJEhAKCENpdHlT",
+            "aXplGAggASgFEhEKCUlzQ2FwaXRhbBgJIAEoCBIRCglDcmVhdG9ySWQYCiAB",
+            "KAMSCwoDUmV0GAsgASgIIj0KCkNpdHlSZW1vdmUSDgoGUm9vbUlkGAEgASgD",
+            "Eg8KB093bmVySWQYAiABKAMSDgoGQ2l0eUlkGAMgASgDIk8KD0NpdHlSZW1v",
+            "dmVSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIOCgZD",
+            "aXR5SWQYAyABKAMSCwoDUmV0GAQgASgIIoEBCglVcGRhdGVQb3MSDgoGUm9v",
+            "bUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIM",
+            "CgRQb3NYGAQgASgFEgwKBFBvc1oYBSABKAUSEQoJQ2VsbEluZGV4GAYgASgF",
+            "EhMKC09yaWVudGF0aW9uGAcgASgCIpMBCg5VcGRhdGVQb3NSZXBseRIOCgZS",
+            "b29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgD",
+            "EgwKBFBvc1gYBCABKAUSDAoEUG9zWhgFIAEoBRIRCglDZWxsSW5kZXgYBiAB",
+            "KAUSEwoLT3JpZW50YXRpb24YByABKAISCwoDUmV0GAggASgIYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -115,10 +122,12 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.TroopAiStateReply), global::Protobuf.Room.TroopAiStateReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "State", "PosXFrom", "PosZFrom", "PosXTo", "PosZTo", "CellIndexFrom", "CellIndexTo", "Orientation", "Speed", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.AskForCities), global::Protobuf.Room.AskForCities.Parser, new[]{ "RoomId", "OwnerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.AskForCitiesReply), global::Protobuf.Room.AskForCitiesReply.Parser, new[]{ "RoomId", "OwnerId", "TotalCityCount", "MyCityCount", "CapitalCityId", "Ret" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CityAdd), global::Protobuf.Room.CityAdd.Parser, new[]{ "RoomId", "OwnerId", "CityId", "PosX", "PosZ", "CellIndex", "CityName", "CitySize" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CityAddReply), global::Protobuf.Room.CityAddReply.Parser, new[]{ "RoomId", "OwnerId", "CityId", "PosX", "PosZ", "CellIndex", "CityName", "CitySize", "IsCapital", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CityAdd), global::Protobuf.Room.CityAdd.Parser, new[]{ "RoomId", "OwnerId", "CityId", "PosX", "PosZ", "CellIndex", "CityName", "CitySize", "CreatorId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CityAddReply), global::Protobuf.Room.CityAddReply.Parser, new[]{ "RoomId", "OwnerId", "CityId", "PosX", "PosZ", "CellIndex", "CityName", "CitySize", "IsCapital", "CreatorId", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CityRemove), global::Protobuf.Room.CityRemove.Parser, new[]{ "RoomId", "OwnerId", "CityId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CityRemoveReply), global::Protobuf.Room.CityRemoveReply.Parser, new[]{ "RoomId", "OwnerId", "CityId", "Ret" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CityRemoveReply), global::Protobuf.Room.CityRemoveReply.Parser, new[]{ "RoomId", "OwnerId", "CityId", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdatePos), global::Protobuf.Room.UpdatePos.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "CellIndex", "Orientation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdatePosReply), global::Protobuf.Room.UpdatePosReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "CellIndex", "Orientation", "Ret" }, null, null, null, null)
           }));
     }
     #endregion
@@ -5684,6 +5693,7 @@ namespace Protobuf.Room {
       cellIndex_ = other.cellIndex_;
       cityName_ = other.cityName_;
       citySize_ = other.citySize_;
+      creatorId_ = other.creatorId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5772,14 +5782,25 @@ namespace Protobuf.Room {
     /// <summary>Field number for the "CitySize" field.</summary>
     public const int CitySizeFieldNumber = 8;
     private int citySize_;
-    /// <summary>
-    ///bool IsCapital = 9; 是否是都城，由服务器来算，暂时不需要客户端来传
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CitySize {
       get { return citySize_; }
       set {
         citySize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CreatorId" field.</summary>
+    public const int CreatorIdFieldNumber = 9;
+    private long creatorId_;
+    /// <summary>
+    ///bool IsCapital = 10; 是否是都城，由服务器来算，暂时不需要客户端来传
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long CreatorId {
+      get { return creatorId_; }
+      set {
+        creatorId_ = value;
       }
     }
 
@@ -5804,6 +5825,7 @@ namespace Protobuf.Room {
       if (CellIndex != other.CellIndex) return false;
       if (CityName != other.CityName) return false;
       if (CitySize != other.CitySize) return false;
+      if (CreatorId != other.CreatorId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5818,6 +5840,7 @@ namespace Protobuf.Room {
       if (CellIndex != 0) hash ^= CellIndex.GetHashCode();
       if (CityName.Length != 0) hash ^= CityName.GetHashCode();
       if (CitySize != 0) hash ^= CitySize.GetHashCode();
+      if (CreatorId != 0L) hash ^= CreatorId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5863,6 +5886,10 @@ namespace Protobuf.Room {
         output.WriteRawTag(64);
         output.WriteInt32(CitySize);
       }
+      if (CreatorId != 0L) {
+        output.WriteRawTag(72);
+        output.WriteInt64(CreatorId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5894,6 +5921,9 @@ namespace Protobuf.Room {
       }
       if (CitySize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(CitySize);
+      }
+      if (CreatorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreatorId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5929,6 +5959,9 @@ namespace Protobuf.Room {
       }
       if (other.CitySize != 0) {
         CitySize = other.CitySize;
+      }
+      if (other.CreatorId != 0L) {
+        CreatorId = other.CreatorId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5973,6 +6006,10 @@ namespace Protobuf.Room {
             CitySize = input.ReadInt32();
             break;
           }
+          case 72: {
+            CreatorId = input.ReadInt64();
+            break;
+          }
         }
       }
     }
@@ -6013,6 +6050,7 @@ namespace Protobuf.Room {
       cityName_ = other.cityName_;
       citySize_ = other.citySize_;
       isCapital_ = other.isCapital_;
+      creatorId_ = other.creatorId_;
       ret_ = other.ret_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -6121,8 +6159,19 @@ namespace Protobuf.Room {
       }
     }
 
+    /// <summary>Field number for the "CreatorId" field.</summary>
+    public const int CreatorIdFieldNumber = 10;
+    private long creatorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long CreatorId {
+      get { return creatorId_; }
+      set {
+        creatorId_ = value;
+      }
+    }
+
     /// <summary>Field number for the "Ret" field.</summary>
-    public const int RetFieldNumber = 10;
+    public const int RetFieldNumber = 11;
     private bool ret_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Ret {
@@ -6154,6 +6203,7 @@ namespace Protobuf.Room {
       if (CityName != other.CityName) return false;
       if (CitySize != other.CitySize) return false;
       if (IsCapital != other.IsCapital) return false;
+      if (CreatorId != other.CreatorId) return false;
       if (Ret != other.Ret) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -6170,6 +6220,7 @@ namespace Protobuf.Room {
       if (CityName.Length != 0) hash ^= CityName.GetHashCode();
       if (CitySize != 0) hash ^= CitySize.GetHashCode();
       if (IsCapital != false) hash ^= IsCapital.GetHashCode();
+      if (CreatorId != 0L) hash ^= CreatorId.GetHashCode();
       if (Ret != false) hash ^= Ret.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6220,8 +6271,12 @@ namespace Protobuf.Room {
         output.WriteRawTag(72);
         output.WriteBool(IsCapital);
       }
-      if (Ret != false) {
+      if (CreatorId != 0L) {
         output.WriteRawTag(80);
+        output.WriteInt64(CreatorId);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(88);
         output.WriteBool(Ret);
       }
       if (_unknownFields != null) {
@@ -6258,6 +6313,9 @@ namespace Protobuf.Room {
       }
       if (IsCapital != false) {
         size += 1 + 1;
+      }
+      if (CreatorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(CreatorId);
       }
       if (Ret != false) {
         size += 1 + 1;
@@ -6299,6 +6357,9 @@ namespace Protobuf.Room {
       }
       if (other.IsCapital != false) {
         IsCapital = other.IsCapital;
+      }
+      if (other.CreatorId != 0L) {
+        CreatorId = other.CreatorId;
       }
       if (other.Ret != false) {
         Ret = other.Ret;
@@ -6351,6 +6412,10 @@ namespace Protobuf.Room {
             break;
           }
           case 80: {
+            CreatorId = input.ReadInt64();
+            break;
+          }
+          case 88: {
             Ret = input.ReadBool();
             break;
           }
@@ -6749,6 +6814,628 @@ namespace Protobuf.Room {
             break;
           }
           case 32: {
+            Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UpdatePos : pb::IMessage<UpdatePos> {
+    private static readonly pb::MessageParser<UpdatePos> _parser = new pb::MessageParser<UpdatePos>(() => new UpdatePos());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdatePos> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[26]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdatePos() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdatePos(UpdatePos other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      posX_ = other.posX_;
+      posZ_ = other.posZ_;
+      cellIndex_ = other.cellIndex_;
+      orientation_ = other.orientation_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdatePos Clone() {
+      return new UpdatePos(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosX" field.</summary>
+    public const int PosXFieldNumber = 4;
+    private int posX_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosX {
+      get { return posX_; }
+      set {
+        posX_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosZ" field.</summary>
+    public const int PosZFieldNumber = 5;
+    private int posZ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosZ {
+      get { return posZ_; }
+      set {
+        posZ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CellIndex" field.</summary>
+    public const int CellIndexFieldNumber = 6;
+    private int cellIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CellIndex {
+      get { return cellIndex_; }
+      set {
+        cellIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Orientation" field.</summary>
+    public const int OrientationFieldNumber = 7;
+    private float orientation_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Orientation {
+      get { return orientation_; }
+      set {
+        orientation_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdatePos);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdatePos other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (PosX != other.PosX) return false;
+      if (PosZ != other.PosZ) return false;
+      if (CellIndex != other.CellIndex) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Orientation, other.Orientation)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (PosX != 0) hash ^= PosX.GetHashCode();
+      if (PosZ != 0) hash ^= PosZ.GetHashCode();
+      if (CellIndex != 0) hash ^= CellIndex.GetHashCode();
+      if (Orientation != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Orientation);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (PosX != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PosX);
+      }
+      if (PosZ != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PosZ);
+      }
+      if (CellIndex != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(CellIndex);
+      }
+      if (Orientation != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(Orientation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (PosX != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosX);
+      }
+      if (PosZ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosZ);
+      }
+      if (CellIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CellIndex);
+      }
+      if (Orientation != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdatePos other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.PosX != 0) {
+        PosX = other.PosX;
+      }
+      if (other.PosZ != 0) {
+        PosZ = other.PosZ;
+      }
+      if (other.CellIndex != 0) {
+        CellIndex = other.CellIndex;
+      }
+      if (other.Orientation != 0F) {
+        Orientation = other.Orientation;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            PosX = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            PosZ = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            CellIndex = input.ReadInt32();
+            break;
+          }
+          case 61: {
+            Orientation = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UpdatePosReply : pb::IMessage<UpdatePosReply> {
+    private static readonly pb::MessageParser<UpdatePosReply> _parser = new pb::MessageParser<UpdatePosReply>(() => new UpdatePosReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdatePosReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdatePosReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdatePosReply(UpdatePosReply other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      posX_ = other.posX_;
+      posZ_ = other.posZ_;
+      cellIndex_ = other.cellIndex_;
+      orientation_ = other.orientation_;
+      ret_ = other.ret_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdatePosReply Clone() {
+      return new UpdatePosReply(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosX" field.</summary>
+    public const int PosXFieldNumber = 4;
+    private int posX_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosX {
+      get { return posX_; }
+      set {
+        posX_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PosZ" field.</summary>
+    public const int PosZFieldNumber = 5;
+    private int posZ_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PosZ {
+      get { return posZ_; }
+      set {
+        posZ_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CellIndex" field.</summary>
+    public const int CellIndexFieldNumber = 6;
+    private int cellIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CellIndex {
+      get { return cellIndex_; }
+      set {
+        cellIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Orientation" field.</summary>
+    public const int OrientationFieldNumber = 7;
+    private float orientation_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Orientation {
+      get { return orientation_; }
+      set {
+        orientation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 8;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdatePosReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdatePosReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (PosX != other.PosX) return false;
+      if (PosZ != other.PosZ) return false;
+      if (CellIndex != other.CellIndex) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Orientation, other.Orientation)) return false;
+      if (Ret != other.Ret) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (PosX != 0) hash ^= PosX.GetHashCode();
+      if (PosZ != 0) hash ^= PosZ.GetHashCode();
+      if (CellIndex != 0) hash ^= CellIndex.GetHashCode();
+      if (Orientation != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Orientation);
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (PosX != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PosX);
+      }
+      if (PosZ != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PosZ);
+      }
+      if (CellIndex != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(CellIndex);
+      }
+      if (Orientation != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(Orientation);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(Ret);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (PosX != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosX);
+      }
+      if (PosZ != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PosZ);
+      }
+      if (CellIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CellIndex);
+      }
+      if (Orientation != 0F) {
+        size += 1 + 4;
+      }
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdatePosReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.PosX != 0) {
+        PosX = other.PosX;
+      }
+      if (other.PosZ != 0) {
+        PosZ = other.PosZ;
+      }
+      if (other.CellIndex != 0) {
+        CellIndex = other.CellIndex;
+      }
+      if (other.Orientation != 0F) {
+        Orientation = other.Orientation;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            PosX = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            PosZ = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            CellIndex = input.ReadInt32();
+            break;
+          }
+          case 61: {
+            Orientation = input.ReadFloat();
+            break;
+          }
+          case 64: {
             Ret = input.ReadBool();
             break;
           }

@@ -24,21 +24,22 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKpQCCgRST09N",
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKqUCCgRST09N",
             "EgwKCE1zZ1N0YXJ0EAASDwoJSGVhcnRCZWF0EKCcARIRCgtQbGF5ZXJFbnRl",
             "chChnAESDwoJRW50ZXJSb29tEKOcARIPCglMZWF2ZVJvb20QpZwBEg8KCVVw",
             "bG9hZE1hcBCnnAESEQoLRG93bmxvYWRNYXAQqZwBEhEKC0Rlc3Ryb3lSb29t",
             "EKucARISCgxDcmVhdGVBVHJvb3AQtZwBEhMKDURlc3Ryb3lBVHJvb3AQt5wB",
             "Eg8KCVRyb29wTW92ZRC/nAESEgoMVHJvb3BBaVN0YXRlEMGcARISCgxBc2tG",
             "b3JDaXRpZXMQw5wBEg0KB0NpdHlBZGQQxZwBEhAKCkNpdHlSZW1vdmUQx5wB",
-            "Ks8CCgpST09NX1JFUExZEhEKDU1zZ1N0YXJ0UmVwbHkQABIWChBQbGF5ZXJF",
-            "bnRlclJlcGx5EKKcARIUCg5FbnRlclJvb21SZXBseRCknAESFAoOTGVhdmVS",
-            "b29tUmVwbHkQxpoMEhQKDlVwbG9hZE1hcFJlcGx5EKicARIWChBEb3dubG9h",
-            "ZE1hcFJlcGx5EKqcARIWChBEZXN0cm95Um9vbVJlcGx5EKycARIXChFDcmVh",
-            "dGVBVHJvb3BSZXBseRC2nAESGAoSRGVzdHJveUFUcm9vcFJlcGx5ELicARIU",
-            "Cg5Ucm9vcE1vdmVSZXBseRDAnAESFwoRVHJvb3BBaVN0YXRlUmVwbHkQwpwB",
-            "EhcKEUFza0ZvckNpdGllc1JlcGx5EMScARISCgxDaXR5QWRkUmVwbHkQxpwB",
-            "EhUKD0NpdHlSZW1vdmVSZXBseRDInAFiBnByb3RvMw=="));
+            "Eg8KCVVwZGF0ZVBvcxDJnAEq5QIKClJPT01fUkVQTFkSEQoNTXNnU3RhcnRS",
+            "ZXBseRAAEhYKEFBsYXllckVudGVyUmVwbHkQopwBEhQKDkVudGVyUm9vbVJl",
+            "cGx5EKScARIUCg5MZWF2ZVJvb21SZXBseRDGmgwSFAoOVXBsb2FkTWFwUmVw",
+            "bHkQqJwBEhYKEERvd25sb2FkTWFwUmVwbHkQqpwBEhYKEERlc3Ryb3lSb29t",
+            "UmVwbHkQrJwBEhcKEUNyZWF0ZUFUcm9vcFJlcGx5ELacARIYChJEZXN0cm95",
+            "QVRyb29wUmVwbHkQuJwBEhQKDlRyb29wTW92ZVJlcGx5EMCcARIXChFUcm9v",
+            "cEFpU3RhdGVSZXBseRDCnAESFwoRQXNrRm9yQ2l0aWVzUmVwbHkQxJwBEhIK",
+            "DENpdHlBZGRSZXBseRDGnAESFQoPQ2l0eVJlbW92ZVJlcGx5EMicARIUCg5V",
+            "cGRhdGVQb3NSZXBseRDKnAFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -69,6 +70,7 @@ namespace Protobuf.Room {
     [pbr::OriginalName("AskForCities")] AskForCities = 20035,
     [pbr::OriginalName("CityAdd")] CityAdd = 20037,
     [pbr::OriginalName("CityRemove")] CityRemove = 20039,
+    [pbr::OriginalName("UpdatePos")] UpdatePos = 20041,
   }
 
   /// <summary>
@@ -92,6 +94,7 @@ namespace Protobuf.Room {
     [pbr::OriginalName("AskForCitiesReply")] AskForCitiesReply = 20036,
     [pbr::OriginalName("CityAddReply")] CityAddReply = 20038,
     [pbr::OriginalName("CityRemoveReply")] CityRemoveReply = 20040,
+    [pbr::OriginalName("UpdatePosReply")] UpdatePosReply = 20042,
   }
 
   #endregion
