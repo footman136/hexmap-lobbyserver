@@ -24,22 +24,26 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKqUCCgRST09N",
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKvECCgRST09N",
             "EgwKCE1zZ1N0YXJ0EAASDwoJSGVhcnRCZWF0EKCcARIRCgtQbGF5ZXJFbnRl",
             "chChnAESDwoJRW50ZXJSb29tEKOcARIPCglMZWF2ZVJvb20QpZwBEg8KCVVw",
             "bG9hZE1hcBCnnAESEQoLRG93bmxvYWRNYXAQqZwBEhEKC0Rlc3Ryb3lSb29t",
             "EKucARISCgxDcmVhdGVBVHJvb3AQtZwBEhMKDURlc3Ryb3lBVHJvb3AQt5wB",
             "Eg8KCVRyb29wTW92ZRC/nAESEgoMVHJvb3BBaVN0YXRlEMGcARISCgxBc2tG",
             "b3JDaXRpZXMQw5wBEg0KB0NpdHlBZGQQxZwBEhAKCkNpdHlSZW1vdmUQx5wB",
-            "Eg8KCVVwZGF0ZVBvcxDJnAEq5QIKClJPT01fUkVQTFkSEQoNTXNnU3RhcnRS",
-            "ZXBseRAAEhYKEFBsYXllckVudGVyUmVwbHkQopwBEhQKDkVudGVyUm9vbVJl",
-            "cGx5EKScARIUCg5MZWF2ZVJvb21SZXBseRDGmgwSFAoOVXBsb2FkTWFwUmVw",
-            "bHkQqJwBEhYKEERvd25sb2FkTWFwUmVwbHkQqpwBEhYKEERlc3Ryb3lSb29t",
-            "UmVwbHkQrJwBEhcKEUNyZWF0ZUFUcm9vcFJlcGx5ELacARIYChJEZXN0cm95",
-            "QVRyb29wUmVwbHkQuJwBEhQKDlRyb29wTW92ZVJlcGx5EMCcARIXChFUcm9v",
-            "cEFpU3RhdGVSZXBseRDCnAESFwoRQXNrRm9yQ2l0aWVzUmVwbHkQxJwBEhIK",
-            "DENpdHlBZGRSZXBseRDGnAESFQoPQ2l0eVJlbW92ZVJlcGx5EMicARIUCg5V",
-            "cGRhdGVQb3NSZXBseRDKnAFiBnByb3RvMw=="));
+            "Eg8KCVVwZGF0ZVBvcxDJnAESEgoMSGFydmVzdFN0YXJ0ENOcARIRCgtIYXJ2",
+            "ZXN0U3RvcBDVnAESEQoLRG93bmxvYWRSZXMQ15wBEhAKCkZpZ2h0U3RhcnQQ",
+            "3ZwBKsADCgpST09NX1JFUExZEhEKDU1zZ1N0YXJ0UmVwbHkQABIWChBQbGF5",
+            "ZXJFbnRlclJlcGx5EKKcARIUCg5FbnRlclJvb21SZXBseRCknAESFAoOTGVh",
+            "dmVSb29tUmVwbHkQxpoMEhQKDlVwbG9hZE1hcFJlcGx5EKicARIWChBEb3du",
+            "bG9hZE1hcFJlcGx5EKqcARIWChBEZXN0cm95Um9vbVJlcGx5EKycARIXChFD",
+            "cmVhdGVBVHJvb3BSZXBseRC2nAESGAoSRGVzdHJveUFUcm9vcFJlcGx5ELic",
+            "ARIUCg5Ucm9vcE1vdmVSZXBseRDAnAESFwoRVHJvb3BBaVN0YXRlUmVwbHkQ",
+            "wpwBEhcKEUFza0ZvckNpdGllc1JlcGx5EMScARISCgxDaXR5QWRkUmVwbHkQ",
+            "xpwBEhUKD0NpdHlSZW1vdmVSZXBseRDInAESFAoOVXBkYXRlUG9zUmVwbHkQ",
+            "ypwBEhcKEUhhcnZlc3RTdGFydFJlcGx5ENScARIWChBIYXJ2ZXN0U3RvcFJl",
+            "cGx5ENacARIWChBEb3dubG9hZFJlc1JlcGx5ENicARIQCgpGaWdodFJlcGx5",
+            "EN6cAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -56,6 +60,9 @@ namespace Protobuf.Room {
     /// proto3枚举的第一个成员必须是0
     /// </summary>
     [pbr::OriginalName("MsgStart")] MsgStart = 0,
+    /// <summary>
+    /// 心跳
+    /// </summary>
     [pbr::OriginalName("HeartBeat")] HeartBeat = 20000,
     [pbr::OriginalName("PlayerEnter")] PlayerEnter = 20001,
     [pbr::OriginalName("EnterRoom")] EnterRoom = 20003,
@@ -65,12 +72,34 @@ namespace Protobuf.Room {
     [pbr::OriginalName("DestroyRoom")] DestroyRoom = 20011,
     [pbr::OriginalName("CreateATroop")] CreateAtroop = 20021,
     [pbr::OriginalName("DestroyATroop")] DestroyAtroop = 20023,
+    /// <summary>
+    /// 部队移动,此指令已废弃,被TroopAiState取代
+    /// </summary>
     [pbr::OriginalName("TroopMove")] TroopMove = 20031,
     [pbr::OriginalName("TroopAiState")] TroopAiState = 20033,
     [pbr::OriginalName("AskForCities")] AskForCities = 20035,
     [pbr::OriginalName("CityAdd")] CityAdd = 20037,
     [pbr::OriginalName("CityRemove")] CityRemove = 20039,
+    /// <summary>
+    /// 因为AI在客户端进行,所以要从客户端同步坐标到服务器
+    /// </summary>
     [pbr::OriginalName("UpdatePos")] UpdatePos = 20041,
+    /// <summary>
+    /// 采集
+    /// </summary>
+    [pbr::OriginalName("HarvestStart")] HarvestStart = 20051,
+    /// <summary>
+    /// 停止采集
+    /// </summary>
+    [pbr::OriginalName("HarvestStop")] HarvestStop = 20053,
+    /// <summary>
+    /// 更新资源变更
+    /// </summary>
+    [pbr::OriginalName("DownloadRes")] DownloadRes = 20055,
+    /// <summary>
+    /// 战斗
+    /// </summary>
+    [pbr::OriginalName("FightStart")] FightStart = 20061,
   }
 
   /// <summary>
@@ -95,6 +124,10 @@ namespace Protobuf.Room {
     [pbr::OriginalName("CityAddReply")] CityAddReply = 20038,
     [pbr::OriginalName("CityRemoveReply")] CityRemoveReply = 20040,
     [pbr::OriginalName("UpdatePosReply")] UpdatePosReply = 20042,
+    [pbr::OriginalName("HarvestStartReply")] HarvestStartReply = 20052,
+    [pbr::OriginalName("HarvestStopReply")] HarvestStopReply = 20054,
+    [pbr::OriginalName("DownloadResReply")] DownloadResReply = 20056,
+    [pbr::OriginalName("FightReply")] FightReply = 20062,
   }
 
   #endregion

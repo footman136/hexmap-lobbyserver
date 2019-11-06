@@ -36,67 +36,87 @@ namespace Protobuf.Room {
             "ASgDEhAKCFJvb21OYW1lGAMgASgJEhYKDk1heFBsYXllckNvdW50GAQgASgF",
             "EhUKDUlzQ3JlYXRlZEJ5TWUYBSABKAgSFAoMUGFja2FnZUluZGV4GAYgASgF",
             "EhUKDUlzTGFzdFBhY2thZ2UYByABKAgSDwoHTWFwRGF0YRgIIAEoDBIOCgZF",
-            "cnJNc2cYCSABKAkigQEKCFJvb21JbmZvEhAKCFJvb21OYW1lGAEgASgJEg4K",
-            "BlJvb21JZBgCIAEoAxISCgpDcmVhdGVUaW1lGAMgASgDEhYKDkN1clBsYXll",
-            "ckNvdW50GAQgASgFEhYKDk1heFBsYXllckNvdW50GAUgASgFEg8KB0NyZWF0",
-            "b3IYBiABKAMiGwoJRW50ZXJSb29tEg4KBlJvb21JZBgBIAEoAyJPCg5FbnRl",
-            "clJvb21SZXBseRILCgNSZXQYASABKAgSDgoGUm9vbUlkGAIgASgDEhAKCFJv",
-            "b21OYW1lGAMgASgJEg4KBkVyck1zZxgEIAEoCSI0CglMZWF2ZVJvb20SDgoG",
-            "Um9vbUlkGAEgASgDEhcKD1JlbGVhc2VJZk5vVXNlchgCIAEoCCIvCg5MZWF2",
-            "ZVJvb21SZXBseRILCgNSZXQYASABKAgSEAoIUm9vbU5hbWUYAiABKAkiqgEK",
-            "DENyZWF0ZUFUcm9vcBIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEo",
-            "AxIPCgdBY3RvcklkGAMgASgDEgwKBFBvc1gYBCABKAUSDAoEUG9zWhgFIAEo",
-            "BRITCgtPcmllbnRhdGlvbhgGIAEoAhIPCgdTcGVjaWVzGAcgASgJEhEKCUNl",
-            "bGxJbmRleBgIIAEoBRITCgtBY3RvckluZm9JZBgJIAEoBSK+AgoRQ3JlYXRl",
-            "QVRyb29wUmVwbHkSDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMS",
-            "DwoHQWN0b3JJZBgDIAEoAxIMCgRQb3NYGAQgASgFEgwKBFBvc1oYBSABKAUS",
-            "EwoLT3JpZW50YXRpb24YBiABKAISDwoHU3BlY2llcxgHIAEoCRIRCglDZWxs",
-            "SW5kZXgYCCABKAUSEwoLQWN0b3JJbmZvSWQYCSABKAUSDAoETmFtZRgKIAEo",
-            "CRIKCgJIcBgLIAEoBRITCgtBdHRhY2tQb3dlchgMIAEoAhIUCgxEZWZlbmNl",
-            "UG93ZXIYDSABKAISDQoFU3BlZWQYDiABKAISFQoNRmllbGRPZlZpc2lvbhgP",
-            "IAEoAhIVCg1TaG9vdGluZ1JhbmdlGBAgASgCEgsKA3JldBgRIAEoCCJBCg1E",
-            "ZXN0cm95QVRyb29wEg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgD",
-            "Eg8KB0FjdG9ySWQYAyABKAMiUwoSRGVzdHJveUFUcm9vcFJlcGx5Eg4KBlJv",
-            "b21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMS",
-            "CwoDcmV0GAQgASgIIoEBCglUcm9vcE1vdmUSDgoGUm9vbUlkGAEgASgDEg8K",
-            "B093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIQCghQb3NGcm9tWBgE",
-            "IAEoBRIQCghQb3NGcm9tWhgFIAEoBRIOCgZQb3NUb1gYBiABKAUSDgoGUG9z",
-            "VG9aGAcgASgFIpMBCg5Ucm9vcE1vdmVSZXBseRIOCgZSb29tSWQYASABKAMS",
-            "DwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEhAKCFBvc0Zyb21Y",
-            "GAQgASgFEhAKCFBvc0Zyb21aGAUgASgFEg4KBlBvc1RvWBgGIAEoBRIOCgZQ",
-            "b3NUb1oYByABKAUSCwoDUmV0GAggASgIIuMBCgxUcm9vcEFpU3RhdGUSDgoG",
+            "cnJNc2cYCSABKAkihAEKC05ldFJvb21JbmZvEhAKCFJvb21OYW1lGAEgASgJ",
+            "Eg4KBlJvb21JZBgCIAEoAxISCgpDcmVhdGVUaW1lGAMgASgDEhYKDkN1clBs",
+            "YXllckNvdW50GAQgASgFEhYKDk1heFBsYXllckNvdW50GAUgASgFEg8KB0Ny",
+            "ZWF0b3IYBiABKAMiGwoJRW50ZXJSb29tEg4KBlJvb21JZBgBIAEoAyJPCg5F",
+            "bnRlclJvb21SZXBseRILCgNSZXQYASABKAgSDgoGUm9vbUlkGAIgASgDEhAK",
+            "CFJvb21OYW1lGAMgASgJEg4KBkVyck1zZxgEIAEoCSI0CglMZWF2ZVJvb20S",
+            "DgoGUm9vbUlkGAEgASgDEhcKD1JlbGVhc2VJZk5vVXNlchgCIAEoCCIvCg5M",
+            "ZWF2ZVJvb21SZXBseRILCgNSZXQYASABKAgSEAoIUm9vbU5hbWUYAiABKAki",
+            "qgEKDENyZWF0ZUFUcm9vcBIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgC",
+            "IAEoAxIPCgdBY3RvcklkGAMgASgDEgwKBFBvc1gYBCABKAUSDAoEUG9zWhgF",
+            "IAEoBRITCgtPcmllbnRhdGlvbhgGIAEoAhIPCgdTcGVjaWVzGAcgASgJEhEK",
+            "CUNlbGxJbmRleBgIIAEoBRITCgtBY3RvckluZm9JZBgJIAEoBSK+AgoRQ3Jl",
+            "YXRlQVRyb29wUmVwbHkSDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiAB",
+            "KAMSDwoHQWN0b3JJZBgDIAEoAxIMCgRQb3NYGAQgASgFEgwKBFBvc1oYBSAB",
+            "KAUSEwoLT3JpZW50YXRpb24YBiABKAISDwoHU3BlY2llcxgHIAEoCRIRCglD",
+            "ZWxsSW5kZXgYCCABKAUSEwoLQWN0b3JJbmZvSWQYCSABKAUSDAoETmFtZRgK",
+            "IAEoCRIKCgJIcBgLIAEoBRITCgtBdHRhY2tQb3dlchgMIAEoAhIUCgxEZWZl",
+            "bmNlUG93ZXIYDSABKAISDQoFU3BlZWQYDiABKAISFQoNRmllbGRPZlZpc2lv",
+            "bhgPIAEoAhIVCg1TaG9vdGluZ1JhbmdlGBAgASgCEgsKA3JldBgRIAEoCCJB",
+            "Cg1EZXN0cm95QVRyb29wEg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIg",
+            "ASgDEg8KB0FjdG9ySWQYAyABKAMiUwoSRGVzdHJveUFUcm9vcFJlcGx5Eg4K",
+            "BlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyAB",
+            "KAMSCwoDcmV0GAQgASgIIoEBCglUcm9vcE1vdmUSDgoGUm9vbUlkGAEgASgD",
+            "Eg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIQCghQb3NGcm9t",
+            "WBgEIAEoBRIQCghQb3NGcm9tWhgFIAEoBRIOCgZQb3NUb1gYBiABKAUSDgoG",
+            "UG9zVG9aGAcgASgFIpMBCg5Ucm9vcE1vdmVSZXBseRIOCgZSb29tSWQYASAB",
+            "KAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEhAKCFBvc0Zy",
+            "b21YGAQgASgFEhAKCFBvc0Zyb21aGAUgASgFEg4KBlBvc1RvWBgGIAEoBRIO",
+            "CgZQb3NUb1oYByABKAUSCwoDUmV0GAggASgIIuMBCgxUcm9vcEFpU3RhdGUS",
+            "DgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgD",
+            "IAEoAxINCgVTdGF0ZRgEIAEoBRIQCghQb3NYRnJvbRgFIAEoBRIQCghQb3Na",
+            "RnJvbRgGIAEoBRIOCgZQb3NYVG8YByABKAUSDgoGUG9zWlRvGAggASgFEhUK",
+            "DUNlbGxJbmRleEZyb20YCSABKAUSEwoLQ2VsbEluZGV4VG8YCiABKAUSEwoL",
+            "T3JpZW50YXRpb24YCyABKAISDQoFU3BlZWQYDCABKAIi9QEKEVRyb29wQWlT",
+            "dGF0ZVJlcGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8K",
+            "B0FjdG9ySWQYAyABKAMSDQoFU3RhdGUYBCABKAUSEAoIUG9zWEZyb20YBSAB",
+            "KAUSEAoIUG9zWkZyb20YBiABKAUSDgoGUG9zWFRvGAcgASgFEg4KBlBvc1pU",
+            "bxgIIAEoBRIVCg1DZWxsSW5kZXhGcm9tGAkgASgFEhMKC0NlbGxJbmRleFRv",
+            "GAogASgFEhMKC09yaWVudGF0aW9uGAsgASgCEg0KBVNwZWVkGAwgASgCEgsK",
+            "A1JldBgNIAEoCCIvCgxBc2tGb3JDaXRpZXMSDgoGUm9vbUlkGAEgASgDEg8K",
+            "B093bmVySWQYAiABKAMihQEKEUFza0ZvckNpdGllc1JlcGx5Eg4KBlJvb21J",
+            "ZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEhYKDlRvdGFsQ2l0eUNvdW50GAMg",
+            "ASgFEhMKC015Q2l0eUNvdW50GAQgASgFEhUKDUNhcGl0YWxDaXR5SWQYBSAB",
+            "KAMSCwoDUmV0GAYgASgIIqABCgdDaXR5QWRkEg4KBlJvb21JZBgBIAEoAxIP",
+            "CgdPd25lcklkGAIgASgDEg4KBkNpdHlJZBgDIAEoAxIMCgRQb3NYGAQgASgF",
+            "EgwKBFBvc1oYBSABKAUSEQoJQ2VsbEluZGV4GAYgASgFEhAKCENpdHlOYW1l",
+            "GAcgASgJEhAKCENpdHlTaXplGAggASgFEhEKCUNyZWF0b3JJZBgJIAEoAyLF",
+            "AQoMQ2l0eUFkZFJlcGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIg",
+            "ASgDEg4KBkNpdHlJZBgDIAEoAxIMCgRQb3NYGAQgASgFEgwKBFBvc1oYBSAB",
+            "KAUSEQoJQ2VsbEluZGV4GAYgASgFEhAKCENpdHlOYW1lGAcgASgJEhAKCENp",
+            "dHlTaXplGAggASgFEhEKCUlzQ2FwaXRhbBgJIAEoCBIRCglDcmVhdG9ySWQY",
+            "CiABKAMSCwoDUmV0GAsgASgIIj0KCkNpdHlSZW1vdmUSDgoGUm9vbUlkGAEg",
+            "ASgDEg8KB093bmVySWQYAiABKAMSDgoGQ2l0eUlkGAMgASgDIk8KD0NpdHlS",
+            "ZW1vdmVSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIO",
+            "CgZDaXR5SWQYAyABKAMSCwoDUmV0GAQgASgIIoEBCglVcGRhdGVQb3MSDgoG",
             "Um9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEo",
-            "AxINCgVTdGF0ZRgEIAEoBRIQCghQb3NYRnJvbRgFIAEoBRIQCghQb3NaRnJv",
-            "bRgGIAEoBRIOCgZQb3NYVG8YByABKAUSDgoGUG9zWlRvGAggASgFEhUKDUNl",
-            "bGxJbmRleEZyb20YCSABKAUSEwoLQ2VsbEluZGV4VG8YCiABKAUSEwoLT3Jp",
-            "ZW50YXRpb24YCyABKAISDQoFU3BlZWQYDCABKAIi9QEKEVRyb29wQWlTdGF0",
-            "ZVJlcGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0Fj",
-            "dG9ySWQYAyABKAMSDQoFU3RhdGUYBCABKAUSEAoIUG9zWEZyb20YBSABKAUS",
-            "EAoIUG9zWkZyb20YBiABKAUSDgoGUG9zWFRvGAcgASgFEg4KBlBvc1pUbxgI",
-            "IAEoBRIVCg1DZWxsSW5kZXhGcm9tGAkgASgFEhMKC0NlbGxJbmRleFRvGAog",
-            "ASgFEhMKC09yaWVudGF0aW9uGAsgASgCEg0KBVNwZWVkGAwgASgCEgsKA1Jl",
-            "dBgNIAEoCCIvCgxBc2tGb3JDaXRpZXMSDgoGUm9vbUlkGAEgASgDEg8KB093",
-            "bmVySWQYAiABKAMihQEKEUFza0ZvckNpdGllc1JlcGx5Eg4KBlJvb21JZBgB",
-            "IAEoAxIPCgdPd25lcklkGAIgASgDEhYKDlRvdGFsQ2l0eUNvdW50GAMgASgF",
-            "EhMKC015Q2l0eUNvdW50GAQgASgFEhUKDUNhcGl0YWxDaXR5SWQYBSABKAMS",
-            "CwoDUmV0GAYgASgIIqABCgdDaXR5QWRkEg4KBlJvb21JZBgBIAEoAxIPCgdP",
-            "d25lcklkGAIgASgDEg4KBkNpdHlJZBgDIAEoAxIMCgRQb3NYGAQgASgFEgwK",
-            "BFBvc1oYBSABKAUSEQoJQ2VsbEluZGV4GAYgASgFEhAKCENpdHlOYW1lGAcg",
-            "ASgJEhAKCENpdHlTaXplGAggASgFEhEKCUNyZWF0b3JJZBgJIAEoAyLFAQoM",
-            "Q2l0eUFkZFJlcGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgD",
-            "Eg4KBkNpdHlJZBgDIAEoAxIMCgRQb3NYGAQgASgFEgwKBFBvc1oYBSABKAUS",
-            "EQoJQ2VsbEluZGV4GAYgASgFEhAKCENpdHlOYW1lGAcgASgJEhAKCENpdHlT",
-            "aXplGAggASgFEhEKCUlzQ2FwaXRhbBgJIAEoCBIRCglDcmVhdG9ySWQYCiAB",
-            "KAMSCwoDUmV0GAsgASgIIj0KCkNpdHlSZW1vdmUSDgoGUm9vbUlkGAEgASgD",
-            "Eg8KB093bmVySWQYAiABKAMSDgoGQ2l0eUlkGAMgASgDIk8KD0NpdHlSZW1v",
-            "dmVSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIOCgZD",
-            "aXR5SWQYAyABKAMSCwoDUmV0GAQgASgIIoEBCglVcGRhdGVQb3MSDgoGUm9v",
-            "bUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIM",
-            "CgRQb3NYGAQgASgFEgwKBFBvc1oYBSABKAUSEQoJQ2VsbEluZGV4GAYgASgF",
-            "EhMKC09yaWVudGF0aW9uGAcgASgCIpMBCg5VcGRhdGVQb3NSZXBseRIOCgZS",
-            "b29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgD",
-            "EgwKBFBvc1gYBCABKAUSDAoEUG9zWhgFIAEoBRIRCglDZWxsSW5kZXgYBiAB",
-            "KAUSEwoLT3JpZW50YXRpb24YByABKAISCwoDUmV0GAggASgIYgZwcm90bzM="));
+            "AxIMCgRQb3NYGAQgASgFEgwKBFBvc1oYBSABKAUSEQoJQ2VsbEluZGV4GAYg",
+            "ASgFEhMKC09yaWVudGF0aW9uGAcgASgCIpMBCg5VcGRhdGVQb3NSZXBseRIO",
+            "CgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMg",
+            "ASgDEgwKBFBvc1gYBCABKAUSDAoEUG9zWhgFIAEoBRIRCglDZWxsSW5kZXgY",
+            "BiABKAUSEwoLT3JpZW50YXRpb24YByABKAISCwoDUmV0GAggASgIIo0BCgxI",
+            "YXJ2ZXN0U3RhcnQSDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMS",
+            "DwoHQWN0b3JJZBgDIAEoAxIRCglDZWxsSW5kZXgYBCABKAUSDwoHUmVzVHlw",
+            "ZRgFIAEoBRIRCglSZXNSZW1haW4YBiABKAUSFAoMRHVyYXRpb25UaW1lGAcg",
+            "ASgCIp8BChFIYXJ2ZXN0U3RhcnRSZXBseRIOCgZSb29tSWQYASABKAMSDwoH",
+            "T3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEhEKCUNlbGxJbmRleBgE",
+            "IAEoBRIPCgdSZXNUeXBlGAUgASgFEhEKCVJlc1JlbWFpbhgGIAEoBRIUCgxE",
+            "dXJhdGlvblRpbWUYByABKAISCwoDUmV0GAggASgIIooBCgtIYXJ2ZXN0U3Rv",
+            "cBIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3Rvcklk",
+            "GAMgASgDEhEKCUNlbGxJbmRleBgEIAEoBRIPCgdSZXNUeXBlGAUgASgFEhEK",
+            "CVJlc1JlbWFpbhgGIAEoBRISCgpSZXNIYXJ2ZXN0GAcgASgFIpwBChBIYXJ2",
+            "ZXN0U3RvcFJlcGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgD",
+            "Eg8KB0FjdG9ySWQYAyABKAMSEQoJQ2VsbEluZGV4GAQgASgFEg8KB1Jlc1R5",
+            "cGUYBSABKAUSEQoJUmVzUmVtYWluGAYgASgFEhIKClJlc0hhcnZlc3QYByAB",
+            "KAUSCwoDUmV0GAggASgIIh0KC0Rvd25sb2FkUmVzEg4KBlJvb21JZBgBIAEo",
+            "AyJDCgpOZXRSZXNJbmZvEhEKCUNlbGxJbmRleBgBIAEoBRIPCgdSZXNUeXBl",
+            "GAIgASgFEhEKCVJlc0Ftb3VudBgDIAEoBSKqAQoQRG93bmxvYWRSZXNSZXBs",
+            "eRIOCgZSb29tSWQYASABKAMSCwoDUmV0GAIgASgIEg4KBkVyck1zZxgDIAEo",
+            "CRIUCgxQYWNrYWdlQ291bnQYBCABKAUSFAoMUGFja2FnZUluZGV4GAUgASgF",
+            "EhEKCUluZm9Db3VudBgGIAEoBRIqCgdSZXNJbmZvGAcgAygLMhkuUHJvdG9i",
+            "dWYuUm9vbS5OZXRSZXNJbmZvYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -107,7 +127,7 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UploadMapReply), global::Protobuf.Room.UploadMapReply.Parser, new[]{ "Ret", "IsLastPackage", "RoomId", "RoomName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMap), global::Protobuf.Room.DownloadMap.Parser, new[]{ "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadMapReply), global::Protobuf.Room.DownloadMapReply.Parser, new[]{ "Ret", "RoomId", "RoomName", "MaxPlayerCount", "IsCreatedByMe", "PackageIndex", "IsLastPackage", "MapData", "ErrMsg" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.RoomInfo), global::Protobuf.Room.RoomInfo.Parser, new[]{ "RoomName", "RoomId", "CreateTime", "CurPlayerCount", "MaxPlayerCount", "Creator" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.NetRoomInfo), global::Protobuf.Room.NetRoomInfo.Parser, new[]{ "RoomName", "RoomId", "CreateTime", "CurPlayerCount", "MaxPlayerCount", "Creator" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoom), global::Protobuf.Room.EnterRoom.Parser, new[]{ "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.EnterRoomReply), global::Protobuf.Room.EnterRoomReply.Parser, new[]{ "Ret", "RoomId", "RoomName", "ErrMsg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.LeaveRoom), global::Protobuf.Room.LeaveRoom.Parser, new[]{ "RoomId", "ReleaseIfNoUser" }, null, null, null, null),
@@ -127,7 +147,14 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CityRemove), global::Protobuf.Room.CityRemove.Parser, new[]{ "RoomId", "OwnerId", "CityId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.CityRemoveReply), global::Protobuf.Room.CityRemoveReply.Parser, new[]{ "RoomId", "OwnerId", "CityId", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdatePos), global::Protobuf.Room.UpdatePos.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "CellIndex", "Orientation" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdatePosReply), global::Protobuf.Room.UpdatePosReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "CellIndex", "Orientation", "Ret" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdatePosReply), global::Protobuf.Room.UpdatePosReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "CellIndex", "Orientation", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.HarvestStart), global::Protobuf.Room.HarvestStart.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndex", "ResType", "ResRemain", "DurationTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.HarvestStartReply), global::Protobuf.Room.HarvestStartReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndex", "ResType", "ResRemain", "DurationTime", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.HarvestStop), global::Protobuf.Room.HarvestStop.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndex", "ResType", "ResRemain", "ResHarvest" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.HarvestStopReply), global::Protobuf.Room.HarvestStopReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndex", "ResType", "ResRemain", "ResHarvest", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadRes), global::Protobuf.Room.DownloadRes.Parser, new[]{ "RoomId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.NetResInfo), global::Protobuf.Room.NetResInfo.Parser, new[]{ "CellIndex", "ResType", "ResAmount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadResReply), global::Protobuf.Room.DownloadResReply.Parser, new[]{ "RoomId", "Ret", "ErrMsg", "PackageCount", "PackageIndex", "InfoCount", "ResInfo" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1457,11 +1484,11 @@ namespace Protobuf.Room {
 
   }
 
-  public sealed partial class RoomInfo : pb::IMessage<RoomInfo> {
-    private static readonly pb::MessageParser<RoomInfo> _parser = new pb::MessageParser<RoomInfo>(() => new RoomInfo());
+  public sealed partial class NetRoomInfo : pb::IMessage<NetRoomInfo> {
+    private static readonly pb::MessageParser<NetRoomInfo> _parser = new pb::MessageParser<NetRoomInfo>(() => new NetRoomInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<RoomInfo> Parser { get { return _parser; } }
+    public static pb::MessageParser<NetRoomInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -1474,14 +1501,14 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RoomInfo() {
+    public NetRoomInfo() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RoomInfo(RoomInfo other) : this() {
+    public NetRoomInfo(NetRoomInfo other) : this() {
       roomName_ = other.roomName_;
       roomId_ = other.roomId_;
       createTime_ = other.createTime_;
@@ -1492,8 +1519,8 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public RoomInfo Clone() {
-      return new RoomInfo(this);
+    public NetRoomInfo Clone() {
+      return new NetRoomInfo(this);
     }
 
     /// <summary>Field number for the "RoomName" field.</summary>
@@ -1564,11 +1591,11 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as RoomInfo);
+      return Equals(other as NetRoomInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(RoomInfo other) {
+    public bool Equals(NetRoomInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1663,7 +1690,7 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(RoomInfo other) {
+    public void MergeFrom(NetRoomInfo other) {
       if (other == null) {
         return;
       }
@@ -7437,6 +7464,1889 @@ namespace Protobuf.Room {
           }
           case 64: {
             Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class HarvestStart : pb::IMessage<HarvestStart> {
+    private static readonly pb::MessageParser<HarvestStart> _parser = new pb::MessageParser<HarvestStart>(() => new HarvestStart());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<HarvestStart> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[28]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStart() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStart(HarvestStart other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      cellIndex_ = other.cellIndex_;
+      resType_ = other.resType_;
+      resRemain_ = other.resRemain_;
+      durationTime_ = other.durationTime_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStart Clone() {
+      return new HarvestStart(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CellIndex" field.</summary>
+    public const int CellIndexFieldNumber = 4;
+    private int cellIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CellIndex {
+      get { return cellIndex_; }
+      set {
+        cellIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResType" field.</summary>
+    public const int ResTypeFieldNumber = 5;
+    private int resType_;
+    /// <summary>
+    /// 资源种类,因为服务器什么都不知道,所以所有信息都从客户端来
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResType {
+      get { return resType_; }
+      set {
+        resType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResRemain" field.</summary>
+    public const int ResRemainFieldNumber = 6;
+    private int resRemain_;
+    /// <summary>
+    /// 资源剩余
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResRemain {
+      get { return resRemain_; }
+      set {
+        resRemain_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "DurationTime" field.</summary>
+    public const int DurationTimeFieldNumber = 7;
+    private float durationTime_;
+    /// <summary>
+    /// 采集完全部需要的时间
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float DurationTime {
+      get { return durationTime_; }
+      set {
+        durationTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as HarvestStart);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(HarvestStart other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (CellIndex != other.CellIndex) return false;
+      if (ResType != other.ResType) return false;
+      if (ResRemain != other.ResRemain) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DurationTime, other.DurationTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (CellIndex != 0) hash ^= CellIndex.GetHashCode();
+      if (ResType != 0) hash ^= ResType.GetHashCode();
+      if (ResRemain != 0) hash ^= ResRemain.GetHashCode();
+      if (DurationTime != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DurationTime);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (CellIndex != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(CellIndex);
+      }
+      if (ResType != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(ResType);
+      }
+      if (ResRemain != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ResRemain);
+      }
+      if (DurationTime != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(DurationTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (CellIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CellIndex);
+      }
+      if (ResType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResType);
+      }
+      if (ResRemain != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResRemain);
+      }
+      if (DurationTime != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(HarvestStart other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.CellIndex != 0) {
+        CellIndex = other.CellIndex;
+      }
+      if (other.ResType != 0) {
+        ResType = other.ResType;
+      }
+      if (other.ResRemain != 0) {
+        ResRemain = other.ResRemain;
+      }
+      if (other.DurationTime != 0F) {
+        DurationTime = other.DurationTime;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            CellIndex = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            ResType = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            ResRemain = input.ReadInt32();
+            break;
+          }
+          case 61: {
+            DurationTime = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class HarvestStartReply : pb::IMessage<HarvestStartReply> {
+    private static readonly pb::MessageParser<HarvestStartReply> _parser = new pb::MessageParser<HarvestStartReply>(() => new HarvestStartReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<HarvestStartReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[29]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStartReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStartReply(HarvestStartReply other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      cellIndex_ = other.cellIndex_;
+      resType_ = other.resType_;
+      resRemain_ = other.resRemain_;
+      durationTime_ = other.durationTime_;
+      ret_ = other.ret_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStartReply Clone() {
+      return new HarvestStartReply(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CellIndex" field.</summary>
+    public const int CellIndexFieldNumber = 4;
+    private int cellIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CellIndex {
+      get { return cellIndex_; }
+      set {
+        cellIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResType" field.</summary>
+    public const int ResTypeFieldNumber = 5;
+    private int resType_;
+    /// <summary>
+    /// 资源种类,因为服务器什么都不知道,所以所有信息都从客户端来
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResType {
+      get { return resType_; }
+      set {
+        resType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResRemain" field.</summary>
+    public const int ResRemainFieldNumber = 6;
+    private int resRemain_;
+    /// <summary>
+    /// 资源剩余
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResRemain {
+      get { return resRemain_; }
+      set {
+        resRemain_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "DurationTime" field.</summary>
+    public const int DurationTimeFieldNumber = 7;
+    private float durationTime_;
+    /// <summary>
+    /// 采集完全部需要的时间
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float DurationTime {
+      get { return durationTime_; }
+      set {
+        durationTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 8;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as HarvestStartReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(HarvestStartReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (CellIndex != other.CellIndex) return false;
+      if (ResType != other.ResType) return false;
+      if (ResRemain != other.ResRemain) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DurationTime, other.DurationTime)) return false;
+      if (Ret != other.Ret) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (CellIndex != 0) hash ^= CellIndex.GetHashCode();
+      if (ResType != 0) hash ^= ResType.GetHashCode();
+      if (ResRemain != 0) hash ^= ResRemain.GetHashCode();
+      if (DurationTime != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DurationTime);
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (CellIndex != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(CellIndex);
+      }
+      if (ResType != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(ResType);
+      }
+      if (ResRemain != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ResRemain);
+      }
+      if (DurationTime != 0F) {
+        output.WriteRawTag(61);
+        output.WriteFloat(DurationTime);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(Ret);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (CellIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CellIndex);
+      }
+      if (ResType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResType);
+      }
+      if (ResRemain != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResRemain);
+      }
+      if (DurationTime != 0F) {
+        size += 1 + 4;
+      }
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(HarvestStartReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.CellIndex != 0) {
+        CellIndex = other.CellIndex;
+      }
+      if (other.ResType != 0) {
+        ResType = other.ResType;
+      }
+      if (other.ResRemain != 0) {
+        ResRemain = other.ResRemain;
+      }
+      if (other.DurationTime != 0F) {
+        DurationTime = other.DurationTime;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            CellIndex = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            ResType = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            ResRemain = input.ReadInt32();
+            break;
+          }
+          case 61: {
+            DurationTime = input.ReadFloat();
+            break;
+          }
+          case 64: {
+            Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class HarvestStop : pb::IMessage<HarvestStop> {
+    private static readonly pb::MessageParser<HarvestStop> _parser = new pb::MessageParser<HarvestStop>(() => new HarvestStop());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<HarvestStop> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[30]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStop() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStop(HarvestStop other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      cellIndex_ = other.cellIndex_;
+      resType_ = other.resType_;
+      resRemain_ = other.resRemain_;
+      resHarvest_ = other.resHarvest_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStop Clone() {
+      return new HarvestStop(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CellIndex" field.</summary>
+    public const int CellIndexFieldNumber = 4;
+    private int cellIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CellIndex {
+      get { return cellIndex_; }
+      set {
+        cellIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResType" field.</summary>
+    public const int ResTypeFieldNumber = 5;
+    private int resType_;
+    /// <summary>
+    /// 资源种类,因为服务器什么都不知道,所以所有信息都从客户端来
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResType {
+      get { return resType_; }
+      set {
+        resType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResRemain" field.</summary>
+    public const int ResRemainFieldNumber = 6;
+    private int resRemain_;
+    /// <summary>
+    /// 资源剩余
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResRemain {
+      get { return resRemain_; }
+      set {
+        resRemain_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResHarvest" field.</summary>
+    public const int ResHarvestFieldNumber = 7;
+    private int resHarvest_;
+    /// <summary>
+    ///采集到的资源
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResHarvest {
+      get { return resHarvest_; }
+      set {
+        resHarvest_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as HarvestStop);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(HarvestStop other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (CellIndex != other.CellIndex) return false;
+      if (ResType != other.ResType) return false;
+      if (ResRemain != other.ResRemain) return false;
+      if (ResHarvest != other.ResHarvest) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (CellIndex != 0) hash ^= CellIndex.GetHashCode();
+      if (ResType != 0) hash ^= ResType.GetHashCode();
+      if (ResRemain != 0) hash ^= ResRemain.GetHashCode();
+      if (ResHarvest != 0) hash ^= ResHarvest.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (CellIndex != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(CellIndex);
+      }
+      if (ResType != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(ResType);
+      }
+      if (ResRemain != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ResRemain);
+      }
+      if (ResHarvest != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(ResHarvest);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (CellIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CellIndex);
+      }
+      if (ResType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResType);
+      }
+      if (ResRemain != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResRemain);
+      }
+      if (ResHarvest != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResHarvest);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(HarvestStop other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.CellIndex != 0) {
+        CellIndex = other.CellIndex;
+      }
+      if (other.ResType != 0) {
+        ResType = other.ResType;
+      }
+      if (other.ResRemain != 0) {
+        ResRemain = other.ResRemain;
+      }
+      if (other.ResHarvest != 0) {
+        ResHarvest = other.ResHarvest;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            CellIndex = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            ResType = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            ResRemain = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            ResHarvest = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class HarvestStopReply : pb::IMessage<HarvestStopReply> {
+    private static readonly pb::MessageParser<HarvestStopReply> _parser = new pb::MessageParser<HarvestStopReply>(() => new HarvestStopReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<HarvestStopReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[31]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStopReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStopReply(HarvestStopReply other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      cellIndex_ = other.cellIndex_;
+      resType_ = other.resType_;
+      resRemain_ = other.resRemain_;
+      resHarvest_ = other.resHarvest_;
+      ret_ = other.ret_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public HarvestStopReply Clone() {
+      return new HarvestStopReply(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "CellIndex" field.</summary>
+    public const int CellIndexFieldNumber = 4;
+    private int cellIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CellIndex {
+      get { return cellIndex_; }
+      set {
+        cellIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResType" field.</summary>
+    public const int ResTypeFieldNumber = 5;
+    private int resType_;
+    /// <summary>
+    /// 资源种类,因为服务器什么都不知道,所以所有信息都从客户端来
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResType {
+      get { return resType_; }
+      set {
+        resType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResRemain" field.</summary>
+    public const int ResRemainFieldNumber = 6;
+    private int resRemain_;
+    /// <summary>
+    /// 资源剩余
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResRemain {
+      get { return resRemain_; }
+      set {
+        resRemain_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResHarvest" field.</summary>
+    public const int ResHarvestFieldNumber = 7;
+    private int resHarvest_;
+    /// <summary>
+    ///采集到的资源
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResHarvest {
+      get { return resHarvest_; }
+      set {
+        resHarvest_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 8;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as HarvestStopReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(HarvestStopReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (CellIndex != other.CellIndex) return false;
+      if (ResType != other.ResType) return false;
+      if (ResRemain != other.ResRemain) return false;
+      if (ResHarvest != other.ResHarvest) return false;
+      if (Ret != other.Ret) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (CellIndex != 0) hash ^= CellIndex.GetHashCode();
+      if (ResType != 0) hash ^= ResType.GetHashCode();
+      if (ResRemain != 0) hash ^= ResRemain.GetHashCode();
+      if (ResHarvest != 0) hash ^= ResHarvest.GetHashCode();
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (CellIndex != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(CellIndex);
+      }
+      if (ResType != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(ResType);
+      }
+      if (ResRemain != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ResRemain);
+      }
+      if (ResHarvest != 0) {
+        output.WriteRawTag(56);
+        output.WriteInt32(ResHarvest);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(Ret);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (CellIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CellIndex);
+      }
+      if (ResType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResType);
+      }
+      if (ResRemain != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResRemain);
+      }
+      if (ResHarvest != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResHarvest);
+      }
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(HarvestStopReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.CellIndex != 0) {
+        CellIndex = other.CellIndex;
+      }
+      if (other.ResType != 0) {
+        ResType = other.ResType;
+      }
+      if (other.ResRemain != 0) {
+        ResRemain = other.ResRemain;
+      }
+      if (other.ResHarvest != 0) {
+        ResHarvest = other.ResHarvest;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            CellIndex = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            ResType = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            ResRemain = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            ResHarvest = input.ReadInt32();
+            break;
+          }
+          case 64: {
+            Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DownloadRes : pb::IMessage<DownloadRes> {
+    private static readonly pb::MessageParser<DownloadRes> _parser = new pb::MessageParser<DownloadRes>(() => new DownloadRes());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DownloadRes> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[32]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadRes() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadRes(DownloadRes other) : this() {
+      roomId_ = other.roomId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadRes Clone() {
+      return new DownloadRes(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DownloadRes);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DownloadRes other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DownloadRes other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class NetResInfo : pb::IMessage<NetResInfo> {
+    private static readonly pb::MessageParser<NetResInfo> _parser = new pb::MessageParser<NetResInfo>(() => new NetResInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<NetResInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[33]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NetResInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NetResInfo(NetResInfo other) : this() {
+      cellIndex_ = other.cellIndex_;
+      resType_ = other.resType_;
+      resAmount_ = other.resAmount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public NetResInfo Clone() {
+      return new NetResInfo(this);
+    }
+
+    /// <summary>Field number for the "CellIndex" field.</summary>
+    public const int CellIndexFieldNumber = 1;
+    private int cellIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CellIndex {
+      get { return cellIndex_; }
+      set {
+        cellIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResType" field.</summary>
+    public const int ResTypeFieldNumber = 2;
+    private int resType_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResType {
+      get { return resType_; }
+      set {
+        resType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResAmount" field.</summary>
+    public const int ResAmountFieldNumber = 3;
+    private int resAmount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int ResAmount {
+      get { return resAmount_; }
+      set {
+        resAmount_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as NetResInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(NetResInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CellIndex != other.CellIndex) return false;
+      if (ResType != other.ResType) return false;
+      if (ResAmount != other.ResAmount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CellIndex != 0) hash ^= CellIndex.GetHashCode();
+      if (ResType != 0) hash ^= ResType.GetHashCode();
+      if (ResAmount != 0) hash ^= ResAmount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (CellIndex != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(CellIndex);
+      }
+      if (ResType != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(ResType);
+      }
+      if (ResAmount != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(ResAmount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (CellIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CellIndex);
+      }
+      if (ResType != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResType);
+      }
+      if (ResAmount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ResAmount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(NetResInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CellIndex != 0) {
+        CellIndex = other.CellIndex;
+      }
+      if (other.ResType != 0) {
+        ResType = other.ResType;
+      }
+      if (other.ResAmount != 0) {
+        ResAmount = other.ResAmount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            CellIndex = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            ResType = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            ResAmount = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DownloadResReply : pb::IMessage<DownloadResReply> {
+    private static readonly pb::MessageParser<DownloadResReply> _parser = new pb::MessageParser<DownloadResReply>(() => new DownloadResReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DownloadResReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[34]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadResReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadResReply(DownloadResReply other) : this() {
+      roomId_ = other.roomId_;
+      ret_ = other.ret_;
+      errMsg_ = other.errMsg_;
+      packageCount_ = other.packageCount_;
+      packageIndex_ = other.packageIndex_;
+      infoCount_ = other.infoCount_;
+      resInfo_ = other.resInfo_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DownloadResReply Clone() {
+      return new DownloadResReply(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 2;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ErrMsg" field.</summary>
+    public const int ErrMsgFieldNumber = 3;
+    private string errMsg_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ErrMsg {
+      get { return errMsg_; }
+      set {
+        errMsg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "PackageCount" field.</summary>
+    public const int PackageCountFieldNumber = 4;
+    private int packageCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PackageCount {
+      get { return packageCount_; }
+      set {
+        packageCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "PackageIndex" field.</summary>
+    public const int PackageIndexFieldNumber = 5;
+    private int packageIndex_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int PackageIndex {
+      get { return packageIndex_; }
+      set {
+        packageIndex_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "InfoCount" field.</summary>
+    public const int InfoCountFieldNumber = 6;
+    private int infoCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int InfoCount {
+      get { return infoCount_; }
+      set {
+        infoCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ResInfo" field.</summary>
+    public const int ResInfoFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Protobuf.Room.NetResInfo> _repeated_resInfo_codec
+        = pb::FieldCodec.ForMessage(58, global::Protobuf.Room.NetResInfo.Parser);
+    private readonly pbc::RepeatedField<global::Protobuf.Room.NetResInfo> resInfo_ = new pbc::RepeatedField<global::Protobuf.Room.NetResInfo>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<global::Protobuf.Room.NetResInfo> ResInfo {
+      get { return resInfo_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DownloadResReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DownloadResReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (Ret != other.Ret) return false;
+      if (ErrMsg != other.ErrMsg) return false;
+      if (PackageCount != other.PackageCount) return false;
+      if (PackageIndex != other.PackageIndex) return false;
+      if (InfoCount != other.InfoCount) return false;
+      if(!resInfo_.Equals(other.resInfo_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (ErrMsg.Length != 0) hash ^= ErrMsg.GetHashCode();
+      if (PackageCount != 0) hash ^= PackageCount.GetHashCode();
+      if (PackageIndex != 0) hash ^= PackageIndex.GetHashCode();
+      if (InfoCount != 0) hash ^= InfoCount.GetHashCode();
+      hash ^= resInfo_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(Ret);
+      }
+      if (ErrMsg.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ErrMsg);
+      }
+      if (PackageCount != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(PackageCount);
+      }
+      if (PackageIndex != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(PackageIndex);
+      }
+      if (InfoCount != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(InfoCount);
+      }
+      resInfo_.WriteTo(output, _repeated_resInfo_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (ErrMsg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrMsg);
+      }
+      if (PackageCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PackageCount);
+      }
+      if (PackageIndex != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PackageIndex);
+      }
+      if (InfoCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(InfoCount);
+      }
+      size += resInfo_.CalculateSize(_repeated_resInfo_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DownloadResReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      if (other.ErrMsg.Length != 0) {
+        ErrMsg = other.ErrMsg;
+      }
+      if (other.PackageCount != 0) {
+        PackageCount = other.PackageCount;
+      }
+      if (other.PackageIndex != 0) {
+        PackageIndex = other.PackageIndex;
+      }
+      if (other.InfoCount != 0) {
+        InfoCount = other.InfoCount;
+      }
+      resInfo_.Add(other.resInfo_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            Ret = input.ReadBool();
+            break;
+          }
+          case 26: {
+            ErrMsg = input.ReadString();
+            break;
+          }
+          case 32: {
+            PackageCount = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            PackageIndex = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            InfoCount = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            resInfo_.AddEntriesFrom(input, _repeated_resInfo_codec);
             break;
           }
         }
