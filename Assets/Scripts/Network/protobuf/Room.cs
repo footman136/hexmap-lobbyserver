@@ -112,13 +112,17 @@ namespace Protobuf.Room {
             "ByABKAUinAEKEEhhcnZlc3RTdG9wUmVwbHkSDgoGUm9vbUlkGAEgASgDEg8K",
             "B093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIRCglDZWxsSW5kZXgY",
             "BCABKAUSDwoHUmVzVHlwZRgFIAEoBRIRCglSZXNSZW1haW4YBiABKAUSEgoK",
-            "UmVzSGFydmVzdBgHIAEoBRILCgNSZXQYCCABKAgiHQoLRG93bmxvYWRSZXMS",
-            "DgoGUm9vbUlkGAEgASgDIkMKCk5ldFJlc0luZm8SEQoJQ2VsbEluZGV4GAEg",
-            "ASgFEg8KB1Jlc1R5cGUYAiABKAUSEQoJUmVzQW1vdW50GAMgASgFIqoBChBE",
-            "b3dubG9hZFJlc1JlcGx5Eg4KBlJvb21JZBgBIAEoAxILCgNSZXQYAiABKAgS",
-            "DgoGRXJyTXNnGAMgASgJEhQKDFBhY2thZ2VDb3VudBgEIAEoBRIUCgxQYWNr",
-            "YWdlSW5kZXgYBSABKAUSEQoJSW5mb0NvdW50GAYgASgFEioKB1Jlc0luZm8Y",
-            "ByADKAsyGS5Qcm90b2J1Zi5Sb29tLk5ldFJlc0luZm9iBnByb3RvMw=="));
+            "UmVzSGFydmVzdBgHIAEoBRILCgNSZXQYCCABKAgiIQoPRG93bmxvYWRSZXND",
+            "ZWxsEg4KBlJvb21JZBgBIAEoAyJHCg5OZXRSZXNDZWxsSW5mbxIRCglDZWxs",
+            "SW5kZXgYASABKAUSDwoHUmVzVHlwZRgCIAEoBRIRCglSZXNBbW91bnQYAyAB",
+            "KAUisgEKFERvd25sb2FkUmVzQ2VsbFJlcGx5Eg4KBlJvb21JZBgBIAEoAxIL",
+            "CgNSZXQYAiABKAgSDgoGRXJyTXNnGAMgASgJEhQKDFBhY2thZ2VDb3VudBgE",
+            "IAEoBRIUCgxQYWNrYWdlSW5kZXgYBSABKAUSEQoJSW5mb0NvdW50GAYgASgF",
+            "Ei4KB1Jlc0luZm8YByADKAsyHS5Qcm90b2J1Zi5Sb29tLk5ldFJlc0NlbGxJ",
+            "bmZvIiwKCVVwZGF0ZVJlcxIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgC",
+            "IAEoAyJoCg5VcGRhdGVSZXNSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3du",
+            "ZXJJZBgCIAEoAxILCgNSZXQYAyABKAgSDAoEV29vZBgEIAEoBRIMCgRGb29k",
+            "GAUgASgFEgwKBElyb24YBiABKAViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -156,9 +160,11 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.HarvestStartReply), global::Protobuf.Room.HarvestStartReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndex", "ResType", "ResRemain", "DurationTime", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.HarvestStop), global::Protobuf.Room.HarvestStop.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndex", "ResType", "ResRemain", "ResHarvest" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.HarvestStopReply), global::Protobuf.Room.HarvestStopReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndex", "ResType", "ResRemain", "ResHarvest", "Ret" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadRes), global::Protobuf.Room.DownloadRes.Parser, new[]{ "RoomId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.NetResInfo), global::Protobuf.Room.NetResInfo.Parser, new[]{ "CellIndex", "ResType", "ResAmount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadResReply), global::Protobuf.Room.DownloadResReply.Parser, new[]{ "RoomId", "Ret", "ErrMsg", "PackageCount", "PackageIndex", "InfoCount", "ResInfo" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadResCell), global::Protobuf.Room.DownloadResCell.Parser, new[]{ "RoomId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.NetResCellInfo), global::Protobuf.Room.NetResCellInfo.Parser, new[]{ "CellIndex", "ResType", "ResAmount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadResCellReply), global::Protobuf.Room.DownloadResCellReply.Parser, new[]{ "RoomId", "Ret", "ErrMsg", "PackageCount", "PackageIndex", "InfoCount", "ResInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateRes), global::Protobuf.Room.UpdateRes.Parser, new[]{ "RoomId", "OwnerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateResReply), global::Protobuf.Room.UpdateResReply.Parser, new[]{ "RoomId", "OwnerId", "Ret", "Wood", "Food", "Iron" }, null, null, null, null)
           }));
     }
     #endregion
@@ -9138,11 +9144,11 @@ namespace Protobuf.Room {
   //////////////////////////////////////////////////
   /// 单独保存资源数据,这里保存的是地图创建以后,改变的资源数据.这只是临时的...
   /// </summary>
-  public sealed partial class DownloadRes : pb::IMessage<DownloadRes> {
-    private static readonly pb::MessageParser<DownloadRes> _parser = new pb::MessageParser<DownloadRes>(() => new DownloadRes());
+  public sealed partial class DownloadResCell : pb::IMessage<DownloadResCell> {
+    private static readonly pb::MessageParser<DownloadResCell> _parser = new pb::MessageParser<DownloadResCell>(() => new DownloadResCell());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<DownloadRes> Parser { get { return _parser; } }
+    public static pb::MessageParser<DownloadResCell> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -9155,21 +9161,21 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DownloadRes() {
+    public DownloadResCell() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DownloadRes(DownloadRes other) : this() {
+    public DownloadResCell(DownloadResCell other) : this() {
       roomId_ = other.roomId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DownloadRes Clone() {
-      return new DownloadRes(this);
+    public DownloadResCell Clone() {
+      return new DownloadResCell(this);
     }
 
     /// <summary>Field number for the "RoomId" field.</summary>
@@ -9185,11 +9191,11 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as DownloadRes);
+      return Equals(other as DownloadResCell);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(DownloadRes other) {
+    public bool Equals(DownloadResCell other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -9239,7 +9245,7 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(DownloadRes other) {
+    public void MergeFrom(DownloadResCell other) {
       if (other == null) {
         return;
       }
@@ -9267,11 +9273,11 @@ namespace Protobuf.Room {
 
   }
 
-  public sealed partial class NetResInfo : pb::IMessage<NetResInfo> {
-    private static readonly pb::MessageParser<NetResInfo> _parser = new pb::MessageParser<NetResInfo>(() => new NetResInfo());
+  public sealed partial class NetResCellInfo : pb::IMessage<NetResCellInfo> {
+    private static readonly pb::MessageParser<NetResCellInfo> _parser = new pb::MessageParser<NetResCellInfo>(() => new NetResCellInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<NetResInfo> Parser { get { return _parser; } }
+    public static pb::MessageParser<NetResCellInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -9284,14 +9290,14 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NetResInfo() {
+    public NetResCellInfo() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NetResInfo(NetResInfo other) : this() {
+    public NetResCellInfo(NetResCellInfo other) : this() {
       cellIndex_ = other.cellIndex_;
       resType_ = other.resType_;
       resAmount_ = other.resAmount_;
@@ -9299,8 +9305,8 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public NetResInfo Clone() {
-      return new NetResInfo(this);
+    public NetResCellInfo Clone() {
+      return new NetResCellInfo(this);
     }
 
     /// <summary>Field number for the "CellIndex" field.</summary>
@@ -9338,11 +9344,11 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as NetResInfo);
+      return Equals(other as NetResCellInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(NetResInfo other) {
+    public bool Equals(NetResCellInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -9410,7 +9416,7 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(NetResInfo other) {
+    public void MergeFrom(NetResCellInfo other) {
       if (other == null) {
         return;
       }
@@ -9452,11 +9458,11 @@ namespace Protobuf.Room {
 
   }
 
-  public sealed partial class DownloadResReply : pb::IMessage<DownloadResReply> {
-    private static readonly pb::MessageParser<DownloadResReply> _parser = new pb::MessageParser<DownloadResReply>(() => new DownloadResReply());
+  public sealed partial class DownloadResCellReply : pb::IMessage<DownloadResCellReply> {
+    private static readonly pb::MessageParser<DownloadResCellReply> _parser = new pb::MessageParser<DownloadResCellReply>(() => new DownloadResCellReply());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<DownloadResReply> Parser { get { return _parser; } }
+    public static pb::MessageParser<DownloadResCellReply> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -9469,14 +9475,14 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DownloadResReply() {
+    public DownloadResCellReply() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DownloadResReply(DownloadResReply other) : this() {
+    public DownloadResCellReply(DownloadResCellReply other) : this() {
       roomId_ = other.roomId_;
       ret_ = other.ret_;
       errMsg_ = other.errMsg_;
@@ -9488,8 +9494,8 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DownloadResReply Clone() {
-      return new DownloadResReply(this);
+    public DownloadResCellReply Clone() {
+      return new DownloadResCellReply(this);
     }
 
     /// <summary>Field number for the "RoomId" field.</summary>
@@ -9560,21 +9566,21 @@ namespace Protobuf.Room {
 
     /// <summary>Field number for the "ResInfo" field.</summary>
     public const int ResInfoFieldNumber = 7;
-    private static readonly pb::FieldCodec<global::Protobuf.Room.NetResInfo> _repeated_resInfo_codec
-        = pb::FieldCodec.ForMessage(58, global::Protobuf.Room.NetResInfo.Parser);
-    private readonly pbc::RepeatedField<global::Protobuf.Room.NetResInfo> resInfo_ = new pbc::RepeatedField<global::Protobuf.Room.NetResInfo>();
+    private static readonly pb::FieldCodec<global::Protobuf.Room.NetResCellInfo> _repeated_resInfo_codec
+        = pb::FieldCodec.ForMessage(58, global::Protobuf.Room.NetResCellInfo.Parser);
+    private readonly pbc::RepeatedField<global::Protobuf.Room.NetResCellInfo> resInfo_ = new pbc::RepeatedField<global::Protobuf.Room.NetResCellInfo>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::Protobuf.Room.NetResInfo> ResInfo {
+    public pbc::RepeatedField<global::Protobuf.Room.NetResCellInfo> ResInfo {
       get { return resInfo_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as DownloadResReply);
+      return Equals(other as DownloadResCellReply);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(DownloadResReply other) {
+    public bool Equals(DownloadResCellReply other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -9673,7 +9679,7 @@ namespace Protobuf.Room {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(DownloadResReply other) {
+    public void MergeFrom(DownloadResCellReply other) {
       if (other == null) {
         return;
       }
@@ -9733,6 +9739,432 @@ namespace Protobuf.Room {
           }
           case 58: {
             resInfo_.AddEntriesFrom(input, _repeated_resInfo_codec);
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UpdateRes : pb::IMessage<UpdateRes> {
+    private static readonly pb::MessageParser<UpdateRes> _parser = new pb::MessageParser<UpdateRes>(() => new UpdateRes());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateRes> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[37]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateRes() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateRes(UpdateRes other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateRes Clone() {
+      return new UpdateRes(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateRes);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateRes other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateRes other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class UpdateResReply : pb::IMessage<UpdateResReply> {
+    private static readonly pb::MessageParser<UpdateResReply> _parser = new pb::MessageParser<UpdateResReply>(() => new UpdateResReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<UpdateResReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[38]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateResReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateResReply(UpdateResReply other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      ret_ = other.ret_;
+      wood_ = other.wood_;
+      food_ = other.food_;
+      iron_ = other.iron_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public UpdateResReply Clone() {
+      return new UpdateResReply(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 3;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Wood" field.</summary>
+    public const int WoodFieldNumber = 4;
+    private int wood_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Wood {
+      get { return wood_; }
+      set {
+        wood_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Food" field.</summary>
+    public const int FoodFieldNumber = 5;
+    private int food_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Food {
+      get { return food_; }
+      set {
+        food_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Iron" field.</summary>
+    public const int IronFieldNumber = 6;
+    private int iron_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Iron {
+      get { return iron_; }
+      set {
+        iron_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateResReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(UpdateResReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (Ret != other.Ret) return false;
+      if (Wood != other.Wood) return false;
+      if (Food != other.Food) return false;
+      if (Iron != other.Iron) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (Wood != 0) hash ^= Wood.GetHashCode();
+      if (Food != 0) hash ^= Food.GetHashCode();
+      if (Iron != 0) hash ^= Iron.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Ret);
+      }
+      if (Wood != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Wood);
+      }
+      if (Food != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Food);
+      }
+      if (Iron != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(Iron);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (Wood != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Wood);
+      }
+      if (Food != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Food);
+      }
+      if (Iron != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Iron);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(UpdateResReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      if (other.Wood != 0) {
+        Wood = other.Wood;
+      }
+      if (other.Food != 0) {
+        Food = other.Food;
+      }
+      if (other.Iron != 0) {
+        Iron = other.Iron;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            Ret = input.ReadBool();
+            break;
+          }
+          case 32: {
+            Wood = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            Food = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            Iron = input.ReadInt32();
             break;
           }
         }
