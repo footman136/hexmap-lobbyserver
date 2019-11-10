@@ -74,7 +74,7 @@ namespace Protobuf.Room {
             "DERlZmVuY2VQb3dlchgOIAEoAhINCgVTcGVlZBgPIAEoAhIVCg1GaWVsZE9m",
             "VmlzaW9uGBAgASgCEhUKDVNob290aW5nUmFuZ2UYESABKAISFgoOQXR0YWNr",
             "RHVyYXRpb24YEiABKAISFgoOQXR0YWNrSW50ZXJ2YWwYEyABKAISEAoIQW1t",
-            "dUJhc2UYFCABKAUSCwoDcmV0GBUgASgIIj8KC0FjdG9yUmVtb3ZlEg4KBlJv",
+            "b0Jhc2UYFCABKAUSCwoDcmV0GBUgASgIIj8KC0FjdG9yUmVtb3ZlEg4KBlJv",
             "b21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMi",
             "UQoQQWN0b3JSZW1vdmVSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJ",
             "ZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEgsKA3JldBgEIAEoCCKBAQoJVHJv",
@@ -163,7 +163,7 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadActors), global::Protobuf.Room.DownloadActors.Parser, new[]{ "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadActorsReply), global::Protobuf.Room.DownloadActorsReply.Parser, new[]{ "RoomId", "TotalCount", "MyCount", "Ret", "ErrMsg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ActorAdd), global::Protobuf.Room.ActorAdd.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "Orientation", "Species", "CellIndex", "ActorInfoId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ActorAddReply), global::Protobuf.Room.ActorAddReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "Orientation", "Species", "CellIndex", "ActorInfoId", "Name", "Hp", "HpMax", "AttackPower", "DefencePower", "Speed", "FieldOfVision", "ShootingRange", "AttackDuration", "AttackInterval", "AmmuBase", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ActorAddReply), global::Protobuf.Room.ActorAddReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "Orientation", "Species", "CellIndex", "ActorInfoId", "Name", "Hp", "HpMax", "AttackPower", "DefencePower", "Speed", "FieldOfVision", "ShootingRange", "AttackDuration", "AttackInterval", "AmmoBase", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ActorRemove), global::Protobuf.Room.ActorRemove.Parser, new[]{ "RoomId", "OwnerId", "ActorId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ActorRemoveReply), global::Protobuf.Room.ActorRemoveReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.TroopMove), global::Protobuf.Room.TroopMove.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosFromX", "PosFromZ", "PosToX", "PosToZ" }, null, null, null, null),
@@ -4797,7 +4797,7 @@ namespace Protobuf.Room {
       shootingRange_ = other.shootingRange_;
       attackDuration_ = other.attackDuration_;
       attackInterval_ = other.attackInterval_;
-      ammuBase_ = other.ammuBase_;
+      ammoBase_ = other.ammoBase_;
       ret_ = other.ret_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -5016,14 +5016,14 @@ namespace Protobuf.Room {
       }
     }
 
-    /// <summary>Field number for the "AmmuBase" field.</summary>
-    public const int AmmuBaseFieldNumber = 20;
-    private int ammuBase_;
+    /// <summary>Field number for the "AmmoBase" field.</summary>
+    public const int AmmoBaseFieldNumber = 20;
+    private int ammoBase_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int AmmuBase {
-      get { return ammuBase_; }
+    public int AmmoBase {
+      get { return ammoBase_; }
       set {
-        ammuBase_ = value;
+        ammoBase_ = value;
       }
     }
 
@@ -5070,7 +5070,7 @@ namespace Protobuf.Room {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ShootingRange, other.ShootingRange)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AttackDuration, other.AttackDuration)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AttackInterval, other.AttackInterval)) return false;
-      if (AmmuBase != other.AmmuBase) return false;
+      if (AmmoBase != other.AmmoBase) return false;
       if (Ret != other.Ret) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5097,7 +5097,7 @@ namespace Protobuf.Room {
       if (ShootingRange != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ShootingRange);
       if (AttackDuration != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AttackDuration);
       if (AttackInterval != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AttackInterval);
-      if (AmmuBase != 0) hash ^= AmmuBase.GetHashCode();
+      if (AmmoBase != 0) hash ^= AmmoBase.GetHashCode();
       if (Ret != false) hash ^= Ret.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5188,9 +5188,9 @@ namespace Protobuf.Room {
         output.WriteRawTag(157, 1);
         output.WriteFloat(AttackInterval);
       }
-      if (AmmuBase != 0) {
+      if (AmmoBase != 0) {
         output.WriteRawTag(160, 1);
-        output.WriteInt32(AmmuBase);
+        output.WriteInt32(AmmoBase);
       }
       if (Ret != false) {
         output.WriteRawTag(168, 1);
@@ -5261,8 +5261,8 @@ namespace Protobuf.Room {
       if (AttackInterval != 0F) {
         size += 2 + 4;
       }
-      if (AmmuBase != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeInt32Size(AmmuBase);
+      if (AmmoBase != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(AmmoBase);
       }
       if (Ret != false) {
         size += 2 + 1;
@@ -5335,8 +5335,8 @@ namespace Protobuf.Room {
       if (other.AttackInterval != 0F) {
         AttackInterval = other.AttackInterval;
       }
-      if (other.AmmuBase != 0) {
-        AmmuBase = other.AmmuBase;
+      if (other.AmmoBase != 0) {
+        AmmoBase = other.AmmoBase;
       }
       if (other.Ret != false) {
         Ret = other.Ret;
@@ -5429,7 +5429,7 @@ namespace Protobuf.Room {
             break;
           }
           case 160: {
-            AmmuBase = input.ReadInt32();
+            AmmoBase = input.ReadInt32();
             break;
           }
           case 168: {
