@@ -26,29 +26,33 @@ namespace Protobuf.Lobby {
           string.Concat(
             "Cgtsb2JieS5wcm90bxIOUHJvdG9idWYubG9iYnkiCwoJSGVhcnRCZWF0Ii8K",
             "C1BsYXllckVudGVyEg8KB0FjY291bnQYASABKAkSDwoHVG9rZW5JZBgCIAEo",
-            "AyIfChBQbGF5ZXJFbnRlclJlcGx5EgsKA1JldBgBIAEoCCIeCgtDaGF0TWVz",
-            "c2FnZRIPCgdNZXNzYWdlGAEgASgJIg0KC0Fza1Jvb21MaXN0IpQBCghSb29t",
-            "SW5mbxIQCghSb29tTmFtZRgBIAEoCRIOCgZSb29tSWQYAiABKAMSEgoKQ3Jl",
-            "YXRlVGltZRgDIAEoAxIWCg5DdXJQbGF5ZXJDb3VudBgEIAEoBRIWCg5NYXhQ",
-            "bGF5ZXJDb3VudBgFIAEoBRIPCgdDcmVhdG9yGAYgASgDEhEKCUlzUnVubmlu",
-            "ZxgHIAEoCCJIChBBc2tSb29tTGlzdFJlcGx5EgsKA1JldBgBIAEoCBInCgVS",
-            "b29tcxgCIAMoCzIYLlByb3RvYnVmLmxvYmJ5LlJvb21JbmZvIjkKDUFza0Ny",
-            "ZWF0ZVJvb20SEAoIUm9vbU5hbWUYASABKAkSFgoOTWF4UGxheWVyQ291bnQY",
-            "AiABKAUifgoSQXNrQ3JlYXRlUm9vbVJlcGx5EgsKA1JldBgBIAEoCBIZChFS",
-            "b29tU2VydmVyQWRkcmVzcxgCIAEoCRIWCg5Sb29tU2VydmVyUG9ydBgDIAEo",
-            "BRIQCghSb29tTmFtZRgEIAEoCRIWCg5NYXhQbGF5ZXJDb3VudBgFIAEoBSI1",
-            "CgtBc2tKb2luUm9vbRIOCgZSb29tSWQYASABKAMSFgoOTWF4UGxheWVyQ291",
-            "bnQYAiABKAUiYgoQQXNrSm9pblJvb21SZXBseRILCgNSZXQYASABKAgSGQoR",
-            "Um9vbVNlcnZlckFkZHJlc3MYAiABKAkSFgoOUm9vbVNlcnZlclBvcnQYAyAB",
-            "KAUSDgoGUm9vbUlkGAQgASgDIh0KC0Rlc3Ryb3lSb29tEg4KBlJvb21JZBgB",
-            "IAEoAyIxChBEZXN0cm95Um9vbVJlcGx5EgsKA1JldBgBIAEoCBIQCghSb29t",
-            "TmFtZRgCIAEoCWIGcHJvdG8z"));
+            "AyIfChBQbGF5ZXJFbnRlclJlcGx5EgsKA1JldBgBIAEoCCIeCgtQbGF5ZXJM",
+            "ZWF2ZRIPCgdUb2tlbklkGAEgASgDIkIKEFBsYXllckxlYXZlUmVwbHkSDwoH",
+            "VG9rZW5JZBgBIAEoAxIQCghJc0tpY2tlZBgCIAEoCBILCgNSZXQYAyABKAgi",
+            "HgoLQ2hhdE1lc3NhZ2USDwoHTWVzc2FnZRgBIAEoCSINCgtBc2tSb29tTGlz",
+            "dCKUAQoIUm9vbUluZm8SEAoIUm9vbU5hbWUYASABKAkSDgoGUm9vbUlkGAIg",
+            "ASgDEhIKCkNyZWF0ZVRpbWUYAyABKAMSFgoOQ3VyUGxheWVyQ291bnQYBCAB",
+            "KAUSFgoOTWF4UGxheWVyQ291bnQYBSABKAUSDwoHQ3JlYXRvchgGIAEoAxIR",
+            "CglJc1J1bm5pbmcYByABKAgiSAoQQXNrUm9vbUxpc3RSZXBseRILCgNSZXQY",
+            "ASABKAgSJwoFUm9vbXMYAiADKAsyGC5Qcm90b2J1Zi5sb2JieS5Sb29tSW5m",
+            "byI5Cg1Bc2tDcmVhdGVSb29tEhAKCFJvb21OYW1lGAEgASgJEhYKDk1heFBs",
+            "YXllckNvdW50GAIgASgFIn4KEkFza0NyZWF0ZVJvb21SZXBseRILCgNSZXQY",
+            "ASABKAgSGQoRUm9vbVNlcnZlckFkZHJlc3MYAiABKAkSFgoOUm9vbVNlcnZl",
+            "clBvcnQYAyABKAUSEAoIUm9vbU5hbWUYBCABKAkSFgoOTWF4UGxheWVyQ291",
+            "bnQYBSABKAUiNQoLQXNrSm9pblJvb20SDgoGUm9vbUlkGAEgASgDEhYKDk1h",
+            "eFBsYXllckNvdW50GAIgASgFImIKEEFza0pvaW5Sb29tUmVwbHkSCwoDUmV0",
+            "GAEgASgIEhkKEVJvb21TZXJ2ZXJBZGRyZXNzGAIgASgJEhYKDlJvb21TZXJ2",
+            "ZXJQb3J0GAMgASgFEg4KBlJvb21JZBgEIAEoAyIdCgtEZXN0cm95Um9vbRIO",
+            "CgZSb29tSWQYASABKAMiMQoQRGVzdHJveVJvb21SZXBseRILCgNSZXQYASAB",
+            "KAgSEAoIUm9vbU5hbWUYAiABKAliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.HeartBeat), global::Protobuf.Lobby.HeartBeat.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.PlayerEnter), global::Protobuf.Lobby.PlayerEnter.Parser, new[]{ "Account", "TokenId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.PlayerEnterReply), global::Protobuf.Lobby.PlayerEnterReply.Parser, new[]{ "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.PlayerLeave), global::Protobuf.Lobby.PlayerLeave.Parser, new[]{ "TokenId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.PlayerLeaveReply), global::Protobuf.Lobby.PlayerLeaveReply.Parser, new[]{ "TokenId", "IsKicked", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.ChatMessage), global::Protobuf.Lobby.ChatMessage.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.AskRoomList), global::Protobuf.Lobby.AskRoomList.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomInfo), global::Protobuf.Lobby.RoomInfo.Parser, new[]{ "RoomName", "RoomId", "CreateTime", "CurPlayerCount", "MaxPlayerCount", "Creator", "IsRunning" }, null, null, null, null),
@@ -452,6 +456,320 @@ namespace Protobuf.Lobby {
 
   }
 
+  public sealed partial class PlayerLeave : pb::IMessage<PlayerLeave> {
+    private static readonly pb::MessageParser<PlayerLeave> _parser = new pb::MessageParser<PlayerLeave>(() => new PlayerLeave());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PlayerLeave> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerLeave() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerLeave(PlayerLeave other) : this() {
+      tokenId_ = other.tokenId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerLeave Clone() {
+      return new PlayerLeave(this);
+    }
+
+    /// <summary>Field number for the "TokenId" field.</summary>
+    public const int TokenIdFieldNumber = 1;
+    private long tokenId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TokenId {
+      get { return tokenId_; }
+      set {
+        tokenId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PlayerLeave);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PlayerLeave other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TokenId != other.TokenId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TokenId != 0L) hash ^= TokenId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (TokenId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TokenId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (TokenId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TokenId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PlayerLeave other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TokenId != 0L) {
+        TokenId = other.TokenId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TokenId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class PlayerLeaveReply : pb::IMessage<PlayerLeaveReply> {
+    private static readonly pb::MessageParser<PlayerLeaveReply> _parser = new pb::MessageParser<PlayerLeaveReply>(() => new PlayerLeaveReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PlayerLeaveReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerLeaveReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerLeaveReply(PlayerLeaveReply other) : this() {
+      tokenId_ = other.tokenId_;
+      isKicked_ = other.isKicked_;
+      ret_ = other.ret_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PlayerLeaveReply Clone() {
+      return new PlayerLeaveReply(this);
+    }
+
+    /// <summary>Field number for the "TokenId" field.</summary>
+    public const int TokenIdFieldNumber = 1;
+    private long tokenId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long TokenId {
+      get { return tokenId_; }
+      set {
+        tokenId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "IsKicked" field.</summary>
+    public const int IsKickedFieldNumber = 2;
+    private bool isKicked_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsKicked {
+      get { return isKicked_; }
+      set {
+        isKicked_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 3;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PlayerLeaveReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PlayerLeaveReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (TokenId != other.TokenId) return false;
+      if (IsKicked != other.IsKicked) return false;
+      if (Ret != other.Ret) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TokenId != 0L) hash ^= TokenId.GetHashCode();
+      if (IsKicked != false) hash ^= IsKicked.GetHashCode();
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (TokenId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(TokenId);
+      }
+      if (IsKicked != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(IsKicked);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Ret);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (TokenId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(TokenId);
+      }
+      if (IsKicked != false) {
+        size += 1 + 1;
+      }
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PlayerLeaveReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TokenId != 0L) {
+        TokenId = other.TokenId;
+      }
+      if (other.IsKicked != false) {
+        IsKicked = other.IsKicked;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            TokenId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            IsKicked = input.ReadBool();
+            break;
+          }
+          case 24: {
+            Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
   public sealed partial class ChatMessage : pb::IMessage<ChatMessage> {
     private static readonly pb::MessageParser<ChatMessage> _parser = new pb::MessageParser<ChatMessage>(() => new ChatMessage());
     private pb::UnknownFieldSet _unknownFields;
@@ -460,7 +778,7 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -589,7 +907,7 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -690,7 +1008,7 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -987,7 +1305,7 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1136,7 +1454,7 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1293,7 +1611,7 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1534,7 +1852,7 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1691,7 +2009,7 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1904,7 +2222,7 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2033,7 +2351,7 @@ namespace Protobuf.Lobby {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Protobuf.Lobby.LobbyReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

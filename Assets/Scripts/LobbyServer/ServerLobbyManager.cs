@@ -239,6 +239,23 @@ public class ServerLobbyManager : MonoBehaviour
         return null;
     }
 
+    public void AddPlayer(SocketAsyncEventArgs args, PlayerInfo pi)
+    {
+        Players[args] = pi;
+    }
+
+    public void RemovePlayer(SocketAsyncEventArgs args)
+    {
+        if (Players.ContainsKey(args))
+        {
+            Players.Remove(args);
+        }
+        else
+        {
+            _server.Log("ServerLobbyManager RemovePlayer Error - Player Info not found!");
+        }
+    }
+
     public RoomServerInfo GetRoomServer(SocketAsyncEventArgs args)
     {
         if (RoomServers.ContainsKey(args))
@@ -264,18 +281,18 @@ public class ServerLobbyManager : MonoBehaviour
         }
     }
 
-    public bool CanBeLoggedIn(long tokenId)
+    public SocketAsyncEventArgs FindDuplicatedPlayer(long tokenId)
     {
         foreach (var keyValue in Players)
         {
             var pe = keyValue.Value;
             if (pe.Enter.TokenId == tokenId)
             {
-                return false;
+                return keyValue.Key;
             }
         }
 
-        return true;
+        return null;
     }
 
     public void AddRoom(SocketAsyncEventArgs args, RoomInfo roomInfo)

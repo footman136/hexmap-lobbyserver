@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using LitJson;
 using UnityEngine;
 using System.Net.Sockets;
-using System.Runtime.InteropServices;
 using Google.Protobuf;
 // https://blog.csdn.net/u014308482/article/details/52958148
 using Protobuf.Lobby;
-using UnityEngine.Experimental.PlayerLoop;
-using Random = System.Random;
 
 // https://github.com/LitJSON/litjson
 public class LobbyMsgReply
@@ -42,6 +37,9 @@ public class LobbyMsgReply
             {
                 case LOBBY.PlayerEnter:
                     PLAYER_ENTER(recvData);
+                    break;
+                case LOBBY.PlayerLeave:
+                    PLAYER_LEAVE(recvData);
                     break;
                 case LOBBY.HeartBeat:
                     HEART_BEAT(recvData);
@@ -100,19 +98,24 @@ public class LobbyMsgReply
 
         if (ret)
         {
-            //检测是否重复登录
-            if (!ServerLobbyManager.Instance.CanBeLoggedIn(input.TokenId))
-            { // 重复登录了,登录失败!
-                PlayerEnterReply output = new PlayerEnterReply()
+            //检测是否重复登录,如果发现曾经有人登录,则将前面的人踢掉
+            var alreadyLoggedIn = ServerLobbyManager.Instance.FindDuplicatedPlayer(input.TokenId);
+            if (alreadyLoggedIn != null)
+            {
+                PlayerInfo oldPlayer = ServerLobbyManager.Instance.GetPlayer(alreadyLoggedIn);
+                if (oldPlayer != null)
                 {
-                    Ret = false,
-                };
-                // 返回失败消息
-                ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.PlayerEnterReply, output.ToByteArray());
-                ServerLobbyManager.Instance.Log($"MSG: 登录失败！重复登录！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
-                return;
+                    ServerLobbyManager.Instance.RemovePlayer(alreadyLoggedIn);
+                    PlayerLeaveReply output = new PlayerLeaveReply()
+                    {
+                        TokenId = oldPlayer.Enter.TokenId,
+                        IsKicked = true,
+                        Ret = true,
+                    };
+                    ServerLobbyManager.Instance.SendMsg(alreadyLoggedIn, LOBBY_REPLY.PlayerLeaveReply, output.ToByteArray());
+                }
             }
-            
+                
             PlayerInfo pi = new PlayerInfo()
             {
                 Enter = input,
@@ -121,18 +124,46 @@ public class LobbyMsgReply
                 HasRoom = false,
             };
             
-            ServerLobbyManager.Instance.Players[_args] = pi;
+            ServerLobbyManager.Instance.AddPlayer(_args, pi);
         }
 
         {
             PlayerEnterReply output = new PlayerEnterReply()
             {
-                Ret = ret,
+                Ret = true,
             };
             // 返回登录成功消息
             ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.PlayerEnterReply, output.ToByteArray());
             ServerLobbyManager.Instance.Log($"MSG: 老用户登录成功！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
         }
+    }
+
+    private static void PLAYER_LEAVE(byte[] bytes)
+    {
+        PlayerLeave input = PlayerLeave.Parser.ParseFrom(bytes);
+        PlayerInfo pi = ServerLobbyManager.Instance.GetPlayer(_args);
+        if (pi == null)
+        {
+            string msg = $"没有找到自己!";
+            ServerLobbyManager.Instance.Log("LobbyMsgReply PLAYER_LEAVE Error - "+msg);
+            return;
+        }
+        if (input.TokenId != pi.Enter.TokenId)
+        {
+            string msg = $"离开的不是自己, 必须是自己!";
+            ServerLobbyManager.Instance.Log("LobbyMsgReply PLAYER_LEAVE Error - "+msg);
+            return;
+        }
+        
+        ServerLobbyManager.Instance.RemovePlayer(_args);
+        PlayerLeaveReply output = new PlayerLeaveReply()
+        {
+            TokenId = pi.Enter.TokenId,
+            IsKicked = false,
+            Ret = true,
+        };
+        ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.PlayerLeaveReply, output.ToByteArray());
+        ServerLobbyManager.Instance.Log($"MSG: 用户离开大厅！Account:<{pi.Enter.Account}> - TokenId:<{pi.Enter.TokenId}>");
     }
 
     private static void HEART_BEAT(byte[] byts)
