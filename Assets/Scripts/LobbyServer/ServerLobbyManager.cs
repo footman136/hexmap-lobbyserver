@@ -32,7 +32,7 @@ public class ServerLobbyManager : MonoBehaviour
     // 房间的集合，Key是房间的唯一ID
     public Dictionary<long, RoomInfo> Rooms { set; get; } 
     
-    private const float _heartBeatTimeInterval = 20f; // 心跳时间间隔,服务器检测用的间隔比客户端实际间隔要多一些
+    private const float _heartBeatTimeInterval = 30f; // 心跳时间间隔,服务器检测用的间隔比客户端实际间隔要多一些
 
     #region 初始化
     
@@ -123,6 +123,7 @@ public class ServerLobbyManager : MonoBehaviour
             if (ts.TotalSeconds > _heartBeatTimeInterval)
             { // 该客户端(玩家)超时没有心跳了,干掉
                 delPlayerList.Add(keyValue.Key);
+                _server.Log($"长时间没有检测到心跳,将客户端踢出! - {keyValue.Value.Enter.Account}");
             }
         }
         foreach (var args in delPlayerList)

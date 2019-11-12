@@ -4,6 +4,8 @@ using System.Net.Sockets;
 using Google.Protobuf;
 // https://blog.csdn.net/u014308482/article/details/52958148
 using Protobuf.Lobby;
+using PlayerEnter = Protobuf.Lobby.PlayerEnter;
+using PlayerEnterReply = Protobuf.Lobby.PlayerEnterReply;
 
 // https://github.com/LitJSON/litjson
 public class LobbyMsgReply
@@ -106,13 +108,15 @@ public class LobbyMsgReply
                 if (oldPlayer != null)
                 {
                     ServerLobbyManager.Instance.RemovePlayer(alreadyLoggedIn);
-                    PlayerLeaveReply output = new PlayerLeaveReply()
+                    PlayerLeaveReply output2 = new PlayerLeaveReply()
                     {
                         TokenId = oldPlayer.Enter.TokenId,
                         IsKicked = true,
                         Ret = true,
                     };
-                    ServerLobbyManager.Instance.SendMsg(alreadyLoggedIn, LOBBY_REPLY.PlayerLeaveReply, output.ToByteArray());
+                    ServerLobbyManager.Instance.SendMsg(alreadyLoggedIn, LOBBY_REPLY.PlayerLeaveReply, output2.ToByteArray());
+                    string msg = "踢掉之前登录的本用户.";
+                    ServerLobbyManager.Instance.Log($"MSG: PLAYER_ENTER WARNING - " + msg + $" - {oldPlayer.Enter.Account}");
                 }
             }
                 
@@ -134,7 +138,7 @@ public class LobbyMsgReply
             };
             // 返回登录成功消息
             ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.PlayerEnterReply, output.ToByteArray());
-            ServerLobbyManager.Instance.Log($"MSG: 老用户登录成功！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
+            ServerLobbyManager.Instance.Log($"MSG: PLAYER_ENTER OK - 老用户登录成功！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
         }
     }
 
