@@ -264,6 +264,20 @@ public class ServerLobbyManager : MonoBehaviour
         }
     }
 
+    public bool CanBeLoggedIn(long tokenId)
+    {
+        foreach (var keyValue in Players)
+        {
+            var pe = keyValue.Value;
+            if (pe.Enter.TokenId == tokenId)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public void AddRoom(SocketAsyncEventArgs args, RoomInfo roomInfo)
     {
         Rooms[roomInfo.RoomId] = roomInfo;

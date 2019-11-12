@@ -96,11 +96,23 @@ public class LobbyMsgReply
         else
         {
             ret = true;
-            ServerLobbyManager.Instance.Log($"MSG: 老用户登录！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
         }
 
         if (ret)
         {
+            //检测是否重复登录
+            if (!ServerLobbyManager.Instance.CanBeLoggedIn(input.TokenId))
+            { // 重复登录了,登录失败!
+                PlayerEnterReply output = new PlayerEnterReply()
+                {
+                    Ret = false,
+                };
+                // 返回失败消息
+                ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.PlayerEnterReply, output.ToByteArray());
+                ServerLobbyManager.Instance.Log($"MSG: 登录失败！重复登录！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
+                return;
+            }
+            
             PlayerInfo pi = new PlayerInfo()
             {
                 Enter = input,
@@ -108,15 +120,19 @@ public class LobbyMsgReply
                 IsInRoom = false,
                 HasRoom = false,
             };
+            
             ServerLobbyManager.Instance.Players[_args] = pi;
         }
 
-        PlayerEnterReply output = new PlayerEnterReply()
         {
-            Ret = ret,
-        };
-        // 返回消息
-        ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.PlayerEnterReply, output.ToByteArray());
+            PlayerEnterReply output = new PlayerEnterReply()
+            {
+                Ret = ret,
+            };
+            // 返回登录成功消息
+            ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.PlayerEnterReply, output.ToByteArray());
+            ServerLobbyManager.Instance.Log($"MSG: 老用户登录成功！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
+        }
     }
 
     private static void HEART_BEAT(byte[] byts)
