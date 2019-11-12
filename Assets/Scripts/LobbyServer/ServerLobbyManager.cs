@@ -10,8 +10,14 @@ using Protobuf.Lobby;
 public class ServerLobbyManager : MonoBehaviour
 {
     public static ServerLobbyManager Instance { get; private set; }
+    
+    [Header("Basic Attributes"), Space(5)]
     public ServerScript _server;
     public RedisManager Redis;
+    
+    [Space(), Header("Debug"), Space(5)]
+    public bool IsCheckHeartBeat;
+    
     [HideInInspector]
     public CsvDataManager CsvDataManager;
     
@@ -68,7 +74,10 @@ public class ServerLobbyManager : MonoBehaviour
             yield return null;
         }
         receive_str = $"Server started! {_server.Address}:{_server.Port}";
-        StartCheckHeartBeat();
+        if (IsCheckHeartBeat)
+        {
+            StartCheckHeartBeat();
+        }
     }
 
     void OnGUI()
