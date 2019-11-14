@@ -12,12 +12,14 @@ public class LobbyMsgReply
 {
     private static SocketAsyncEventArgs _args;
     
+    #region 消息分发
+
     /// <summary>
     /// 处理服务器接收到的消息
     /// </summary>
     /// <param name="args"></param>
     /// <param name="content"></param>
-    public static void ProcessMsg(SocketAsyncEventArgs args, byte[] data, int size)
+    public static void ProcessMsg(SocketAsyncEventArgs args, byte[] bytes, int size)
     {
         try
         {
@@ -26,15 +28,15 @@ public class LobbyMsgReply
                 ServerLobbyManager.Instance.Log($"ProcessMsg Error - invalid data size:{size}");
                 return;
             }
-
             _args = args;
-
-            byte[] recvHeader = new byte[4];
-            Array.Copy(data, 0, recvHeader, 0, 4);
+            
             byte[] recvData = new byte[size - 4];
-            Array.Copy(data, 4, recvData, 0, size - 4);
+            Array.Copy(bytes, 4, recvData, 0, size - 4);
 
-            int msgId = BitConverter.ToInt32(recvHeader, 0);
+            // 记录心跳时间,每接收到一条消息,都更新时间,而不仅仅是心跳消息
+            HEART_BEAT(null);
+
+            int msgId = ParseMsgId(bytes);
             switch ((LOBBY) msgId)
             {
                 case LOBBY.PlayerEnter:
@@ -71,6 +73,16 @@ public class LobbyMsgReply
             Debug.LogError($"Exception - LobbyMsgReply - {e}");
         }
     }
+    
+    private static int ParseMsgId(byte[] bytes)
+    {
+        byte[] recvHeader = new byte[4];
+        Array.Copy(bytes, 0, recvHeader, 0, 4);
+        int msgId = BitConverter.ToInt32(recvHeader, 0);
+        return msgId;
+    }
+    
+    #endregion
     
 #region 客户端消息处理
     static void PLAYER_ENTER(byte[] bytes)
