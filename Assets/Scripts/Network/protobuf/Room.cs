@@ -66,7 +66,7 @@ namespace Protobuf.Room {
             "DwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEgwKBFBvc1gYBCAB",
             "KAUSDAoEUG9zWhgFIAEoBRITCgtPcmllbnRhdGlvbhgGIAEoAhIPCgdTcGVj",
             "aWVzGAcgASgJEhEKCUNlbGxJbmRleBgIIAEoBRITCgtBY3RvckluZm9JZBgJ",
-            "IAEoBSKLAwoNQWN0b3JBZGRSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3du",
+            "IAEoBSKgAwoNQWN0b3JBZGRSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3du",
             "ZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEgwKBFBvc1gYBCABKAUSDAoE",
             "UG9zWhgFIAEoBRITCgtPcmllbnRhdGlvbhgGIAEoAhIPCgdTcGVjaWVzGAcg",
             "ASgJEhEKCUNlbGxJbmRleBgIIAEoBRITCgtBY3RvckluZm9JZBgJIAEoBRIM",
@@ -74,73 +74,83 @@ namespace Protobuf.Room {
             "dGFja1Bvd2VyGA0gASgCEhQKDERlZmVuY2VQb3dlchgOIAEoAhINCgVTcGVl",
             "ZBgPIAEoAhIVCg1GaWVsZE9mVmlzaW9uGBAgASgCEhUKDVNob290aW5nUmFu",
             "Z2UYESABKAISFgoOQXR0YWNrRHVyYXRpb24YEiABKAISFgoOQXR0YWNrSW50",
-            "ZXJ2YWwYEyABKAISEAoIQW1tb0Jhc2UYFCABKAUSCwoDcmV0GBUgASgIIlAK",
-            "C0FjdG9yUmVtb3ZlEg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgD",
-            "Eg8KB0FjdG9ySWQYAyABKAMSDwoHRGllVHlwZRgEIAEoBSJiChBBY3RvclJl",
-            "bW92ZVJlcGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8K",
-            "B0FjdG9ySWQYAyABKAMSDwoHRGllVHlwZRgEIAEoBRILCgNyZXQYBSABKAgi",
-            "aQoJVHJvb3BNb3ZlEg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgD",
-            "Eg8KB0FjdG9ySWQYAyABKAMSFQoNQ2VsbEluZGV4RnJvbRgEIAEoBRITCgtD",
-            "ZWxsSW5kZXhUbxgFIAEoBSJ7Cg5Ucm9vcE1vdmVSZXBseRIOCgZSb29tSWQY",
-            "ASABKAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEhUKDUNl",
-            "bGxJbmRleEZyb20YBCABKAUSEwoLQ2VsbEluZGV4VG8YBSABKAUSCwoDUmV0",
-            "GAYgASgIIrEBCgxUcm9vcEFpU3RhdGUSDgoGUm9vbUlkGAEgASgDEg8KB093",
-            "bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIQCghUYXJnZXRJZBgEIAEo",
-            "AxINCgVTdGF0ZRgFIAEoBRIVCg1DZWxsSW5kZXhGcm9tGAYgASgFEhMKC0Nl",
-            "bGxJbmRleFRvGAcgASgFEhMKC09yaWVudGF0aW9uGAggASgCEg0KBVNwZWVk",
-            "GAkgASgCIsMBChFUcm9vcEFpU3RhdGVSZXBseRIOCgZSb29tSWQYASABKAMS",
-            "DwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEhAKCFRhcmdldElk",
-            "GAQgASgDEg0KBVN0YXRlGAUgASgFEhUKDUNlbGxJbmRleEZyb20YBiABKAUS",
-            "EwoLQ2VsbEluZGV4VG8YByABKAUSEwoLT3JpZW50YXRpb24YCCABKAISDQoF",
-            "U3BlZWQYCSABKAISCwoDUmV0GAogASgIIoYBCg5VcGRhdGVBY3RvclBvcxIO",
-            "CgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMg",
-            "ASgDEgwKBFBvc1gYBCABKAUSDAoEUG9zWhgFIAEoBRIRCglDZWxsSW5kZXgY",
-            "BiABKAUSEwoLT3JpZW50YXRpb24YByABKAIimAEKE1VwZGF0ZUFjdG9yUG9z",
-            "UmVwbHkSDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0",
-            "b3JJZBgDIAEoAxIMCgRQb3NYGAQgASgFEgwKBFBvc1oYBSABKAUSEQoJQ2Vs",
-            "bEluZGV4GAYgASgFEhMKC09yaWVudGF0aW9uGAcgASgCEgsKA1JldBgIIAEo",
-            "CCJPCg9VcGRhdGVBY3RvckluZm8SDgoGUm9vbUlkGAEgASgDEg8KB093bmVy",
-            "SWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIKCgJIcBgFIAEoBSJhChRVcGRh",
-            "dGVBY3RvckluZm9SZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgC",
-            "IAEoAxIPCgdBY3RvcklkGAMgASgDEgoKAkhwGAQgASgFEgsKA1JldBgFIAEo",
-            "CCKNAQoMSGFydmVzdFN0YXJ0Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklk",
-            "GAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEQoJQ2VsbEluZGV4GAQgASgFEg8K",
-            "B1Jlc1R5cGUYBSABKAUSEQoJUmVzUmVtYWluGAYgASgFEhQKDER1cmF0aW9u",
-            "VGltZRgHIAEoAiKfAQoRSGFydmVzdFN0YXJ0UmVwbHkSDgoGUm9vbUlkGAEg",
-            "ASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIRCglDZWxs",
-            "SW5kZXgYBCABKAUSDwoHUmVzVHlwZRgFIAEoBRIRCglSZXNSZW1haW4YBiAB",
-            "KAUSFAoMRHVyYXRpb25UaW1lGAcgASgCEgsKA1JldBgIIAEoCCKKAQoLSGFy",
-            "dmVzdFN0b3ASDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoH",
-            "QWN0b3JJZBgDIAEoAxIRCglDZWxsSW5kZXgYBCABKAUSDwoHUmVzVHlwZRgF",
-            "IAEoBRIRCglSZXNSZW1haW4YBiABKAUSEgoKUmVzSGFydmVzdBgHIAEoBSKc",
-            "AQoQSGFydmVzdFN0b3BSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJ",
-            "ZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEhEKCUNlbGxJbmRleBgEIAEoBRIP",
-            "CgdSZXNUeXBlGAUgASgFEhEKCVJlc1JlbWFpbhgGIAEoBRISCgpSZXNIYXJ2",
-            "ZXN0GAcgASgFEgsKA1JldBgIIAEoCCIhCg9Eb3dubG9hZFJlc0NlbGwSDgoG",
-            "Um9vbUlkGAEgASgDIkcKDk5ldFJlc0NlbGxJbmZvEhEKCUNlbGxJbmRleBgB",
-            "IAEoBRIPCgdSZXNUeXBlGAIgASgFEhEKCVJlc0Ftb3VudBgDIAEoBSKyAQoU",
-            "RG93bmxvYWRSZXNDZWxsUmVwbHkSDgoGUm9vbUlkGAEgASgDEgsKA1JldBgC",
-            "IAEoCBIOCgZFcnJNc2cYAyABKAkSFAoMUGFja2FnZUNvdW50GAQgASgFEhQK",
-            "DFBhY2thZ2VJbmRleBgFIAEoBRIRCglJbmZvQ291bnQYBiABKAUSLgoHUmVz",
-            "SW5mbxgHIAMoCzIdLlByb3RvYnVmLlJvb20uTmV0UmVzQ2VsbEluZm8iLAoJ",
-            "VXBkYXRlUmVzEg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDImgK",
-            "DlVwZGF0ZVJlc1JlcGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIg",
-            "ASgDEgsKA1JldBgDIAEoCBIMCgRXb29kGAQgASgFEgwKBEZvb2QYBSABKAUS",
-            "DAoESXJvbhgGIAEoBSJhCgpGaWdodFN0YXJ0Eg4KBlJvb21JZBgBIAEoAxIP",
-            "CgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEAoIVGFyZ2V0SWQY",
-            "BCABKAMSDwoHU2tpbGxJZBgFIAEoBSJzCg9GaWdodFN0YXJ0UmVwbHkSDgoG",
+            "ZXJ2YWwYEyABKAISEAoIQW1tb0Jhc2UYFCABKAUSEwoLQW1tb0Jhc2VNYXgY",
+            "FSABKAUSCwoDcmV0GBYgASgIIlAKC0FjdG9yUmVtb3ZlEg4KBlJvb21JZBgB",
+            "IAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSDwoHRGll",
+            "VHlwZRgEIAEoBSJiChBBY3RvclJlbW92ZVJlcGx5Eg4KBlJvb21JZBgBIAEo",
+            "AxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSDwoHRGllVHlw",
+            "ZRgEIAEoBRILCgNyZXQYBSABKAgiaQoJVHJvb3BNb3ZlEg4KBlJvb21JZBgB",
+            "IAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSFQoNQ2Vs",
+            "bEluZGV4RnJvbRgEIAEoBRITCgtDZWxsSW5kZXhUbxgFIAEoBSJ7Cg5Ucm9v",
+            "cE1vdmVSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIP",
+            "CgdBY3RvcklkGAMgASgDEhUKDUNlbGxJbmRleEZyb20YBCABKAUSEwoLQ2Vs",
+            "bEluZGV4VG8YBSABKAUSCwoDUmV0GAYgASgIIrEBCgxUcm9vcEFpU3RhdGUS",
+            "DgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgD",
+            "IAEoAxIQCghUYXJnZXRJZBgEIAEoAxINCgVTdGF0ZRgFIAEoBRIVCg1DZWxs",
+            "SW5kZXhGcm9tGAYgASgFEhMKC0NlbGxJbmRleFRvGAcgASgFEhMKC09yaWVu",
+            "dGF0aW9uGAggASgCEg0KBVNwZWVkGAkgASgCIsMBChFUcm9vcEFpU3RhdGVS",
+            "ZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3Rv",
+            "cklkGAMgASgDEhAKCFRhcmdldElkGAQgASgDEg0KBVN0YXRlGAUgASgFEhUK",
+            "DUNlbGxJbmRleEZyb20YBiABKAUSEwoLQ2VsbEluZGV4VG8YByABKAUSEwoL",
+            "T3JpZW50YXRpb24YCCABKAISDQoFU3BlZWQYCSABKAISCwoDUmV0GAogASgI",
+            "IoYBCg5VcGRhdGVBY3RvclBvcxIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJ",
+            "ZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEgwKBFBvc1gYBCABKAUSDAoEUG9z",
+            "WhgFIAEoBRIRCglDZWxsSW5kZXgYBiABKAUSEwoLT3JpZW50YXRpb24YByAB",
+            "KAIimAEKE1VwZGF0ZUFjdG9yUG9zUmVwbHkSDgoGUm9vbUlkGAEgASgDEg8K",
+            "B093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIMCgRQb3NYGAQgASgF",
+            "EgwKBFBvc1oYBSABKAUSEQoJQ2VsbEluZGV4GAYgASgFEhMKC09yaWVudGF0",
+            "aW9uGAcgASgCEgsKA1JldBgIIAEoCCJhCg9VcGRhdGVBY3RvckluZm8SDgoG",
             "Um9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEo",
-            "AxIQCghUYXJnZXRJZBgEIAEoAxIPCgdTa2lsbElkGAUgASgFEgsKA1JldBgG",
-            "IAEoCCJlCglGaWdodFN0b3ASDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQY",
-            "AiABKAMSDwoHQWN0b3JJZBgDIAEoAxIQCghUYXJnZXRJZBgEIAEoAxIUCgxE",
-            "dXJhdGlvblRpbWUYBSABKAIihgEKDkZpZ2h0U3RvcFJlcGx5Eg4KBlJvb21J",
+            "AxIKCgJIcBgEIAEoBRIQCghBbW1vQmFzZRgFIAEoBSJzChRVcGRhdGVBY3Rv",
+            "ckluZm9SZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIP",
+            "CgdBY3RvcklkGAMgASgDEgoKAkhwGAQgASgFEhAKCEFtbW9CYXNlGAUgASgF",
+            "EgsKA1JldBgGIAEoCCJRCgxUcm9vcFBsYXlBbmkSDgoGUm9vbUlkGAEgASgD",
+            "Eg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIPCgdBaVN0YXRl",
+            "GAQgASgFImMKEVRyb29wUGxheUFuaVJlcGx5Eg4KBlJvb21JZBgBIAEoAxIP",
+            "CgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSDwoHQWlTdGF0ZRgE",
+            "IAEoBRILCgNSZXQYBSABKAgijQEKDEhhcnZlc3RTdGFydBIOCgZSb29tSWQY",
+            "ASABKAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEhEKCUNl",
+            "bGxJbmRleBgEIAEoBRIPCgdSZXNUeXBlGAUgASgFEhEKCVJlc1JlbWFpbhgG",
+            "IAEoBRIUCgxEdXJhdGlvblRpbWUYByABKAIinwEKEUhhcnZlc3RTdGFydFJl",
+            "cGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9y",
+            "SWQYAyABKAMSEQoJQ2VsbEluZGV4GAQgASgFEg8KB1Jlc1R5cGUYBSABKAUS",
+            "EQoJUmVzUmVtYWluGAYgASgFEhQKDER1cmF0aW9uVGltZRgHIAEoAhILCgNS",
+            "ZXQYCCABKAgiigEKC0hhcnZlc3RTdG9wEg4KBlJvb21JZBgBIAEoAxIPCgdP",
+            "d25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEQoJQ2VsbEluZGV4GAQg",
+            "ASgFEg8KB1Jlc1R5cGUYBSABKAUSEQoJUmVzUmVtYWluGAYgASgFEhIKClJl",
+            "c0hhcnZlc3QYByABKAUinAEKEEhhcnZlc3RTdG9wUmVwbHkSDgoGUm9vbUlk",
+            "GAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIRCglD",
+            "ZWxsSW5kZXgYBCABKAUSDwoHUmVzVHlwZRgFIAEoBRIRCglSZXNSZW1haW4Y",
+            "BiABKAUSEgoKUmVzSGFydmVzdBgHIAEoBRILCgNSZXQYCCABKAgiIQoPRG93",
+            "bmxvYWRSZXNDZWxsEg4KBlJvb21JZBgBIAEoAyJHCg5OZXRSZXNDZWxsSW5m",
+            "bxIRCglDZWxsSW5kZXgYASABKAUSDwoHUmVzVHlwZRgCIAEoBRIRCglSZXNB",
+            "bW91bnQYAyABKAUisgEKFERvd25sb2FkUmVzQ2VsbFJlcGx5Eg4KBlJvb21J",
+            "ZBgBIAEoAxILCgNSZXQYAiABKAgSDgoGRXJyTXNnGAMgASgJEhQKDFBhY2th",
+            "Z2VDb3VudBgEIAEoBRIUCgxQYWNrYWdlSW5kZXgYBSABKAUSEQoJSW5mb0Nv",
+            "dW50GAYgASgFEi4KB1Jlc0luZm8YByADKAsyHS5Qcm90b2J1Zi5Sb29tLk5l",
+            "dFJlc0NlbGxJbmZvIiwKCVVwZGF0ZVJlcxIOCgZSb29tSWQYASABKAMSDwoH",
+            "T3duZXJJZBgCIAEoAyJoCg5VcGRhdGVSZXNSZXBseRIOCgZSb29tSWQYASAB",
+            "KAMSDwoHT3duZXJJZBgCIAEoAxILCgNSZXQYAyABKAgSDAoEV29vZBgEIAEo",
+            "BRIMCgRGb29kGAUgASgFEgwKBElyb24YBiABKAUiYQoKRmlnaHRTdGFydBIO",
+            "CgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMg",
+            "ASgDEhAKCFRhcmdldElkGAQgASgDEg8KB1NraWxsSWQYBSABKAUigwEKD0Zp",
+            "Z2h0U3RhcnRSZXBseRIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEo",
+            "AxIPCgdBY3RvcklkGAMgASgDEhAKCFRhcmdldElkGAQgASgDEg8KB1NraWxs",
+            "SWQYBSABKAUSCwoDUmV0GAYgASgIEg4KBkVyck1zZxgHIAEoCSJlCglGaWdo",
+            "dFN0b3ASDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0",
+            "b3JJZBgDIAEoAxIQCghUYXJnZXRJZBgEIAEoAxIUCgxEdXJhdGlvblRpbWUY",
+            "BSABKAIimgEKDkZpZ2h0U3RvcFJlcGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdP",
+            "d25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEAoIVGFyZ2V0SWQYBCAB",
+            "KAMSEwoLSXNFbmVteURlYWQYBSABKAgSEgoKRmlnaHRBZ2FpbhgGIAEoCBIL",
+            "CgNSZXQYByABKAgSDgoGRXJyTXNnGAggASgJIk4KClNwcmF5Qmxvb2QSDgoG",
+            "Um9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEo",
+            "AxIOCgZEYW1hZ2UYBCABKAUiYAoPU3ByYXlCbG9vZFJlcGx5Eg4KBlJvb21J",
+            "ZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSDgoG",
+            "RGFtYWdlGAQgASgFEgsKA1JldBgFIAEoCCJQCgpBbW1vU3VwcGx5Eg4KBlJv",
+            "b21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMS",
+            "EAoIQW1tb0Jhc2UYBCABKAUiYgoPQW1tb1N1cHBseVJlcGx5Eg4KBlJvb21J",
             "ZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEAoI",
-            "VGFyZ2V0SWQYBCABKAMSEwoLSXNFbmVteURlYWQYBSABKAgSCwoDUmV0GAYg",
-            "ASgIEg4KBkVyck1zZxgHIAEoCSJOCgpTcHJheUJsb29kEg4KBlJvb21JZBgB",
-            "IAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSDgoGRGFt",
-            "YWdlGAQgASgFImAKD1NwcmF5Qmxvb2RSZXBseRIOCgZSb29tSWQYASABKAMS",
-            "DwoHT3duZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEg4KBkRhbWFnZRgE",
-            "IAEoBRILCgNSZXQYBSABKAhiBnByb3RvMw=="));
+            "QW1tb0Jhc2UYBCABKAUSCwoDUmV0GAUgASgIYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -165,7 +175,7 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadActors), global::Protobuf.Room.DownloadActors.Parser, new[]{ "RoomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.DownloadActorsReply), global::Protobuf.Room.DownloadActorsReply.Parser, new[]{ "RoomId", "TotalCount", "MyCount", "Ret", "ErrMsg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ActorAdd), global::Protobuf.Room.ActorAdd.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "Orientation", "Species", "CellIndex", "ActorInfoId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ActorAddReply), global::Protobuf.Room.ActorAddReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "Orientation", "Species", "CellIndex", "ActorInfoId", "Name", "Hp", "HpMax", "AttackPower", "DefencePower", "Speed", "FieldOfVision", "ShootingRange", "AttackDuration", "AttackInterval", "AmmoBase", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ActorAddReply), global::Protobuf.Room.ActorAddReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "Orientation", "Species", "CellIndex", "ActorInfoId", "Name", "Hp", "HpMax", "AttackPower", "DefencePower", "Speed", "FieldOfVision", "ShootingRange", "AttackDuration", "AttackInterval", "AmmoBase", "AmmoBaseMax", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ActorRemove), global::Protobuf.Room.ActorRemove.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "DieType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ActorRemoveReply), global::Protobuf.Room.ActorRemoveReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "DieType", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.TroopMove), global::Protobuf.Room.TroopMove.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndexFrom", "CellIndexTo" }, null, null, null, null),
@@ -174,8 +184,10 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.TroopAiStateReply), global::Protobuf.Room.TroopAiStateReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "State", "CellIndexFrom", "CellIndexTo", "Orientation", "Speed", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateActorPos), global::Protobuf.Room.UpdateActorPos.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "CellIndex", "Orientation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateActorPosReply), global::Protobuf.Room.UpdateActorPosReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "PosX", "PosZ", "CellIndex", "Orientation", "Ret" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateActorInfo), global::Protobuf.Room.UpdateActorInfo.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Hp" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateActorInfoReply), global::Protobuf.Room.UpdateActorInfoReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Hp", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateActorInfo), global::Protobuf.Room.UpdateActorInfo.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Hp", "AmmoBase" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateActorInfoReply), global::Protobuf.Room.UpdateActorInfoReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Hp", "AmmoBase", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.TroopPlayAni), global::Protobuf.Room.TroopPlayAni.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "AiState" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.TroopPlayAniReply), global::Protobuf.Room.TroopPlayAniReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "AiState", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.HarvestStart), global::Protobuf.Room.HarvestStart.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndex", "ResType", "ResRemain", "DurationTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.HarvestStartReply), global::Protobuf.Room.HarvestStartReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndex", "ResType", "ResRemain", "DurationTime", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.HarvestStop), global::Protobuf.Room.HarvestStop.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "CellIndex", "ResType", "ResRemain", "ResHarvest" }, null, null, null, null),
@@ -186,11 +198,13 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateRes), global::Protobuf.Room.UpdateRes.Parser, new[]{ "RoomId", "OwnerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateResReply), global::Protobuf.Room.UpdateResReply.Parser, new[]{ "RoomId", "OwnerId", "Ret", "Wood", "Food", "Iron" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStart), global::Protobuf.Room.FightStart.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "SkillId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStartReply), global::Protobuf.Room.FightStartReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "SkillId", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStartReply), global::Protobuf.Room.FightStartReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "SkillId", "Ret", "ErrMsg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStop), global::Protobuf.Room.FightStop.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "DurationTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStopReply), global::Protobuf.Room.FightStopReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "IsEnemyDead", "Ret", "ErrMsg" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStopReply), global::Protobuf.Room.FightStopReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "IsEnemyDead", "FightAgain", "Ret", "ErrMsg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.SprayBlood), global::Protobuf.Room.SprayBlood.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Damage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.SprayBloodReply), global::Protobuf.Room.SprayBloodReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Damage", "Ret" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.SprayBloodReply), global::Protobuf.Room.SprayBloodReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Damage", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.AmmoSupply), global::Protobuf.Room.AmmoSupply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "AmmoBase" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.AmmoSupplyReply), global::Protobuf.Room.AmmoSupplyReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "AmmoBase", "Ret" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4830,6 +4844,7 @@ namespace Protobuf.Room {
       attackDuration_ = other.attackDuration_;
       attackInterval_ = other.attackInterval_;
       ammoBase_ = other.ammoBase_;
+      ammoBaseMax_ = other.ammoBaseMax_;
       ret_ = other.ret_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -5059,8 +5074,19 @@ namespace Protobuf.Room {
       }
     }
 
+    /// <summary>Field number for the "AmmoBaseMax" field.</summary>
+    public const int AmmoBaseMaxFieldNumber = 21;
+    private int ammoBaseMax_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AmmoBaseMax {
+      get { return ammoBaseMax_; }
+      set {
+        ammoBaseMax_ = value;
+      }
+    }
+
     /// <summary>Field number for the "ret" field.</summary>
-    public const int RetFieldNumber = 21;
+    public const int RetFieldNumber = 22;
     private bool ret_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Ret {
@@ -5103,6 +5129,7 @@ namespace Protobuf.Room {
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AttackDuration, other.AttackDuration)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AttackInterval, other.AttackInterval)) return false;
       if (AmmoBase != other.AmmoBase) return false;
+      if (AmmoBaseMax != other.AmmoBaseMax) return false;
       if (Ret != other.Ret) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -5130,6 +5157,7 @@ namespace Protobuf.Room {
       if (AttackDuration != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AttackDuration);
       if (AttackInterval != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AttackInterval);
       if (AmmoBase != 0) hash ^= AmmoBase.GetHashCode();
+      if (AmmoBaseMax != 0) hash ^= AmmoBaseMax.GetHashCode();
       if (Ret != false) hash ^= Ret.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -5224,8 +5252,12 @@ namespace Protobuf.Room {
         output.WriteRawTag(160, 1);
         output.WriteInt32(AmmoBase);
       }
-      if (Ret != false) {
+      if (AmmoBaseMax != 0) {
         output.WriteRawTag(168, 1);
+        output.WriteInt32(AmmoBaseMax);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(176, 1);
         output.WriteBool(Ret);
       }
       if (_unknownFields != null) {
@@ -5295,6 +5327,9 @@ namespace Protobuf.Room {
       }
       if (AmmoBase != 0) {
         size += 2 + pb::CodedOutputStream.ComputeInt32Size(AmmoBase);
+      }
+      if (AmmoBaseMax != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(AmmoBaseMax);
       }
       if (Ret != false) {
         size += 2 + 1;
@@ -5369,6 +5404,9 @@ namespace Protobuf.Room {
       }
       if (other.AmmoBase != 0) {
         AmmoBase = other.AmmoBase;
+      }
+      if (other.AmmoBaseMax != 0) {
+        AmmoBaseMax = other.AmmoBaseMax;
       }
       if (other.Ret != false) {
         Ret = other.Ret;
@@ -5465,6 +5503,10 @@ namespace Protobuf.Room {
             break;
           }
           case 168: {
+            AmmoBaseMax = input.ReadInt32();
+            break;
+          }
+          case 176: {
             Ret = input.ReadBool();
             break;
           }
@@ -7806,7 +7848,7 @@ namespace Protobuf.Room {
   }
 
   /// <summary>
-  /// 更新其他属性,比如血量:Hp
+  /// 更新其他属性,比如血量:Hp,AmmoBase
   /// </summary>
   public sealed partial class UpdateActorInfo : pb::IMessage<UpdateActorInfo> {
     private static readonly pb::MessageParser<UpdateActorInfo> _parser = new pb::MessageParser<UpdateActorInfo>(() => new UpdateActorInfo());
@@ -7837,6 +7879,7 @@ namespace Protobuf.Room {
       ownerId_ = other.ownerId_;
       actorId_ = other.actorId_;
       hp_ = other.hp_;
+      ammoBase_ = other.ammoBase_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7879,13 +7922,24 @@ namespace Protobuf.Room {
     }
 
     /// <summary>Field number for the "Hp" field.</summary>
-    public const int HpFieldNumber = 5;
+    public const int HpFieldNumber = 4;
     private int hp_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int Hp {
       get { return hp_; }
       set {
         hp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AmmoBase" field.</summary>
+    public const int AmmoBaseFieldNumber = 5;
+    private int ammoBase_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AmmoBase {
+      get { return ammoBase_; }
+      set {
+        ammoBase_ = value;
       }
     }
 
@@ -7906,6 +7960,7 @@ namespace Protobuf.Room {
       if (OwnerId != other.OwnerId) return false;
       if (ActorId != other.ActorId) return false;
       if (Hp != other.Hp) return false;
+      if (AmmoBase != other.AmmoBase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7916,6 +7971,7 @@ namespace Protobuf.Room {
       if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
       if (ActorId != 0L) hash ^= ActorId.GetHashCode();
       if (Hp != 0) hash ^= Hp.GetHashCode();
+      if (AmmoBase != 0) hash ^= AmmoBase.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7942,8 +7998,12 @@ namespace Protobuf.Room {
         output.WriteInt64(ActorId);
       }
       if (Hp != 0) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(32);
         output.WriteInt32(Hp);
+      }
+      if (AmmoBase != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(AmmoBase);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -7964,6 +8024,9 @@ namespace Protobuf.Room {
       }
       if (Hp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Hp);
+      }
+      if (AmmoBase != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AmmoBase);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7988,6 +8051,9 @@ namespace Protobuf.Room {
       if (other.Hp != 0) {
         Hp = other.Hp;
       }
+      if (other.AmmoBase != 0) {
+        AmmoBase = other.AmmoBase;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8011,8 +8077,12 @@ namespace Protobuf.Room {
             ActorId = input.ReadInt64();
             break;
           }
-          case 40: {
+          case 32: {
             Hp = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            AmmoBase = input.ReadInt32();
             break;
           }
         }
@@ -8050,6 +8120,7 @@ namespace Protobuf.Room {
       ownerId_ = other.ownerId_;
       actorId_ = other.actorId_;
       hp_ = other.hp_;
+      ammoBase_ = other.ammoBase_;
       ret_ = other.ret_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -8103,8 +8174,19 @@ namespace Protobuf.Room {
       }
     }
 
+    /// <summary>Field number for the "AmmoBase" field.</summary>
+    public const int AmmoBaseFieldNumber = 5;
+    private int ammoBase_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AmmoBase {
+      get { return ammoBase_; }
+      set {
+        ammoBase_ = value;
+      }
+    }
+
     /// <summary>Field number for the "Ret" field.</summary>
-    public const int RetFieldNumber = 5;
+    public const int RetFieldNumber = 6;
     private bool ret_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Ret {
@@ -8131,6 +8213,7 @@ namespace Protobuf.Room {
       if (OwnerId != other.OwnerId) return false;
       if (ActorId != other.ActorId) return false;
       if (Hp != other.Hp) return false;
+      if (AmmoBase != other.AmmoBase) return false;
       if (Ret != other.Ret) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -8142,6 +8225,7 @@ namespace Protobuf.Room {
       if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
       if (ActorId != 0L) hash ^= ActorId.GetHashCode();
       if (Hp != 0) hash ^= Hp.GetHashCode();
+      if (AmmoBase != 0) hash ^= AmmoBase.GetHashCode();
       if (Ret != false) hash ^= Ret.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -8172,8 +8256,12 @@ namespace Protobuf.Room {
         output.WriteRawTag(32);
         output.WriteInt32(Hp);
       }
-      if (Ret != false) {
+      if (AmmoBase != 0) {
         output.WriteRawTag(40);
+        output.WriteInt32(AmmoBase);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(48);
         output.WriteBool(Ret);
       }
       if (_unknownFields != null) {
@@ -8195,6 +8283,9 @@ namespace Protobuf.Room {
       }
       if (Hp != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(Hp);
+      }
+      if (AmmoBase != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AmmoBase);
       }
       if (Ret != false) {
         size += 1 + 1;
@@ -8221,6 +8312,9 @@ namespace Protobuf.Room {
       }
       if (other.Hp != 0) {
         Hp = other.Hp;
+      }
+      if (other.AmmoBase != 0) {
+        AmmoBase = other.AmmoBase;
       }
       if (other.Ret != false) {
         Ret = other.Ret;
@@ -8253,6 +8347,467 @@ namespace Protobuf.Room {
             break;
           }
           case 40: {
+            AmmoBase = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class TroopPlayAni : pb::IMessage<TroopPlayAni> {
+    private static readonly pb::MessageParser<TroopPlayAni> _parser = new pb::MessageParser<TroopPlayAni>(() => new TroopPlayAni());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TroopPlayAni> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[32]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopPlayAni() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopPlayAni(TroopPlayAni other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      aiState_ = other.aiState_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopPlayAni Clone() {
+      return new TroopPlayAni(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AiState" field.</summary>
+    public const int AiStateFieldNumber = 4;
+    private int aiState_;
+    /// <summary>
+    /// 虽然代表的是AI状态机里的状态,但是仅播放这个状态的动画而已
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AiState {
+      get { return aiState_; }
+      set {
+        aiState_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TroopPlayAni);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TroopPlayAni other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (AiState != other.AiState) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (AiState != 0) hash ^= AiState.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (AiState != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AiState);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (AiState != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AiState);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TroopPlayAni other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.AiState != 0) {
+        AiState = other.AiState;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            AiState = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class TroopPlayAniReply : pb::IMessage<TroopPlayAniReply> {
+    private static readonly pb::MessageParser<TroopPlayAniReply> _parser = new pb::MessageParser<TroopPlayAniReply>(() => new TroopPlayAniReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<TroopPlayAniReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[33]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopPlayAniReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopPlayAniReply(TroopPlayAniReply other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      aiState_ = other.aiState_;
+      ret_ = other.ret_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public TroopPlayAniReply Clone() {
+      return new TroopPlayAniReply(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AiState" field.</summary>
+    public const int AiStateFieldNumber = 4;
+    private int aiState_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AiState {
+      get { return aiState_; }
+      set {
+        aiState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 5;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as TroopPlayAniReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(TroopPlayAniReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (AiState != other.AiState) return false;
+      if (Ret != other.Ret) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (AiState != 0) hash ^= AiState.GetHashCode();
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (AiState != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AiState);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Ret);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (AiState != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AiState);
+      }
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(TroopPlayAniReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.AiState != 0) {
+        AiState = other.AiState;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            AiState = input.ReadInt32();
+            break;
+          }
+          case 40: {
             Ret = input.ReadBool();
             break;
           }
@@ -8274,7 +8829,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8580,7 +9135,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8914,7 +9469,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9220,7 +9775,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9548,7 +10103,8 @@ namespace Protobuf.Room {
 
   /// <summary>
   //////////////////////////////////////////////////
-  /// 单独保存资源数据,这里保存的是地图创建以后,改变的资源数据.这只是临时的...
+  /// 单独保存资源数据,
+  /// 这里保存的是地图创建以后,改变的资源数据.这只是临时的...
   /// </summary>
   public sealed partial class DownloadResCell : pb::IMessage<DownloadResCell> {
     private static readonly pb::MessageParser<DownloadResCell> _parser = new pb::MessageParser<DownloadResCell>(() => new DownloadResCell());
@@ -9558,7 +10114,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9687,7 +10243,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9872,7 +10428,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[38]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10161,7 +10717,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[39]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10318,7 +10874,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[40]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10591,7 +11147,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[41]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10832,7 +11388,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[42]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10855,6 +11411,7 @@ namespace Protobuf.Room {
       targetId_ = other.targetId_;
       skillId_ = other.skillId_;
       ret_ = other.ret_;
+      errMsg_ = other.errMsg_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10929,6 +11486,17 @@ namespace Protobuf.Room {
       }
     }
 
+    /// <summary>Field number for the "ErrMsg" field.</summary>
+    public const int ErrMsgFieldNumber = 7;
+    private string errMsg_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ErrMsg {
+      get { return errMsg_; }
+      set {
+        errMsg_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as FightStartReply);
@@ -10948,6 +11516,7 @@ namespace Protobuf.Room {
       if (TargetId != other.TargetId) return false;
       if (SkillId != other.SkillId) return false;
       if (Ret != other.Ret) return false;
+      if (ErrMsg != other.ErrMsg) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10960,6 +11529,7 @@ namespace Protobuf.Room {
       if (TargetId != 0L) hash ^= TargetId.GetHashCode();
       if (SkillId != 0) hash ^= SkillId.GetHashCode();
       if (Ret != false) hash ^= Ret.GetHashCode();
+      if (ErrMsg.Length != 0) hash ^= ErrMsg.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10997,6 +11567,10 @@ namespace Protobuf.Room {
         output.WriteRawTag(48);
         output.WriteBool(Ret);
       }
+      if (ErrMsg.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(ErrMsg);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -11022,6 +11596,9 @@ namespace Protobuf.Room {
       }
       if (Ret != false) {
         size += 1 + 1;
+      }
+      if (ErrMsg.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrMsg);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -11051,6 +11628,9 @@ namespace Protobuf.Room {
       }
       if (other.Ret != false) {
         Ret = other.Ret;
+      }
+      if (other.ErrMsg.Length != 0) {
+        ErrMsg = other.ErrMsg;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -11087,6 +11667,10 @@ namespace Protobuf.Room {
             Ret = input.ReadBool();
             break;
           }
+          case 58: {
+            ErrMsg = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -11101,7 +11685,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[43]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11342,7 +11926,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[44]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11364,6 +11948,7 @@ namespace Protobuf.Room {
       actorId_ = other.actorId_;
       targetId_ = other.targetId_;
       isEnemyDead_ = other.isEnemyDead_;
+      fightAgain_ = other.fightAgain_;
       ret_ = other.ret_;
       errMsg_ = other.errMsg_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -11429,8 +12014,22 @@ namespace Protobuf.Room {
       }
     }
 
+    /// <summary>Field number for the "FightAgain" field.</summary>
+    public const int FightAgainFieldNumber = 6;
+    private bool fightAgain_;
+    /// <summary>
+    /// 弹药足够,再打一轮
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool FightAgain {
+      get { return fightAgain_; }
+      set {
+        fightAgain_ = value;
+      }
+    }
+
     /// <summary>Field number for the "Ret" field.</summary>
-    public const int RetFieldNumber = 6;
+    public const int RetFieldNumber = 7;
     private bool ret_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public bool Ret {
@@ -11441,7 +12040,7 @@ namespace Protobuf.Room {
     }
 
     /// <summary>Field number for the "ErrMsg" field.</summary>
-    public const int ErrMsgFieldNumber = 7;
+    public const int ErrMsgFieldNumber = 8;
     private string errMsg_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string ErrMsg {
@@ -11469,6 +12068,7 @@ namespace Protobuf.Room {
       if (ActorId != other.ActorId) return false;
       if (TargetId != other.TargetId) return false;
       if (IsEnemyDead != other.IsEnemyDead) return false;
+      if (FightAgain != other.FightAgain) return false;
       if (Ret != other.Ret) return false;
       if (ErrMsg != other.ErrMsg) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -11482,6 +12082,7 @@ namespace Protobuf.Room {
       if (ActorId != 0L) hash ^= ActorId.GetHashCode();
       if (TargetId != 0L) hash ^= TargetId.GetHashCode();
       if (IsEnemyDead != false) hash ^= IsEnemyDead.GetHashCode();
+      if (FightAgain != false) hash ^= FightAgain.GetHashCode();
       if (Ret != false) hash ^= Ret.GetHashCode();
       if (ErrMsg.Length != 0) hash ^= ErrMsg.GetHashCode();
       if (_unknownFields != null) {
@@ -11517,12 +12118,16 @@ namespace Protobuf.Room {
         output.WriteRawTag(40);
         output.WriteBool(IsEnemyDead);
       }
-      if (Ret != false) {
+      if (FightAgain != false) {
         output.WriteRawTag(48);
+        output.WriteBool(FightAgain);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(56);
         output.WriteBool(Ret);
       }
       if (ErrMsg.Length != 0) {
-        output.WriteRawTag(58);
+        output.WriteRawTag(66);
         output.WriteString(ErrMsg);
       }
       if (_unknownFields != null) {
@@ -11546,6 +12151,9 @@ namespace Protobuf.Room {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TargetId);
       }
       if (IsEnemyDead != false) {
+        size += 1 + 1;
+      }
+      if (FightAgain != false) {
         size += 1 + 1;
       }
       if (Ret != false) {
@@ -11579,6 +12187,9 @@ namespace Protobuf.Room {
       }
       if (other.IsEnemyDead != false) {
         IsEnemyDead = other.IsEnemyDead;
+      }
+      if (other.FightAgain != false) {
+        FightAgain = other.FightAgain;
       }
       if (other.Ret != false) {
         Ret = other.Ret;
@@ -11618,10 +12229,14 @@ namespace Protobuf.Room {
             break;
           }
           case 48: {
+            FightAgain = input.ReadBool();
+            break;
+          }
+          case 56: {
             Ret = input.ReadBool();
             break;
           }
-          case 58: {
+          case 66: {
             ErrMsg = input.ReadString();
             break;
           }
@@ -11642,7 +12257,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[45]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11855,7 +12470,7 @@ namespace Protobuf.Room {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[46]; }
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12076,6 +12691,460 @@ namespace Protobuf.Room {
           }
           case 32: {
             Damage = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class AmmoSupply : pb::IMessage<AmmoSupply> {
+    private static readonly pb::MessageParser<AmmoSupply> _parser = new pb::MessageParser<AmmoSupply>(() => new AmmoSupply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AmmoSupply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[49]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AmmoSupply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AmmoSupply(AmmoSupply other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      ammoBase_ = other.ammoBase_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AmmoSupply Clone() {
+      return new AmmoSupply(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AmmoBase" field.</summary>
+    public const int AmmoBaseFieldNumber = 4;
+    private int ammoBase_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AmmoBase {
+      get { return ammoBase_; }
+      set {
+        ammoBase_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AmmoSupply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AmmoSupply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (AmmoBase != other.AmmoBase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (AmmoBase != 0) hash ^= AmmoBase.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (AmmoBase != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AmmoBase);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (AmmoBase != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AmmoBase);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AmmoSupply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.AmmoBase != 0) {
+        AmmoBase = other.AmmoBase;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            AmmoBase = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class AmmoSupplyReply : pb::IMessage<AmmoSupplyReply> {
+    private static readonly pb::MessageParser<AmmoSupplyReply> _parser = new pb::MessageParser<AmmoSupplyReply>(() => new AmmoSupplyReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<AmmoSupplyReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[50]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AmmoSupplyReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AmmoSupplyReply(AmmoSupplyReply other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      actorId_ = other.actorId_;
+      ammoBase_ = other.ammoBase_;
+      ret_ = other.ret_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public AmmoSupplyReply Clone() {
+      return new AmmoSupplyReply(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ActorId" field.</summary>
+    public const int ActorIdFieldNumber = 3;
+    private long actorId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long ActorId {
+      get { return actorId_; }
+      set {
+        actorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AmmoBase" field.</summary>
+    public const int AmmoBaseFieldNumber = 4;
+    private int ammoBase_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int AmmoBase {
+      get { return ammoBase_; }
+      set {
+        ammoBase_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 5;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as AmmoSupplyReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(AmmoSupplyReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (ActorId != other.ActorId) return false;
+      if (AmmoBase != other.AmmoBase) return false;
+      if (Ret != other.Ret) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (ActorId != 0L) hash ^= ActorId.GetHashCode();
+      if (AmmoBase != 0) hash ^= AmmoBase.GetHashCode();
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (ActorId != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(ActorId);
+      }
+      if (AmmoBase != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(AmmoBase);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(40);
+        output.WriteBool(Ret);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (ActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActorId);
+      }
+      if (AmmoBase != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(AmmoBase);
+      }
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(AmmoSupplyReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.ActorId != 0L) {
+        ActorId = other.ActorId;
+      }
+      if (other.AmmoBase != 0) {
+        AmmoBase = other.AmmoBase;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ActorId = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            AmmoBase = input.ReadInt32();
             break;
           }
           case 40: {
