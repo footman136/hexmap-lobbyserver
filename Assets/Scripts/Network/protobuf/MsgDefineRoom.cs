@@ -24,33 +24,35 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKv0DCgRST09N",
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKqgECgRST09N",
             "EgwKCE1zZ1N0YXJ0EAASDwoJSGVhcnRCZWF0EKCcARIRCgtQbGF5ZXJFbnRl",
             "chChnAESDwoJRW50ZXJSb29tEKOcARIPCglMZWF2ZVJvb20QpZwBEg8KCVVw",
             "bG9hZE1hcBCnnAESEQoLRG93bmxvYWRNYXAQqZwBEhEKC0Rlc3Ryb3lSb29t",
             "EKucARIUCg5Eb3dubG9hZENpdGllcxC1nAESDQoHQ2l0eUFkZBC2nAESEAoK",
             "Q2l0eVJlbW92ZRC3nAESFAoORG93bmxvYWRBY3RvcnMQv5wBEg4KCEFjdG9y",
-            "QWRkEMGcARIRCgtBY3RvclJlbW92ZRDCnAESDwoJVHJvb3BNb3ZlEMWcARIS",
-            "CgxUcm9vcEFpU3RhdGUQx5wBEhQKDlVwZGF0ZUFjdG9yUG9zEMmcARIVCg9V",
-            "cGRhdGVBY3RvckluZm8Qy5wBEhIKDFRyb29wUGxheUFuaRDNnAESEgoMSGFy",
-            "dmVzdFN0YXJ0ENOcARIRCgtIYXJ2ZXN0U3RvcBDVnAESFQoPRG93bmxvYWRS",
-            "ZXNDZWxsENecARIPCglVcGRhdGVSZXMQ2ZwBEhAKCkZpZ2h0U3RhcnQQ3ZwB",
-            "Eg8KCUZpZ2h0U3RvcBDfnAESEAoKU3ByYXlCbG9vZBDhnAESEAoKQW1tb1N1",
-            "cHBseRDjnAEq9AQKClJPT01fUkVQTFkSEQoNTXNnU3RhcnRSZXBseRAAEhYK",
-            "EFBsYXllckVudGVyUmVwbHkQopwBEhQKDkVudGVyUm9vbVJlcGx5EKScARIU",
-            "Cg5MZWF2ZVJvb21SZXBseRCmnAESFAoOVXBsb2FkTWFwUmVwbHkQqJwBEhYK",
-            "EERvd25sb2FkTWFwUmVwbHkQqpwBEhYKEERlc3Ryb3lSb29tUmVwbHkQrJwB",
-            "EhkKE0Rvd25sb2FkQ2l0aWVzUmVwbHkQtpwBEhIKDENpdHlBZGRSZXBseRC4",
-            "nAESFQoPQ2l0eVJlbW92ZVJlcGx5ELqcARIZChNEb3dubG9hZEFjdG9yc1Jl",
-            "cGx5EMCcARITCg1BY3RvckFkZFJlcGx5EMKcARIWChBBY3RvclJlbW92ZVJl",
-            "cGx5EMScARIUCg5Ucm9vcE1vdmVSZXBseRDGnAESFwoRVHJvb3BBaVN0YXRl",
-            "UmVwbHkQyJwBEhkKE1VwZGF0ZUFjdG9yUG9zUmVwbHkQypwBEhoKFFVwZGF0",
-            "ZUFjdG9ySW5mb1JlcGx5EMycARIXChFUcm9vcFBsYXlBbmlSZXBseRDOnAES",
-            "FwoRSGFydmVzdFN0YXJ0UmVwbHkQ1JwBEhYKEEhhcnZlc3RTdG9wUmVwbHkQ",
-            "1pwBEhoKFERvd25sb2FkUmVzQ2VsbFJlcGx5ENicARIUCg5VcGRhdGVSZXNS",
-            "ZXBseRDanAESFQoPRmlnaHRTdGFydFJlcGx5EN6cARIUCg5GaWdodFN0b3BS",
-            "ZXBseRDgnAESFQoPU3ByYXlCbG9vZFJlcGx5EOKcARIVCg9BbW1vU3VwcGx5",
-            "UmVwbHkQ5JwBYgZwcm90bzM="));
+            "QWRkEMGcARIRCgtBY3RvclJlbW92ZRDCnAESDwoJQWN0b3JNb3ZlEMWcARIS",
+            "CgxBY3RvckFpU3RhdGUQx5wBEhQKDlVwZGF0ZUFjdG9yUG9zEMmcARIVCg9V",
+            "cGRhdGVBY3RvckluZm8Qy5wBEhIKDEFjdG9yUGxheUFuaRDNnAESEAoKVHJ5",
+            "Q29tbWFuZBDPnAESEgoMSGFydmVzdFN0YXJ0ENOcARIRCgtIYXJ2ZXN0U3Rv",
+            "cBDVnAESFQoPRG93bmxvYWRSZXNDZWxsENecARIPCglVcGRhdGVSZXMQ2ZwB",
+            "EhcKEVVwZGF0ZUFjdGlvblBvaW50ENucARIQCgpGaWdodFN0YXJ0EN2cARIP",
+            "CglGaWdodFN0b3AQ35wBEhAKClNwcmF5Qmxvb2QQ4ZwBEhAKCkFtbW9TdXBw",
+            "bHkQ45wBKqkFCgpST09NX1JFUExZEhEKDU1zZ1N0YXJ0UmVwbHkQABIWChBQ",
+            "bGF5ZXJFbnRlclJlcGx5EKKcARIUCg5FbnRlclJvb21SZXBseRCknAESFAoO",
+            "TGVhdmVSb29tUmVwbHkQppwBEhQKDlVwbG9hZE1hcFJlcGx5EKicARIWChBE",
+            "b3dubG9hZE1hcFJlcGx5EKqcARIWChBEZXN0cm95Um9vbVJlcGx5EKycARIZ",
+            "ChNEb3dubG9hZENpdGllc1JlcGx5ELacARISCgxDaXR5QWRkUmVwbHkQuJwB",
+            "EhUKD0NpdHlSZW1vdmVSZXBseRC6nAESGQoTRG93bmxvYWRBY3RvcnNSZXBs",
+            "eRDAnAESEwoNQWN0b3JBZGRSZXBseRDCnAESFgoQQWN0b3JSZW1vdmVSZXBs",
+            "eRDEnAESFAoOQWN0b3JNb3ZlUmVwbHkQxpwBEhcKEUFjdG9yQWlTdGF0ZVJl",
+            "cGx5EMicARIZChNVcGRhdGVBY3RvclBvc1JlcGx5EMqcARIaChRVcGRhdGVB",
+            "Y3RvckluZm9SZXBseRDMnAESFwoRQWN0b3JQbGF5QW5pUmVwbHkQzpwBEhUK",
+            "D1RyeUNvbW1hbmRSZXBseRDQnAESFwoRSGFydmVzdFN0YXJ0UmVwbHkQ1JwB",
+            "EhYKEEhhcnZlc3RTdG9wUmVwbHkQ1pwBEhoKFERvd25sb2FkUmVzQ2VsbFJl",
+            "cGx5ENicARIUCg5VcGRhdGVSZXNSZXBseRDanAESHAoWVXBkYXRlQWN0aW9u",
+            "UG9pbnRSZXBseRDcnAESFQoPRmlnaHRTdGFydFJlcGx5EN6cARIUCg5GaWdo",
+            "dFN0b3BSZXBseRDgnAESFQoPU3ByYXlCbG9vZFJlcGx5EOKcARIVCg9BbW1v",
+            "U3VwcGx5UmVwbHkQ5JwBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -84,10 +86,10 @@ namespace Protobuf.Room {
     [pbr::OriginalName("ActorAdd")] ActorAdd = 20033,
     [pbr::OriginalName("ActorRemove")] ActorRemove = 20034,
     /// <summary>
-    /// 部队移动,此指令已废弃,被TroopAiState取代
+    /// 部队移动,此指令已废弃,被ActorAiState取代
     /// </summary>
-    [pbr::OriginalName("TroopMove")] TroopMove = 20037,
-    [pbr::OriginalName("TroopAiState")] TroopAiState = 20039,
+    [pbr::OriginalName("ActorMove")] ActorMove = 20037,
+    [pbr::OriginalName("ActorAiState")] ActorAiState = 20039,
     /// <summary>
     /// 因为AI在客户端进行,所以要从客户端同步坐标到服务器
     /// </summary>
@@ -99,7 +101,11 @@ namespace Protobuf.Room {
     /// <summary>
     /// 仅播放动画, 不改变AI状态机
     /// </summary>
-    [pbr::OriginalName("TroopPlayAni")] TroopPlayAni = 20045,
+    [pbr::OriginalName("ActorPlayAni")] ActorPlayAni = 20045,
+    /// <summary>
+    /// 尝试发送指令,如果成功消耗行动点ActionPoint
+    /// </summary>
+    [pbr::OriginalName("TryCommand")] TryCommand = 20047,
     /// <summary>
     /// 采集
     /// </summary>
@@ -113,6 +119,10 @@ namespace Protobuf.Room {
     /// </summary>
     [pbr::OriginalName("DownloadResCell")] DownloadResCell = 20055,
     [pbr::OriginalName("UpdateRes")] UpdateRes = 20057,
+    /// <summary>
+    /// 更新行动点
+    /// </summary>
+    [pbr::OriginalName("UpdateActionPoint")] UpdateActionPoint = 20059,
     /// <summary>
     /// 战斗
     /// </summary>
@@ -148,15 +158,17 @@ namespace Protobuf.Room {
     [pbr::OriginalName("DownloadActorsReply")] DownloadActorsReply = 20032,
     [pbr::OriginalName("ActorAddReply")] ActorAddReply = 20034,
     [pbr::OriginalName("ActorRemoveReply")] ActorRemoveReply = 20036,
-    [pbr::OriginalName("TroopMoveReply")] TroopMoveReply = 20038,
-    [pbr::OriginalName("TroopAiStateReply")] TroopAiStateReply = 20040,
+    [pbr::OriginalName("ActorMoveReply")] ActorMoveReply = 20038,
+    [pbr::OriginalName("ActorAiStateReply")] ActorAiStateReply = 20040,
     [pbr::OriginalName("UpdateActorPosReply")] UpdateActorPosReply = 20042,
     [pbr::OriginalName("UpdateActorInfoReply")] UpdateActorInfoReply = 20044,
-    [pbr::OriginalName("TroopPlayAniReply")] TroopPlayAniReply = 20046,
+    [pbr::OriginalName("ActorPlayAniReply")] ActorPlayAniReply = 20046,
+    [pbr::OriginalName("TryCommandReply")] TryCommandReply = 20048,
     [pbr::OriginalName("HarvestStartReply")] HarvestStartReply = 20052,
     [pbr::OriginalName("HarvestStopReply")] HarvestStopReply = 20054,
     [pbr::OriginalName("DownloadResCellReply")] DownloadResCellReply = 20056,
     [pbr::OriginalName("UpdateResReply")] UpdateResReply = 20058,
+    [pbr::OriginalName("UpdateActionPointReply")] UpdateActionPointReply = 20060,
     [pbr::OriginalName("FightStartReply")] FightStartReply = 20062,
     [pbr::OriginalName("FightStopReply")] FightStopReply = 20064,
     [pbr::OriginalName("SprayBloodReply")] SprayBloodReply = 20066,
