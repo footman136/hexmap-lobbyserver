@@ -145,21 +145,21 @@ namespace Protobuf.Room {
             "bGxJZBgFIAEoBSKDAQoPRmlnaHRTdGFydFJlcGx5Eg4KBlJvb21JZBgBIAEo",
             "AxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEAoIVGFyZ2V0",
             "SWQYBCABKAMSDwoHU2tpbGxJZBgFIAEoBRILCgNSZXQYBiABKAgSDgoGRXJy",
-            "TXNnGAcgASgJImUKCUZpZ2h0U3RvcBIOCgZSb29tSWQYASABKAMSDwoHT3du",
+            "TXNnGAcgASgJIn4KCUZpZ2h0U3RvcBIOCgZSb29tSWQYASABKAMSDwoHT3du",
             "ZXJJZBgCIAEoAxIPCgdBY3RvcklkGAMgASgDEhAKCFRhcmdldElkGAQgASgD",
-            "EhQKDER1cmF0aW9uVGltZRgFIAEoAiKaAQoORmlnaHRTdG9wUmVwbHkSDgoG",
-            "Um9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEo",
-            "AxIQCghUYXJnZXRJZBgEIAEoAxITCgtJc0VuZW15RGVhZBgFIAEoCBISCgpG",
-            "aWdodEFnYWluGAYgASgIEgsKA1JldBgHIAEoCBIOCgZFcnJNc2cYCCABKAki",
-            "TgoKU3ByYXlCbG9vZBIOCgZSb29tSWQYASABKAMSDwoHT3duZXJJZBgCIAEo",
-            "AxIPCgdBY3RvcklkGAMgASgDEg4KBkRhbWFnZRgEIAEoBSJgCg9TcHJheUJs",
-            "b29kUmVwbHkSDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoH",
-            "QWN0b3JJZBgDIAEoAxIOCgZEYW1hZ2UYBCABKAUSCwoDUmV0GAUgASgIIlAK",
-            "CkFtbW9TdXBwbHkSDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMS",
-            "DwoHQWN0b3JJZBgDIAEoAxIQCghBbW1vQmFzZRgEIAEoBSJiCg9BbW1vU3Vw",
-            "cGx5UmVwbHkSDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoH",
-            "QWN0b3JJZBgDIAEoAxIQCghBbW1vQmFzZRgEIAEoBRILCgNSZXQYBSABKAhi",
-            "BnByb3RvMw=="));
+            "EhQKDER1cmF0aW9uVGltZRgFIAEoAhIXCg9Jc0NvdW50ZXJBdHRhY2sYBiAB",
+            "KAgimgEKDkZpZ2h0U3RvcFJlcGx5Eg4KBlJvb21JZBgBIAEoAxIPCgdPd25l",
+            "cklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEAoIVGFyZ2V0SWQYBCABKAMS",
+            "EwoLSXNFbmVteURlYWQYBSABKAgSEgoKRmlnaHRBZ2FpbhgGIAEoCBILCgNS",
+            "ZXQYByABKAgSDgoGRXJyTXNnGAggASgJIk4KClNwcmF5Qmxvb2QSDgoGUm9v",
+            "bUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSDwoHQWN0b3JJZBgDIAEoAxIO",
+            "CgZEYW1hZ2UYBCABKAUiYAoPU3ByYXlCbG9vZFJlcGx5Eg4KBlJvb21JZBgB",
+            "IAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSDgoGRGFt",
+            "YWdlGAQgASgFEgsKA1JldBgFIAEoCCJQCgpBbW1vU3VwcGx5Eg4KBlJvb21J",
+            "ZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEAoI",
+            "QW1tb0Jhc2UYBCABKAUiYgoPQW1tb1N1cHBseVJlcGx5Eg4KBlJvb21JZBgB",
+            "IAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEAoIQW1t",
+            "b0Jhc2UYBCABKAUSCwoDUmV0GAUgASgIYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -212,7 +212,7 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.UpdateActionPointReply), global::Protobuf.Room.UpdateActionPointReply.Parser, new[]{ "RoomId", "OwnerId", "Ret", "ActionPoint", "ActionPointMax" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStart), global::Protobuf.Room.FightStart.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "SkillId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStartReply), global::Protobuf.Room.FightStartReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "SkillId", "Ret", "ErrMsg" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStop), global::Protobuf.Room.FightStop.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "DurationTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStop), global::Protobuf.Room.FightStop.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "DurationTime", "IsCounterAttack" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.FightStopReply), global::Protobuf.Room.FightStopReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "TargetId", "IsEnemyDead", "FightAgain", "Ret", "ErrMsg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.SprayBlood), global::Protobuf.Room.SprayBlood.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Damage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.SprayBloodReply), global::Protobuf.Room.SprayBloodReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Damage", "Ret" }, null, null, null, null),
@@ -8893,6 +8893,9 @@ namespace Protobuf.Room {
     /// <summary>Field number for the "ActorId" field.</summary>
     public const int ActorIdFieldNumber = 3;
     private long actorId_;
+    /// <summary>
+    /// 如果改为先发送本消息,等待服务器返回后再执行指令的话,这个变量就有用了,在返回后可以找到被执行的单位
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public long ActorId {
       get { return actorId_; }
@@ -12606,6 +12609,7 @@ namespace Protobuf.Room {
       actorId_ = other.actorId_;
       targetId_ = other.targetId_;
       durationTime_ = other.durationTime_;
+      isCounterAttack_ = other.isCounterAttack_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -12669,6 +12673,17 @@ namespace Protobuf.Room {
       }
     }
 
+    /// <summary>Field number for the "IsCounterAttack" field.</summary>
+    public const int IsCounterAttackFieldNumber = 6;
+    private bool isCounterAttack_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool IsCounterAttack {
+      get { return isCounterAttack_; }
+      set {
+        isCounterAttack_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as FightStop);
@@ -12687,6 +12702,7 @@ namespace Protobuf.Room {
       if (ActorId != other.ActorId) return false;
       if (TargetId != other.TargetId) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DurationTime, other.DurationTime)) return false;
+      if (IsCounterAttack != other.IsCounterAttack) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -12698,6 +12714,7 @@ namespace Protobuf.Room {
       if (ActorId != 0L) hash ^= ActorId.GetHashCode();
       if (TargetId != 0L) hash ^= TargetId.GetHashCode();
       if (DurationTime != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DurationTime);
+      if (IsCounterAttack != false) hash ^= IsCounterAttack.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12731,6 +12748,10 @@ namespace Protobuf.Room {
         output.WriteRawTag(45);
         output.WriteFloat(DurationTime);
       }
+      if (IsCounterAttack != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(IsCounterAttack);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -12753,6 +12774,9 @@ namespace Protobuf.Room {
       }
       if (DurationTime != 0F) {
         size += 1 + 4;
+      }
+      if (IsCounterAttack != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -12779,6 +12803,9 @@ namespace Protobuf.Room {
       }
       if (other.DurationTime != 0F) {
         DurationTime = other.DurationTime;
+      }
+      if (other.IsCounterAttack != false) {
+        IsCounterAttack = other.IsCounterAttack;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -12809,6 +12836,10 @@ namespace Protobuf.Room {
           }
           case 45: {
             DurationTime = input.ReadFloat();
+            break;
+          }
+          case 48: {
+            IsCounterAttack = input.ReadBool();
             break;
           }
         }
