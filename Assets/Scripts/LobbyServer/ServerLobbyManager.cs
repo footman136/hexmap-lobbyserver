@@ -32,7 +32,7 @@ public class ServerLobbyManager : MonoBehaviour
     // 房间的集合，Key是房间的唯一ID
     public Dictionary<long, RoomInfo> Rooms { set; get; } 
     
-    private const float _heartBeatTimeInterval = 20f; // 心跳时间间隔,服务器检测用的间隔比客户端实际间隔要多一些
+    private const float _heartBeatTimeInterval = 45f; // 心跳时间间隔,服务器检测用的间隔比客户端实际间隔要多一些, LobbyServer的间隔要再多一些,因为客户端与大厅之间的消息少
 
     #region 初始化
     
