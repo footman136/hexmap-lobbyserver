@@ -24,20 +24,20 @@ namespace Protobuf.Lobby {
     static L2RReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CglMMlIucHJvdG8SDlByb3RvYnVmLkxvYmJ5IoYBCg9Sb29tU2VydmVyTG9n",
+            "CglMMlIucHJvdG8SDlByb3RvYnVmLkxvYmJ5IpsBCg9Sb29tU2VydmVyTG9n",
             "aW4SEgoKU2VydmVyTmFtZRgBIAEoCRIQCghTZXJ2ZXJJZBgCIAEoAxIPCgdB",
             "ZGRyZXNzGAMgASgJEgwKBFBvcnQYBCABKAUSFAoMTWF4Um9vbUNvdW50GAUg",
-            "ASgFEhgKEE1heFBsYXllclBlclJvb20YBiABKAUiIwoUUm9vbVNlcnZlckxv",
-            "Z2luUmVwbHkSCwoDUmV0GAEgASgIIqwBCg5VcGRhdGVSb29tSW5mbxIQCghS",
-            "b29tTmFtZRgBIAEoCRIOCgZSb29tSWQYAiABKAMSEgoKQ3JlYXRlVGltZRgD",
-            "IAEoAxIWCg5DdXJQbGF5ZXJDb3VudBgEIAEoBRIWCg5NYXhQbGF5ZXJDb3Vu",
-            "dBgFIAEoBRIPCgdDcmVhdG9yGAYgASgDEhEKCUlzUnVubmluZxgHIAEoCBIQ",
-            "CghJc1JlbW92ZRgIIAEoCCIiChNVcGRhdGVSb29tSW5mb1JlcGx5EgsKA1Jl",
-            "dBgBIAEoCGIGcHJvdG8z"));
+            "ASgFEhgKEE1heFBsYXllclBlclJvb20YBiABKAUSEwoLQWRkcmVzc1JlYWwY",
+            "ByABKAkiIwoUUm9vbVNlcnZlckxvZ2luUmVwbHkSCwoDUmV0GAEgASgIIqwB",
+            "Cg5VcGRhdGVSb29tSW5mbxIQCghSb29tTmFtZRgBIAEoCRIOCgZSb29tSWQY",
+            "AiABKAMSEgoKQ3JlYXRlVGltZRgDIAEoAxIWCg5DdXJQbGF5ZXJDb3VudBgE",
+            "IAEoBRIWCg5NYXhQbGF5ZXJDb3VudBgFIAEoBRIPCgdDcmVhdG9yGAYgASgD",
+            "EhEKCUlzUnVubmluZxgHIAEoCBIQCghJc1JlbW92ZRgIIAEoCCIiChNVcGRh",
+            "dGVSb29tSW5mb1JlcGx5EgsKA1JldBgBIAEoCGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomServerLogin), global::Protobuf.Lobby.RoomServerLogin.Parser, new[]{ "ServerName", "ServerId", "Address", "Port", "MaxRoomCount", "MaxPlayerPerRoom" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomServerLogin), global::Protobuf.Lobby.RoomServerLogin.Parser, new[]{ "ServerName", "ServerId", "Address", "Port", "MaxRoomCount", "MaxPlayerPerRoom", "AddressReal" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.RoomServerLoginReply), global::Protobuf.Lobby.RoomServerLoginReply.Parser, new[]{ "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.UpdateRoomInfo), global::Protobuf.Lobby.UpdateRoomInfo.Parser, new[]{ "RoomName", "RoomId", "CreateTime", "CurPlayerCount", "MaxPlayerCount", "Creator", "IsRunning", "IsRemove" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Lobby.UpdateRoomInfoReply), global::Protobuf.Lobby.UpdateRoomInfoReply.Parser, new[]{ "Ret" }, null, null, null, null)
@@ -78,6 +78,7 @@ namespace Protobuf.Lobby {
       port_ = other.port_;
       maxRoomCount_ = other.maxRoomCount_;
       maxPlayerPerRoom_ = other.maxPlayerPerRoom_;
+      addressReal_ = other.addressReal_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -111,6 +112,9 @@ namespace Protobuf.Lobby {
     /// <summary>Field number for the "Address" field.</summary>
     public const int AddressFieldNumber = 3;
     private string address_ = "";
+    /// <summary>
+    /// 云服务器上,这个地址可能只是0.0.0.0, 没有实际意义; 在本地服务器会有意义,但是也仅限于观察
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Address {
       get { return address_; }
@@ -152,6 +156,20 @@ namespace Protobuf.Lobby {
       }
     }
 
+    /// <summary>Field number for the "AddressReal" field.</summary>
+    public const int AddressRealFieldNumber = 7;
+    private string addressReal_ = "";
+    /// <summary>
+    /// 云服务器上, 是虚拟地址, 所以启动监听的时候,用0.0.0.0, 但是外部连接的时候肯定有指定的地址, 这个就是指定的地址,外部连接要连接这个地址
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AddressReal {
+      get { return addressReal_; }
+      set {
+        addressReal_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RoomServerLogin);
@@ -171,6 +189,7 @@ namespace Protobuf.Lobby {
       if (Port != other.Port) return false;
       if (MaxRoomCount != other.MaxRoomCount) return false;
       if (MaxPlayerPerRoom != other.MaxPlayerPerRoom) return false;
+      if (AddressReal != other.AddressReal) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -183,6 +202,7 @@ namespace Protobuf.Lobby {
       if (Port != 0) hash ^= Port.GetHashCode();
       if (MaxRoomCount != 0) hash ^= MaxRoomCount.GetHashCode();
       if (MaxPlayerPerRoom != 0) hash ^= MaxPlayerPerRoom.GetHashCode();
+      if (AddressReal.Length != 0) hash ^= AddressReal.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -220,6 +240,10 @@ namespace Protobuf.Lobby {
         output.WriteRawTag(48);
         output.WriteInt32(MaxPlayerPerRoom);
       }
+      if (AddressReal.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(AddressReal);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -245,6 +269,9 @@ namespace Protobuf.Lobby {
       }
       if (MaxPlayerPerRoom != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxPlayerPerRoom);
+      }
+      if (AddressReal.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AddressReal);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -274,6 +301,9 @@ namespace Protobuf.Lobby {
       }
       if (other.MaxPlayerPerRoom != 0) {
         MaxPlayerPerRoom = other.MaxPlayerPerRoom;
+      }
+      if (other.AddressReal.Length != 0) {
+        AddressReal = other.AddressReal;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -308,6 +338,10 @@ namespace Protobuf.Lobby {
           }
           case 48: {
             MaxPlayerPerRoom = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            AddressReal = input.ReadString();
             break;
           }
         }

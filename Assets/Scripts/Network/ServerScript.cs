@@ -24,20 +24,40 @@ public class ServerScript : MonoBehaviour {
     
     public int ClientCount => _server.ClientCount;
     public int MaxClientCount => _server.MaxClientCount;
-    public string Address => _server.Address;
-    public int Port => _server.Port;
+
+    public string Address
+    {
+        set { _server.Address = value; }
+        get { return _server.Address; }
+    }
+
+    public int Port
+    {
+        set { _server.Port = value; }
+        get { return _server.Port; }
+    }
 
     public bool IsReady;
-    
-    // Use this for initialization
-    void Start()
+
+    void Awake()
     {
         //初始化服务器
         _server = new MicrosoftServer(PLAYER_MAX_COUNT, BUFF_SIZE, OnReceive);
         _server.Init();
+    }
+    
+    // Use this for initialization
+    void Start()
+    {
         // 获得主机相关信息
         IPAddress[] addressList = Dns.GetHostEntry(Environment.MachineName).AddressList;
         IPAddress ipAddress = null;
+        for(int i=0; i<addressList.Length; ++i)
+        {
+            var addr = addressList[i];
+            Log($"Address {i} : {addr.ToString()}");
+        }
+
         foreach (var addr in addressList)
         {
             if (addr.AddressFamily.ToString() == "InterNetwork")
@@ -47,9 +67,14 @@ public class ServerScript : MonoBehaviour {
             }
         }
 
+        { // 在外网云服务器上, 无法像上面那样获取服务器地址,只能用0.0.0.0来作为地址监听. Nov.19.2019. Liu Gang.
+            //string addrStr = "0.0.0.0";
+            IPAddress.TryParse(_server.Address, out ipAddress);
+        }
+
         if (ipAddress != null)
         {
-            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, PORT);
+            IPEndPoint localEndPoint = new IPEndPoint(ipAddress, _server.Port);
             //IPEndPoint localEndPoint = new IPEndPoint(IPAddress.Any, PORT);
             _server.Start(localEndPoint);
             _server.Completed += OnComplete;

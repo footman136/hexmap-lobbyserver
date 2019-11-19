@@ -50,6 +50,13 @@ public class ServerLobbyManager : MonoBehaviour
         // 读取数据表
         CsvDataManager = gameObject.AddComponent<CsvDataManager>();
         CsvDataManager.LoadDataAll();
+        
+        var csv = CsvDataManager.Instance.GetTable("server_config_lobby");
+        if (csv != null)
+        { // 房间服务器监听地址, 按理说监听地址, 不能由外部指定, 但是对于云服务器, 是没有本地地址的, 只能外部指定
+            _server.Address = csv.GetValue(1, "LobbyServerAddress");
+            _server.Port = csv.GetValueInt(1, "LobbyServerPort");
+        }
     }
     
     // Start is called before the first frame update

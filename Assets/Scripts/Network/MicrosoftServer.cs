@@ -34,8 +34,8 @@ public class MicrosoftServer
     // 以下的代码是我加的，提供了外部函数和外部回调函数
     public int ClientCount => m_numConnectedSockets;
     public int MaxClientCount => m_numConnections;
-    public int Port { get; private set; }
-    public string Address { get; private set; }
+    public int Port { get; set; }
+    public string Address { get; set; }
     public bool LogEnabled;
     
     //定义接收数据的对象  

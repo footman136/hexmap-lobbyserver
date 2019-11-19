@@ -98,11 +98,11 @@ public class LobbyMsgReply
             if (ret)
             {
                 ret = ServerLobbyManager.Instance.Redis.CSRedis.HSet(tableName, "TokenId", input.TokenId);
-                ServerLobbyManager.Instance.Log($"MSG：创建新用户！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
+                ServerLobbyManager.Instance.Log($"MSG：Create new user successful! Account:<{input.Account}> - TokenId:<{input.TokenId}>"); // 创建新用户成功！
             }
             else
             {
-                ServerLobbyManager.Instance.Log($"MSG：新用户创建失败！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
+                ServerLobbyManager.Instance.Log($"MSG：New user create failed! Account:<{input.Account}> - TokenId:<{input.TokenId}>"); // 新用户创建失败！
             }
         }
         else
@@ -127,7 +127,7 @@ public class LobbyMsgReply
                         Ret = true,
                     };
                     ServerLobbyManager.Instance.SendMsg(alreadyLoggedIn, LOBBY_REPLY.PlayerLeaveReply, output2.ToByteArray());
-                    string msg = "踢掉之前登录的本用户.";
+                    string msg = "Kicked out the same user that logged in previously."; // 踢掉之前登录的本用户.
                     ServerLobbyManager.Instance.Log($"MSG: PLAYER_ENTER WARNING - " + msg + $" - {oldPlayer.Enter.Account}");
                 }
             }
@@ -150,7 +150,7 @@ public class LobbyMsgReply
             };
             // 返回登录成功消息
             ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.PlayerEnterReply, output.ToByteArray());
-            ServerLobbyManager.Instance.Log($"MSG: PLAYER_ENTER OK - 老用户登录成功！Account:<{input.Account}> - TokenId:<{input.TokenId}>");
+            ServerLobbyManager.Instance.Log($"MSG: PLAYER_ENTER OK - Old user logged in successful! Account:<{input.Account}> - TokenId:<{input.TokenId}>"); // 老用户登录成功！
         }
     }
 
@@ -160,13 +160,13 @@ public class LobbyMsgReply
         PlayerInfo pi = ServerLobbyManager.Instance.GetPlayer(_args);
         if (pi == null)
         {
-            string msg = $"没有找到自己!";
+            string msg = $"Do not find myself!"; // 没有找到自己!
             ServerLobbyManager.Instance.Log("LobbyMsgReply PLAYER_LEAVE Error - "+msg);
             return;
         }
         if (input.TokenId != pi.Enter.TokenId)
         {
-            string msg = $"离开的不是自己, 必须是自己!";
+            string msg = $"It's not me that leaves, it must be yourself!"; // 离开的不是自己, 必须是自己!
             ServerLobbyManager.Instance.Log("LobbyMsgReply PLAYER_LEAVE Error - "+msg);
             return;
         }
@@ -179,7 +179,7 @@ public class LobbyMsgReply
             Ret = true,
         };
         ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.PlayerLeaveReply, output.ToByteArray());
-        ServerLobbyManager.Instance.Log($"MSG: 用户离开大厅！Account:<{pi.Enter.Account}> - TokenId:<{pi.Enter.TokenId}>");
+        ServerLobbyManager.Instance.Log($"MSG: User leaves the lobby! Account:<{pi.Enter.Account}> - TokenId:<{pi.Enter.TokenId}>"); // 用户离开大厅！
     }
 
     private static void HEART_BEAT(byte[] byts)
@@ -258,21 +258,21 @@ public class LobbyMsgReply
                 Ret = false,    
             };
             ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskCreateRoomReply, output.ToByteArray());
-            ServerLobbyManager.Instance.Log("MSG: 没有空余的房间服务器！");
+            ServerLobbyManager.Instance.Log("MSG: There is not enough free room-servers!"); // 没有空余的房间服务器！
         }
         else
         {
             AskCreateRoomReply output = new AskCreateRoomReply()
             {
                 Ret = true,
-                RoomServerAddress = theRoomServer.Address,
+                RoomServerAddress = theRoomServer.AddressReal, // 发给客户端的是从外部连接的地址
                 RoomServerPort = theRoomServer.Port,
                 MaxPlayerCount = input.MaxPlayerCount,
                 RoomName = input.RoomName,
             };
             
             ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskCreateRoomReply, output.ToByteArray());
-            ServerLobbyManager.Instance.Log($"MSG: 找到空余的房间服务器，可以创建房间 - {theRoomServer.Address}:{theRoomServer.Port}");
+            ServerLobbyManager.Instance.Log($"MSG: Find a free room-server, you can create the room! - {theRoomServer.Address}:{theRoomServer.Port}"); // 找到空余的房间服务器，可以创建房间
         }
     }
 
@@ -299,20 +299,20 @@ public class LobbyMsgReply
                 Ret = false,    
             };
             ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskJoinRoomReply, output.ToByteArray());
-            ServerLobbyManager.Instance.Log("MSG: 没有空余的房间服务器！");
+            ServerLobbyManager.Instance.Log("MSG: There is not enough free room-servers!"); // 没有空余的房间服务器！
         }
         else
         {
             AskJoinRoomReply output = new AskJoinRoomReply()
             {
                 Ret = true,
-                RoomServerAddress = theRoomServer.Address,
+                RoomServerAddress = theRoomServer.AddressReal, // 发给客户端的是从外部连接的地址
                 RoomServerPort = theRoomServer.Port,
                 RoomId = input.RoomId,
             };
             
             ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskJoinRoomReply, output.ToByteArray());
-            ServerLobbyManager.Instance.Log($"MSG: 找到空余的房间服务器，可以加入房间 - {theRoomServer.Address}:{theRoomServer.Port}");
+            ServerLobbyManager.Instance.Log($"MSG: Find a free room-server, you can join the room! - {theRoomServer.Address}:{theRoomServer.Port}"); // 找到空余的房间服务器，可以加入房间
         }
     }
 
@@ -354,7 +354,7 @@ public class LobbyMsgReply
         };
         // 返回消息
         ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.RoomServerLoginReply, output.ToByteArray());
-        ServerLobbyManager.Instance.Log($"MSG: 房间服务器登录成功！地址:{input.ServerName} - MaxRoomCount:{input.MaxRoomCount} - MaxPlayerPerRoom:{input.MaxPlayerPerRoom}");
+        ServerLobbyManager.Instance.Log($"MSG: Room-server Logged in! Address:{input.ServerName} - Address Real:{input.AddressReal} - MaxRoomCount:{input.MaxRoomCount} - MaxPlayerPerRoom:{input.MaxPlayerPerRoom}"); // 房间服务器登录成功！
     }
 
     static void UPDATE_ROOM_INFO(byte[] bytes)
