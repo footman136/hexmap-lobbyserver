@@ -57,6 +57,9 @@ public class ServerLobbyManager : MonoBehaviour
             _server.Address = csv.GetValue(1, "LobbyServerAddress");
             _server.Port = csv.GetValueInt(1, "LobbyServerPort");
         }
+
+        // 限制帧速率
+        Application.targetFrameRate = 30;
     }
     
     // Start is called before the first frame update

@@ -108,7 +108,7 @@ public class ServerScript : MonoBehaviour {
         catch (Exception e)
         {
             string dataStr = System.Text.Encoding.UTF8.GetString(content);
-            Debug.LogError($"Server OnReceive() Exceptioon - offset:{offset} - size:{size} - data:{dataStr} - {e}");
+            Debug.LogError($"ServerSciprt OnReceive Exceptioon - offset:{offset} - size:{size} - data:{dataStr} - {e}");
             throw;
         }
     }
@@ -121,7 +121,7 @@ public class ServerScript : MonoBehaviour {
         }
         catch (Exception e)
         {
-            Debug.LogError($"Server OnComplete() Exception - {e}");
+            Debug.LogError($"ServerScript OnComplete Exception - {e}");
             throw;
         }
     }
@@ -134,7 +134,7 @@ public class ServerScript : MonoBehaviour {
         }
         catch (Exception e)
         {
-            Debug.LogError($"Server SendMsg() Exception - size:{size} - {e}");
+            Debug.LogError($"ServerScript SendMsg Exception - size:{size} - {e}");
             throw;
         }
     }
