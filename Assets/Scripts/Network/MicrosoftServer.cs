@@ -280,7 +280,7 @@ public class MicrosoftServer
                 // 真正的互联网环境下会有消息包被截断的情况，所以发送的时候必须在开始定义4个字节的包长度，目前是测试阶段，暂时不开放。
                 //读取数据  
                 byte[] data = new byte[e.BytesTransferred];
-                Log($"Server Found data received - {e.BytesTransferred} byts");
+                //Log($"Server Found data received - {e.BytesTransferred} byts");
                 Array.Copy(e.Buffer, e.Offset, data, 0, e.BytesTransferred);  
                 lock (m_buffer)  
                 {  
@@ -335,6 +335,7 @@ public class MicrosoftServer
         }
         else
         {
+            Log($"MicrosfotServer ProcessReceive Error - SocketError : {e.SocketError}");
             CloseClientSocket(e);
         }
     }
@@ -355,6 +356,7 @@ public class MicrosoftServer
         }
         else
         {
+            Log($"MicrosfotServer ProcessSend Error - SocketError : {e.SocketError}");
             CloseClientSocket(e);
         }
     }

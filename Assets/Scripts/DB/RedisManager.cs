@@ -18,7 +18,7 @@ public class RedisManager : MonoBehaviour
     {
         if (Instance != null)
         {
-            Debug.LogError("RedisManager must be Singleton! 必须是单例！！！");
+            Debug.LogError("RedisManager must be Singleton! Cannot be created twice!");
         }
         Instance = this;
     }

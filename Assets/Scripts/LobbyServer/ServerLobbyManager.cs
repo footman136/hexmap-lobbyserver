@@ -32,7 +32,7 @@ public class ServerLobbyManager : MonoBehaviour
     // 房间的集合，Key是房间的唯一ID
     public Dictionary<long, RoomInfo> Rooms { set; get; } 
     
-    private const float _heartBeatTimeInterval = 45f; // 心跳时间间隔,服务器检测用的间隔比客户端实际间隔要多一些, LobbyServer的间隔要再多一些,因为客户端与大厅之间的消息少
+    private const float _HEART_BEAT_INTERVAL = 60f; // 心跳时间间隔,服务器检测用的间隔比客户端实际间隔要多一些, LobbyServer的间隔要再多一些,因为客户端与大厅之间的消息少
 
     #region 初始化
     
@@ -83,11 +83,12 @@ public class ServerLobbyManager : MonoBehaviour
         {
             yield return null;
         }
-        receive_str = $"Server started! {_server.Address}:{_server.Port}";
+        receive_str = $"Lobby-server started! {_server.Address}:{_server.Port}";
         if (IsCheckHeartBeat)
         {
             StartCheckHeartBeat();
         }
+        Log(receive_str);
     }
 
     void OnGUI()
@@ -114,7 +115,7 @@ public class ServerLobbyManager : MonoBehaviour
 
     private void StartCheckHeartBeat()
     {
-        InvokeRepeating(nameof(CheckHeartBeat), _heartBeatTimeInterval, _heartBeatTimeInterval);
+        InvokeRepeating(nameof(CheckHeartBeat), _HEART_BEAT_INTERVAL, _HEART_BEAT_INTERVAL);
     }
 
     private void StopCheckHeartBeat()
@@ -130,10 +131,10 @@ public class ServerLobbyManager : MonoBehaviour
         foreach (var keyValue in Players)
         {
             var ts = now - keyValue.Value.HeartBeatTime;
-            if (ts.TotalSeconds > _heartBeatTimeInterval)
+            if (ts.TotalSeconds > _HEART_BEAT_INTERVAL)
             { // 该客户端(玩家)超时没有心跳了,干掉
                 delPlayerList.Add(keyValue.Key);
-                _server.Log($"长时间没有检测到心跳,将客户端踢出! - {keyValue.Value.Enter.Account}");
+                Log($"HeartBeat is not detected! Kick out! - {keyValue.Value.Enter.Account} - time:{ts.TotalSeconds}"); // 长时间没有检测到心跳,将客户端踢出
             }
         }
         foreach (var args in delPlayerList)
@@ -143,7 +144,7 @@ public class ServerLobbyManager : MonoBehaviour
         foreach (var keyValue in RoomServers)
         {
             var ts = now - keyValue.Value.HeartBeatTime;
-            if (ts.TotalSeconds > _heartBeatTimeInterval)
+            if (ts.TotalSeconds > _HEART_BEAT_INTERVAL)
             { // 该客户端(房间服务器)超时没有心跳了,干掉
                 delRoomServerList.Add(keyValue.Key);
             }
@@ -177,14 +178,14 @@ public class ServerLobbyManager : MonoBehaviour
                 break;
             case ServerSocketAction.Send:
             {
-                int size = args.BytesTransferred;
-                Log($"Server send a message. {size} bytes");
+                //int size = args.BytesTransferred;
+                //Log($"Server send a message. {size} bytes");
             }
                 break;
             case ServerSocketAction.Receive:
             {
-                int size = args.BytesTransferred;
-                Log($"Server receive a message. {size} bytes");
+                //int size = args.BytesTransferred;
+                //Log($"Server receive a message. {size} bytes");
             }
                 break;
             case ServerSocketAction.Drop:
@@ -220,12 +221,12 @@ public class ServerLobbyManager : MonoBehaviour
     {
         if (Players.ContainsKey(args))
         {
-            Log($"MSG: 玩家离开大厅服务器 - {Players[args].Enter.Account} - PlayerCount:{Players.Count-1}/{_server.MaxClientCount}");
+            Log($"MSG: User left the lobby-server - {Players[args].Enter.Account} - PlayerCount:{Players.Count-1}/{_server.MaxClientCount}"); // 玩家离开大厅服务器
             Players.Remove(args);
         }
         else if(RoomServers.ContainsKey(args))
         {
-            Log($"MSG: 房间服务器离开大厅服务器 - {RoomServers[args].Login.ServerName} - RoomServerCount:{RoomServers.Count-1}");
+            Log($"MSG: Room-server left the lobby-server - {RoomServers[args].Login.ServerName} - RoomServerCount:{RoomServers.Count-1}"); // 房间服务器离开大厅服务器
             // 该房间服务器所带来的房间数也都要清理一下
             RemoveRoomsInARoomServer(args);
             RoomServers.Remove(args);
@@ -263,7 +264,7 @@ public class ServerLobbyManager : MonoBehaviour
         }
         else
         {
-            _server.Log("ServerLobbyManager RemovePlayer Error - Player Info not found!");
+            Log("ServerLobbyManager RemovePlayer Error - Player Info not found!");
         }
     }
 

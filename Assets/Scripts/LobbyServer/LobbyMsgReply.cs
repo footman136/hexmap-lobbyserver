@@ -33,7 +33,7 @@ public class LobbyMsgReply
             byte[] recvData = new byte[size - 4];
             Array.Copy(bytes, 4, recvData, 0, size - 4);
 
-            // 记录心跳时间,每接收到一条消息,都更新时间,而不仅仅是心跳消息
+            // 每接收到任意一条消息,都刷新心跳时间,而不仅仅是心跳消息
             HEART_BEAT(null);
 
             int msgId = ParseMsgId(bytes);
@@ -203,6 +203,8 @@ public class LobbyMsgReply
     static void ASK_ROOM_LIST(byte[] bytes)
     {
         AskRoomList input = AskRoomList.Parser.ParseFrom(bytes);
+
+        ServerLobbyManager.Instance.Log($"LobbyMsgReply ASK_ROOM_LIST - Received!");
         
         // 从redis里读取房间信息
         {
@@ -210,6 +212,7 @@ public class LobbyMsgReply
             AskRoomListReply output = new AskRoomListReply();
             output.Ret = true;
             string[] tableNames = ServerLobbyManager.Instance.Redis.CSRedis.Keys("MAP:*");
+            ServerLobbyManager.Instance.Log($"ASK_ROOM_LIST : RoomCount:{tableNames.Length}");
             foreach (string tableName in tableNames)
             {
                 long createrId = ServerLobbyManager.Instance.Redis.CSRedis.HGet<long>(tableName, "Creator");
@@ -228,6 +231,7 @@ public class LobbyMsgReply
                 }
 
                 output.Rooms.Add(roomInfo);
+                ServerLobbyManager.Instance.Log($"RoomInfo : {roomInfo}");
             }
 
             ServerLobbyManager.Instance.SendMsg(_args, LOBBY_REPLY.AskRoomListReply, output.ToByteArray());
@@ -238,7 +242,10 @@ public class LobbyMsgReply
     static void ASK_CREATE_ROOM(byte[] bytes)
     {
         AskCreateRoom input = AskCreateRoom.Parser.ParseFrom(bytes);
-        RoomServerLogin theRoomServer = null; 
+        RoomServerLogin theRoomServer = null;
+        
+        ServerLobbyManager.Instance.Log($"LobbyMsgReply ASK_CREATE_ROOM - Received!");
+        
         // 
         foreach (var keyValue in ServerLobbyManager.Instance.RoomServers)
         {
@@ -280,6 +287,9 @@ public class LobbyMsgReply
     {
         AskJoinRoom input = AskJoinRoom.Parser.ParseFrom(bytes);
         RoomServerLogin theRoomServer = null;
+        
+        ServerLobbyManager.Instance.Log($"LobbyMsgReply ASK_JOIN_ROOM - Received!");
+        
         //
         foreach (var keyValue in ServerLobbyManager.Instance.RoomServers)
         {
