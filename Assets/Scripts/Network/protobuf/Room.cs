@@ -159,7 +159,11 @@ namespace Protobuf.Room {
             "ZBgBIAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEAoI",
             "QW1tb0Jhc2UYBCABKAUiYgoPQW1tb1N1cHBseVJlcGx5Eg4KBlJvb21JZBgB",
             "IAEoAxIPCgdPd25lcklkGAIgASgDEg8KB0FjdG9ySWQYAyABKAMSEAoIQW1t",
-            "b0Jhc2UYBCABKAUSCwoDUmV0GAUgASgIYgZwcm90bzM="));
+            "b0Jhc2UYBCABKAUSCwoDUmV0GAUgASgIIjEKDkNoYW5nZUFpUmlnaHRzEg4K",
+            "BlJvb21JZBgBIAEoAxIPCgdPd25lcklkGAIgASgDIn4KE0NoYW5nZUFpUmln",
+            "aHRzUmVwbHkSDgoGUm9vbUlkGAEgASgDEg8KB093bmVySWQYAiABKAMSCwoD",
+            "UmV0GAMgASgIEhEKCUFpQWN0b3JJZBgEIAEoAxIRCglBaUFjY291bnQYBSAB",
+            "KAkSEwoLQ29udHJvbEJ5TWUYBiABKAhiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -217,7 +221,9 @@ namespace Protobuf.Room {
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.SprayBlood), global::Protobuf.Room.SprayBlood.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Damage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.SprayBloodReply), global::Protobuf.Room.SprayBloodReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "Damage", "Ret" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.AmmoSupply), global::Protobuf.Room.AmmoSupply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "AmmoBase" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.AmmoSupplyReply), global::Protobuf.Room.AmmoSupplyReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "AmmoBase", "Ret" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.AmmoSupplyReply), global::Protobuf.Room.AmmoSupplyReply.Parser, new[]{ "RoomId", "OwnerId", "ActorId", "AmmoBase", "Ret" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ChangeAiRights), global::Protobuf.Room.ChangeAiRights.Parser, new[]{ "RoomId", "OwnerId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Protobuf.Room.ChangeAiRightsReply), global::Protobuf.Room.ChangeAiRightsReply.Parser, new[]{ "RoomId", "OwnerId", "Ret", "AiActorId", "AiAccount", "ControlByMe" }, null, null, null, null)
           }));
     }
     #endregion
@@ -14079,6 +14085,441 @@ namespace Protobuf.Room {
           }
           case 40: {
             Ret = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  /// <summary>
+  //////////////////////////////////////////////////
+  /// 这个消息比较特殊, 因为我们的产品在服务器端是没有任何逻辑和AI的, 仅仅是转发和存取的作用,
+  /// 所以如果玩家不在线的时候, 它的所有逻辑和AI会交给其他玩家的客户端上进行计算
+  /// ChangeAiRights这个消息其实不会被用到, 因为所有改变都是服务器端管理的, 只会由服务器向客户端发出ChangeAiRightsReply消息
+  /// </summary>
+  public sealed partial class ChangeAiRights : pb::IMessage<ChangeAiRights> {
+    private static readonly pb::MessageParser<ChangeAiRights> _parser = new pb::MessageParser<ChangeAiRights>(() => new ChangeAiRights());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ChangeAiRights> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[55]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeAiRights() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeAiRights(ChangeAiRights other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeAiRights Clone() {
+      return new ChangeAiRights(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ChangeAiRights);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ChangeAiRights other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ChangeAiRights other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class ChangeAiRightsReply : pb::IMessage<ChangeAiRightsReply> {
+    private static readonly pb::MessageParser<ChangeAiRightsReply> _parser = new pb::MessageParser<ChangeAiRightsReply>(() => new ChangeAiRightsReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ChangeAiRightsReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Protobuf.Room.RoomReflection.Descriptor.MessageTypes[56]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeAiRightsReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeAiRightsReply(ChangeAiRightsReply other) : this() {
+      roomId_ = other.roomId_;
+      ownerId_ = other.ownerId_;
+      ret_ = other.ret_;
+      aiActorId_ = other.aiActorId_;
+      aiAccount_ = other.aiAccount_;
+      controlByMe_ = other.controlByMe_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ChangeAiRightsReply Clone() {
+      return new ChangeAiRightsReply(this);
+    }
+
+    /// <summary>Field number for the "RoomId" field.</summary>
+    public const int RoomIdFieldNumber = 1;
+    private long roomId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long RoomId {
+      get { return roomId_; }
+      set {
+        roomId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "OwnerId" field.</summary>
+    public const int OwnerIdFieldNumber = 2;
+    private long ownerId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long OwnerId {
+      get { return ownerId_; }
+      set {
+        ownerId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "Ret" field.</summary>
+    public const int RetFieldNumber = 3;
+    private bool ret_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ret {
+      get { return ret_; }
+      set {
+        ret_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AiActorId" field.</summary>
+    public const int AiActorIdFieldNumber = 4;
+    private long aiActorId_;
+    /// <summary>
+    /// 本机可以控制谁?
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public long AiActorId {
+      get { return aiActorId_; }
+      set {
+        aiActorId_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "AiAccount" field.</summary>
+    public const int AiAccountFieldNumber = 5;
+    private string aiAccount_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string AiAccount {
+      get { return aiAccount_; }
+      set {
+        aiAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "ControlByMe" field.</summary>
+    public const int ControlByMeFieldNumber = 6;
+    private bool controlByMe_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool ControlByMe {
+      get { return controlByMe_; }
+      set {
+        controlByMe_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ChangeAiRightsReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ChangeAiRightsReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RoomId != other.RoomId) return false;
+      if (OwnerId != other.OwnerId) return false;
+      if (Ret != other.Ret) return false;
+      if (AiActorId != other.AiActorId) return false;
+      if (AiAccount != other.AiAccount) return false;
+      if (ControlByMe != other.ControlByMe) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RoomId != 0L) hash ^= RoomId.GetHashCode();
+      if (OwnerId != 0L) hash ^= OwnerId.GetHashCode();
+      if (Ret != false) hash ^= Ret.GetHashCode();
+      if (AiActorId != 0L) hash ^= AiActorId.GetHashCode();
+      if (AiAccount.Length != 0) hash ^= AiAccount.GetHashCode();
+      if (ControlByMe != false) hash ^= ControlByMe.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (RoomId != 0L) {
+        output.WriteRawTag(8);
+        output.WriteInt64(RoomId);
+      }
+      if (OwnerId != 0L) {
+        output.WriteRawTag(16);
+        output.WriteInt64(OwnerId);
+      }
+      if (Ret != false) {
+        output.WriteRawTag(24);
+        output.WriteBool(Ret);
+      }
+      if (AiActorId != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(AiActorId);
+      }
+      if (AiAccount.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AiAccount);
+      }
+      if (ControlByMe != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(ControlByMe);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (RoomId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoomId);
+      }
+      if (OwnerId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(OwnerId);
+      }
+      if (Ret != false) {
+        size += 1 + 1;
+      }
+      if (AiActorId != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(AiActorId);
+      }
+      if (AiAccount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AiAccount);
+      }
+      if (ControlByMe != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ChangeAiRightsReply other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RoomId != 0L) {
+        RoomId = other.RoomId;
+      }
+      if (other.OwnerId != 0L) {
+        OwnerId = other.OwnerId;
+      }
+      if (other.Ret != false) {
+        Ret = other.Ret;
+      }
+      if (other.AiActorId != 0L) {
+        AiActorId = other.AiActorId;
+      }
+      if (other.AiAccount.Length != 0) {
+        AiAccount = other.AiAccount;
+      }
+      if (other.ControlByMe != false) {
+        ControlByMe = other.ControlByMe;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RoomId = input.ReadInt64();
+            break;
+          }
+          case 16: {
+            OwnerId = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            Ret = input.ReadBool();
+            break;
+          }
+          case 32: {
+            AiActorId = input.ReadInt64();
+            break;
+          }
+          case 42: {
+            AiAccount = input.ReadString();
+            break;
+          }
+          case 48: {
+            ControlByMe = input.ReadBool();
             break;
           }
         }

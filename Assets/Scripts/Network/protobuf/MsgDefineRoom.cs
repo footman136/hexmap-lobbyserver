@@ -24,7 +24,7 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKqgECgRST09N",
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKr4ECgRST09N",
             "EgwKCE1zZ1N0YXJ0EAASDwoJSGVhcnRCZWF0EKCcARIRCgtQbGF5ZXJFbnRl",
             "chChnAESDwoJRW50ZXJSb29tEKOcARIPCglMZWF2ZVJvb20QpZwBEg8KCVVw",
             "bG9hZE1hcBCnnAESEQoLRG93bmxvYWRNYXAQqZwBEhEKC0Rlc3Ryb3lSb29t",
@@ -37,22 +37,23 @@ namespace Protobuf.Room {
             "cBDVnAESFQoPRG93bmxvYWRSZXNDZWxsENecARIPCglVcGRhdGVSZXMQ2ZwB",
             "EhcKEVVwZGF0ZUFjdGlvblBvaW50ENucARIQCgpGaWdodFN0YXJ0EN2cARIP",
             "CglGaWdodFN0b3AQ35wBEhAKClNwcmF5Qmxvb2QQ4ZwBEhAKCkFtbW9TdXBw",
-            "bHkQ45wBKqkFCgpST09NX1JFUExZEhEKDU1zZ1N0YXJ0UmVwbHkQABIWChBQ",
-            "bGF5ZXJFbnRlclJlcGx5EKKcARIUCg5FbnRlclJvb21SZXBseRCknAESFAoO",
-            "TGVhdmVSb29tUmVwbHkQppwBEhQKDlVwbG9hZE1hcFJlcGx5EKicARIWChBE",
-            "b3dubG9hZE1hcFJlcGx5EKqcARIWChBEZXN0cm95Um9vbVJlcGx5EKycARIZ",
-            "ChNEb3dubG9hZENpdGllc1JlcGx5ELacARISCgxDaXR5QWRkUmVwbHkQuJwB",
-            "EhUKD0NpdHlSZW1vdmVSZXBseRC6nAESGQoTRG93bmxvYWRBY3RvcnNSZXBs",
-            "eRDAnAESEwoNQWN0b3JBZGRSZXBseRDCnAESFgoQQWN0b3JSZW1vdmVSZXBs",
-            "eRDEnAESFAoOQWN0b3JNb3ZlUmVwbHkQxpwBEhcKEUFjdG9yQWlTdGF0ZVJl",
-            "cGx5EMicARIZChNVcGRhdGVBY3RvclBvc1JlcGx5EMqcARIaChRVcGRhdGVB",
-            "Y3RvckluZm9SZXBseRDMnAESFwoRQWN0b3JQbGF5QW5pUmVwbHkQzpwBEhUK",
-            "D1RyeUNvbW1hbmRSZXBseRDQnAESFwoRSGFydmVzdFN0YXJ0UmVwbHkQ1JwB",
-            "EhYKEEhhcnZlc3RTdG9wUmVwbHkQ1pwBEhoKFERvd25sb2FkUmVzQ2VsbFJl",
-            "cGx5ENicARIUCg5VcGRhdGVSZXNSZXBseRDanAESHAoWVXBkYXRlQWN0aW9u",
-            "UG9pbnRSZXBseRDcnAESFQoPRmlnaHRTdGFydFJlcGx5EN6cARIUCg5GaWdo",
-            "dFN0b3BSZXBseRDgnAESFQoPU3ByYXlCbG9vZFJlcGx5EOKcARIVCg9BbW1v",
-            "U3VwcGx5UmVwbHkQ5JwBYgZwcm90bzM="));
+            "bHkQ45wBEhQKDkNoYW5nZUFpUmlnaHRzEOecASrEBQoKUk9PTV9SRVBMWRIR",
+            "Cg1Nc2dTdGFydFJlcGx5EAASFgoQUGxheWVyRW50ZXJSZXBseRCinAESFAoO",
+            "RW50ZXJSb29tUmVwbHkQpJwBEhQKDkxlYXZlUm9vbVJlcGx5EKacARIUCg5V",
+            "cGxvYWRNYXBSZXBseRConAESFgoQRG93bmxvYWRNYXBSZXBseRCqnAESFgoQ",
+            "RGVzdHJveVJvb21SZXBseRCsnAESGQoTRG93bmxvYWRDaXRpZXNSZXBseRC2",
+            "nAESEgoMQ2l0eUFkZFJlcGx5ELicARIVCg9DaXR5UmVtb3ZlUmVwbHkQupwB",
+            "EhkKE0Rvd25sb2FkQWN0b3JzUmVwbHkQwJwBEhMKDUFjdG9yQWRkUmVwbHkQ",
+            "wpwBEhYKEEFjdG9yUmVtb3ZlUmVwbHkQxJwBEhQKDkFjdG9yTW92ZVJlcGx5",
+            "EMacARIXChFBY3RvckFpU3RhdGVSZXBseRDInAESGQoTVXBkYXRlQWN0b3JQ",
+            "b3NSZXBseRDKnAESGgoUVXBkYXRlQWN0b3JJbmZvUmVwbHkQzJwBEhcKEUFj",
+            "dG9yUGxheUFuaVJlcGx5EM6cARIVCg9UcnlDb21tYW5kUmVwbHkQ0JwBEhcK",
+            "EUhhcnZlc3RTdGFydFJlcGx5ENScARIWChBIYXJ2ZXN0U3RvcFJlcGx5ENac",
+            "ARIaChREb3dubG9hZFJlc0NlbGxSZXBseRDYnAESFAoOVXBkYXRlUmVzUmVw",
+            "bHkQ2pwBEhwKFlVwZGF0ZUFjdGlvblBvaW50UmVwbHkQ3JwBEhUKD0ZpZ2h0",
+            "U3RhcnRSZXBseRDenAESFAoORmlnaHRTdG9wUmVwbHkQ4JwBEhUKD1NwcmF5",
+            "Qmxvb2RSZXBseRDinAESFQoPQW1tb1N1cHBseVJlcGx5EOScARIZChNDaGFu",
+            "Z2VBaVJpZ2h0c1JlcGx5EOicAWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -136,6 +137,10 @@ namespace Protobuf.Room {
     /// 补充弹药
     /// </summary>
     [pbr::OriginalName("AmmoSupply")] AmmoSupply = 20067,
+    /// <summary>
+    /// 改变AI权限
+    /// </summary>
+    [pbr::OriginalName("ChangeAiRights")] ChangeAiRights = 20071,
   }
 
   /// <summary>
@@ -173,6 +178,10 @@ namespace Protobuf.Room {
     [pbr::OriginalName("FightStopReply")] FightStopReply = 20064,
     [pbr::OriginalName("SprayBloodReply")] SprayBloodReply = 20066,
     [pbr::OriginalName("AmmoSupplyReply")] AmmoSupplyReply = 20068,
+    /// <summary>
+    /// 改变AI权限
+    /// </summary>
+    [pbr::OriginalName("ChangeAiRightsReply")] ChangeAiRightsReply = 20072,
   }
 
   #endregion
