@@ -24,7 +24,7 @@ namespace Protobuf.Room {
     static MsgDefineRoomReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKtEECgRST09N",
+            "ChNNc2dEZWZpbmVSb29tLnByb3RvEg1Qcm90b2J1Zi5Sb29tKtYECgRST09N",
             "EgwKCE1zZ1N0YXJ0EAASDwoJSGVhcnRCZWF0EKCcARIRCgtQbGF5ZXJFbnRl",
             "chChnAESDwoJRW50ZXJSb29tEKOcARIPCglMZWF2ZVJvb20QpZwBEg8KCVVw",
             "bG9hZE1hcBCnnAESEQoLRG93bmxvYWRNYXAQqZwBEhEKC0Rlc3Ryb3lSb29t",
@@ -37,24 +37,24 @@ namespace Protobuf.Room {
             "cBDVnAESFQoPRG93bmxvYWRSZXNDZWxsENecARIPCglVcGRhdGVSZXMQ2ZwB",
             "EhcKEVVwZGF0ZUFjdGlvblBvaW50ENucARIQCgpGaWdodFN0YXJ0EN2cARIP",
             "CglGaWdodFN0b3AQ35wBEhAKClNwcmF5Qmxvb2QQ4ZwBEhAKCkFtbW9TdXBw",
-            "bHkQ45wBEhQKDkNoYW5nZUFpUmlnaHRzEOecARIRCgtIaWdoQWlTdGF0ZRDp",
-            "nAEq3AUKClJPT01fUkVQTFkSEQoNTXNnU3RhcnRSZXBseRAAEhYKEFBsYXll",
-            "ckVudGVyUmVwbHkQopwBEhQKDkVudGVyUm9vbVJlcGx5EKScARIUCg5MZWF2",
-            "ZVJvb21SZXBseRCmnAESFAoOVXBsb2FkTWFwUmVwbHkQqJwBEhYKEERvd25s",
-            "b2FkTWFwUmVwbHkQqpwBEhYKEERlc3Ryb3lSb29tUmVwbHkQrJwBEhkKE0Rv",
-            "d25sb2FkQ2l0aWVzUmVwbHkQtpwBEhIKDENpdHlBZGRSZXBseRC4nAESFQoP",
-            "Q2l0eVJlbW92ZVJlcGx5ELqcARIZChNEb3dubG9hZEFjdG9yc1JlcGx5EMCc",
-            "ARITCg1BY3RvckFkZFJlcGx5EMKcARIWChBBY3RvclJlbW92ZVJlcGx5EMSc",
-            "ARIUCg5BY3Rvck1vdmVSZXBseRDGnAESFwoRQWN0b3JBaVN0YXRlUmVwbHkQ",
-            "yJwBEhkKE1VwZGF0ZUFjdG9yUG9zUmVwbHkQypwBEhoKFFVwZGF0ZUFjdG9y",
-            "SW5mb1JlcGx5EMycARIXChFBY3RvclBsYXlBbmlSZXBseRDOnAESFQoPVHJ5",
-            "Q29tbWFuZFJlcGx5ENCcARIXChFIYXJ2ZXN0U3RhcnRSZXBseRDUnAESFgoQ",
-            "SGFydmVzdFN0b3BSZXBseRDWnAESGgoURG93bmxvYWRSZXNDZWxsUmVwbHkQ",
-            "2JwBEhQKDlVwZGF0ZVJlc1JlcGx5ENqcARIcChZVcGRhdGVBY3Rpb25Qb2lu",
-            "dFJlcGx5ENycARIVCg9GaWdodFN0YXJ0UmVwbHkQ3pwBEhQKDkZpZ2h0U3Rv",
-            "cFJlcGx5EOCcARIVCg9TcHJheUJsb29kUmVwbHkQ4pwBEhUKD0FtbW9TdXBw",
-            "bHlSZXBseRDknAESGQoTQ2hhbmdlQWlSaWdodHNSZXBseRDonAESFgoQSGln",
-            "aEFpU3RhdGVSZXBseRDqnAFiBnByb3RvMw=="));
+            "bHkQ45wBEhQKDkNoYW5nZUFpUmlnaHRzEOecARIWChBBY3RvckFpU3RhdGVI",
+            "aWdoEOmcASrhBQoKUk9PTV9SRVBMWRIRCg1Nc2dTdGFydFJlcGx5EAASFgoQ",
+            "UGxheWVyRW50ZXJSZXBseRCinAESFAoORW50ZXJSb29tUmVwbHkQpJwBEhQK",
+            "DkxlYXZlUm9vbVJlcGx5EKacARIUCg5VcGxvYWRNYXBSZXBseRConAESFgoQ",
+            "RG93bmxvYWRNYXBSZXBseRCqnAESFgoQRGVzdHJveVJvb21SZXBseRCsnAES",
+            "GQoTRG93bmxvYWRDaXRpZXNSZXBseRC2nAESEgoMQ2l0eUFkZFJlcGx5ELic",
+            "ARIVCg9DaXR5UmVtb3ZlUmVwbHkQupwBEhkKE0Rvd25sb2FkQWN0b3JzUmVw",
+            "bHkQwJwBEhMKDUFjdG9yQWRkUmVwbHkQwpwBEhYKEEFjdG9yUmVtb3ZlUmVw",
+            "bHkQxJwBEhQKDkFjdG9yTW92ZVJlcGx5EMacARIXChFBY3RvckFpU3RhdGVS",
+            "ZXBseRDInAESGQoTVXBkYXRlQWN0b3JQb3NSZXBseRDKnAESGgoUVXBkYXRl",
+            "QWN0b3JJbmZvUmVwbHkQzJwBEhcKEUFjdG9yUGxheUFuaVJlcGx5EM6cARIV",
+            "Cg9UcnlDb21tYW5kUmVwbHkQ0JwBEhcKEUhhcnZlc3RTdGFydFJlcGx5ENSc",
+            "ARIWChBIYXJ2ZXN0U3RvcFJlcGx5ENacARIaChREb3dubG9hZFJlc0NlbGxS",
+            "ZXBseRDYnAESFAoOVXBkYXRlUmVzUmVwbHkQ2pwBEhwKFlVwZGF0ZUFjdGlv",
+            "blBvaW50UmVwbHkQ3JwBEhUKD0ZpZ2h0U3RhcnRSZXBseRDenAESFAoORmln",
+            "aHRTdG9wUmVwbHkQ4JwBEhUKD1NwcmF5Qmxvb2RSZXBseRDinAESFQoPQW1t",
+            "b1N1cHBseVJlcGx5EOScARIZChNDaGFuZ2VBaVJpZ2h0c1JlcGx5EOicARIb",
+            "ChVBY3RvckFpU3RhdGVIaWdoUmVwbHkQ6pwBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -145,7 +145,7 @@ namespace Protobuf.Room {
     /// <summary>
     /// 高等级AI状态(不同于之前的AI状态, 之前的状态属于AI状态机的状态)
     /// </summary>
-    [pbr::OriginalName("HighAiState")] HighAiState = 20073,
+    [pbr::OriginalName("ActorAiStateHigh")] ActorAiStateHigh = 20073,
   }
 
   /// <summary>
@@ -190,7 +190,7 @@ namespace Protobuf.Room {
     /// <summary>
     /// 高等级AI状态(不同于之前的AI状态, 之前的状态属于AI状态机的状态)
     /// </summary>
-    [pbr::OriginalName("HighAiStateReply")] HighAiStateReply = 20074,
+    [pbr::OriginalName("ActorAiStateHighReply")] ActorAiStateHighReply = 20074,
   }
 
   #endregion
