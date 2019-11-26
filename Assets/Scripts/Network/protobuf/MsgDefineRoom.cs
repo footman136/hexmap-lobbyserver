@@ -31,14 +31,14 @@ namespace Protobuf.Room {
             "EKucARIUCg5Eb3dubG9hZENpdGllcxC1nAESDQoHQ2l0eUFkZBC2nAESEAoK",
             "Q2l0eVJlbW92ZRC3nAESFAoORG93bmxvYWRBY3RvcnMQv5wBEg4KCEFjdG9y",
             "QWRkEMGcARIRCgtBY3RvclJlbW92ZRDCnAESDwoJQWN0b3JNb3ZlEMWcARIS",
-            "CgxBY3RvckFpU3RhdGUQx5wBEhQKDlVwZGF0ZUFjdG9yUG9zEMmcARIVCg9V",
-            "cGRhdGVBY3RvckluZm8Qy5wBEhIKDEFjdG9yUGxheUFuaRDNnAESEAoKVHJ5",
-            "Q29tbWFuZBDPnAESEgoMSGFydmVzdFN0YXJ0ENOcARIRCgtIYXJ2ZXN0U3Rv",
-            "cBDVnAESFQoPRG93bmxvYWRSZXNDZWxsENecARIPCglVcGRhdGVSZXMQ2ZwB",
-            "EhcKEVVwZGF0ZUFjdGlvblBvaW50ENucARIQCgpGaWdodFN0YXJ0EN2cARIP",
-            "CglGaWdodFN0b3AQ35wBEhAKClNwcmF5Qmxvb2QQ4ZwBEhAKCkFtbW9TdXBw",
-            "bHkQ45wBEhQKDkNoYW5nZUFpUmlnaHRzEOecARIWChBBY3RvckFpU3RhdGVI",
-            "aWdoEOmcASrhBQoKUk9PTV9SRVBMWRIRCg1Nc2dTdGFydFJlcGx5EAASFgoQ",
+            "CgxBY3RvckFpU3RhdGUQx5wBEhYKEEFjdG9yQWlTdGF0ZUhpZ2gQyZwBEhQK",
+            "DlVwZGF0ZUFjdG9yUG9zEMucARIVCg9VcGRhdGVBY3RvckluZm8QzJwBEhIK",
+            "DEFjdG9yUGxheUFuaRDPnAESEAoKVHJ5Q29tbWFuZBDRnAESEgoMSGFydmVz",
+            "dFN0YXJ0ENOcARIRCgtIYXJ2ZXN0U3RvcBDVnAESFQoPRG93bmxvYWRSZXND",
+            "ZWxsENecARIPCglVcGRhdGVSZXMQ2ZwBEhcKEVVwZGF0ZUFjdGlvblBvaW50",
+            "ENucARIQCgpGaWdodFN0YXJ0EN2cARIPCglGaWdodFN0b3AQ35wBEhAKClNw",
+            "cmF5Qmxvb2QQ4ZwBEhAKCkFtbW9TdXBwbHkQ45wBEhQKDkNoYW5nZUFpUmln",
+            "aHRzEOecASrhBQoKUk9PTV9SRVBMWRIRCg1Nc2dTdGFydFJlcGx5EAASFgoQ",
             "UGxheWVyRW50ZXJSZXBseRCinAESFAoORW50ZXJSb29tUmVwbHkQpJwBEhQK",
             "DkxlYXZlUm9vbVJlcGx5EKacARIUCg5VcGxvYWRNYXBSZXBseRConAESFgoQ",
             "RG93bmxvYWRNYXBSZXBseRCqnAESFgoQRGVzdHJveVJvb21SZXBseRCsnAES",
@@ -46,15 +46,15 @@ namespace Protobuf.Room {
             "ARIVCg9DaXR5UmVtb3ZlUmVwbHkQupwBEhkKE0Rvd25sb2FkQWN0b3JzUmVw",
             "bHkQwJwBEhMKDUFjdG9yQWRkUmVwbHkQwpwBEhYKEEFjdG9yUmVtb3ZlUmVw",
             "bHkQxJwBEhQKDkFjdG9yTW92ZVJlcGx5EMacARIXChFBY3RvckFpU3RhdGVS",
-            "ZXBseRDInAESGQoTVXBkYXRlQWN0b3JQb3NSZXBseRDKnAESGgoUVXBkYXRl",
-            "QWN0b3JJbmZvUmVwbHkQzJwBEhcKEUFjdG9yUGxheUFuaVJlcGx5EM6cARIV",
-            "Cg9UcnlDb21tYW5kUmVwbHkQ0JwBEhcKEUhhcnZlc3RTdGFydFJlcGx5ENSc",
-            "ARIWChBIYXJ2ZXN0U3RvcFJlcGx5ENacARIaChREb3dubG9hZFJlc0NlbGxS",
-            "ZXBseRDYnAESFAoOVXBkYXRlUmVzUmVwbHkQ2pwBEhwKFlVwZGF0ZUFjdGlv",
-            "blBvaW50UmVwbHkQ3JwBEhUKD0ZpZ2h0U3RhcnRSZXBseRDenAESFAoORmln",
-            "aHRTdG9wUmVwbHkQ4JwBEhUKD1NwcmF5Qmxvb2RSZXBseRDinAESFQoPQW1t",
-            "b1N1cHBseVJlcGx5EOScARIZChNDaGFuZ2VBaVJpZ2h0c1JlcGx5EOicARIb",
-            "ChVBY3RvckFpU3RhdGVIaWdoUmVwbHkQ6pwBYgZwcm90bzM="));
+            "ZXBseRDInAESGwoVQWN0b3JBaVN0YXRlSGlnaFJlcGx5EMqcARIZChNVcGRh",
+            "dGVBY3RvclBvc1JlcGx5EMycARIaChRVcGRhdGVBY3RvckluZm9SZXBseRDO",
+            "nAESFwoRQWN0b3JQbGF5QW5pUmVwbHkQ0JwBEhUKD1RyeUNvbW1hbmRSZXBs",
+            "eRDSnAESFwoRSGFydmVzdFN0YXJ0UmVwbHkQ1JwBEhYKEEhhcnZlc3RTdG9w",
+            "UmVwbHkQ1pwBEhoKFERvd25sb2FkUmVzQ2VsbFJlcGx5ENicARIUCg5VcGRh",
+            "dGVSZXNSZXBseRDanAESHAoWVXBkYXRlQWN0aW9uUG9pbnRSZXBseRDcnAES",
+            "FQoPRmlnaHRTdGFydFJlcGx5EN6cARIUCg5GaWdodFN0b3BSZXBseRDgnAES",
+            "FQoPU3ByYXlCbG9vZFJlcGx5EOKcARIVCg9BbW1vU3VwcGx5UmVwbHkQ5JwB",
+            "EhkKE0NoYW5nZUFpUmlnaHRzUmVwbHkQ6JwBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protobuf.Room.ROOM), typeof(global::Protobuf.Room.ROOM_REPLY), }, null, null));
@@ -93,21 +93,25 @@ namespace Protobuf.Room {
     [pbr::OriginalName("ActorMove")] ActorMove = 20037,
     [pbr::OriginalName("ActorAiState")] ActorAiState = 20039,
     /// <summary>
+    /// 高等级AI状态(不同于之前的AI状态, 之前的状态属于AI状态机的状态)
+    /// </summary>
+    [pbr::OriginalName("ActorAiStateHigh")] ActorAiStateHigh = 20041,
+    /// <summary>
     /// 因为AI在客户端进行,所以要从客户端同步坐标到服务器
     /// </summary>
-    [pbr::OriginalName("UpdateActorPos")] UpdateActorPos = 20041,
+    [pbr::OriginalName("UpdateActorPos")] UpdateActorPos = 20043,
     /// <summary>
     /// 更新单元的属性
     /// </summary>
-    [pbr::OriginalName("UpdateActorInfo")] UpdateActorInfo = 20043,
+    [pbr::OriginalName("UpdateActorInfo")] UpdateActorInfo = 20044,
     /// <summary>
     /// 仅播放动画, 不改变AI状态机
     /// </summary>
-    [pbr::OriginalName("ActorPlayAni")] ActorPlayAni = 20045,
+    [pbr::OriginalName("ActorPlayAni")] ActorPlayAni = 20047,
     /// <summary>
     /// 尝试发送指令,如果成功消耗行动点ActionPoint
     /// </summary>
-    [pbr::OriginalName("TryCommand")] TryCommand = 20047,
+    [pbr::OriginalName("TryCommand")] TryCommand = 20049,
     /// <summary>
     /// 采集
     /// </summary>
@@ -142,10 +146,6 @@ namespace Protobuf.Room {
     /// 改变AI权限
     /// </summary>
     [pbr::OriginalName("ChangeAiRights")] ChangeAiRights = 20071,
-    /// <summary>
-    /// 高等级AI状态(不同于之前的AI状态, 之前的状态属于AI状态机的状态)
-    /// </summary>
-    [pbr::OriginalName("ActorAiStateHigh")] ActorAiStateHigh = 20073,
   }
 
   /// <summary>
@@ -170,10 +170,14 @@ namespace Protobuf.Room {
     [pbr::OriginalName("ActorRemoveReply")] ActorRemoveReply = 20036,
     [pbr::OriginalName("ActorMoveReply")] ActorMoveReply = 20038,
     [pbr::OriginalName("ActorAiStateReply")] ActorAiStateReply = 20040,
-    [pbr::OriginalName("UpdateActorPosReply")] UpdateActorPosReply = 20042,
-    [pbr::OriginalName("UpdateActorInfoReply")] UpdateActorInfoReply = 20044,
-    [pbr::OriginalName("ActorPlayAniReply")] ActorPlayAniReply = 20046,
-    [pbr::OriginalName("TryCommandReply")] TryCommandReply = 20048,
+    /// <summary>
+    /// 高等级AI状态(不同于之前的AI状态, 之前的状态属于AI状态机的状态)
+    /// </summary>
+    [pbr::OriginalName("ActorAiStateHighReply")] ActorAiStateHighReply = 20042,
+    [pbr::OriginalName("UpdateActorPosReply")] UpdateActorPosReply = 20044,
+    [pbr::OriginalName("UpdateActorInfoReply")] UpdateActorInfoReply = 20046,
+    [pbr::OriginalName("ActorPlayAniReply")] ActorPlayAniReply = 20048,
+    [pbr::OriginalName("TryCommandReply")] TryCommandReply = 20050,
     [pbr::OriginalName("HarvestStartReply")] HarvestStartReply = 20052,
     [pbr::OriginalName("HarvestStopReply")] HarvestStopReply = 20054,
     [pbr::OriginalName("DownloadResCellReply")] DownloadResCellReply = 20056,
@@ -187,10 +191,6 @@ namespace Protobuf.Room {
     /// 改变AI权限
     /// </summary>
     [pbr::OriginalName("ChangeAiRightsReply")] ChangeAiRightsReply = 20072,
-    /// <summary>
-    /// 高等级AI状态(不同于之前的AI状态, 之前的状态属于AI状态机的状态)
-    /// </summary>
-    [pbr::OriginalName("ActorAiStateHighReply")] ActorAiStateHighReply = 20074,
   }
 
   #endregion
